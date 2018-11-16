@@ -1,0 +1,81 @@
+leader_traits = {
+
+	YUG_croatian = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
+			modifier = {
+				add = 1
+				tag = YUG
+			}
+		}		
+	}
+	
+	YUG_serbian = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
+			modifier = {
+				add = 1
+				tag = YUG
+			}
+		}		
+	}
+	
+	YUG_slovenian = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
+			modifier = {
+				add = 1
+				tag = YUG
+			}
+		}	
+	}
+	
+	YUG_bosnian = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
+			modifier = {
+				add = 1
+				tag = YUG
+			}
+		}		
+	}
+	
+	YUG_montenegrin = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
+			modifier = {
+				add = 1
+				tag = YUG
+			}
+		}		
+	}
+	
+	YUG_macedonian = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
+			modifier = {
+				add = 1
+				tag = YUG
+			}
+		}		
+	}
+	
+}

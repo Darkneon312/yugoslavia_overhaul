@@ -1,0 +1,46 @@
+﻿l_english:
+
+ ### names
+ YGO_fascism:0 "Radikalna Jugoslavija"
+ YGO_fascism_DEF:0 "Radikalna Jugosavija"
+ YGO_democratic:0 "Yugoslav Confederation"
+ YGO_democratic_DEF:0 "the Yugoslav Confederation"
+ YGO_neutrality:0 "Kingdom of Yugoslavia"
+ YGO_neutrality_DEF:0 "the Kingdom of Yugoslavia"
+ YGO_communism:0 "SFR Yugoslavia"
+ YGO_communism_DEF:0 "the Socialist Federal Republic of Yugoslavia"
+ YGO_fascism_ADJ:0 "Yugoslavian"
+ YGO_democratic_ADJ:0 "Yugoslavian"
+ YGO_neutrality_ADJ:0 "Yugoslavian"
+ YGO_communism_ADJ:0 "Yugoslavian"
+ 
+ 
+ 
+ ### parties
+ 
+ YGO_communism_party:0 "KPJ"
+ YGO_communism_party_long:0 "Komunistička partija Jugoslavije"
+ YGO_democratic_party:0 "Demokratska stranka"
+ YGO_democratic_party_long:0 "Jugoslovenska demokratska stranka"
+ YGO_neutrality_party:0 "Regency Council"
+ YGO_fascism_party:0 "JRZ"
+ YGO_fascism_party_long:0 "Jugoslovenska radikalna zajednica"
+ 
+ 
+ 
+ ### ideas
+ 
+ YGO_communist_revolutionary:0 "Communist Revolutionary"
+ YGO_democratic_reformer:0 "Democratic Reformer"
+ YGO_fascist_demagogue:0 "Fascist Demagogue"
+ YGO_tank_manufacturer:0 "Tank Manufacturer"
+ YGO_naval_manufacturer:0 "Naval Manufacturer"
+ YGO_light_aircraft_manufacturer:0 "Light Aircraft Manufacturer"
+ YGO_medium_aircraft_manufacturer:0 "Medium Aircraft Manufacturer"
+ YGO_heavy_aircraft_manufacturer:0 "Heavy Aircraft Manufacturer"
+ YGO_naval_aircraft_manufacturer:0 "Naval Aircraft Manufacturer"
+ YGO_industrial_concern:0 "Industrial Concern"
+ YGO_electronics_concern:0 "Electronics Concern"
+ YGO_motorized_equipment_manufacturer:0 "Motorized Equipment Manufacturer"
+ YGO_infantry_equipment_manufacturer:0 "Infantry Equipment Manufacturer"
+ YGO_artillery_manufacturer:0 "Artillery Manufacturer"

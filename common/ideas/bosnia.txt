@@ -1,0 +1,361 @@
+ideas = {
+
+
+	political_advisor = {
+
+		#BIH_ante_vokic = {
+		#		
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#	
+		#	traits = { war_industrialist }
+		#
+		#}
+		
+		#BIH_julije_makanec = {
+		#
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#	
+		#	traits = { silent_workhorse }
+		#
+		#}
+
+		#BIH_andrija_artukovic = {
+		#
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#	
+		#	traits = { fortification_engineer }
+		#}
+		
+		#BIH_ante_pavelic = {
+		#
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#
+		#	traits = { smooth_talking_charmer }
+		#}
+		
+		BIH_Duro_Pucar = {
+		
+			picture = generic_political_advisor_europe_1
+	
+			allowed = {
+				original_tag = BIH
+			}
+			
+			traits = { communist_revolutionary }
+		}
+		
+		BIH_Dzafer_Kulenovic = {
+			
+			allowed = {
+				original_tag = BIH
+			}
+		
+			traits = { fascist_demagogue }
+			
+		}
+		
+		BIH_random_democratic_reformer = {
+		
+			picture = generic_democratic_europe
+			
+			allowed = {
+				original_tag = BIH
+			}
+		
+			traits = { democratic_reformer }
+			
+		}
+		
+		BIH_osman_kulenovic = {
+		
+			allowed = {
+				original_tag = BIH
+			}
+			
+			available = {
+				#has_government = fascism
+			}
+			
+			traits = { prince_of_terror }	
+		}
+
+		BIH_mehmed_alajbegovic = {
+
+			allowed = {
+				original_tag = BIH
+			}
+			
+			traits = { compassionate_gentleman }	
+		}		
+
+		BIH_vjekoslav_vrancic = {
+			
+			allowed = {
+				original_tag = BIH
+			}
+		
+			traits = { captain_of_industry }
+		}
+	}
+
+
+	# MILITARY
+	army_chief = {
+
+		BIH_husejin_biscevic = {
+			
+			allowed = {
+				original_tag = BIH
+			}
+		
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		BIH_halim_malkoc = {
+			
+			allowed = {
+				original_tag = BIH
+			}
+			
+			#available = {
+			#	has_government = communism
+			#}
+			
+			traits = { army_chief_morale_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+
+		#BIH_fedor_dragojlov = {
+		#	
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#	
+		#	traits = { army_chief_maneuver_2 }
+		#	
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}
+	}
+
+	air_chief = {
+		
+
+		#BIH_friedrich_navratil = {
+		#	
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#	
+		#	traits = { air_chief_ground_support_3 }
+		#	
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}
+
+		BIH_adalbert_rogulja = {
+		
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = BIH
+			}
+		
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+		
+		BIH_random_high_command = {
+		
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = BIH
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+
+	high_command = {
+
+		#BIH_rafael_boban = {
+		#	
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#	
+		#	traits = { army_infantry_2 }
+		#	
+		#	#available = {
+		#	#		OR = {
+		#	#		has_government = fascism
+		#	#		has_government = neutrality
+		#	#	}	
+		#	#}			
+		#	
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}	
+		
+		#BIH_vjekoslav_luburic = {
+		#	
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#	
+		#	traits = { army_artillery_2 }
+		#	
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}		
+		
+		#BIH_josip_broz_tito = {
+		#	
+		#	allowed = {
+		#		original_tag = BIH
+		#	}
+		#	
+		#	available = {
+		#		OR = {
+		#			has_government = communism
+		#			has_government = democratic
+		#		}
+		#	}	
+		#	
+		#	traits = { army_commando_2  }
+		#	
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}		
+
+		BIH_dobroslav_jevdevic = {
+		
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = BIH
+			}
+			
+			traits = { army_regrouping_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BIH_muhamed_hadziefendic = {
+		
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = BIH
+			}
+			
+			traits = { army_logistics_2 } 
+			
+			#research_bonus = { military_police_tech = 0.25 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		BIH_random_high_command = {
+		
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = BIH
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+		
+		BIH_random_army = {
+			
+			picture = generic_army_europe_3
+
+			allowed = {
+				original_tag = BIH
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+
+		BIH_random_navy = {
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = BIH
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+		BIH_random_air = {
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = BIH
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_theorist }
+		}
+
+	}
+
+}

@@ -1,0 +1,253 @@
+﻿l_english:
+
+ ##### VICTORY POINTS ###
+ VICTORY_POINTS_9809:0 "Podgorica"
+ VICTORY_POINTS_9821:0 "Cetinje"
+ VICTORY_POINTS_11887:0 "Niš"
+ VICTORY_POINTS_11868:0 "Pirot"
+ VICTORY_POINTS_11574:0 "Brčko"
+ VICTORY_POINTS_6983:0 "Banja Luka"
+ VICTORY_POINTS_9894:0 "Mostar"
+ 
+ ##### EVENT RELATED ###
+ 
+ DOD_yugoslavia.1.c:0 "Support the Royalist Coup!"
+ DOD_yugoslavia.1.d:0 "Player Option for the coup not to happen. Option exists for ai to be historicly accurate."
+ 
+ moreyugoslavia.1.t:0 "Petar II officially of age to rule"
+ moreyugoslavia.1.d:0 "Petar II, the son of the late Alexander I, is now offically allowed to rule the country. In 1934 a regency was established under Prince Regent Paul Karađorđević, the cousin of Alexander, but now the regency can end."
+ moreyugoslavia.1.a:0 "Long live Petar II!"
+ moreyugoslavia.1.b:0 "No, he will become a figurehead."
+ moreyugoslavia.2.t:0 "Ljubomir Davidović passes away"
+ moreyugoslavia.2.d:0 "Ljubomir Davidović, the creator of Demokratska Stranka has recently passed away. As one of the oldest members of the Serbian Parliament and as prime minister, he played an important role in shaping then Serbia and today Yugoslavia. His actions will never be forgotten. His successor will be one of his young friends, Milan Grol."
+ moreyugoslavia.2.a:0 "May he rest in peace."
+ moreyugoslavia.3.t:0 "The Croatian Problem and Stojadinović"
+ moreyugoslavia.3.d:0 "Since his election as prime minister in 1935, Milan Stojadinović proved to be ineffective in solving the Croatian Problem. His incompetence has left Prince Paul with no choice but to remove him from his position."
+ moreyugoslavia.3.a:0 "He will be putting Dragiša Cvetković in power."
+ 
+ moreyugoslaviacommunist.1.t:0 "Communists storm the Parliment!"
+ moreyugoslaviacommunist.1.d:0 "Members of the KPJ have today stormed the Parliment building and demanded a new government under the party's leader Josip Broz Tito. If their demands are not met, they threaten militarily fighting for the control of Yugoslavia."
+ moreyugoslaviacommunist.1.a:0 "We have no other choice."
+ 
+ moreyugoslaviaelection.1.t:0 "1938 Election"
+ moreyugoslaviaelection.1.d:0 "The time has come for the parliamentary elections of 1938. The previous election of 1935 resulted in a victory for the JRZ now under Milan Stojadinović. The United Opposition primariy consisting of croatian parties under Vladko Maček are running against Stojadinović. What will be the outcome?"
+ moreyugoslaviaelection.1.a:0 "The JRZ wins the Election!"
+ moreyugoslaviaelection.1.b:0 "The opposition wins the Election!"
+ 
+ moreyugoslaviaoccupation.1.t:0 "The Yugoslavian Question"
+ moreyugoslaviaoccupation.1.d:0 "The Yugoslav Government has decided to officially surrender but refuse to cooperate in any way. However the autonomous governments have decided to go against Yugoslavia and are willing to assist us. How should we proceed?"
+ moreyugoslaviaoccupation.1.a:0 "Split the regions accordingly."
+ moreyugoslaviaoccupation.2.b:0 "Occupy them!"
+ 
+ moreyugoslaviapolitics.1.t:0 "The Status of the Regency"
+ moreyugoslaviapolitics.1.d:0 " "
+ moreyugoslaviapolitics.1.a:0 "Things will stay as they are."
+ moreyugoslaviapolitics.1.b:0 "Their involment will be reduced."
+ moreyugoslaviapolitics.1.c:0 "They will play an important role for the future."
+ 
+ ### LEADER TRAITS ###
+ 
+ the_rightful_successor:0 "The Rightful Successor"
+ push_for_equality:0 "Push for Equality"
+ man_of_compromise:0 "Man of Compromise"
+ stojadinovic_anti_monarchist:0 "Anti-Monarchist"
+ stojadinovic_vice:0 "Vice President of the Belgrade Stock Exchange"
+ stojadinovic_director:0 "Director of British-owned Companies"
+ grol_minister:0 "Minister for Education"
+ grol_publisher:0 "Magazine Publisher"
+ croatian_question_incompetence:0 "Croatian Question Incompetence"
+ titoism:0 "Titoism"
+ 
+ ##### PARTIES ###
+ 
+ #YUG
+ 
+ YUG_JRZ_neutrality_party:0 "JRZ"
+ YUG_JRZ_neutrality_party_long:0 "Jugoslovenska Radikalna Zajednica"
+ YUG_HSS_neutrality_party:0 "HSS"
+ YUG_HSS_neutrality_party_long:0 "Hrvatska seljačka stranka"
+ 
+ YUG_UST_fascism_party:0 "Ustaša"
+ YUG_UST_fascism_party_long:0 "Ustaša – Hrvatski revolucionarni pokret"
+ YUG_ZBR_fascism_party:0 "ZBOR"
+ YUG_ZBR_fascism_party_long:0 "Jugoslovenski narodni pokret Zbor"
+ 
+ ##### COUNTRY NAMES ###
+ 
+ #BIH
+ 
+ BIH_fascism:0 "Unitary Bosnia"
+ BIH_communism:0 "People's Republic of BiH"
+ BIH_democratic:0 "Republic of Bosnia and Herzegovina"
+ BIH_neutrality:0 "Bosnia"
+ BIH_democratic_DEF:0 "The Republic of Bosnia and Herzegovina"
+ BIH_neutrality_DEF:0 "Bosnia"
+ BIH_fascism_DEF:0 "Unitary Bosnia"
+ BIH_communism_DEF:0 "The People's Republic of BiH"
+ BIH_fascism_ADJ:0 "Bosnian"
+ BIH_communism_ADJ:0 "Bosnian"
+ BIH_neutrality_ADJ:0 "Bosnian"
+ BIH_democratic_ADJ:0 "Bosnian"
+ 
+ BIH_YUG_subject:0 "Banovina of Bosnia"
+ BIH_YUG_subject_DEF:0 "The Banovina of Bosnia"
+ 
+ #SVN
+ 
+ SVN_fascism:0 "Slovene State"
+ SVN_fascism_DEF:0 "The Slovene State"
+ SVN_communism:0 "Socialist Republic of Slovenia"
+ SVN_neutrality:0 "Slovenia"
+ SVN_democratic:0 "Republic of Slovenia"
+ SVN_democratic_DEF:0 "Slovenia"
+ SVN_communism_DEF:0 "Slovenia"
+ SVN_neutrality_DEF:0 "Slovenia"
+ SVN_fascism_ADJ:0 "Slovenian"
+ SVN_communism_ADJ:0 "Slovenian"
+ SVN_neutrality_ADJ:0 "Slovenian"
+ SVN_democratic_ADJ:0 "Slovenian"
+ 
+ SVN_YUG_subject:0 "Banovina of Slovenia"
+ SVN_YUG_subject_DEF:0 "The Banovina of Slovenia"
+ 
+ #SVN
+ 
+ MKD_fascism:0 "Vardar Macedonia"
+ MKD_communism:0 "Socialist Republic of Macedonia"
+ MKD_democratic:0 "Republic of Vardar Macedonia"
+ MKD_neutrality:0 "Macedonia"
+ MKD_fascism_ADJ:0 "Macedonian"
+ MKD_fascism_DEF:0 "Vardar Macedonia"
+ MKD_communism_ADJ:0 "Macedonian"
+ MKD_communism_DEF:0 "The Socialist Republic of Macedonia"
+ MKD_democratic_DEF:0 "Republic of Vardar Macedonia"
+ MKD_democratic_ADJ:0 "Macedonian"
+ MKD_neutrality_DEF:0 "Macedonia"
+ MKD_neutrality_ADJ:0 "Macedonian"
+ 
+ MKD_YUG_subject:0 "Banovina of Macedonia"
+ MKD_YUG_subject_DEF:0 "The Banovina of Macedonia"
+ 
+ ##### IDEAS AND MINISTERS ###
+ 
+ YUG_coastal_defense_ships:0 "Costal Defense Ships"
+ YUG_offense_ships:0 "Offense Ships"
+ YUG_domestic_artillery:0 "Domestic Artillery"
+ YUG_engineer_regiments:0 "Independent Engineer Regiments"
+ YUG_mountain_regiments:0 "Mountain Brigades"
+ YUG_secret_police:0 "Služba državne sigurnosti"
+ YUG_secret_police:0 "The State Security Service will serve as our primariy weapon at spreading propaganda and supressing the opposition."
+ 
+ YUG_peter_II:0 "Peter II"
+ YUG_titoism:0 "Titoism"
+ YUG_one_nation_army:0 "One Nation Army"
+ YUG_marsallie_assassination:0 "Marseille Assassination"
+ YUG_marsallie_assassination_desc:0 "Memories of Alexander the I's assassination still haunt the people today."
+ YUG_prince_paul_regency:0 "Prince Paul Regency"
+ YUG_prince_paul_regency_desc:0 "After our king's assassination a council of regents was established under Prince Paul. He has attempted to create a unified south slavic nation ever since our king's death. He believes that establishing an equal and democratic nation would be the best solution."
+ YUG_illiteracy:0 "Public Illiteracy"
+ YUG_illiteracy_desc:0 "Illiteracy is a big problem in Yugoslavia. Illiteracy rates exceedes 60 percent in most rural areas."
+ YUG_education_programm:0 "Education Programm"
+ YUG_education_programm_desc:0 "We've taken our first step into educating the population. Now all that's left is to finalize it."
+ YUG_idea_industrial_centralisation:0 "Industrial Centralisation"
+ YUG_idea_partisans:0 "Partisans"
+ YUG_idea_croatian_officers:0 "Croatian Officers"
+ YUG_agriculutrul_society:0 "Agricultrul Society"
+ YUG_agricultural_development_idea:0 "Agricultrul Development"
+ YUG_foreign_owned_land_idea:0 "Foreign Owned Land"
+ YUG_farming_space_idea:0 "Farming Space"
+ YUG_industrialization_program_idea:0 "Industrialization Programm"
+ YUG_six_year_plan_idea:0 "The Six Year Plan"
+ YUG_coast_defense_idea:0 "Costal Defense"
+ 
+ YUG_milan_grol:0 "Milan Grol"
+ YUG_milan_stojadinovic:0 "Milan Stojadinović"
+ YUG_draza_mihailovic_theorist:0 "Draža Mihailović"
+ YUG_milan_nedic_theorist:0 "Milan Nedić"
+ YUG_petar_kosic_war_industrialist:0 "Petar Kosić"
+ YUG_ljubomir_maric_high_command:0 "Ljubomir Marić"
+ YUG_arso_jovanovic_infantry:0 "Arso Jovanović"
+ YUG_marijan_polic_navy_chief:0 "Marijan Polić"
+ YUG_min:0 "Mašinska Industrija Niš"
+ YUG_radio_station_zagreb:0 "Radio Stanica Zagreb"
+ YUG_koncar_elektroindustrija:0 "Končar Elektroindustrija"
+ YUG_saponia:0 "Saponia"
+ 
+ ##### RESEARCH GROUPS ###
+ 
+ pan_slavic_research_name:0 "Pan-Slavic Research Group"
+ pan_slavic_research_desc:0 "Reduced research time for technologies researched by other Pan-Slavic countries."
+ 
+ ##### COUNTRY FLAG LOCALISATION ###
+ 
+ vladko_elected:0 "Vladko Maček is elected as PM in 1938 Election"
+ 
+ ##### OPINIONS MODIFIERS ###
+ 
+ banovina_established_CRO:0 "Banovina established"
+ banovina_established_YUG:0 "Banovina established"
+ 
+ ##### DECISIONS ###
+ 
+ 
+ 
+ ##### TOOLTIPS ###
+ 
+ 
+ 
+ ##### TRAITS ###
+ YUG_croatian:0 "Croatian"
+ YUG_serbian:0 "Serbian"
+ YUG_slovenian:0 "Slovenian"
+ YUG_bosnian:0 "Bosnian"
+ YUG_montenegrin:0 "Montenegrin"
+ YUG_macedonian:0 "Macedonian"
+ 
+ ##### NATIONAL FOCUS ###
+ 
+ ##politics
+ YUG_internal_stability:0 "Internal Stability"
+ YUG_internal_stability_desc:0 " "
+ YUG_the_status_of_the_regency:0 "The Status of the Regency"
+ YUG_the_status_of_the_regency_desc:0 " "
+ YUG_government_reform:0 "Government Reform"
+ YUG_government_reform_desc:0 " "
+ 
+ YUG_eastern_outlook:0 "Eastern Outlook"
+ YUG_eastern_outlook_desc:0 " "
+ 
+ YUG_nationalistic_values:0 "Nationalistic Values"
+ YUG_nationalistic_values_desc:0 " "
+ YUG_croatian_supremacy:0 "Croatian Supremacy"
+ YUG_croatian_supremacy_desc:0 " "
+ YUG_yugoslavism:0 "Yugoslavism"
+ YUG_yugoslavism_desc:0 " "
+ YUG_serbian_dominance:0 "Serbian Dominance"
+ YUG_serbian_dominance_desc:0 " "
+ 
+ YUG_the_regency_rules:0 "The Regency Rules"
+ YUG_the_regency_rules_desc:0 " "
+ 
+ #com
+ YUG_industrial_centralisation:0 "Industrial Centralisation"
+ YUG_industrial_centralisation_desc:0 "Only the State knows how to properly maximaize the efforts of its Industry and Economy."
+ YUG_invite_greece:0 "Invite Greece"
+ YUG_invite_greece_desc:0 "The Greeks are our best and oldest friends. We fought side by side in the most difficult of times. Together we will achieve greatness."
+ YUG_establish_SDS:0 "Establish the SDS"
+ YUG_establish_SDS_desc:0 "By establishing our secret police we will be able to maintaing our party's popularity."
+ YUG_partisans:0 "Partisan Operations"
+ YUG_partisans_desc:0 "The Partisans, even though being an challenging fighting force, often work alone and in cells thereby minimizing their effectivness. If we organize the partisans, we could turn them into the most fearsome guerillas in Europe."
+ 
+ #industry
+ YUG_continue_stojadinovic_economic_policy:0 "Continue Stojadinović's Economic Policy"
+ YUG_continue_stojadinovic_economic_policy_desc:0 " "
+ YUG_new_economic_policy:0 "New Economic Policy"
+ YUG_new_economic_policy_desc:0 " "
+ YUG_agricultural_development:0 "Agricultrul Development"
+ YUG_agricultural_development_desc:0 " "
+ YUG_farming_space:0 "Farming Space"
+ YUG_farming_space_desc:0 " "
+ YUG_foreign_owned_land:0 "Foreign Owned Land"
+ YUG_foreign_owned_land_desc:0 " "
+ YUG_six_year_plan:0 "The Six Year Plan"
+ YUG_six_year_plan_desc:0 " "

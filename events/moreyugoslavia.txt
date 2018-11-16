@@ -1,0 +1,747 @@
+﻿##############################
+### MORE YUGOSLAVIA EVENTS ###
+##############################
+
+
+add_namespace = moreyugoslavia
+add_namespace = moreyugoslaviatag
+add_namespace = moreyugoslaviaelection
+add_namespace = moreyugoslaviacommunist
+add_namespace = moreyugoslaviaoccupation
+add_namespace = moreyugoslaviaforeign
+add_namespace = moreyugoslaviapolitics
+
+country_event = {
+	id = moreyugoslaviatag.1
+	#title = moreyugoslaviatag.1.t
+	#desc = moreyugoslaviatag.1.d
+	title = "Croatia breaks away!"
+	desc = "After having their demands not met, the croatian governmet has ceded from Yugoslavia and have formed their own forces to combat our own."
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = moreyugoslaviatag.1.a
+		name = "Traitors!"
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		#name = moreyugoslaviatag.1.b
+		name = "We should have done something about this...(Play as Croatia)"
+		trigger = { is_ai = no }
+		
+		CRO = {
+			change_tag_from = YUG
+		}
+	}
+}
+
+country_event = {
+	id = moreyugoslaviatag.2
+	#title = moreyugoslaviatag.1.t
+	#desc = moreyugoslaviatag.1.d
+	title = "Banovina of Croatia"
+	desc = "By establishing a semi-autonomous Banate of Croatia we can hopefully quell calls for true independence."
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = moreyugoslaviatag.1.a
+		name = "Excellent! This should ease tensions."
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		#name = moreyugoslaviatag.1.b
+		name = "We still have to be careful...(Play as Croatia)"
+		trigger = { is_ai = no }
+		
+		CRO = {
+			change_tag_from = YUG
+		}
+	}
+}
+
+country_event = {
+	id = moreyugoslaviatag.3
+	#title = moreyugoslaviatag.2.t
+	#desc = moreyugoslaviatag.2.d
+	title = "Our lands have been split!"
+	desc = "After our capitulation the lands that were unde rour control have been split into ethnic occupation zones. Croatia, Serbia and Montenegro submited to the great powers of Germany and Italy."
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = moreyugoslaviatag.2.a
+		name = "Traitors!"
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		#name = moreyugoslaviatag.2.b
+		name = "They will do anything to save themselves...(Play as Croatia)"
+		trigger = { is_ai = no }
+		CRO = {
+			change_tag_from = YUG
+		}
+	}
+	
+	option = {
+		#name = moreyugoslaviatag.2.c
+		name = "They will do anything to save themselves...(Play as Serbia)"
+		trigger = { is_ai = no }
+		SER = {
+			change_tag_from = YUG
+		}
+	}
+	
+	option = {
+		#name = moreyugoslaviatag.2.c
+		name = "They will do anything to save themselves...(Play as Montenegro)"
+		trigger = { is_ai = no }
+		MNT = {
+			change_tag_from = YUG
+		}
+	}
+}
+
+country_event = {
+	id = moreyugoslavia.1
+	title = moreyugoslavia.1.t
+	desc = moreyugoslavia.1.d
+	picture = GFX_report_event_yugoslavian_king_peter
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = YUG
+		NOT = {
+			has_country_leader = { name = "Petar II" }
+			has_completed_focus = YUG_abolish_the_monarchy
+		}
+		date > 1942.01.01
+		has_country_flag = this_is_not_done_yet
+		
+	}
+
+	mean_time_to_happen = { days = 7 }
+	
+	option = {
+		name = moreyugoslavia.1.a
+		
+		ai_chance = {
+			factor = 90
+		}
+		
+		create_country_leader = {
+			name = "Petar II Karađorđević"
+			desc = "POLITICS_PETER_II_DESC"
+			picture = "Portrait_Yugoslavia_Peter_II.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				#
+			}
+		}
+		
+		set_party_name = { 
+			ideology = neutrality 
+			long_name = YUG_neutrality_party_2 
+			name = YUG_neutrality_party_2 
+		}
+	}
+	
+	option = {
+		name = moreyugoslavia.1.b
+		
+		add_ideas = YUG_peter_II
+	}
+}
+
+country_event = {
+	id = moreyugoslavia.2
+	title = moreyugoslavia.2.t
+	desc = moreyugoslavia.2.d
+	picture = GFX_report_event_generic_parliament
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = YUG
+		date > 1940.19.02
+	}
+
+	mean_time_to_happen = { days = 7 }
+	
+	option = {
+		name = moreyugoslavia.2.a
+		
+		ai_chance = {
+			factor = 90
+		}
+		
+		create_country_leader = {
+			name = "Milan Grol"
+			desc = "POLITICS_MILAN_GROL_DESC"
+			picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Grol.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				grol_minister
+				grol_publisher		
+			}
+		}
+	}
+}
+
+country_event = {
+	id = moreyugoslavia.3
+	title = moreyugoslavia.3.t
+	desc = moreyugoslavia.3.d
+	picture = GFX_report_event_generic_parliament
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = YUG
+		date > 1939.2.5
+		has_idea = YUG_prince_paul_regency
+		has_idea = YUG_idea_croatian_opposition
+		NOT = {
+			has_country_flag = vladko_elected
+		}
+	}
+
+	mean_time_to_happen = { days = 7 }
+	
+	option = {
+		name = moreyugoslavia.3.a
+		
+		ai_chance = {
+			factor = 90
+		}
+		
+		create_country_leader = {
+			name = "Dragiša Cvetković"
+			desc = "POLITICS_MILAN_GROL_DESC"
+			picture = "gfx/leaders/YUG/Portrait_YUG_Dragisa_Cvetkovic.tga"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				#
+			}
+		}
+		
+		set_country_flag = dragisa_in_power
+	}
+}
+
+country_event = {
+	id = moreyugoslaviapolitics.1
+	title = moreyugoslaviapolitics.1.t
+	desc = moreyugoslaviapolitics.1.d
+	picture = GFX_report_event_generic_parliament
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = moreyugoslaviapolitics.1.a
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = moreyugoslaviapolitics.1.b
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = moreyugoslaviapolitics.1.c
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+country_event = {
+	id = moreyugoslaviaelection.1
+	title = moreyugoslaviaelection.1.t
+	desc = moreyugoslaviaelection.1.d
+	picture = GFX_report_event_yug_1938_election
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = YUG
+		date > 1938.12.1
+		date < 1939.1.1
+		has_government = neutrality
+		has_idea = YUG_prince_paul_regency
+	}
+
+	mean_time_to_happen = { days = 7 }
+	
+	option = {
+		name = moreyugoslaviaelection.1.a
+		
+		ai_chance = {
+			factor = 80
+		}
+		
+		add_political_power = 20
+		
+		set_country_flag = stojadinovic_reelected
+	}
+	
+	option = {
+		name = moreyugoslaviaelection.1.b
+		
+		ai_chance = {
+			factor = 20
+		}
+		
+		create_country_leader = {
+			name = "Vladko Maček"
+			desc = "POLITICS_MILAN_GROL_DESC"
+			picture = "gfx/leaders/CRO/Portrait_CRO_Vladko_Macek.tga"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				#
+			}
+		}
+		
+		remove_ideas = YUG_idea_croatian_opposition
+		
+		set_country_flag = vladko_elected
+		
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = moreyugoslaviacommunist.1
+	title = moreyugoslaviacommunist.1.t
+	desc = moreyugoslaviacommunist.1.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = moreyugoslaviacommunist.1.a
+		
+		ai_chance = {
+			factor = 90
+		}
+		
+		set_politics = { 
+			ruling_party = communism 
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				communism < 0.3
+			}
+			add_popularity = { 
+				ideology = communism 
+				popularity = 0.3
+			}
+		}
+		swap_ideas = { 
+			remove_idea = YUG_idea_peasant_councils 
+			add_idea = YUG_idea_empowered_peasant_councils 
+		}
+		add_timed_idea = { idea = reign_of_terror days = 730 }
+	}
+	
+	#option = {
+	#	name = moreyugoslaviacommunist.1.b
+	#}
+}
+
+country_event = {
+	id = moreyugoslaviaoccupation.1
+	title = moreyugoslaviaoccupation.1.t
+	desc = moreyugoslaviaoccupation.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		OR = {
+			GER = {
+				has_full_control_of_state = 107
+			}
+			any_country = {
+				is_in_faction_with = GER
+				has_full_control_of_state = 107
+			}
+		}
+		YUG = {
+			#surrender_progress > 0.9
+			has_capitulated = yes
+			has_war_with = GER
+		}
+	}
+	
+	mean_time_to_happen = { days = 7 }
+	
+	option = { # puppet serbia
+		ai_chance = { factor = 90 }
+		name = moreyugoslaviaoccupation.1.a
+		
+		if = {
+			limit = {
+				HUN = {
+					exists = yes
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			HUN = {
+				add_state_core = 45
+				#add_state_core = 769
+				#add_state_core = 772
+				set_state_controller = 45
+				#set_state_controller = 769
+				#set_state_controller = 772
+			}
+		}
+		
+		if = {
+			limit = {
+				BUL = {
+					exists = yes
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			BUL = {
+				add_state_core = 106
+				#add_state_core = 765
+				set_state_controller = 106
+				#set_state_controller = 765
+			}
+		}
+		
+		if = {
+			limit = {
+				ITA = {
+					exists = yes
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			MNT = {
+				transfer_state = 105
+				load_oob = "MNT_ITA_puppet"
+			}
+			ITA = {
+				puppet = MNT
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = no
+				}
+			}
+			CRO = {
+				transfer_state = 103
+				transfer_state = 109
+				#transfer_state = 768
+				add_state_core = 104
+				set_state_controller = 104
+			}
+			GER = {
+				puppet = CRO
+			}
+		}
+		
+		if = {
+			limit = {
+				YUG = {
+					NOT = {
+						has_completed_focus = YUG_establish_the_banovina_of_croatia
+					}
+				}
+			}			
+			CRO = {
+				load_oob = "CRO_YUG_independence"
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = yes
+					NOT = {
+						OR = {
+							is_in_faction_with = GER
+							is_subject_of = GER
+						}
+					}
+				}
+			}
+			CRO = {
+				transfer_state = 103
+				transfer_state = 109
+				#transfer_state = 768
+				
+				add_state_core = 104
+				#add_state_core = 771
+				#add_state_core = 775
+				set_state_controller = 104
+				#set_state_controller = 771
+				#set_state_controller = 775
+				load_oob = "CRO_YUG_independence"
+			}
+			GER = {
+				puppet = CRO
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = yes
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			CRO = {
+				#transfer_state = 768
+				
+				add_state_core = 104
+				#add_state_core = 771
+				#add_state_core = 775
+				set_state_controller = 104
+				#set_state_controller = 771
+				#set_state_controller = 775
+			}
+		}
+		
+		#if = {
+		#	limit = {
+		#		ALB = {
+		#			exists = yes
+		#			OR = {
+		#				is_subject_of = ITA
+		#				is_in_faction_with = ITA
+		#			}
+		#		}
+		#	}
+		#	ALB = {
+		#		set_state_controller = 763
+		#		set_state_controller = 764
+		#	}
+		#}
+		
+		#if = {
+		#	limit = {
+		#		ALB = {
+		#			exists = no
+		#		}
+		#	}
+		#	ITA = {
+		#		set_state_controller = 763
+		#		set_state_controller = 764
+		#		set_state_controller = 776
+		#	}
+		#}
+		
+		SER = {
+			transfer_state = 107
+			transfer_state = 108
+			#transfer_state = 766
+			#transfer_state = 767
+			load_oob = "SER_GER_puppet"
+		}
+		
+		puppet = SER
+		
+		set_state_controller = 102
+		
+		if = {
+			limit = {
+				SVN = {
+					exists = yes
+					OR = {
+						is_subject_of = GER
+						is_in_faction_with = GER
+					}
+					has_country_flag = wrong
+				}
+			}
+			SVN = {
+				transfer_state = 102
+			}
+		}
+		
+		if = {
+			limit = {
+				SVN = {
+					exists = no
+					has_country_flag = wrong
+				}
+			}
+			SVN = {
+				transfer_state = 102
+			}
+			GER = {
+				puppet = SVN
+			}
+		}
+		
+		#YUG = {
+		#	remove_unit_leader = 900
+		#	remove_unit_leader = 901
+		#	remove_unit_leader = 902
+		#	remove_unit_leader = 903
+		#	remove_unit_leader = 904
+		#	remove_unit_leader = 905
+		#	remove_unit_leader = 906
+		#	remove_unit_leader = 907
+		#	remove_unit_leader = 908
+		#	remove_unit_leader = 909
+		#	remove_unit_leader = 910
+		#	remove_unit_leader = 1000
+		#}
+		
+		hidden_effect = {
+			country_event = axispuppetsserbia.1
+			YUG = { country_event = moreyugoslaviatag.3 }
+		}
+		
+		add_political_power = 50
+	}
+	option = { #occupy them
+		ai_chance = { factor = 90 }
+		name = moreyugoslaviaoccupation.1.b
+		
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = moreyugoslaviaforeign.1
+	title = generic.2.t
+	desc = { # FROM and ROOT are different ideologies
+		text = generic.2.d.e
+		trigger = {
+			NOT = {
+				AND = {
+					FROM = {
+						has_government = democratic
+					}
+					has_government = democratic
+				}
+				AND = {
+					FROM = {
+						has_government = fascism
+					}
+					has_government = fascism
+				}
+				AND = {
+					FROM = {
+						has_government = communism
+					}
+					has_government = communism
+				}
+			}
+		}
+	}
+	picture = GFX_report_event_generic_read_write
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+			FROM = {
+				save_event_target_as = alliance_applicant
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = { #Agree / Both different
+		name = generic.2.e
+		trigger = {
+			NOT = {
+				AND = {
+					FROM = {
+						has_government = democratic
+					}
+					has_government = democratic
+				}
+				AND = {
+					FROM = {
+						has_government = fascism
+					}
+					has_government = fascism
+				}
+				AND = {
+					FROM = {
+						has_government = communism
+					}
+					has_government = communism
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = FROM
+		FROM = { country_event = { id = generic.3 hours = 6 } }
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+		FROM = {
+			add_ai_strategy = {
+				type = alliance
+				id = ROOT
+				value = 200
+			}
+		}
+		
+		YUG = { country_event = { id = DOD_yugoslavia.48 days = 2 } }
+	}
+	
+	option = { #Reject
+		name = generic.2.f
+		ai_chance = { factor = 0 }
+		FROM = { 
+			country_event = { id = generic.4 hours = 6 }
+		}
+	}
+}

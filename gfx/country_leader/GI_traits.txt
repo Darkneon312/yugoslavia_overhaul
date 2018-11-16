@@ -1,0 +1,13 @@
+leader_traits = {
+
+	neutralism_advocate = {
+		random = no
+		# Boosts Unaligned
+		neutrality_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

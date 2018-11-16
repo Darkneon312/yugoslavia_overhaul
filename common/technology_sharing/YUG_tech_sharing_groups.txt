@@ -1,0 +1,19 @@
+
+technology_sharing_group = {
+
+	id = pan_slavic_research
+	name = pan_slavic_research_name
+	desc = pan_slavic_research_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+		YUG = {
+			has_government = communism
+			is_faction_leader = yes 
+		}
+        is_in_faction_with = YUG
+    }
+
+}

@@ -1,0 +1,105 @@
+﻿### OOB ###
+units = {
+	##### Croatian "home guard" #####
+	# 
+	division= {	
+		name = "1. Pešadijska divizija"
+		location = 11586  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+
+	division= {	
+		name = "2. Pešadijska divizija"
+		location = 11580  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	
+	division= {	
+		name = "3. Pešadijska divizija"
+		location = 9599  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+
+	division= {	
+		name = "4. Pešadijska divizija"
+		location = 9602  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	
+	division= {	
+		name = "5. Pešadijska divizija"
+		location = 9906  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	
+	division= {	
+		name = "6. Pešadijska divizija"
+		location = 6970  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	
+	division= {	
+		name = "7. Pešadijska divizija"
+		location = 6634  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	
+	division= {	
+		name = "8. Pešadijska divizija"
+		location = 630  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	
+	division= {	
+		name = "9. Pešadijska divizija"
+		location = 3984  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	
+	division= {	
+		name = "10. Pešadijska divizija"
+		location = 3939  # zagreb
+		division_template = "Pesadijska Divizija"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "YUG" } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+}
+

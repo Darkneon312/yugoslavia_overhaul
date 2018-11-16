@@ -1,0 +1,39 @@
+#capital = 109
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+}
+
+add_political_power = 1198
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 15
+		}
+
+		fascism = {
+			popularity = 10
+		}
+		
+		communism = {
+			popularity = 15
+			#banned = no #default is no
+		}
+		
+		neutrality = { 
+			popularity = 60
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1935.5.3"
+	elections_allowed = no
+}
+
+set_convoys = 10
+
+set_stability = 0.5

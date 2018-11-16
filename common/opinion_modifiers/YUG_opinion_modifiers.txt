@@ -1,0 +1,10 @@
+opinion_modifiers = {
+	
+	banovina_established_YUG = {
+		value = 130
+	}
+	
+	banovina_established_CRO = {
+		value = 50
+	}
+}

@@ -1,0 +1,363 @@
+ideas = {
+
+
+	political_advisor = {
+
+		SVN_anton_korosec = {
+		
+			picture = generic_political_advisor_europe_1
+		
+			allowed = {
+				original_tag = SVN
+			}
+			
+			#traits = { war_industrialist }
+			traits = { popular_figurehead }
+		}
+		
+		SVN_boris_furlan = {
+		
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { silent_workhorse }
+		}				
+		
+		#SVN_franc_leskosek = {
+		#
+		#	allowed = {
+		#		original_tag = SVN
+		#	}
+		#	
+		#	traits = { prince_of_terror }	
+		#}
+
+		SVN_leon_rupnik = {
+		
+			picture = generic_political_advisor_europe_4
+		
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { fortification_engineer }
+		}
+		
+		SVN_bogumil_vosnjak = {
+		
+			picture = generic_democratic_europe
+		
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { democratic_reformer }
+		}
+		
+		
+		SVN_niko_silih = {
+		
+			picture = generic_political_advisor_europe_2
+		
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { communist_revolutionary }
+		}
+		
+		SVN_vuk_rupnik = {
+		
+			picture =  generic_political_advisor_europe_3
+		
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { fascist_demagogue }
+		}
+		
+		#SVN_marko_natlacen = {
+		#
+		#	allowed = {
+		#		original_tag = SVN
+		#	}
+		#	
+		#	traits = { smooth_talking_charmer }
+		#}	
+		
+
+		SVN_franc_kulovec = {
+		
+			picture = generic_political_advisor_europe_5
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { captain_of_industry }
+		}
+	
+	}
+
+
+	# MILITARY
+	army_chief = {
+
+		SVN_franc_krenner = {
+			
+			allowed = {
+				original_tag = SVN
+			}
+
+			traits = { army_chief_maneuver_2  }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SVN_leon_rupnik_army_chief = {
+			
+			#picture = SVN_leon_rupnik
+			
+			allowed = {
+				original_tag = SVN
+			}
+	
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		SVN_air_generic = {
+			
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SVN_air_generic2 = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = SVN
+			}
+		
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+
+		#SVN_naval_generic = {
+		#	
+		#	picture = generic_navy_europe_2
+		#	
+		#	allowed = {
+		#		original_tag = SVN
+		#	}
+		#
+		#	traits = { navy_chief_maneuver_2 }
+		#	
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}
+
+		#SVN_naval_generic2 = {
+		#	
+		#	picture = generic_navy_europe_3
+		#	
+		#	allowed = {
+		#		original_tag = SVN
+		#	}
+		#
+		#	traits = { navy_chief_decisive_battle_2 }
+		#	
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}
+		
+		SVN_djuro_jakcin = {
+
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { navy_screen_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	high_command = {
+		
+		SVN_vuk_rupnik_high_command = {
+
+			picture = SVN_vuk_rupnik
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { army_artillery_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SVN_ernest_peterlin = {
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { army_infantry_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		SVN_niko_silih_high_command = {
+
+			picture = SVN_niko_silih
+		
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { army_regrouping_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SVN_peter_rozman = {
+
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SVN_milko_vizjak = {
+
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		#SVN_djuro_jakcin = {
+		#
+		#	picture = generic_navy_europe_3
+		#	
+		#	allowed = {
+		#		original_tag = SVN
+		#	}
+		#	
+		#	traits = { navy_screen_2 }
+		#	
+		#	ai_will_do = {
+		#		factor = 1
+		#	}
+		#}
+	}
+
+
+	theorist = {
+		
+		SVN_random_army = {
+			
+			picture = generic_army_europe_3
+
+			allowed = {
+				original_tag = SVN
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+
+		SVN_random_navy = {
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+		SVN_random_air = {
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = SVN
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+	
+}

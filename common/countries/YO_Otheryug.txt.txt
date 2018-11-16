@@ -1,0 +1,7 @@
+
+graphical_culture = eastern_european_gfx
+graphical_culture_2d = eastern_european_2d
+
+color = { 255 240 40 }
+color = RGB { 255 240 40 }
+color_ui = rgb { 255 240 40 }

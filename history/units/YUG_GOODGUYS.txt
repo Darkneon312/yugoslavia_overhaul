@@ -1,0 +1,59 @@
+﻿### Copied from Yugoslavia ###
+
+units = {
+	division= {	
+		name = "Royalists"
+		location = 9821
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Royalists"
+		location = 937
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Royalists"
+		location = 797
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Royalists"
+		location = 11580
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Royalists"
+		location = 6643
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Royalists"
+		location = 11586
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Royalists"
+		location = 11586
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Royalists"
+		location = 797
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Royalist Cavalry"
+		location = 11586
+		division_template = "Konjička Divizija"
+		start_experience_factor = 0.3
+	}
+}
+

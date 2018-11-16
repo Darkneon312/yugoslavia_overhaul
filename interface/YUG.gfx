@@ -1,0 +1,252 @@
+spriteTypes = {
+
+	### MINISTERS AND POLITICAL FIGURES #####
+	
+	spriteType = {
+		name = "GFX_idea_YUG_milan_grol"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_milan_grol.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_milan_stojadinovic"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_milan_stojadinovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_peter_II"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_Peter_II.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_prince_paul"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_Prince_Paul.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_prince_paul_regency"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_prince_paul_regency.dds"
+	}
+	
+	### IDEAS ###
+	
+	spriteType = {
+		name = "GFX_idea_YUG_illiteracy"
+		texturefile = "gfx/interface/ideas/YUG/YUG_illiteracy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_min"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_min.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_saponia"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_saponia.dds"
+	}
+	
+	### NATIONAL FOCUSES ###
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_secert_police"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_secret_police.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_secert_police_shine"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_secret_police.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_secret_police.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_secret_police.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_limited_selfgoverment"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_limited_selfgoverment.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_limited_selfgoverment_shine"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_limited_selfgoverment.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_limited_selfgoverment.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_limited_selfgoverment.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_orthodox_church_support"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_orthodox_church_support.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_orthodox_church_support_shine"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_orthodox_church_support.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_orthodox_church_support.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_orthodox_church_support.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_coat_of_arms_serbia"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_coat_of_arms_serbia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_coat_of_arms_serbia_shine"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_coat_of_arms_serbia.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_coat_of_arms_serbia.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_coat_of_arms_serbia.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_yugoslavism"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslavism.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_coat_of_arms_serbia_shine"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslavism.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_yugoslavism.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/YUG/goal_YUG_yugoslavism.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	### EVENTS ###
+	
+	spriteType = {
+		name = "GFX_report_event_yug_1938_election"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_1938_election.dds"
+	}
+	
+	### DECISIONS ###
+	
+	spriteType = {
+		name = "GFX_decision_cat_YUG_partisan"
+		texturefile = "gfx/interface/decisions/YUG/decision_cat_YUG_partisan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_cat_greater_yugoslavia"
+		texturefile = "gfx/interface/decisions/YUG/decision_cat_greater_yugoslavia.dds"
+	}
+}

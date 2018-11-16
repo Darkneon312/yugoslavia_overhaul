@@ -1,0 +1,92 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			YUG = {
+				remove_state_core = 736
+				add_state_claim = 736
+				add_state_claim = 163
+			}
+			
+			163 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			
+			#CRO = {
+			#	
+			#}
+			
+			#ALB = {
+			#	create_country_leader = {
+			#		name = "Enver Hoxha"
+			#		desc = "POLITICS_ENVER_HOXHA_DESC"
+			#		picture = "Portrait_Albania_Enver_Hoxha.tga"
+			#		expire = "1965.1.1"
+			#		ideology = stalinism
+			#		traits = {
+			#			#
+			#		}
+			#	}
+			#}
+			
+			#SVN = {
+			#	add_state_core = 102
+			#}
+			
+			#BIH = {
+			#	add_state_core = 104
+			#}
+		}
+	}
+	
+	on_daily = {
+        effect = {
+			
+			every_country = {
+				if = {
+					limit = {
+						is_in_faction_with = YUG
+						YUG = {
+							has_government = communism
+							has_completed_focus = YUG_pan_slavic_workers_congress
+						}
+						NOT = { has_country_flag = pan_slavic_congress }
+					}
+					set_country_flag = pan_slavic_congress
+				}
+			}
+			
+			every_country = {
+				if = {
+					limit = {
+						is_in_faction_with = YUG
+						YUG = {
+							has_government = communism
+							has_completed_focus = YUG_pan_slavic_workers_congress
+						}
+						has_country_flag = pan_slavic_congress
+						NOT = { has_country_flag = pan_slavic_congress_research }
+					}
+					set_country_flag = pan_slavic_congress_research
+					add_to_tech_sharing_group = pan_slavic_research
+				}
+			}
+		}
+	}
+	
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = YGO
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = YGO
+				}
+				remove_core_of = YGO
+			}
+		}	
+	}
+}
