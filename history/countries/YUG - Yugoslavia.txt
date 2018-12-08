@@ -705,7 +705,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Milan Kostić" #SERB
-	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Milan_Kostic.tga"
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Milan_Kostic.tga"
 	traits = {  }
 	skill = 2
 	attack_skill = 1
