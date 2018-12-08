@@ -163,6 +163,17 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Ivo Lola Ribar"
+	desc = "POLITICS_JOSIP_BROZ_TITO_DESC"
+	picture = "gfx/leaders/CRO/Portrait_CRO_Ivo_Lola_Ribar.tga"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
 	name = "Ivan Šubašić"
 	desc = "POLITICS_JOSIP_BROZ_TITO_DESC"
 	picture = "gfx/leaders/CRO/Portrait_CRO_Ivan_Subasic.tga"
