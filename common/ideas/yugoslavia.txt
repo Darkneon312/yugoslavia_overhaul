@@ -842,7 +842,7 @@ ideas = {
 			}
 		}
 		
-		YUG_prince_paul_regency = {
+		YUG_yugoslav_regency = {
 			
 			#picture = YUG_Prince_Paul
 			

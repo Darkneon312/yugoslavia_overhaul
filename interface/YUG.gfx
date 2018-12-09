@@ -23,8 +23,8 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_prince_paul_regency"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_prince_paul_regency.dds"
+		name = "GFX_idea_YUG_yugoslav_regency"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_yugoslav_regency.dds"
 	}
 	
 	### IDEAS ###

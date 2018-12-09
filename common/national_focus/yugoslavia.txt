@@ -1304,7 +1304,7 @@ focus_tree = {
 			swap_ideas = { remove_idea = YUG_idea_peasant_councils add_idea = YUG_idea_empowered_peasant_councils }
 			
 			remove_ideas = {
-				YUG_prince_paul_regency
+				YUG_yugoslav_regency
 				#YUG_marsallie_assassination
 			}
 		}
