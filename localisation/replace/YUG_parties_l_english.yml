@@ -14,15 +14,15 @@
  ### CRO ###
  
  CRO_fascism_party:0 "Ustaša"
- CRO_fascism_party_long:0 "Ustasha – Croatian Revolutionary Movement"
+ CRO_fascism_party_long:0 "Ustasha – Hrvatski revolucionarni pokret"
  #CRO_democratic_party:0 "Demokratska Stranka"
  #CRO_democratic_party_long:0 "Croatian Democratic Party"
  CRO_democratic_party:0 "HSS"
- CRO_democratic_party_long:0 "Croatian Peasant Party"
+ CRO_democratic_party_long:0 "Hrvatska seljačka stranka"
  CRO_neutrality_party:0 "HSS"
- CRO_neutrality_party_long:0 "Croatian Peasant Party"
+ CRO_neutrality_party_long:0 "Hrvatska seljačka stranka"
  CRO_communism_party:0 "SKH"
- CRO_communism_party_long:0 "League of Communists of Croatia"
+ CRO_communism_party_long:0 "Savez komunista Hrvatske"
  
  CRO_YUG_subject:0 "Banovina of Croatia"
  CRO_YUG_subject_DEF:0 "The Banovina of Croatia"
