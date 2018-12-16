@@ -2137,10 +2137,10 @@ focus_tree = {
 
 		completion_reward = {
 		
-			swap_ideas = {
-				remove_idea = YUG_agriculutrul_society
-				add_idea = YUG_industrialization_program_idea
-			}
+			#swap_ideas = {
+			#	remove_idea = YUG_agriculutrul_society
+			#	add_idea = YUG_industrialization_program_idea
+			#}
 			
 			add_tech_bonus = {
 				bonus = 0.5
@@ -2385,10 +2385,10 @@ focus_tree = {
 
 		completion_reward = {
 		
-			swap_ideas = {
-				remove_idea = YUG_agriculutrul_society
-				add_idea = YUG_agricultural_development_idea
-			}
+			#swap_ideas = {
+			#	remove_idea = YUG_agriculutrul_society
+			#	add_idea = YUG_agricultural_development_idea
+			#}
 			
 			add_tech_bonus = {
 				bonus = 0.5

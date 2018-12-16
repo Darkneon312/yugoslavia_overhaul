@@ -27,7 +27,7 @@ if = {
 }
 
 add_ideas = {
-	YUG_agriculutrul_society
+	#YUG_agriculutrul_society
 }
 
 set_party_name = { 

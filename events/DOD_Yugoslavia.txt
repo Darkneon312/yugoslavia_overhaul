@@ -154,6 +154,7 @@ country_event = {
 			#		#
 			#	}
 			#}
+			
 			create_country_leader = {
 				name = "Dušan Simović"
 				desc = "POLITICS_PETER_II_DESC"
@@ -164,6 +165,7 @@ country_event = {
 					#
 				}
 			}
+			
 			add_ideas = YUG_peter_II
 		}
 	}
