@@ -311,7 +311,19 @@ country_event = {
 					target = YUG
 					type = annex_everything
 				}
-				load_oob = "CRO_YUG_independence"
+				#load_oob = "CRO_YUG_independence"
+			}
+			if = {
+				limit = {
+					YUG = {
+						NOT = {
+							has_completed_focus = YUG_establish_the_banovina_of_croatia
+						}
+					}
+				}			
+				CRO = {
+					load_oob = "CRO_YUG_independence"
+				}
 			}
 		}
 	}
@@ -933,6 +945,7 @@ country_event = {
 			has_war_with = YUG
 		}
 		YUG = {
+			exists = yes
 			is_in_faction = no
 		}
 		FRA = {
@@ -959,10 +972,7 @@ country_event = {
 		ai_chance = {
 			factor = 10
 		}
-		
 	}
-		
-	
 }
 
 #Yugoslavia pressured by Germany - third event
@@ -981,8 +991,6 @@ country_event = {
 		}
 		
 	}
-		
-	
 }
 
 #Yugoslavia pressured by Germany - War!
@@ -997,8 +1005,8 @@ country_event = {
 	trigger = {
 		tag = GER
 		YUG = {
-			is_in_faction = no 
 			exists = yes
+			is_in_faction = no
 			NOT = {
 				focus_progress = { focus = YUG_join_axis progress > 0 } #that would just be mean
 			}
@@ -1014,17 +1022,13 @@ country_event = {
 			target = YUG
 			type = puppet_wargoal_focus
 		}
-		
 	}	
 	option = { # not interested
 		name = DOD_yugoslavia.36.b
 		ai_chance = {
 			factor = 10
 		}
-		
 	}
-		
-	
 }
 
 #Yugoslavia pressured by Britain - Balkan Strategy
@@ -1042,8 +1046,8 @@ country_event = {
 			factor = 70
 		}
 		YUG = { country_event = DOD_yugoslavia.41 }
-		
-	}	
+	}
+	
 	option = { # not interested
 		name = DOD_yugoslavia.40.b
 		ai_chance = {
@@ -1051,8 +1055,6 @@ country_event = {
 		}
 		
 	}
-		
-	
 }
 
 #Yugoslavia pressured by Britain - First event
@@ -1063,13 +1065,12 @@ country_event = {
 	picture = GFX_report_event_french_british_officers
 	
 	is_triggered_only = yes
-		
+
 	option = { # not that bad yet
 		name = DOD_yugoslavia.41.a
 		ai_chance = {
 			factor = 30
 		}
-		
 	}	
 }
 
@@ -1088,8 +1089,8 @@ country_event = {
 			factor = 70
 		}
 		YUG = { country_event = DOD_yugoslavia.43 }
-		
-	}	
+	}
+	
 	option = { # not interested
 		name = DOD_yugoslavia.42.b
 		ai_chance = {
@@ -1097,8 +1098,6 @@ country_event = {
 		}
 		
 	}
-		
-	
 }
 
 #Yugoslavia pressured by Britain - Second event
@@ -1172,7 +1171,6 @@ country_event = {
 		ai_chance = {
 			factor = 30
 		}
-		
 	}	
 }
 
@@ -1186,8 +1184,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes 
 	trigger = {
-		YUG = { is_in_faction = no }
-		YUG = { exists = yes }
+		YUG = {
+			exists = yes
+			is_in_faction = no
+		}
 		has_war_with = GER
 	}
 	

@@ -1827,55 +1827,12 @@ focus_tree = {
 	############################
 	
 	focus = {
-		id = YUG_expand_the_mining_industry
-		icon = GFX_goal_generic_construct_civilian
-		#prerequisite = { focus = YUG_industrialization_program }
-		x = 24
-		y = 0
-		#relative_position_id = YUG_industrialization_program
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 70
-			modifier = {
-				factor = 1.2
-				OR = {
-					has_completed_focus = YUG_join_comintern
-					has_completed_focus = YUG_yugoslavian_path_to_communism
-				}
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = YUG_idea_expanded_mining_industry
-		}
-	}
-	
-	focus = {
 		id = YUG_continue_stojadinovic_economic_policy
 		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = YUG_expand_the_mining_industry }
-		mutually_exclusive = { focus = YUG_new_economic_policy }
-		x = -1
-		y = 1
-		relative_position_id = YUG_expand_the_mining_industry
+		#mutually_exclusive = { focus = YUG_new_economic_policy }
+		x = 24
+		y = 0
+		#relative_position_id = YUG_expand_the_mining_industry
 
 		cost = 10
 
@@ -1917,201 +1874,15 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = YUG_new_economic_policy
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = YUG_expand_the_mining_industry }
-		mutually_exclusive = { focus = YUG_continue_stojadinovic_economic_policy }
-		x = 1
-		y = 1
-		relative_position_id = YUG_expand_the_mining_industry
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 70
-			modifier = {
-				factor = 1.2
-				OR = {
-					has_completed_focus = YUG_join_comintern
-					has_completed_focus = YUG_yugoslavian_path_to_communism
-				}
-			}
-		}
-		
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_political_power = -20
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.25
-				uses = 4
-				category = industry
-				category = electronics
-			}
-		}
-	}
-	
-	#mining / both
-	focus = {
-		id = YUG_rare_minerals_exploitation
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = YUG_industrialization_program focus = YUG_agricultural_development }
-		x = 0
-		y = 3
-		relative_position_id = YUG_expand_the_mining_industry
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-			modifier = {
-					factor = 1.2
-					OR = {
-						has_completed_focus = YUG_join_comintern
-						has_completed_focus = YUG_yugoslavian_path_to_communism
-					}
-			}
-		}
-
-		available = {
-			OR = {
-				has_full_control_of_state = 105
-				has_full_control_of_state = 109
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			
-			if = {
-				limit = {
-					has_full_control_of_state = 109
-				}
-				103 = {
-					add_resource = {
-						type = aluminium
-						amount = 8
-					}
-				}
-			}
-			
-			if = {
-				limit = {
-					has_full_control_of_state = 105
-				}
-				105 = {
-					add_resource = {
-						type = tungsten
-						#amount = 8
-						amount = 12
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					has_full_control_of_state = 109
-				}
-				109 = {
-					add_resource = {
-						type = chromium
-						#amount = 8
-						amount = 12
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = YUG_exploit_the_pannonian_deposits
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = YUG_rare_minerals_exploitation }
-		x = 0
-		y = 1
-		relative_position_id = YUG_rare_minerals_exploitation
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-			modifier = {
-					factor = 1.2
-					OR = {
-						has_completed_focus = YUG_join_comintern
-						has_completed_focus = YUG_yugoslavian_path_to_communism
-					}
-			}
-		}
-
-		available = {
-			has_full_control_of_state = 45
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_full_control_of_state = 45
-				}
-				45 = {
-					add_resource = {
-						type = oil
-						#amount = 8
-						amount = 10
-					}
-				}
-			}
-		}
-	}
-	
 	# milan industry
 	focus = {
 		id = YUG_industrialization_program
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = YUG_continue_stojadinovic_economic_policy }
 		#mutually_exclusive = { focus = YUG_agricultural_development }
-		x = -3
-		y = 2
-		relative_position_id = YUG_expand_the_mining_industry
+		x = 0
+		y = 1
+		relative_position_id = YUG_continue_stojadinovic_economic_policy
 
 		cost = 10
 
@@ -2187,7 +1958,7 @@ focus_tree = {
 		prerequisite = { focus = YUG_industrialization_program }
 		mutually_exclusive = { focus = YUG_develop_civilian_industry }
 		x = -1
-		y = 2
+		y = 1
 		relative_position_id = YUG_industrialization_program
 
 		cost = 10
@@ -2238,7 +2009,7 @@ focus_tree = {
 		prerequisite = { focus = YUG_industrialization_program }
 		mutually_exclusive = { focus = YUG_develop_military_industry }
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = YUG_industrialization_program
 
 		cost = 10
@@ -2313,247 +2084,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_six_year_plan
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = YUG_develop_civilian_industry focus = YUG_develop_military_industry }
-		x = 0
-		y = 3
-		relative_position_id = YUG_industrialization_program
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 80
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = YUG_six_year_plan_idea
-				days = 2160
-			}
-		}
-	}
-	
-	#agriculture
-	focus = {
-		id = YUG_agricultural_development
-		icon = GFX_goal_generic_consumer_goods
-		#prerequisite = { focus = YUG_continue_stojadinovic_economic_policy }
-		prerequisite = { focus = YUG_new_economic_policy }
-		#mutually_exclusive = { focus = YUG_industrialization_program }
-		x = 3
-		y = 2
-		relative_position_id = YUG_expand_the_mining_industry
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 80
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		
-			#swap_ideas = {
-			#	remove_idea = YUG_agriculutrul_society
-			#	add_idea = YUG_agricultural_development_idea
-			#}
-			
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
-			
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = YUG_farming_space
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = YUG_agricultural_development }
-		x = -1
-		y = 2
-		relative_position_id = YUG_agricultural_development
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-			modifier = {
-				factor = 2
-				is_in_faction_with = GER
-			}
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			
-			add_ideas = YUG_farming_space_idea
-			
-			random_owned_controlled_state = {
-				#prioritize = { 109 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			random_owned_controlled_state = {
-				#prioritize = { 109 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			random_owned_controlled_state = {
-				#prioritize = { 109 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			random_owned_controlled_state = {
-				#prioritize = { 109 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = YUG_foreign_owned_land
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = YUG_agricultural_development }
-		x = 1
-		y = 2
-		relative_position_id = YUG_agricultural_development
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-			modifier = {
-				factor = 2
-				is_in_faction_with = GER
-			}
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = YUG_foreign_owned_land_idea
-			
-			add_offsite_building = { type = industrial_complex level = 3 }
-		}
-	}
-	
-	focus = {
 		id = YUG_expand_the_university_of_zagreb
 		icon = GFX_focus_research
-		prerequisite = { focus = YUG_develop_civilian_industry focus = YUG_develop_military_industry focus = YUG_farming_space focus = YUG_foreign_owned_land }
-		x = 0
-		y = 5
-		relative_position_id = YUG_expand_the_mining_industry
+		prerequisite = { focus = YUG_develop_civilian_industry focus = YUG_develop_military_industry }
+		x = -2
+		y = 2
+		relative_position_id = YUG_industrialization_program
 
 		cost = 10
 
@@ -2587,15 +2123,53 @@ focus_tree = {
 			#}
 		}
 	}
+	
+	focus = {
+		id = YUG_six_year_plan
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = YUG_develop_civilian_industry focus = YUG_develop_military_industry }
+		x = 0
+		y = 4
+		relative_position_id = YUG_continue_stojadinovic_economic_policy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = YUG_six_year_plan_idea
+				days = 2160
+			}
+		}
+	}
 
 	focus = {
 		id = YUG_integrated_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = YUG_expand_the_university_of_zagreb }
+		prerequisite = { focus = YUG_six_year_plan }
 		mutually_exclusive = { focus = YUG_improve_serbian_rail_network }
 		x = -1
 		y = 1
-		relative_position_id = YUG_expand_the_university_of_zagreb
+		relative_position_id = YUG_six_year_plan
 
 		cost = 10
 
@@ -2646,8 +2220,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = YUG_integrated_rail_network focus = YUG_improve_serbian_rail_network }
 		x = 0
-		y = 7
-		relative_position_id = YUG_expand_the_mining_industry
+		y = 6
+		relative_position_id = YUG_continue_stojadinovic_economic_policy
 
 		cost = 10
 
@@ -2841,11 +2415,11 @@ focus_tree = {
 	focus = {
 		id = YUG_improve_serbian_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = YUG_expand_the_university_of_zagreb }
+		prerequisite = { focus = YUG_six_year_plan }
 		mutually_exclusive = { focus = YUG_integrated_rail_network }
 		x = 1
 		y = 1
-		relative_position_id = YUG_expand_the_university_of_zagreb
+		relative_position_id = YUG_six_year_plan
 
 		cost = 10
 
@@ -3082,6 +2656,183 @@ focus_tree = {
 		}
 	}
 
+	#mining
+	focus = {
+		id = YUG_expand_the_mining_industry
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = YUG_industrialization_program }
+		x = 3
+		y = 1
+		relative_position_id = YUG_industrialization_program
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				factor = 1.2
+				OR = {
+					has_completed_focus = YUG_join_comintern
+					has_completed_focus = YUG_yugoslavian_path_to_communism
+				}
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_expanded_mining_industry
+		}
+	}
+	
+	focus = {
+		id = YUG_rare_minerals_exploitation
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = YUG_expand_the_mining_industry }
+		x = 0
+		y = 1
+		relative_position_id = YUG_expand_the_mining_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+			}
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 105
+				has_full_control_of_state = 109
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			
+			if = {
+				limit = {
+					has_full_control_of_state = 109
+				}
+				103 = {
+					add_resource = {
+						type = aluminium
+						amount = 8
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					has_full_control_of_state = 105
+				}
+				105 = {
+					add_resource = {
+						type = tungsten
+						#amount = 8
+						amount = 12
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_full_control_of_state = 109
+				}
+				109 = {
+					add_resource = {
+						type = chromium
+						#amount = 8
+						amount = 12
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_exploit_the_pannonian_deposits
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = YUG_rare_minerals_exploitation }
+		x = 0
+		y = 1
+		relative_position_id = YUG_rare_minerals_exploitation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+			}
+		}
+
+		available = {
+			has_full_control_of_state = 45
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 45
+				}
+				45 = {
+					add_resource = {
+						type = oil
+						#amount = 8
+						amount = 10
+					}
+				}
+			}
+		}
+	}
 	
 	############################
 	######## AIR FORCE #########
