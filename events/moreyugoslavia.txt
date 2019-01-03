@@ -214,7 +214,7 @@ country_event = {
 	trigger = {
 		tag = YUG
 		date > 1939.2.5
-		has_idea = YUG_prince_paul_regency
+		has_idea = YUG_yugoslav_regency
 		has_idea = YUG_idea_croatian_opposition
 		NOT = {
 			has_country_flag = vladko_elected
@@ -293,7 +293,7 @@ country_event = {
 		date > 1938.12.1
 		date < 1939.1.1
 		has_government = neutrality
-		has_idea = YUG_prince_paul_regency
+		has_idea = YUG_yugoslav_regency
 	}
 
 	mean_time_to_happen = { days = 7 }

@@ -31,8 +31,8 @@ YUG_historical_plan = {
 		YUG_develop_civilian_industry
 		YUG_greater_yugoslavia
 		YUG_six_year_plan
-		YUG_small_arms
 		YUG_establish_the_banovina_of_croatia
+		YUG_small_arms
 		YUG_expand_the_university_of_zagreb
 		YUG_domestic_artillery_production
 		YUG_expand_the_serbian_shipyards

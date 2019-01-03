@@ -42,6 +42,12 @@ set_party_name = {
 	long_name = YUG_ZBR_fascism_party_long
 }
 
+ai_strategy = {
+	type = invade
+	id = "BUL"			
+	value = -2000
+}
+
 set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
