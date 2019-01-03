@@ -115,6 +115,7 @@ country_event = {
 	}
 }
 
+### Peter II coronation ###
 country_event = {
 	id = moreyugoslavia.1
 	title = moreyugoslavia.1.t
@@ -138,7 +139,6 @@ country_event = {
 	
 	option = {
 		name = moreyugoslavia.1.a
-		
 		ai_chance = {
 			factor = 90
 		}
@@ -154,7 +154,7 @@ country_event = {
 			}
 		}
 		
-		set_party_name = { 
+		set_party_name = {
 			ideology = neutrality 
 			long_name = YUG_neutrality_party_2 
 			name = YUG_neutrality_party_2 
@@ -168,6 +168,7 @@ country_event = {
 	}
 }
 
+### Ljubomir Davidovic dies ###
 country_event = {
 	id = moreyugoslavia.2
 	title = moreyugoslavia.2.t
@@ -185,7 +186,6 @@ country_event = {
 	
 	option = {
 		name = moreyugoslavia.2.a
-		
 		ai_chance = {
 			factor = 90
 		}
@@ -203,6 +203,7 @@ country_event = {
 	}
 }
 
+### Dragiša Cvetković comes to power ###
 country_event = {
 	id = moreyugoslavia.3
 	title = moreyugoslavia.3.t
@@ -225,7 +226,6 @@ country_event = {
 	
 	option = {
 		name = moreyugoslavia.3.a
-		
 		ai_chance = {
 			factor = 90
 		}
@@ -245,38 +245,28 @@ country_event = {
 	}
 }
 
+### Attempted Assassination of Milan Stojadinovic ###
 country_event = {
-	id = moreyugoslaviapolitics.1
-	title = moreyugoslaviapolitics.1.t
-	desc = moreyugoslaviapolitics.1.d
-	picture = GFX_report_event_generic_parliament
-	
-	fire_only_once = yes
+	id = moreyugoslavia.4
+	title = moreyugoslavia.4.t
+	desc = moreyugoslavia.4.d
+	picture = GFX_report_event_milan_stojadinovic
 
-	is_triggered_only = yes
-	
-	option = {
-		name = moreyugoslaviapolitics.1.a
-		
-		ai_chance = {
-			factor = 50
-		}
+	trigger = {
+		tag = YUG
+		date > 1936.3.4
+		date < 1936.3.8
 	}
+
+	fire_only_once = yes
 	
 	option = {
-		name = moreyugoslaviapolitics.1.b
-		
+		name = moreyugoslavia.4.a
 		ai_chance = {
-			factor = 25
+			factor = 90
 		}
-	}
-	
-	option = {
-		name = moreyugoslaviapolitics.1.c
 		
-		ai_chance = {
-			factor = 25
-		}
+		add_stability = -0.05
 	}
 }
 
@@ -300,7 +290,6 @@ country_event = {
 	
 	option = {
 		name = moreyugoslaviaelection.1.a
-		
 		ai_chance = {
 			factor = 80
 		}
@@ -312,7 +301,6 @@ country_event = {
 	
 	option = {
 		name = moreyugoslaviaelection.1.b
-		
 		ai_chance = {
 			factor = 20
 		}
@@ -334,46 +322,6 @@ country_event = {
 		
 		add_political_power = 10
 	}
-}
-
-country_event = {
-	id = moreyugoslaviacommunist.1
-	title = moreyugoslaviacommunist.1.t
-	desc = moreyugoslaviacommunist.1.d
-	picture = GFX_report_event_generic_parliament
-
-	is_triggered_only = yes
-	
-	option = {
-		name = moreyugoslaviacommunist.1.a
-		
-		ai_chance = {
-			factor = 90
-		}
-		
-		set_politics = { 
-			ruling_party = communism 
-			elections_allowed = no
-		}
-		if = {
-			limit = {
-				communism < 0.3
-			}
-			add_popularity = { 
-				ideology = communism 
-				popularity = 0.3
-			}
-		}
-		swap_ideas = { 
-			remove_idea = YUG_idea_peasant_councils 
-			add_idea = YUG_idea_empowered_peasant_councils 
-		}
-		add_timed_idea = { idea = reign_of_terror days = 730 }
-	}
-	
-	#option = {
-	#	name = moreyugoslaviacommunist.1.b
-	#}
 }
 
 country_event = {
