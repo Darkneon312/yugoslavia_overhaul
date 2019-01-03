@@ -793,6 +793,18 @@ create_field_marshal = {
 	id = 913
 }
 
+create_corps_commander = {
+	name = "Petar Živković"
+	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Petar_Zivkovic.tga"
+	traits = { politically_connected }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 2022
+}
+
 create_navy_leader = {
 	name = "Franjo Vučer"
 	portrait_path = "gfx/leaders/SVN/Portrait_SVN_Franjo_Vucer.tga"
