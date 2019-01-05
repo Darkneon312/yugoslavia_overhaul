@@ -238,17 +238,6 @@ set_politics = {
 }
 set_stability = 0.6
 
-#create_country_leader = {
-#	name = "Petar Bojović"
-#	desc = "POLITICS_PETAR_BOJOVIC_DESC"
-#	picture = "gfx/leaders/SER/Portrait_Serbia_Petar_Bojovic.dds"
-#	expire = "1965.1.1"
-#	ideology = despotism
-#	traits = { 
-#		#
-#	}
-#}
-
 create_country_leader = {
 	name = "Petar II"
 	desc = "POLITICS_PETER_II_DESC"
@@ -351,7 +340,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = leninism
 	traits = {
-		dictator
+		#
 	}
 }
 
