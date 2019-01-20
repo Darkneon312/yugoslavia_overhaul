@@ -36,7 +36,7 @@
  moreyugoslaviaoccupation.1.t:0 "The Yugoslavian Question"
  moreyugoslaviaoccupation.1.d:0 "The Yugoslav Government has decided to officially surrender but refuse to cooperate in any way. However the autonomous governments have decided to go against Yugoslavia and are willing to assist us. How should we proceed?"
  moreyugoslaviaoccupation.1.a:0 "Split the regions accordingly."
- moreyugoslaviaoccupation.2.b:0 "Occupy them!"
+ moreyugoslaviaoccupation.1.b:0 "Occupy them!"
  
  moreyugoslaviapolitics.1.t:0 "The Status of the Regency"
  moreyugoslaviapolitics.1.d:0 " "
@@ -64,14 +64,33 @@
  YUG_JRZ_neutrality_party:0 "JRZ"
  YUG_JRZ_neutrality_party_long:0 "Jugoslovenska Radikalna Zajednica"
  YUG_HSS_neutrality_party:0 "HSS"
- YUG_HSS_neutrality_party_long:0 "Hrvatska seljačka stranka"
+ YUG_HSS_neutrality_party_long:0 "Hrvatska Seljačka Stranka"
  
  YUG_UST_fascism_party:0 "Ustaša"
- YUG_UST_fascism_party_long:0 "Ustaša – Hrvatski revolucionarni pokret"
+ YUG_UST_fascism_party_long:0 "Ustaša – Hrvatski Revolucionarni Pokret"
  YUG_ZBR_fascism_party:0 "ZBOR"
- YUG_ZBR_fascism_party_long:0 "Jugoslovenski narodni pokret Zbor"
+ YUG_ZBR_fascism_party_long:0 "Jugoslovenski Narodni pokret Zbor"
+ 
+ 
+ SER_KMV_fascism_party:0 "Komesarska vlada"
+ SER_KMV_fascism_party_long:0 "Komesarska vlada"
  
  ##### COUNTRY NAMES ######
+ 
+ #cosmetic
+ 
+ KMV_fascism:0 "Commissioner Government"
+ KMV_fascism_DEF:0 "The Commissioner Government"
+ KMV_democratic:0 "Republic of Serbia"
+ KMV_democratic_DEF:0 "The Republic of Serbia"
+ KMV_communism:0 "Socialist Republic of Serbia"
+ KMV_communism_DEF:0 "The Socialist Republic of Serbia"
+ KMV_neutrality:0 "Kingdom of Serbia"
+ KMV_neutrality_DEF:0 "The Kingdom of Serbia"
+ KMV_fascism_ADJ:0 "Serbian"
+ KMV_democratic_ADJ:0 "Serbian"
+ KMV_communism_ADJ:0 "Serbian"
+ KMV_neutrality_ADJ:0 "Serbian"
  
  #BIH
  

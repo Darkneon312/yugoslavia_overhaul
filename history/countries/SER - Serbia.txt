@@ -151,10 +151,21 @@ create_country_leader = {
 	}
 }
 
+#create_country_leader = {
+#	name = "Milan Nedić"
+#	desc = ""
+#	picture = "gfx/leaders/YUG/Portrait_YUG_Milan_Nedic.tga"
+#	expire = "1965.1.1"
+#	ideology = fascism_ideology
+#	traits = {
+#		#
+#	}
+#}
+
 create_country_leader = {
-	name = "Milan Nedić"
+	name = "Milan Aćimović"
 	desc = ""
-	picture = "gfx/leaders/YUG/Portrait_YUG_Milan_Nedic.tga"
+	picture = "gfx/leaders/SER/Portrait_SER_Milan_Acimovic.tga"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {

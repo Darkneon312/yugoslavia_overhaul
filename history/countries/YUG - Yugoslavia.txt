@@ -794,6 +794,18 @@ create_corps_commander = {
 	id = 2022
 }
 
+create_corps_commander = {
+	name = "Konstantin Kosta Mušicki"
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Konstantin_Musicki.tga"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 2023
+}
+
 create_navy_leader = {
 	name = "Franjo Vučer"
 	portrait_path = "gfx/leaders/SVN/Portrait_SVN_Franjo_Vucer.tga"

@@ -334,6 +334,7 @@ country_event = {
 	
 	trigger = {
 		tag = GER
+		has_government = fascism
 		OR = {
 			GER = {
 				has_full_control_of_state = 107
@@ -531,6 +532,13 @@ country_event = {
 			#transfer_state = 766
 			#transfer_state = 767
 			load_oob = "SER_GER_puppet"
+			
+			set_cosmetic_tag = KMV
+			set_party_name = { 
+				ideology = fascism
+				name = SER_KMV_fascism_party
+				long_name = SER_KMV_fascism_party_long
+			}
 		}
 		
 		puppet = SER
