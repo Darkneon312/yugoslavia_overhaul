@@ -409,10 +409,9 @@ country_event = {
 		ai_chance = {
 			factor = 30
 		}	
-	}	
-		
-	
+	}
 }
+
 #Yugoslavia wants to buy planes - Major nation sells some fighters
 country_event = {
 	id = DOD_yugoslavia.21
@@ -448,10 +447,9 @@ country_event = {
 			factor = 30
 		}
 		add_opinion_modifier = { target = FROM modifier = YUG_sold_planes}	
-	}	
-		
-	
+	}
 }
+
 #Yugoslavia wants to buy planes - Major nation sells some fighters
 country_event = {
 	id = DOD_yugoslavia.23
@@ -637,9 +635,7 @@ country_event = {
 			}
 		}
 		add_opinion_modifier = { target = FROM modifier = YUG_sold_planes}	
-	}	
-		
-	
+	}
 }
 
 #Yugoslavia wants to buy planes - Major nation sells some bombers
@@ -827,10 +823,9 @@ country_event = {
 			}
 		}
 		add_opinion_modifier = { target = FROM modifier = YUG_sold_planes}	
-	}	
-		
-	
+	}
 }
+
 #Yugoslavia pressured by Germany - Anschluss
 country_event = {
 	id = DOD_yugoslavia.30
@@ -858,8 +853,6 @@ country_event = {
 		}
 		
 	}
-		
-	
 }
 
 #Yugoslavia pressured by Germany - First event
@@ -878,8 +871,6 @@ country_event = {
 		}
 		
 	}
-		
-	
 }
 
 #Yugoslavia pressured by Germany - Fate of CZE
@@ -909,8 +900,6 @@ country_event = {
 		}
 		
 	}
-		
-	
 }
 
 #Yugoslavia pressured by Germany - Second event
@@ -1016,7 +1005,7 @@ country_event = {
 	option = { # put the squeeze on them
 		name = DOD_yugoslavia.36.a
 		ai_chance = {
-			factor = 90
+			factor = 10
 		}
 		declare_war_on = {
 			target = YUG
@@ -1026,7 +1015,7 @@ country_event = {
 	option = { # not interested
 		name = DOD_yugoslavia.36.b
 		ai_chance = {
-			factor = 10
+			factor = 90
 		}
 	}
 }
@@ -1194,7 +1183,7 @@ country_event = {
 	option = { # put the squeeze on them
 		name = DOD_yugoslavia.46.a
 		ai_chance = {
-			factor = 90
+			factor = 10
 		}
 		declare_war_on = {
 			target = YUG
@@ -1205,7 +1194,7 @@ country_event = {
 	option = { # not interested
 		name = DOD_yugoslavia.46.b
 		ai_chance = {
-			factor = 10
+			factor = 90
 		}	
 	}
 }
