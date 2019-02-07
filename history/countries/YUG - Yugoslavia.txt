@@ -44,7 +44,7 @@ set_party_name = {
 
 ai_strategy = {
 	type = invade
-	id = "BUL"			
+	id = "BUL"
 	value = -2000
 }
 
@@ -470,7 +470,8 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Milan Nedić"
-	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Milan_Nedic.tga"
+	#portrait_path = "gfx/leaders/SER/Portrait_YUG_Milan_Nedic.tga"
+	portrait_path = "gfx/leaders/SER/Portrait_YUG_Milan_Nedic_army.tga"
 	traits = { career_officer harsh_leader trait_mountaineer }
 	attack_skill = 3
 	defense_skill = 1
