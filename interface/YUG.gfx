@@ -12,6 +12,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_milan_stojadinovic.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_idea_YUG_petar_bojovic"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_petar_bojovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_petar_zivkovic_army"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_petar_zivkovic_army.dds"
+	}
+	
 	
 	spriteType = {
 		name = "GFX_idea_YUG_peter_II"

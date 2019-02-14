@@ -186,6 +186,12 @@
  YUG_ljubomir_maric_high_command:0 "Ljubomir Marić"
  YUG_arso_jovanovic_infantry:0 "Arso Jovanović"
  YUG_marijan_polic_navy_chief:0 "Marijan Polić"
+ YUG_petar_bojovic:0 "Petar Bojović"
+ YUG_petar_bojovic_theorist:0 "Petar Bojović"
+ YUG_petar_zivkovic:0 "Petar Zivković"
+ YUG_petar_zivkovic_army:0 "Petar Zivković"
+ YUG_dusan_simovic_theorist:0 "Dušan Simović"
+ 
  YUG_min:0 "Mašinska Industrija Niš"
  YUG_radio_station_zagreb:0 "Radio Stanica Zagreb"
  YUG_koncar_elektroindustrija:0 "Končar Elektroindustrija"
@@ -199,6 +205,7 @@
  ##### COUNTRY FLAG LOCALISATION ###
  
  vladko_elected:0 "Vladko Maček is elected as PM in 1938 Election"
+ bojovic_passed_away:0 "Bojović has passed away"
  
  ##### OPINIONS MODIFIERS ###
  

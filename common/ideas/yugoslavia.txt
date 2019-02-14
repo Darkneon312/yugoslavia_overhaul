@@ -1432,21 +1432,28 @@ ideas = {
 			
 			traits = { military_theorist }
 		}
+		
+		YUG_petar_bojovic_theorist = {
 
-		YUG_marijan_polic = {
-	
-	
 			allowed = {
 				original_tag = YUG
 			}
 			
-			picture = generic_political_advisor_europe_2
-			
-			research_bonus = {
-				naval_doctrine = 0.07
+			available = {
+				NOT = {
+					has_country_flag = bojovic_passed_away
+				}
 			}
 			
-			traits = { naval_theorist }
+			cost = 250
+			
+			picture = YUG_petar_bojovic
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.10
+			}
+			
+			traits = { grand_battle_plan_expert }
 		}
 		
 		YUG_milan_nedic_theorist = {
@@ -1490,9 +1497,89 @@ ideas = {
 				factor = 1
 			}
 		}
+		
+		YUG_dusan_simovic_theorist = {
+			
+			picture = YUG_dusan_simovic
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_marijan_polic = {
+	
+	
+			allowed = {
+				original_tag = YUG
+			}
+			
+			picture = generic_political_advisor_europe_2
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
+	
 	# MILITARY
 	army_chief = {
+	
+		YUG_petar_zivkovic_army = {
+			
+			picture = generic_army_europe_6
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		
+		YUG_petar_bojovic = {
+
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				NOT = {
+					has_country_flag = bojovic_passed_away
+				}
+			}
+			
+			picture = generic_army_europe_5
+			
+			traits = { army_entrenchment_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 
 		YUG_milutin_nedic = {
 			
@@ -1501,8 +1588,6 @@ ideas = {
 			allowed = {
 				original_tag = YUG
 			}
-			
-
 			
 			traits = { army_chief_offensive_2 }
 			
@@ -1519,13 +1604,11 @@ ideas = {
 				original_tag = YUG
 			}
 			
-
-			
 			#traits = { army_chief_defensive_2 }
 			
 			#research_bonus = { military_police_tech = 0.25 }
 			
-			traits = { army_chief_defensive_2 army }
+			traits = { army_chief_defensive_2 }
 			
 			ai_will_do = {
 				factor = 1

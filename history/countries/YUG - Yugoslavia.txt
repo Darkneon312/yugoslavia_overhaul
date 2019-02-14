@@ -8,6 +8,8 @@ add_ideas = {
 	YUG_yugoslav_regency
 	#YUG_marsallie_assassination
 	#YUG_illiteracy
+	
+	YUG_petar_zivkovic_army
 }
 
 add_ideas = {
@@ -786,11 +788,11 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Petar Živković"
 	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Petar_Zivkovic.tga"
-	traits = { politically_connected }
-	skill = 4
-	attack_skill = 2
+	traits = { politically_connected media_personality }
+	skill = 2
+	attack_skill = 1
 	defense_skill = 2
-	planning_skill = 2
+	planning_skill = 1
 	logistics_skill = 2
 	id = 2022
 }
