@@ -56,6 +56,7 @@
  grol_publisher:0 "Magazine Publisher"
  croatian_question_incompetence:0 "Croatian Question Incompetence"
  titoism:0 "Titoism"
+ famous_poet:0 "Famous Poet"
  
  ##### PARTIES ######
  
@@ -191,6 +192,7 @@
  YUG_petar_zivkovic:0 "Petar Zivković"
  YUG_petar_zivkovic_army:0 "Petar Zivković"
  YUG_dusan_simovic_theorist:0 "Dušan Simović"
+ YUG_vladimir_nazor:0 "Vladimir Nazor"
  
  YUG_min:0 "Mašinska Industrija Niš"
  YUG_radio_station_zagreb:0 "Radio Stanica Zagreb"

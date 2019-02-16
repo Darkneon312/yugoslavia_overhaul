@@ -60,9 +60,8 @@ leader_traits = {
 	
 	grol_minister = {
 		random = no
-		political_power_factor = 0.05
 		production_speed_industrial_complex_factor = 0.05
-		research_time_factor = -0.02
+		research_time_factor = -0.01
 
 		ai_will_do = {
 			factor = 1
@@ -90,10 +89,19 @@ leader_traits = {
 	
 	titoism = {
 		random = no
-		
 		stability_factor = 0.05
 		communism_acceptance = 35
 		democratic_acceptance = 35
+		
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+
+	famous_poet = {
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.05
 		
 		ai_will_do = {
 			factor = 1
