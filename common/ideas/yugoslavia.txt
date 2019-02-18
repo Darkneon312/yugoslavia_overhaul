@@ -1209,25 +1209,6 @@ ideas = {
 				factor = 1
 			}
 		}
-
-		YUG_milan_nedic = {
-
-			picture = generic_army_europe_2
-			
-			allowed = {
-				original_tag = YUG
-			}
-			
-			available = {
-			
-			}
-			
-			traits = { prince_of_terror }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 		YUG_petar_kosic_war_industrialist = {
 			
@@ -1242,6 +1223,25 @@ ideas = {
 			}
 			
 			traits = { war_industrialist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		YUG_milan_nedic = {
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+			
+			traits = { prince_of_terror }
 			
 			ai_will_do = {
 				factor = 1
@@ -1306,7 +1306,7 @@ ideas = {
 			}
 			
 			equipment_bonus = {
-				# trainers and bombers
+				
 			}
 			
 			modifier = {
@@ -1316,6 +1316,35 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+		
+		YUG_saponia = {
+			
+			allowed = { 
+				original_tag = YUG
+			}
+			
+			available = {
+				NOT = {
+					has_idea = YUG_idea_croatian_opposition
+				}
+				CRO = {
+					OR = {
+						exists = no
+						is_subject_of = YUG
+					}
+				}
+			}
+			
+			traits = { industrial_concern }
+			
+			research_bonus = {
+				industry = 0.10
+			}
+
+			ai_will_do = {
+				factor = 1
+			}			
 		}
 		
 		YUG_koncar_elektroindustrija = {
@@ -1342,35 +1371,6 @@ ideas = {
 			
 			research_bonus = {
 				electronics = 0.10
-			}
-
-			ai_will_do = {
-				factor = 1
-			}			
-		}
-		
-		YUG_saponia = {
-			
-			allowed = { 
-				original_tag = YUG
-			}
-			
-			available = {
-				NOT = {
-					has_idea = YUG_idea_croatian_opposition
-				}
-				CRO = {
-					OR = {
-						exists = no
-						is_subject_of = YUG
-					}
-				}
-			}
-			
-			traits = { industrial_concern }
-			
-			research_bonus = {
-				industry = 0.10
 			}
 
 			ai_will_do = {

@@ -28,21 +28,15 @@
  moreyugoslavia.4.d:0 "Milan Stojadinović, our Prime Minister, was holding an Exposé in Parliament today, when a man identified as Damjan Arnautović, a macedonian teacher, attempted to assassinate him! Many MPs can confirm that he was annoying the PM during his speech and was asked to keep quiet. Moments later he stood up from his seat and approched the speaking booth. At this point everyone noticed he was drunk, then suddenly he pulled out a revolver and tried to shoot Stojadinović, however he was rescued by Stojadin Dimitrijević, a young MP."
  moreyugoslavia.4.a:0 "This is getting out of hand."
  
- moreyugoslaviaelection.1.t:0 "1938 Election"
- moreyugoslaviaelection.1.d:0 "The time has come for the parliamentary elections of 1938. The previous election of 1935 resulted in a victory for the JRZ now under Milan Stojadinović. The United Opposition primariy consisting of croatian parties under Vladko Maček are running against Stojadinović. What will be the outcome?"
- moreyugoslaviaelection.1.a:0 "The JRZ wins the Election!"
- moreyugoslaviaelection.1.b:0 "The opposition wins the Election!"
+ moreyugoslavia.5.t:0 "1938 Election"
+ moreyugoslavia.5.d:0 "The time has come for the parliamentary elections of 1938. The previous election of 1935 resulted in a victory for the JRZ now under Milan Stojadinović. The United Opposition primariy consisting of croatian parties under Vladko Maček are running against Stojadinović. What will be the outcome?"
+ moreyugoslavia.5.a:0 "The JRZ wins the Election!"
+ moreyugoslavia.5.b:0 "The United Opposition wins the Election!"
  
- moreyugoslaviaoccupation.1.t:0 "The Yugoslavian Question"
- moreyugoslaviaoccupation.1.d:0 "The Yugoslav Government has decided to officially surrender but refuse to cooperate in any way. However the autonomous governments have decided to go against Yugoslavia and are willing to assist us. How should we proceed?"
- moreyugoslaviaoccupation.1.a:0 "Split the regions accordingly."
- moreyugoslaviaoccupation.1.b:0 "Occupy them!"
- 
- moreyugoslaviapolitics.1.t:0 "The Status of the Regency"
- moreyugoslaviapolitics.1.d:0 " "
- moreyugoslaviapolitics.1.a:0 "Things will stay as they are."
- moreyugoslaviapolitics.1.b:0 "Their involment will be reduced."
- moreyugoslaviapolitics.1.c:0 "They will play an important role for the future."
+ moreyugoslavia.6.t:0 "The Yugoslav Question"
+ moreyugoslavia.6.d:0 "The Yugoslav Government has decided to officially surrender but refuse to cooperate in any way. However the autonomous governments have decided to go against Yugoslavia and are willing to assist us. How should we proceed?"
+ moreyugoslavia.6.a:0 "Split the regions accordingly."
+ moreyugoslavia.6.b:0 "Occupy them!"
  
  ##### LEADER TRAITS #####
  
@@ -268,13 +262,6 @@
  #industry
  YUG_continue_stojadinovic_economic_policy:0 "Continue Stojadinović's Economic Policy"
  YUG_continue_stojadinovic_economic_policy_desc:0 " "
- YUG_new_economic_policy:0 "New Economic Policy"
- YUG_new_economic_policy_desc:0 " "
- YUG_agricultural_development:0 "Agricultrul Development"
- YUG_agricultural_development_desc:0 " "
- YUG_farming_space:0 "Farming Space"
- YUG_farming_space_desc:0 " "
- YUG_foreign_owned_land:0 "Foreign Owned Land"
  YUG_foreign_owned_land_desc:0 " "
  YUG_six_year_plan:0 "The Six Year Plan"
  YUG_six_year_plan_desc:0 " "

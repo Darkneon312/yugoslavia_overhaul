@@ -2,14 +2,8 @@
 ### MORE YUGOSLAVIA EVENTS ###
 ##############################
 
-
 add_namespace = moreyugoslavia
 add_namespace = moreyugoslaviatag
-add_namespace = moreyugoslaviaelection
-add_namespace = moreyugoslaviacommunist
-add_namespace = moreyugoslaviaoccupation
-add_namespace = moreyugoslaviaforeign
-add_namespace = moreyugoslaviapolitics
 
 country_event = {
 	id = moreyugoslaviatag.1
@@ -115,7 +109,7 @@ country_event = {
 	}
 }
 
-### Peter II coronation ###
+### Peter II coronation
 country_event = {
 	id = moreyugoslavia.1
 	title = moreyugoslavia.1.t
@@ -168,7 +162,7 @@ country_event = {
 	}
 }
 
-### Ljubomir Davidovic dies ###
+### Ljubomir Davidovic dies
 country_event = {
 	id = moreyugoslavia.2
 	title = moreyugoslavia.2.t
@@ -203,7 +197,7 @@ country_event = {
 	}
 }
 
-### Dragiša Cvetković comes to power ###
+### Dragiša Cvetković comes to power
 country_event = {
 	id = moreyugoslavia.3
 	title = moreyugoslavia.3.t
@@ -245,7 +239,7 @@ country_event = {
 	}
 }
 
-### Attempted Assassination of Milan Stojadinovic ###
+### Attempted Assassination of Milan Stojadinovic
 country_event = {
 	id = moreyugoslavia.4
 	title = moreyugoslavia.4.t
@@ -270,10 +264,11 @@ country_event = {
 	}
 }
 
+### 1938 Election
 country_event = {
-	id = moreyugoslaviaelection.1
-	title = moreyugoslaviaelection.1.t
-	desc = moreyugoslaviaelection.1.d
+	id = moreyugoslaviaelection.5
+	title = moreyugoslaviaelection.5.t
+	desc = moreyugoslaviaelection.5.d
 	picture = GFX_report_event_yug_1938_election
 	
 	fire_only_once = yes
@@ -289,7 +284,7 @@ country_event = {
 	mean_time_to_happen = { days = 7 }
 	
 	option = {
-		name = moreyugoslaviaelection.1.a
+		name = moreyugoslaviaelection.5.a
 		ai_chance = {
 			factor = 80
 		}
@@ -300,7 +295,7 @@ country_event = {
 	}
 	
 	option = {
-		name = moreyugoslaviaelection.1.b
+		name = moreyugoslaviaelection.5.b
 		ai_chance = {
 			factor = 20
 		}
@@ -324,10 +319,11 @@ country_event = {
 	}
 }
 
+### Yugoslav Occupation
 country_event = {
-	id = moreyugoslaviaoccupation.1
-	title = moreyugoslaviaoccupation.1.t
-	desc = moreyugoslaviaoccupation.1.d
+	id = moreyugoslavia.6
+	title = moreyugoslavia.6.t
+	desc = moreyugoslavia.6.d
 	picture = GFX_report_event_generic_sign_treaty2
 	
 	fire_only_once = yes
@@ -355,7 +351,7 @@ country_event = {
 	
 	option = { # puppet serbia
 		ai_chance = { factor = 90 }
-		name = moreyugoslaviaoccupation.1.a
+		name = moreyugoslavia.6.a
 		
 		if = {
 			limit = {
@@ -596,14 +592,14 @@ country_event = {
 	}
 	option = { #occupy them
 		ai_chance = { factor = 90 }
-		name = moreyugoslaviaoccupation.1.b
+		name = moreyugoslavia.6.b
 		
 		add_political_power = -25
 	}
 }
 
 country_event = {
-	id = moreyugoslaviaforeign.1
+	id = moreyugoslavia.7
 	title = generic.2.t
 	desc = { # FROM and ROOT are different ideologies
 		text = generic.2.d.e
