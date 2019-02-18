@@ -1040,108 +1040,6 @@ ideas = {
 			}
 		}
 		
-		YUG_agriculutrul_society = {
-			
-			picture = generic_agrarian_society
-			
-			allowed = {
-				
-			}
-
-			allowed_civil_war = {
-				
-			}
-			
-			available = {
-				
-			}
-			
-			research_bonus = { 
-				industry = -0.10
-			}
-			
-			modifier = {
-				production_speed_industrial_complex_factor = -0.10
-				production_speed_arms_factory_factor = -0.10
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		YUG_agricultural_development_idea = {
-			
-			picture = generic_agrarian_society
-			
-			allowed = {
-				
-			}
-
-			allowed_civil_war = {
-				
-			}
-			
-			available = {
-				
-			}
-			
-			research_bonus = { 
-				industry = -0.10
-			}
-			
-			modifier = {
-				production_speed_industrial_complex_factor = -0.08
-				production_speed_arms_factory_factor = -0.08
-				industrial_capacity_factory = 0.025
-				consumer_goods_factor = -0.075
-			}
-		}
-		
-		YUG_farming_space_idea = {
-			
-			picture = CZE_planning_bonus
-			
-			allowed = {
-				
-			}
-
-			allowed_civil_war = {
-				
-			}
-			
-			available = {
-				
-			}
-			
-			modifier = {
-				global_building_slots_factor = 0.1
-			}
-		}
-		
-		YUG_foreign_owned_land_idea = {
-			
-			picture = generic_research_bonus
-			
-			allowed = {
-				
-			}
-
-			allowed_civil_war = {
-				
-			}
-			
-			available = {
-				
-			}
-			
-			research_bonus = { 
-				industry = 0.02
-			}
-			
-			modifier = {
-				industrial_capacity_factory = 0.025
-				stability_factor = -0.05
-			}
-		}
-		
 		YUG_industrialization_program_idea = {
 			
 			picture = man_five_year_plan_industry
@@ -1213,7 +1111,7 @@ ideas = {
 			traits = { communist_revolutionary }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0
 			}
 		}
 
@@ -1232,7 +1130,7 @@ ideas = {
 			traits = { democratic_reformer }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0
 			}
 		}
 
@@ -1251,7 +1149,7 @@ ideas = {
 			traits = { fascist_demagogue }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0
 			}
 		}
 
@@ -2034,14 +1932,14 @@ ideas = {
 		YUG_ikarus = {
 		
 			picture = generic_air_manufacturer_3
-			
-			available = {
-				has_completed_focus = YUG_ikarus
-			}
 
 			allowed = {
 				original_tag = YUG
 				has_dlc = "Death or Dishonor"
+			}
+			
+			available = {
+				has_completed_focus = YUG_ikarus
 			}
 			
 			research_bonus = {
@@ -2086,14 +1984,14 @@ ideas = {
 		YUG_rogozarski = {
 
 			picture = generic_air_manufacturer_2
-			
-			available = {
-				has_completed_focus = YUG_rogozarski
-			}
 
 			allowed = {
 				original_tag = YUG
 				has_dlc = "Death or Dishonor"
+			}
+			
+			available = {
+				has_completed_focus = YUG_rogozarski
 			}
 			
 			research_bonus = {
@@ -2138,14 +2036,14 @@ ideas = {
 		YUG_zmaj = {
 
 			picture = generic_air_manufacturer_1
-			
-			available = {
-				has_completed_focus = YUG_zmaj				
-			}			
 
 			allowed = {
 				original_tag = YUG
 				has_dlc = "Death or Dishonor"
+			}
+			
+			available = {
+				has_completed_focus = YUG_zmaj				
 			}
 			
 			research_bonus = {
@@ -2182,7 +2080,7 @@ ideas = {
 			}
 			
 			equipment_bonus = {
-				# trainers and bombers
+				
 			}
 			
 			traits = { infantry_equipment_manufacturer }
