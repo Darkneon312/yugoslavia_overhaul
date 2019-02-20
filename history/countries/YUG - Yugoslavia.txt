@@ -460,7 +460,6 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Milan Nedić"
-	#portrait_path = "gfx/leaders/SER/Portrait_YUG_Milan_Nedic.tga"
 	portrait_path = "gfx/leaders/SER/Portrait_YUG_Milan_Nedic_army.tga"
 	traits = { career_officer harsh_leader trait_mountaineer }
 	attack_skill = 3
@@ -470,18 +469,6 @@ create_corps_commander = {
 	skill = 3
 	id = 902
 }
-
-#create_corps_commander = {
-#	name = "Ante Pavelić"
-#	portrait_path = "gfx/leaders/CRO/Portrait_Croatia_Ante_Pavelic.dds"
-#	traits = { harsh_leader ranger }
-#	attack_skill = 3
-#	defense_skill = 3
-#	planning_skill = 2
-#	logistics_skill = 1
-#	skill = 3
-#	id = 900
-#}
 
 create_field_marshal = {
 	name = "Leon Rupnik"
@@ -591,44 +578,12 @@ create_corps_commander = {
 	id = 2014
 }
 
-#create_navy_leader = {
-#	name = "Andro Vrkljan"
-#	portrait_path = "gfx/leaders/CRO/CRO_andro_vrkljan.tga"
-#	traits = { blockade_runner }
-#	skill = 1
-#	id = 1000
-#}
-
 create_navy_leader = {
 	name = "Aleksandar Berić"
 	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Aleksandar_Beric.tga"
 	traits = { seawolf }
 	skill = 2
 	id = 2015
-}
-
-create_field_marshal = {
-	name = "Slavko Kvaternik"
-	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Slavko_Kvaternik.tga"
-	traits = { defensive_doctrine }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-	id = 904
-}
-
-create_corps_commander = {
-	name = "Slavko Štancer"
-	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Stancer_Slavko.tga"
-	traits = { bearer_of_artillery }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-	id = 905
 }
 
 create_corps_commander = {
@@ -643,26 +598,6 @@ create_corps_commander = {
 	id = 906
 }
 
-create_navy_leader = {
-	name = "Đuro Jakčin"
-	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Duro_Jakcin.tga"
-	traits = { seawolf }
-	skill = 4
-	id = 907
-}
-
-#create_field_marshal = {
-#	name = "Stjepan Sarkotić" #Never actually was in royal army
-#	portrait_path = "gfx/leaders/CRO/Portrait_Stjepan_Sarkotic.dds"
-#	traits = { old_guard defensive_doctrine }
-#	skill = 4
-#	attack_skill = 3
-#	defense_skill = 2
-#	planning_skill = 2
-#	logistics_skill = 2
-#	id = 908
-#}
-
 create_corps_commander = {
 	name = "Ernest Peterlin"
 	portrait_path = "gfx/leaders/SVN/Portriat_SVN_Ernest_Peterlin.tga"
@@ -676,18 +611,6 @@ create_corps_commander = {
 }
 
 #Vuk rupnik moved under Leon Rupnik (Father - Son )
-
-create_field_marshal = {
-	name = "Krsto Popović"
-	portrait_path = "gfx/leaders/MNT/Portrait_MNT_Krsto_Popovic.tga"
-	traits = { defensive_doctrine logistics_wizard }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-	id = 2018
-}
 
 create_corps_commander = {
 	name = "Milan Kostić" #SERB
@@ -759,18 +682,6 @@ create_corps_commander = {
 	planning_skill = 1
 	logistics_skill = 2
 	id = 912
-}
-	
-create_field_marshal = {
-	name = "Husejn Biščević"
-	portrait_path = "gfx/leaders/BIH/Portrait_BIH_Husejn_Biscevic.dds"
-	traits = { defensive_doctrine }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 913
 }
 
 create_corps_commander = {
