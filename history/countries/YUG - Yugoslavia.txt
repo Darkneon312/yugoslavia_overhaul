@@ -360,7 +360,7 @@ create_corps_commander = {
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 2
-	id = 2016
+	id = 2000
 }
 
 create_corps_commander = {
@@ -373,7 +373,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
-	id = 2000
+	id = 2001
 }
 
 create_field_marshal = {
@@ -385,7 +385,7 @@ create_field_marshal = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2001
+	id = 2002
 }
 
 create_field_marshal = {
@@ -397,7 +397,7 @@ create_field_marshal = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
-	id = 2002
+	id = 2003
 }
 
 create_corps_commander = {
@@ -409,7 +409,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2003
+	id = 2004
 }
 
 create_navy_leader = {
@@ -417,33 +417,21 @@ create_navy_leader = {
 	gfx = GFX_Portrait_yugoslavia_marijan_polic
 	traits = {  }
 	skill = 2
-	id = 2004
+	id = 2005
 }
 
 ### moded here ###
 
-create_field_marshal = {
-	name = "Draža Mihailović"
-	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Draza_Mihailovic.tga"
-	traits = { inflexible_strategist trait_cautious thorough_planner logistics_wizard }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-	id = 2006
-}
-
 create_corps_commander = {
-	name = "Arso Jovanović"
-	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Arso_Jovanovic.tga"
-	traits = { career_officer infantry_officer trickster }
-	skill = 3
-	attack_skill = 2
+	name = "Petar Živković"
+	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Petar_Zivkovic.tga"
+	traits = { politically_connected media_personality }
+	skill = 2
+	attack_skill = 1
 	defense_skill = 2
-	planning_skill = 2
+	planning_skill = 1
 	logistics_skill = 2
-	id = 2007
+	id = 2006
 }
 
 create_field_marshal = {
@@ -455,7 +443,19 @@ create_field_marshal = {
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 3
-	id = 2008
+	id = 2007
+}
+
+create_field_marshal = {
+	name = "Draža Mihailović"
+	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Draza_Mihailovic.tga"
+	traits = { inflexible_strategist trait_cautious thorough_planner logistics_wizard }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+	id = 4000
 }
 
 create_corps_commander = {
@@ -467,233 +467,7 @@ create_corps_commander = {
 	planning_skill = 2
 	logistics_skill = 1
 	skill = 3
-	id = 902
-}
-
-create_field_marshal = {
-	name = "Leon Rupnik"
-	portrait_path = "gfx/leaders/SVN/Portrait_SVN_Leon_Rupnik.tga"
-	traits = { career_officer old_guard defensive_doctrine }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 3
-	id = 901
-}
-
-create_corps_commander = {
-	name = "Vuk Rupnik"
-	portrait_path = "gfx/leaders/SVN/Portriat_SVN_Vuk_Rupnik.dds"
-	traits = { hill_fighter trickster }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-	id = 910
-}
-
-create_corps_commander = {
-	name = "Mihajlo Lukić"
-	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Mihajlo_Lukic.tga"
-	traits = { career_officer trait_mountaineer }
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	skill = 2
-	id = 903
-}
-
-create_corps_commander = {
-    name = "Ljubomir Marić"
-    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Ljubomir_Maric.tga"
-    traits = { career_officer trickster }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 2009
-}
-
-create_corps_commander = {
-    name = "Borivoje Mirković"
-    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Birivoje_Mirkovic.tga"
-	traits = { career_officer commando paratrooper }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 2010
-}
-
-create_corps_commander = {
-    name = "Milorad Petrović"
-    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Milorad_Petrovic.tga"
-    traits = { infantry_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-	id = 2011
-}
-
-create_corps_commander = {
-    name = "Dušan Trifunović"
-    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Dusan_Trifunovic.tga"
-    traits = { trait_mountaineer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-	id = 2012
-}
-
-create_corps_commander = {
-    name = "Petar Vukcević"
-    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Petar_Vukicevic.tga"
-	traits = { old_guard }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-	id = 2013
-}
-
-create_corps_commander = {
-    name = "Bogoljub Ilić"
-    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Bogoljub_Ilic.tga"
-    traits = { cavalry_officer politically_connected }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 2014
-}
-
-create_navy_leader = {
-	name = "Aleksandar Berić"
-	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Aleksandar_Beric.tga"
-	traits = { seawolf }
-	skill = 2
-	id = 2015
-}
-
-create_corps_commander = {
-	name = "Vladimir Laxa"
-	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Vladimir_Laxa.tga"
-	traits = { ranger }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-	id = 906
-}
-
-create_corps_commander = {
-	name = "Ernest Peterlin"
-	portrait_path = "gfx/leaders/SVN/Portriat_SVN_Ernest_Peterlin.tga"
-	traits = { trait_mountaineer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-	id = 909
-}
-
-#Vuk rupnik moved under Leon Rupnik (Father - Son )
-
-create_corps_commander = {
-	name = "Milan Kostić" #SERB
-	portrait_path = "gfx/leaders/SER/Portrait_SER_Milan_Kostic.tga"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-	id = 2017
-}
-
-create_corps_commander = {
-	name = "Blažo Đukanović"
-	portrait_path = "gfx/leaders/MNT/Portrait_MNT_Blazo_Djukanovic.tga"
-	traits = { trickster trait_mountaineer }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-	id = 2019
-}
-
-create_corps_commander = {
-	name = "Pavle Đurišić"
-	portrait_path = "gfx/leaders/MNT/Portriat_MNT_Pavle_Djurisic.tga"
-	traits = { trait_engineer trait_mountaineer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 2
-	id = 2020
-}
-
-create_corps_commander = {
-	name = "Spasoje Tešić"
-	portrait_path = "gfx/leaders/YUG/Portriat_YUG_Spasoje_Tesic.tga"
-	traits = { old_guard }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 2021
-}
-
-create_corps_commander = {
-	name = "Halim Malkoč"
-	portrait_path = "gfx/leaders/BIH/Portrait_BIH_Halim_Malkoc.tga"
-	traits = { trait_mountaineer hill_fighter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-	id = 911
-}	
-
-create_corps_commander = {
-	name = "Muhamed Hadžiefendić"
-	portrait_path = "gfx/leaders/BIH/Portrait_BIH_Muhamed_Hadziefendic.dds"
-	traits = { commando urban_assault_specialist }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-	id = 912
-}
-
-create_corps_commander = {
-	name = "Petar Živković"
-	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Petar_Zivkovic.tga"
-	traits = { politically_connected media_personality }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-	id = 2022
+	id = 5000
 }
 
 create_corps_commander = {
@@ -705,7 +479,233 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
-	id = 2023
+	id = 5001
+}
+
+create_corps_commander = {
+	name = "Milan Kostić" #SERB
+	portrait_path = "gfx/leaders/SER/Portrait_SER_Milan_Kostic.tga"
+	traits = {  }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 2008
+}
+
+create_corps_commander = {
+	name = "Spasoje Tešić"
+	portrait_path = "gfx/leaders/YUG/Portriat_YUG_Spasoje_Tesic.tga"
+	traits = { old_guard }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+	id = 2009
+}
+
+create_corps_commander = {
+	name = "Arso Jovanović"
+	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Arso_Jovanovic.tga"
+	traits = { career_officer infantry_officer trickster }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 6000
+}
+
+create_field_marshal = {
+	name = "Leon Rupnik"
+	portrait_path = "gfx/leaders/SVN/Portrait_SVN_Leon_Rupnik.tga"
+	traits = { career_officer old_guard defensive_doctrine }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+	id = 7000
+}
+
+create_corps_commander = {
+	name = "Vuk Rupnik"
+	portrait_path = "gfx/leaders/SVN/Portriat_SVN_Vuk_Rupnik.dds"
+	traits = { hill_fighter trickster }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 7001
+}
+
+create_corps_commander = {
+	name = "Mihajlo Lukić"
+	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Mihajlo_Lukic.tga"
+	traits = { career_officer trait_mountaineer }
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	skill = 2
+	id = 3000
+}
+
+create_corps_commander = {
+    name = "Ljubomir Marić"
+    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Ljubomir_Maric.tga"
+    traits = { career_officer trickster }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 2010
+}
+
+create_corps_commander = {
+    name = "Borivoje Mirković"
+    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Birivoje_Mirkovic.tga"
+	traits = { career_officer commando paratrooper }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 2011
+}
+
+create_corps_commander = {
+    name = "Milorad Petrović"
+    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Milorad_Petrovic.tga"
+    traits = { infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+	id = 2012
+}
+
+create_corps_commander = {
+    name = "Dušan Trifunović"
+    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Dusan_Trifunovic.tga"
+    traits = { trait_mountaineer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 2013
+}
+
+create_corps_commander = {
+    name = "Petar Vukcević"
+    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Petar_Vukicevic.tga"
+	traits = { old_guard }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	id = 2014
+}
+
+create_corps_commander = {
+    name = "Bogoljub Ilić"
+    portrait_path = "gfx/leaders/YUG/Portrait_YUG_Bogoljub_Ilic.tga"
+    traits = { cavalry_officer politically_connected }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+	id = 2015
+}
+
+create_navy_leader = {
+	name = "Aleksandar Berić"
+	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Aleksandar_Beric.tga"
+	traits = { seawolf }
+	skill = 2
+	id = 2016
+}
+
+create_corps_commander = {
+	name = "Vladimir Laxa"
+	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Vladimir_Laxa.tga"
+	traits = { ranger }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 3001
+}
+
+create_corps_commander = {
+	name = "Ernest Peterlin"
+	portrait_path = "gfx/leaders/SVN/Portriat_SVN_Ernest_Peterlin.tga"
+	traits = { trait_mountaineer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 3002
+}
+
+#Vuk rupnik moved under Leon Rupnik (Father - Son )
+
+create_corps_commander = {
+	name = "Blažo Đukanović"
+	portrait_path = "gfx/leaders/MNT/Portrait_MNT_Blazo_Djukanovic.tga"
+	traits = { trickster trait_mountaineer }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 8000
+}
+
+create_corps_commander = {
+	name = "Pavle Đurišić"
+	portrait_path = "gfx/leaders/MNT/Portriat_MNT_Pavle_Djurisic.tga"
+	traits = { trait_engineer trait_mountaineer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+	id = 8001
+}
+
+create_corps_commander = {
+	name = "Halim Malkoč"
+	portrait_path = "gfx/leaders/BIH/Portrait_BIH_Halim_Malkoc.tga"
+	traits = { trait_mountaineer hill_fighter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	id = 9000
+}	
+
+create_corps_commander = {
+	name = "Muhamed Hadžiefendić"
+	portrait_path = "gfx/leaders/BIH/Portrait_BIH_Muhamed_Hadziefendic.dds"
+	traits = { commando urban_assault_specialist }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+	id = 9001
 }
 
 create_navy_leader = {
@@ -713,5 +713,5 @@ create_navy_leader = {
 	portrait_path = "gfx/leaders/SVN/Portrait_SVN_Franjo_Vucer.tga"
 	traits = {  }
 	skill = 2
-	id = 914
+	id = 3003
 }

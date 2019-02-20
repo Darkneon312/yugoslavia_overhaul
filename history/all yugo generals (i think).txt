@@ -1,3 +1,10 @@
+﻿# gonna have to make some pattern for ids
+# chetniks - 4000
+# ustashe - 3000
+# royal army - 2000
+# national salvation (milan nedic) - 5000
+
+
 #############################
 ### GENERALS AND MARSHALS ###
 #############################
