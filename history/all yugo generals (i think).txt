@@ -3,7 +3,10 @@
 # ustashe - 3000
 # royal army - 2000
 # national salvation (milan nedic) - 5000
-
+# communist / tito - 6000
+# slovene guard - 7000
+# greens/montenegro - 8000
+# bosnians - 9000
 
 #############################
 ### GENERALS AND MARSHALS ###
