@@ -394,7 +394,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.3
-				war_support_factor = -0.2
+				war_support_factor = -0.3
 				#conscription = -0.005
 			}
 		}
@@ -863,9 +863,9 @@ ideas = {
 			modifier = {
 				stability_factor = 0.05
 				democratic_drift = 0.01
-				mobilization_speed = -0.1
 				fascism_acceptance = 35
 				democratic_acceptance = 50
+				mobilization_speed = -0.1
 			}
 		}
 		
@@ -1183,6 +1183,8 @@ ideas = {
 			available = {
 			
 			}
+			
+			cost = 200
 			
 			traits = { famous_poet }
 			
@@ -1569,7 +1571,11 @@ ideas = {
 			
 			}
 			
-			traits = { army_chief_offensive_2 }
+			traits = { political_military_figure }
+			
+			modifier = {
+				max_command_power = -25
+			}
 			
 			ai_will_do = {
 				factor = 1
@@ -1648,7 +1654,10 @@ ideas = {
 			}
 			
 			available = {
-			
+				OR = {
+					has_government = communism
+					has_country_flag = communists_allowed_in_governemt
+				}
 			}
 			
 			traits = { army_chief_morale_2 }

@@ -51,6 +51,7 @@
  croatian_question_incompetence:0 "Croatian Question Incompetence"
  titoism:0 "Titoism"
  famous_poet:0 "Famous Poet"
+ political_military_figure:0 "Political Military Figure"
  
  ##### PARTIES ######
  
@@ -164,11 +165,6 @@
  YUG_education_programm_desc:0 "We've taken our first step into educating the population. Now all that's left is to finalize it."
  YUG_idea_industrial_centralisation:0 "Industrial Centralisation"
  YUG_idea_partisans:0 "Partisans"
- YUG_idea_croatian_officers:0 "Croatian Officers"
- YUG_agriculutrul_society:0 "Agricultrul Society"
- YUG_agricultural_development_idea:0 "Agricultrul Development"
- YUG_foreign_owned_land_idea:0 "Foreign Owned Land"
- YUG_farming_space_idea:0 "Farming Space"
  YUG_industrialization_program_idea:0 "Industrialization Programm"
  YUG_six_year_plan_idea:0 "The Six Year Plan"
  YUG_coast_defense_idea:0 "Costal Defense"
@@ -202,6 +198,7 @@
  
  vladko_elected:0 "Vladko Maček is elected as PM in 1938 Election"
  bojovic_passed_away:0 "Bojović has passed away"
+ communists_allowed_in_governemt:0 "§YCommunists§! allowed in Governemt."
  
  ##### OPINIONS MODIFIERS ###
  
