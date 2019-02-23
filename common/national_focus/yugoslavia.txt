@@ -558,7 +558,7 @@ focus_tree = {
 				}
 				GER = { country_event = generic.2 }
 				else = {
-					GER = { country_event = moreyugoslaviaforeign.1 }
+					GER = { country_event = moreyugoslaviajoinaxis.1 }
 				}
 			}
 		}

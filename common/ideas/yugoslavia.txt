@@ -20,7 +20,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				#drift_defence_factor = 0.05
 				drift_defence_factor = 0.1
 				war_support_factor = 0.05
 			}
@@ -1566,14 +1565,23 @@ ideas = {
 				original_tag = YUG
 			}
 			
-			available = {
+			visible = {
+				
+			}
 			
+			available = {
+				if = {
+					limit = {
+						has_country_flag = zivkovic_out_of_office
+					}
+					has_country_flag = put_zivkovic_in_office_again
+				}
 			}
 			
 			traits = { political_military_figure }
 			
 			modifier = {
-				max_command_power = -25
+				max_command_power = -20
 			}
 			
 			ai_will_do = {
@@ -1581,7 +1589,14 @@ ideas = {
 			}
 			
 			allowed_to_remove = {
-				always = no
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = zivkovic_out_of_office
+						}
+					}
+					always = no
+				}
 			}
 		}
 		
@@ -1655,11 +1670,30 @@ ideas = {
 			available = {
 				OR = {
 					has_government = communism
-					has_country_flag = communists_allowed_in_governemt
+					has_country_flag = communists_allowed_in_government
 				}
 			}
 			
 			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_ljubomir_maric_army_chief = {
+			
+			picture = YUG_ljubomir_maric
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+			
+			traits = { army_chief_organizational_2 }
 			
 			ai_will_do = {
 				factor = 1
@@ -1782,7 +1816,9 @@ ideas = {
 			}
 			
 			available = {
-			
+				NOT = {
+					has_idea = YUG_idea_serbian_general_staff
+				}
 			}
 			
 			traits = {
@@ -1804,7 +1840,9 @@ ideas = {
 			}
 			
 			available = {
-			
+				NOT = {
+					has_idea = YUG_idea_serbian_general_staff
+				}
 			}
 			
 			traits = { army_logistics_2 }
@@ -1864,7 +1902,7 @@ ideas = {
 			
 			}
 			
-			traits = { army_artillery_3 }
+			traits = { army_artillery_2 }
 			
 			ai_will_do = {
 				factor = 1

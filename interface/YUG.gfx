@@ -259,6 +259,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/YUG/report_event_milan_stojadinovic.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_report_event_petar_zivkovic"
+		texturefile = "gfx/event_pictures/YUG/report_event_petar_zivkovic.dds"
+	}
+	
 	### DECISIONS ###
 	
 	spriteType = {

@@ -6,9 +6,6 @@ set_research_slots = 3
 
 add_ideas = {
 	YUG_yugoslav_regency
-	#YUG_marsallie_assassination
-	#YUG_illiteracy
-	
 	YUG_petar_zivkovic_army
 }
 

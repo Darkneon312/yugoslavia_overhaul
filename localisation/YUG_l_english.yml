@@ -9,7 +9,7 @@
  VICTORY_POINTS_6983:0 "Banja Luka"
  VICTORY_POINTS_9894:0 "Mostar"
  
- ##### EVENT RELATED ###
+ ##### EVENTS ###
  
  DOD_yugoslavia.1.c:0 "Support the Royalist Coup!"
  DOD_yugoslavia.1.d:0 "Player Option for the coup not to happen. Option exists for ai to be historicly accurate."
@@ -24,19 +24,25 @@
  moreyugoslavia.3.t:0 "The Croatian Question and Stojadinović"
  moreyugoslavia.3.d:0 "Since his election as prime minister in 1935, Milan Stojadinović proved to be ineffective in solving the Croatian Question. His incompetence has left Prince Paul with no choice but to remove him from his position."
  moreyugoslavia.3.a:0 "He will be putting Dragiša Cvetković in power."
- moreyugoslavia.4.t:0 "Attempted Assassination in Parliament!"
- moreyugoslavia.4.d:0 "Milan Stojadinović, our Prime Minister, was holding an Exposé in Parliament today, when a man identified as Damjan Arnautović, a macedonian teacher, attempted to assassinate him! Many MPs can confirm that he was annoying the PM during his speech and was asked to keep quiet. Moments later he stood up from his seat and approched the speaking booth. At this point everyone noticed he was drunk, then suddenly he pulled out a revolver and tried to shoot Stojadinović, however he was rescued by Stojadin Dimitrijević, a young MP."
- moreyugoslavia.4.a:0 "This is getting out of hand."
+ moreyugoslavia.4.t:0 "1938 Election"
+ moreyugoslavia.4.d:0 "The time has come for the parliamentary elections of 1938. The previous election of 1935 resulted in a victory for the JRZ now under Milan Stojadinović. The United Opposition primariy consisting of croatian parties under Vladko Maček are running against Stojadinović. What will be the outcome?"
+ moreyugoslavia.4.a:0 "The JRZ wins the Election!"
+ moreyugoslavia.4.b:0 "The United Opposition wins the Election!"
  
- moreyugoslavia.5.t:0 "1938 Election"
- moreyugoslavia.5.d:0 "The time has come for the parliamentary elections of 1938. The previous election of 1935 resulted in a victory for the JRZ now under Milan Stojadinović. The United Opposition primariy consisting of croatian parties under Vladko Maček are running against Stojadinović. What will be the outcome?"
- moreyugoslavia.5.a:0 "The JRZ wins the Election!"
- moreyugoslavia.5.b:0 "The United Opposition wins the Election!"
+ moreyugoslavia.5.t:0 "Attempted Assassination in Parliament!"
+ moreyugoslavia.5.d:0 "Milan Stojadinović, our Prime Minister, was holding an Exposé in Parliament today, when a man identified as Damjan Arnautović, a macedonian teacher, attempted to assassinate him! Many MPs can confirm that he was annoying the PM during his speech and was asked to keep quiet. Moments later he stood up from his seat and approched the speaking booth. At this point everyone noticed he was drunk, then suddenly he pulled out a revolver and tried to shoot Stojadinović, however he was rescued by Stojadin Dimitrijević, a young MP."
+ moreyugoslavia.5.a:0 "This is getting out of hand."
+ moreyugoslavia.6.t:0 "Assassination Attempted Follow-up"
+ moreyugoslavia.6.d:0 "After the event from a few days ago, Milan and Prince Paul, the Regent, spoke with one another and concluded that only General Petar Živković could be behind the attempt. The Prince pushed this idea, taking into account how the General was resposible for the overthrow of the previous dynasty back in 1903. Worried sick, he recommended his assassination, however Stojadinović quickly dismissed the idea."
+ moreyugoslavia.6.a:0 "Something will have to be done soon."
+ moreyugoslavia.7.t:0 "2nd Stojadinović's Government"
+ moreyugoslavia.7.d:0 " "
+ moreyugoslavia.7.a:0 "Finally, that damn General is out of office."
  
- moreyugoslavia.6.t:0 "The Yugoslav Question"
- moreyugoslavia.6.d:0 "The Yugoslav Government has decided to officially surrender but refuse to cooperate in any way. However the autonomous governments have decided to go against Yugoslavia and are willing to assist us. How should we proceed?"
- moreyugoslavia.6.a:0 "Split the regions accordingly."
- moreyugoslavia.6.b:0 "Occupy them!"
+ moreyugoslaviaocc.1.t:0 "The Yugoslav Question"
+ moreyugoslaviaocc.1.d:0 "The Yugoslav Government has decided to officially surrender but refuse to cooperate in any way. However the autonomous governments have decided to go against Yugoslavia and are willing to assist us. How should we proceed?"
+ moreyugoslaviaocc.1.a:0 "Split the regions accordingly."
+ moreyugoslaviaocc.1.b:0 "Occupy them!"
  
  ##### LEADER TRAITS #####
  
@@ -183,6 +189,7 @@
  YUG_petar_zivkovic_army:0 "Petar Zivković"
  YUG_dusan_simovic_theorist:0 "Dušan Simović"
  YUG_vladimir_nazor:0 "Vladimir Nazor"
+ YUG_ljubomir_maric_army_chief:0 "Ljubomir Marić"
  
  YUG_min:0 "Mašinska Industrija Niš"
  YUG_radio_station_zagreb:0 "Radio Stanica Zagreb"
@@ -194,11 +201,14 @@
  pan_slavic_research_name:0 "Pan-Slavic Research Group"
  pan_slavic_research_desc:0 "Reduced research time for technologies researched by other Pan-Slavic countries."
  
- ##### COUNTRY FLAG LOCALISATION ###
+ ##### COUNTRY FLAGs LOCALISATION ###
  
- vladko_elected:0 "Vladko Maček is elected as PM in 1938 Election"
- bojovic_passed_away:0 "Bojović has passed away"
- communists_allowed_in_governemt:0 "§YCommunists§! allowed in Governemt."
+ vladko_elected:0 "Vladko Maček is elected as PM in 1938 Election."
+ bojovic_passed_away:0 "Bojović has passed away."
+ communists_allowed_in_government:0 "§YCommunists§! allowed in Government."
+ attempted_assassination_stojadinovic:0 "Attempted Assassination on Milan Stojadinović occurred."
+ zivkovic_out_of_office:0 "Petar Zivković kicked out out of office."
+ put_zivkovic_in_office_again:0 "Petar Zivković put in office again."
  
  ##### OPINIONS MODIFIERS ###
  

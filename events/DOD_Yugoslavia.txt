@@ -56,6 +56,8 @@ country_event = {
 				#
 			}
 		}
+		
+		remove_ideas = YUG_yugoslav_regency
 		add_ideas = YUG_peter_II
 		
 		GER = { country_event = DOD_yugoslavia.2 hours = 6 }
@@ -3112,6 +3114,8 @@ country_event = {
 				#
 			}
 		}
+		
+		remove_ideas = YUG_yugoslav_regency
 		add_ideas = YUG_peter_II
 		
 		GER = { country_event = DOD_yugoslavia.2 hours = 6 }
@@ -3159,9 +3163,9 @@ country_event = {
 		every_country = {
 			limit = { has_war_with = YUG }
 			white_peace = YUG
-		}
-		
+		}	
 	}
+	
 	option = { #resistance to the coup, call on Germans for support
 		name = DOD_yugoslavia.1.b
 		ai_chance = {
