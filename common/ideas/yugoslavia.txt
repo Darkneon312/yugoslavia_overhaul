@@ -1816,13 +1816,11 @@ ideas = {
 			}
 			
 			available = {
-				NOT = {
-					has_idea = YUG_idea_serbian_general_staff
-				}
+				
 			}
 			
 			traits = {
-				army_chief_drill_2
+				#army_chief_drill_2
 				army_infantry_2
 			}
 			
@@ -1840,9 +1838,7 @@ ideas = {
 			}
 			
 			available = {
-				NOT = {
-					has_idea = YUG_idea_serbian_general_staff
-				}
+				
 			}
 			
 			traits = { army_logistics_2 }

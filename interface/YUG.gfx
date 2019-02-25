@@ -221,7 +221,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_YUG_coat_of_arms_serbia_shine"
+		name = "GFX_goal_YUG_yugoslavism_shine"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslavism.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
