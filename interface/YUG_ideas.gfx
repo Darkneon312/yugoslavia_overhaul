@@ -1,0 +1,12 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_YUG_yugoslav_regency"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_yugoslav_regency.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_the_croatian_question"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_the_croatian_question.dds"
+	}
+}
