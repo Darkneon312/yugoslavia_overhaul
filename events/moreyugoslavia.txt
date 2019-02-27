@@ -204,7 +204,6 @@ country_event = {
 		has_government = neutrality
 		has_idea = YUG_yugoslav_regency
 		date > 1936.3.4
-		date < 1936.3.10
 	}
 	
 	mean_time_to_happen = { days = 5 }
