@@ -6,57 +6,35 @@ add_namespace = moreyugoslavia
 add_namespace = moreyugoslaviaocc
 add_namespace = moreyugoslaviatag
 
-# Peter II coronation
+# Attempted Assassination of Milan Stojadinovic
 country_event = {
 	id = moreyugoslavia.1
 	title = moreyugoslavia.1.t
 	desc = moreyugoslavia.1.d
-	picture = GFX_report_event_yugoslavian_king_peter
-	
-	fire_only_once = yes
+	picture = GFX_report_event_milan_stojadinovic
 
 	trigger = {
 		tag = YUG
-		NOT = {
-			has_country_leader = { name = "Petar II" }
-			has_completed_focus = YUG_abolish_the_monarchy
-		}
-		date > 1942.9.4
-		has_country_flag = this_is_not_done_yet
-		
+		has_government = neutrality
+		has_idea = YUG_yugoslav_regency
+		date > 1936.3.4
 	}
+	
+	mean_time_to_happen = { days = 5 }
 
-	mean_time_to_happen = { days = 7 }
+	fire_only_once = yes
 	
 	option = {
-		name = moreyugoslavia.1.a
+		name = moreyugoslavia.5.a
 		ai_chance = {
 			factor = 90
 		}
+		add_stability = -0.05
+		set_country_flag = attempted_assassination_stojadinovic
 		
-		create_country_leader = {
-			name = "Petar II Karađorđević"
-			desc = "POLITICS_PETER_II_DESC"
-			picture = "Portrait_Yugoslavia_Peter_II.dds"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				#
-			}
+		hidden_effect = {
+			country_event = { days = 3 id = moreyugoslavia.6 }
 		}
-		
-		set_party_name = {
-			ideology = neutrality 
-			long_name = YUG_neutrality_party_2 
-			name = YUG_neutrality_party_2 
-		}
-	}
-	
-	option = {
-		name = moreyugoslavia.1.b
-		
-		remove_ideas = YUG_yugoslav_regency
-		add_ideas = YUG_peter_II
 	}
 }
 
@@ -189,89 +167,6 @@ country_event = {
 		set_country_flag = vladko_elected
 		
 		add_political_power = 10
-	}
-}
-
-# Attempted Assassination of Milan Stojadinovic
-country_event = {
-	id = moreyugoslavia.5
-	title = moreyugoslavia.5.t
-	desc = moreyugoslavia.5.d
-	picture = GFX_report_event_milan_stojadinovic
-
-	trigger = {
-		tag = YUG
-		has_government = neutrality
-		has_idea = YUG_yugoslav_regency
-		date > 1936.3.4
-	}
-	
-	mean_time_to_happen = { days = 5 }
-
-	fire_only_once = yes
-	
-	option = {
-		name = moreyugoslavia.5.a
-		ai_chance = {
-			factor = 90
-		}
-		add_stability = -0.05
-		set_country_flag = attempted_assassination_stojadinovic
-		
-		hidden_effect = {
-			country_event = { days = 3 id = moreyugoslavia.6 }
-		}
-	}
-}
-
-# Assassination Attempt Follow-up
-country_event = {
-	id = moreyugoslavia.6
-	title = moreyugoslavia.6.t
-	desc = moreyugoslavia.6.d
-	picture = GFX_report_event_petar_zivkovic
-
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-	option = {
-		name = moreyugoslavia.6.a
-		ai_chance = {
-			factor = 90
-		}
-	}
-}
-
-# 2nd Stojadinović's Government
-country_event = {
-	id = moreyugoslavia.7
-	title = moreyugoslavia.7.t
-	desc = moreyugoslavia.7.d
-	picture = GFX_report_event_generic_conference
-
-	trigger = {
-		tag = YUG
-		has_government = neutrality
-		has_idea = YUG_yugoslav_regency
-		date > 1937.3.7
-		has_country_flag = attempted_assassination_stojadinovic
-	}
-	
-	mean_time_to_happen = { days = 5 }
-	
-	fire_only_once = yes
-	
-	option = {
-		name = moreyugoslavia.7.a
-		ai_chance = {
-			factor = 90
-		}
-		add_political_power = -20
-		add_stability = 0.05
-		remove_ideas = YUG_petar_zivkovic_army
-		add_ideas = YUG_ljubomir_maric_army_chief
-		set_country_flag = zivkovic_out_of_office
 	}
 }
 
