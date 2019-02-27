@@ -6,7 +6,7 @@ add_namespace = moreyugoslavia
 add_namespace = moreyugoslaviaocc
 add_namespace = moreyugoslaviatag
 
-# Attempted Assassination of Milan Stojadinovic
+# Attempted Assassination on Milan Stojadinovic
 country_event = {
 	id = moreyugoslavia.1
 	title = moreyugoslavia.1.t
@@ -29,6 +29,8 @@ country_event = {
 		ai_chance = {
 			factor = 90
 		}
+		complete_national_focus = YUG_stojadinovic_assassination
+		
 		add_stability = -0.05
 		set_country_flag = attempted_assassination_stojadinovic
 		

@@ -14,4 +14,81 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1350 }
 	
+	#	focus = {
+	#		id = YUG_
+	#		icon = GFX_
+	#		prerequisite = { focus = }
+	#		mutually_exclusive = { focus =  }
+	#		x = -3
+	#		y = 0
+	#		relative_position_id = 
+	#
+	#		cost = 10
+	#
+	#		ai_will_do = {
+	#			factor = 1
+	#		}
+	#
+	#		available = {
+	#
+	#		}
+	#		
+	#		bypass = {
+	#
+	#		}
+	#
+	#		cancel_if_invalid = yes
+	#		continue_if_invalid = no
+	#		available_if_capitulated = no
+	#
+	#		complete_tooltip = {
+	#
+	#		}
+	#
+	#		completion_reward = {
+	#
+	#		}
+	#	}
+	
+	################################
+	### POLITICIAL TREE/POLITICS ###
+	################################
+	
+	focus = {
+		id = YUG_stojadinovic_assassination
+		icon = GFX_goal_YUG_stojadinovic_assassination
+		mutually_exclusive = {  }
+		x = 2
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = YUG_stojadinovic_assassination_tt
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			
+		}
+	}
+	
 }

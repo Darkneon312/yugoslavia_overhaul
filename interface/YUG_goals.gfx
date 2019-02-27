@@ -1,0 +1,22 @@
+spriteTypes = {
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_stojadinovic_assassination"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_stojadinovic_assassination.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_secert_police"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_secret_police.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_limited_selfgoverment"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_limited_selfgoverment.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_orthodox_church_support"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_orthodox_church_support.dds"			
+	}
+}
