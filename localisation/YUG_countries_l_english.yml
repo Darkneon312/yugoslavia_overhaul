@@ -1,0 +1,54 @@
+﻿l_english:
+
+ #BIH
+ BIH_fascism:0 "Unitary Bosnia"
+ BIH_fascism_DEF:0 "Unitary Bosnia"
+ BIH_communism:0 "People's Republic of BiH"
+ BIH_communism_DEF:0 "The People's Republic of Bosnia and Herzegovina"
+ BIH_democratic:0 "Republic of Bosnia and Herzegovina"
+ BIH_democratic_DEF:0 "The Republic of Bosnia and Herzegovina"
+ BIH_neutrality:0 "Bosnia"
+ BIH_neutrality_DEF:0 "Bosnia"
+ BIH_fascism_ADJ:0 "Bosnian"
+ BIH_communism_ADJ:0 "Bosnian"
+ BIH_neutrality_ADJ:0 "Bosnian"
+ BIH_democratic_ADJ:0 "Bosnian"
+ 
+ BIH_YUG_subject:0 "Banovina of Bosnia"
+ BIH_YUG_subject_DEF:0 "The Banovina of Bosnia"
+ 
+ #SVN
+ SVN_fascism:0 "Slovene State"
+ SVN_fascism_DEF:0 "The Slovene State"
+ SVN_communism:0 "Socialist Republic of Slovenia"
+ SVN_communism_DEF:0 "The Socialist Republic of Slovenia"
+ SVN_neutrality:0 "Slovenia"
+ SVN_neutrality_DEF:0 "Slovenia"
+ SVN_democratic:0 "Republic of Slovenia"
+ SVN_democratic_DEF:0 "The Republic of Slovenia"
+ SVN_fascism_ADJ:0 "Slovene"
+ SVN_communism_ADJ:0 "Slovene"
+ SVN_neutrality_ADJ:0 "Slovene"
+ SVN_democratic_ADJ:0 "Slovene"
+ 
+ SVN_YUG_subject:0 "Banovina of Slovenia"
+ SVN_YUG_subject_DEF:0 "The Banovina of Slovenia"
+ 
+ #MKD
+ 
+ MKD_fascism:0 "Vardar Macedonia"
+ MKD_fascism_DEF:0 "Vardar Macedonia"
+ MKD_communism:0 "Socialist Republic of Macedonia"
+ MKD_communism_DEF:0 "The Socialist Republic of Macedonia"
+ MKD_democratic:0 "Republic of Vardar Macedonia"
+ MKD_democratic_DEF:0 "The Republic of Vardar Macedonia"
+ MKD_neutrality:0 "Macedonia"
+ MKD_neutrality_DEF:0 "Macedonia"
+ MKD_fascism_ADJ:0 "Macedonian"
+ MKD_communism_ADJ:0 "Macedonian"
+ MKD_democratic_ADJ:0 "Macedonian"
+ MKD_neutrality_DEF:0 "Macedonia"
+ MKD_neutrality_ADJ:0 "Macedonian"
+ 
+ MKD_YUG_subject:0 "Banovina of Macedonia"
+ MKD_YUG_subject_DEF:0 "The Banovina of Macedonia"

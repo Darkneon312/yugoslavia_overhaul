@@ -55,6 +55,27 @@ ideas = {
 			}
 		}
 		
+		YUG_serbian_favortism = {
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			available = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		
 		YUG_the_croatian_question = {
 			
 			allowed = {
@@ -66,10 +87,13 @@ ideas = {
 			}
 			
 			available = {
-				CRO = {
-					OR = {
-						exists = no
+				OR = {
+					CRO = {
 						is_subject_of = YUG
+					}
+					YUG = { 
+						owns_state = 103
+						owns_state = 109
 					}
 				}
 			}
@@ -78,6 +102,48 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.3
+			}
+		}
+		
+		YUG_slovene_nationalism = {
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			available = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		
+		YUG_vmro = {
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			available = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
 			}
 		}
 		
@@ -356,10 +422,6 @@ ideas = {
 	industrial_concern = {
 	
 		YUG_min = {
-		
-			picture = idea_YUG_min
-
-			#available = { has_completed_focus = YUG_found_min }
 			
 			allowed = {
 				original_tag = YUG
@@ -368,7 +430,7 @@ ideas = {
 			traits = { industrial_concern }
 			
 			research_bonus = {
-				industry = 0.07
+				industry = 0.075
 			}
 			
 			equipment_bonus = {
@@ -391,6 +453,9 @@ ideas = {
 			}
 			
 			available = {
+				NOT = {
+					has_idea = YUG_the_croatian_question
+				}
 				CRO = {
 					OR = {
 						exists = no
@@ -402,7 +467,7 @@ ideas = {
 			traits = { industrial_concern }
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.1
 			}
 
 			ai_will_do = {
@@ -419,6 +484,9 @@ ideas = {
 			}
 			
 			available = {
+				NOT = {
+					has_idea = YUG_the_croatian_question
+				}
 				CRO = {
 					OR = {
 						exists = no
@@ -430,39 +498,13 @@ ideas = {
 			traits = { electronics_concern }
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.1
 			}
 
 			ai_will_do = {
 				factor = 1
 			}			
 		}
-		
-		#YUG_radio_station_zagreb = {
-		#	
-		#	picture = generic_electronics_concern_1
-		#	
-		#	allowed = {
-		#		original_tag = YUG
-		#	}
-		#	
-		#	traits = { electronics_concern }
-		#	
-		#	equipment_bonus = {
-		#		# trainers and bombers
-		#	}
-		#	
-		#	ai_will_do = {
-		#		factor = 1
-		#	}
-		#	
-		#	research_bonus = {
-		#		radar_tech = 0.1
-		#		electronics = 0.05
-		#	}
-		#	
-		#}
-		
 	}
 
 	theorist = {

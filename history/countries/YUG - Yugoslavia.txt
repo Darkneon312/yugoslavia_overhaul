@@ -10,6 +10,13 @@ add_ideas = {
 
 add_ideas = {
 	YUG_yugoslav_regency
+	YUG_serbian_favortism
+	YUG_the_croatian_question
+	YUG_slovene_nationalism
+	YUG_vmro
+}
+
+add_ideas = {
 	YUG_petar_zivkovic_army
 }
 

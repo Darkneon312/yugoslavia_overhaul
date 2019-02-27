@@ -6,7 +6,22 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_YUG_serbian_favortism"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_serbian_favortism.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_YUG_the_croatian_question"
 		texturefile = "gfx/interface/ideas/YUG/idea_YUG_the_croatian_question.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_slovene_nationalism"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_slovene_nationalism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_vmro"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_vmro.dds"
 	}
 }
