@@ -1,7 +1,0 @@
-
-graphical_culture = eastern_european_gfx
-graphical_culture_2d = eastern_european_2d
-
-#color = { 94 143 163 }
-color = rgb { 94 143 163 }
-color_ui = rgb { 94 143 163 }

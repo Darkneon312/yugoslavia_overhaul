@@ -3,81 +3,81 @@ ideas = {
 
 	political_advisor = {
 
-		#BIH_ante_vokic = {
+		#BOS_ante_vokic = {
 		#		
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#	
 		#	traits = { war_industrialist }
 		#
 		#}
 		
-		#BIH_julije_makanec = {
+		#BOS_julije_makanec = {
 		#
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#	
 		#	traits = { silent_workhorse }
 		#
 		#}
 
-		#BIH_andrija_artukovic = {
+		#BOS_andrija_artukovic = {
 		#
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#	
 		#	traits = { fortification_engineer }
 		#}
 		
-		#BIH_ante_pavelic = {
+		#BOS_ante_pavelic = {
 		#
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#
 		#	traits = { smooth_talking_charmer }
 		#}
 		
-		BIH_Duro_Pucar = {
+		BOS_Duro_Pucar = {
 		
 			picture = generic_political_advisor_europe_1
 	
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			traits = { communist_revolutionary }
 		}
 		
-		BIH_Dzafer_Kulenovic = {
+		BOS_Dzafer_Kulenovic = {
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 		
 			traits = { fascist_demagogue }
 			
 		}
 		
-		BIH_random_democratic_reformer = {
+		BOS_random_democratic_reformer = {
 		
 			picture = generic_democratic_europe
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 		
 			traits = { democratic_reformer }
 			
 		}
 		
-		BIH_osman_kulenovic = {
+		BOS_osman_kulenovic = {
 		
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			available = {
@@ -87,19 +87,19 @@ ideas = {
 			traits = { prince_of_terror }	
 		}
 
-		BIH_mehmed_alajbegovic = {
+		BOS_mehmed_alajbegovic = {
 
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			traits = { compassionate_gentleman }	
 		}		
 
-		BIH_vjekoslav_vrancic = {
+		BOS_vjekoslav_vrancic = {
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 		
 			traits = { captain_of_industry }
@@ -110,10 +110,10 @@ ideas = {
 	# MILITARY
 	army_chief = {
 
-		BIH_husejin_biscevic = {
+		BOS_husejin_biscevic = {
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 		
 			traits = { army_chief_defensive_2 }
@@ -123,10 +123,10 @@ ideas = {
 			}
 		}
 		
-		BIH_halim_malkoc = {
+		BOS_halim_malkoc = {
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			#available = {
@@ -140,10 +140,10 @@ ideas = {
 			}
 		}		
 
-		#BIH_fedor_dragojlov = {
+		#BOS_fedor_dragojlov = {
 		#	
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#	
 		#	traits = { army_chief_maneuver_2 }
@@ -157,10 +157,10 @@ ideas = {
 	air_chief = {
 		
 
-		#BIH_friedrich_navratil = {
+		#BOS_friedrich_navratil = {
 		#	
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#	
 		#	traits = { air_chief_ground_support_3 }
@@ -170,12 +170,12 @@ ideas = {
 		#	}
 		#}
 
-		BIH_adalbert_rogulja = {
+		BOS_adalbert_rogulja = {
 		
 			picture = generic_air_europe_1
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 		
 			traits = { air_chief_ground_support_2 }
@@ -188,12 +188,12 @@ ideas = {
 
 	navy_chief = {
 		
-		BIH_random_high_command = {
+		BOS_random_high_command = {
 		
 			picture = generic_navy_europe_1
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			traits = { army_infantry_2 }
@@ -208,10 +208,10 @@ ideas = {
 
 	high_command = {
 
-		#BIH_rafael_boban = {
+		#BOS_rafael_boban = {
 		#	
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#	
 		#	traits = { army_infantry_2 }
@@ -228,10 +228,10 @@ ideas = {
 		#	}
 		#}	
 		
-		#BIH_vjekoslav_luburic = {
+		#BOS_vjekoslav_luburic = {
 		#	
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#	
 		#	traits = { army_artillery_2 }
@@ -241,10 +241,10 @@ ideas = {
 		#	}
 		#}		
 		
-		#BIH_josip_broz_tito = {
+		#BOS_josip_broz_tito = {
 		#	
 		#	allowed = {
-		#		original_tag = BIH
+		#		original_tag = BOS
 		#	}
 		#	
 		#	available = {
@@ -261,12 +261,12 @@ ideas = {
 		#	}
 		#}		
 
-		BIH_dobroslav_jevdevic = {
+		BOS_dobroslav_jevdevic = {
 		
 			picture = generic_army_europe_3
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			traits = { army_regrouping_3 }
@@ -276,12 +276,12 @@ ideas = {
 			}
 		}
 
-		BIH_muhamed_hadziefendic = {
+		BOS_muhamed_hadziefendic = {
 		
 			picture = generic_army_europe_2
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			traits = { army_logistics_2 } 
@@ -293,12 +293,12 @@ ideas = {
 			}
 		}
 		
-		BIH_random_high_command = {
+		BOS_random_high_command = {
 		
 			picture = generic_army_europe_1
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			traits = { army_infantry_2 }
@@ -311,12 +311,12 @@ ideas = {
 
 	theorist = {
 		
-		BIH_random_army = {
+		BOS_random_army = {
 			
 			picture = generic_army_europe_3
 
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			research_bonus = {
@@ -326,12 +326,12 @@ ideas = {
 			traits = { military_theorist }
 		}
 
-		BIH_random_navy = {
+		BOS_random_navy = {
 
 			picture = generic_navy_europe_2
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			research_bonus = {
@@ -341,12 +341,12 @@ ideas = {
 			traits = { naval_theorist }
 		}
 
-		BIH_random_air = {
+		BOS_random_air = {
 
 			picture = generic_air_europe_2
 			
 			allowed = {
-				original_tag = BIH
+				original_tag = BOS
 			}
 			
 			research_bonus = {

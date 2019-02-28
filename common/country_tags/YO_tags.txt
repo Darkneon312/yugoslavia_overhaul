@@ -1,5 +1,1 @@
-
-SVN = "countries/YO_Slovenia.txt"
-BIH = "countries/YO_Bosnia.txt"
-#MKD = "countries/YO_Macedonia.txt"
 YGO = "countries/YO_Otheryug.txt"

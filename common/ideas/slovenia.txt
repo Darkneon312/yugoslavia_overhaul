@@ -3,99 +3,99 @@ ideas = {
 
 	political_advisor = {
 
-		SVN_anton_korosec = {
+		SLV_anton_korosec = {
 		
 			picture = generic_political_advisor_europe_1
 		
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			#traits = { war_industrialist }
 			traits = { popular_figurehead }
 		}
 		
-		SVN_boris_furlan = {
+		SLV_boris_furlan = {
 		
 			picture = generic_political_advisor_europe_3
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { silent_workhorse }
 		}				
 		
-		#SVN_franc_leskosek = {
+		#SLV_franc_leskosek = {
 		#
 		#	allowed = {
-		#		original_tag = SVN
+		#		original_tag = SLV
 		#	}
 		#	
 		#	traits = { prince_of_terror }	
 		#}
 
-		SVN_leon_rupnik = {
+		SLV_leon_rupnik = {
 		
 			picture = generic_political_advisor_europe_4
 		
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { fortification_engineer }
 		}
 		
-		SVN_bogumil_vosnjak = {
+		SLV_bogumil_vosnjak = {
 		
 			picture = generic_democratic_europe
 		
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { democratic_reformer }
 		}
 		
 		
-		SVN_niko_silih = {
+		SLV_niko_silih = {
 		
 			picture = generic_political_advisor_europe_2
 		
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { communist_revolutionary }
 		}
 		
-		SVN_vuk_rupnik = {
+		SLV_vuk_rupnik = {
 		
 			picture =  generic_political_advisor_europe_3
 		
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { fascist_demagogue }
 		}
 		
-		#SVN_marko_natlacen = {
+		#SLV_marko_natlacen = {
 		#
 		#	allowed = {
-		#		original_tag = SVN
+		#		original_tag = SLV
 		#	}
 		#	
 		#	traits = { smooth_talking_charmer }
 		#}	
 		
 
-		SVN_franc_kulovec = {
+		SLV_franc_kulovec = {
 		
 			picture = generic_political_advisor_europe_5
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { captain_of_industry }
@@ -107,10 +107,10 @@ ideas = {
 	# MILITARY
 	army_chief = {
 
-		SVN_franc_krenner = {
+		SLV_franc_krenner = {
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 
 			traits = { army_chief_maneuver_2  }
@@ -120,12 +120,12 @@ ideas = {
 			}
 		}
 
-		SVN_leon_rupnik_army_chief = {
+		SLV_leon_rupnik_army_chief = {
 			
-			#picture = SVN_leon_rupnik
+			#picture = SLV_leon_rupnik
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 	
 			traits = { army_chief_defensive_2 }
@@ -138,12 +138,12 @@ ideas = {
 
 	air_chief = {
 
-		SVN_air_generic = {
+		SLV_air_generic = {
 			
 			picture = generic_air_europe_2
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { air_chief_reform_2 }
@@ -153,12 +153,12 @@ ideas = {
 			}
 		}
 
-		SVN_air_generic2 = {
+		SLV_air_generic2 = {
 			
 			picture = generic_air_europe_3
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 		
 			traits = { air_chief_ground_support_2 }
@@ -171,12 +171,12 @@ ideas = {
 
 	navy_chief = {
 
-		#SVN_naval_generic = {
+		#SLV_naval_generic = {
 		#	
 		#	picture = generic_navy_europe_2
 		#	
 		#	allowed = {
-		#		original_tag = SVN
+		#		original_tag = SLV
 		#	}
 		#
 		#	traits = { navy_chief_maneuver_2 }
@@ -186,12 +186,12 @@ ideas = {
 		#	}
 		#}
 
-		#SVN_naval_generic2 = {
+		#SLV_naval_generic2 = {
 		#	
 		#	picture = generic_navy_europe_3
 		#	
 		#	allowed = {
-		#		original_tag = SVN
+		#		original_tag = SLV
 		#	}
 		#
 		#	traits = { navy_chief_decisive_battle_2 }
@@ -201,12 +201,12 @@ ideas = {
 		#	}
 		#}
 		
-		SVN_djuro_jakcin = {
+		SLV_djuro_jakcin = {
 
 			picture = generic_navy_europe_3
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { navy_screen_2 }
@@ -220,12 +220,12 @@ ideas = {
 
 	high_command = {
 		
-		SVN_vuk_rupnik_high_command = {
+		SLV_vuk_rupnik_high_command = {
 
-			picture = SVN_vuk_rupnik
+			picture = SLV_vuk_rupnik
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { army_artillery_2 }
@@ -235,10 +235,10 @@ ideas = {
 			}
 		}
 		
-		SVN_ernest_peterlin = {
+		SLV_ernest_peterlin = {
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { army_infantry_3 }
@@ -248,12 +248,12 @@ ideas = {
 			}
 		}
 	
-		SVN_niko_silih_high_command = {
+		SLV_niko_silih_high_command = {
 
-			picture = SVN_niko_silih
+			picture = SLV_niko_silih
 		
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { army_regrouping_3 }
@@ -263,12 +263,12 @@ ideas = {
 			}
 		}
 		
-		SVN_peter_rozman = {
+		SLV_peter_rozman = {
 
 			picture = generic_army_europe_5
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { army_logistics_2 }
@@ -278,12 +278,12 @@ ideas = {
 			}
 		}
 
-		SVN_milko_vizjak = {
+		SLV_milko_vizjak = {
 
 			picture = generic_army_europe_1
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			traits = { army_commando_2 }
@@ -294,12 +294,12 @@ ideas = {
 		}
 		
 
-		#SVN_djuro_jakcin = {
+		#SLV_djuro_jakcin = {
 		#
 		#	picture = generic_navy_europe_3
 		#	
 		#	allowed = {
-		#		original_tag = SVN
+		#		original_tag = SLV
 		#	}
 		#	
 		#	traits = { navy_screen_2 }
@@ -313,12 +313,12 @@ ideas = {
 
 	theorist = {
 		
-		SVN_random_army = {
+		SLV_random_army = {
 			
 			picture = generic_army_europe_3
 
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			research_bonus = {
@@ -328,12 +328,12 @@ ideas = {
 			traits = { military_theorist }
 		}
 
-		SVN_random_navy = {
+		SLV_random_navy = {
 
 			picture = generic_navy_europe_2
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			research_bonus = {
@@ -343,12 +343,12 @@ ideas = {
 			traits = { naval_theorist }
 		}
 
-		SVN_random_air = {
+		SLV_random_air = {
 
 			picture = generic_air_europe_2
 			
 			allowed = {
-				original_tag = SVN
+				original_tag = SLV
 			}
 			
 			research_bonus = {
