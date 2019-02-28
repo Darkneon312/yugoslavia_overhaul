@@ -12,46 +12,19 @@ if = {
 set_research_slots = 3
 
 add_ideas = {
-	YUG_yugoslav_regency
-	YUG_petar_zivkovic_army
-}
-
-add_ideas = {
 	anti_german_military
 }
 
-if = {
-	limit = {
-		has_dlc = "Death or Dishonor"
-	}
-	add_ideas = {
-		YUG_idea_croatian_opposition
-		YUG_idea_macedonian_opposition
-		YUG_idea_slovene_nationalism
-		YUG_idea_serbian_general_staff
-	}
+add_ideas = {
+	YUG_yugoslav_regency
+	YUG_serbian_favortism
+	YUG_the_croatian_question
+	YUG_slovene_nationalism
+	YUG_vmro
 }
 
 add_ideas = {
-	#YUG_agriculutrul_society
-}
-
-set_party_name = { 
-	ideology = neutrality
-	name = YUG_JRZ_neutrality_party
-	long_name = YUG_JRZ_neutrality_party_long
-}
-
-set_party_name = { 
-	ideology = fascism
-	name = YUG_ZBR_fascism_party
-	long_name = YUG_ZBR_fascism_party_long
-}
-
-ai_strategy = {
-	type = invade
-	id = "BUL"
-	value = -2000
+	YUG_petar_zivkovic_army
 }
 
 set_technology = {
@@ -228,9 +201,6 @@ if = {
 	}
 
 	set_country_flag = dragisa_in_power
-	set_country_flag = rupnik_line_ready
-	
-	#add_opinion_modifier = { target = CRO modifier = banovina_established }
 }
 
 set_convoys = 10
@@ -290,6 +260,19 @@ set_politics = {
 	}
 
 }
+
+set_party_name = { 
+	ideology = neutrality
+	name = YUG_JRZ_neutrality_party
+	long_name = YUG_JRZ_neutrality_party_long
+}
+
+set_party_name = { 
+	ideology = fascism
+	name = YUG_ZBR_fascism_party
+	long_name = YUG_ZBR_fascism_party_long
+}
+
 set_stability = 0.6
 
 create_country_leader = {
