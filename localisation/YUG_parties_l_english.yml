@@ -1,0 +1,16 @@
+﻿l_english:
+
+ #YUG
+ YUG_JRZ_neutrality_party:0 "JRZ"
+ YUG_JRZ_neutrality_party_long:0 "Jugoslovenska Radikalna Zajednica"
+ YUG_HSS_neutrality_party:0 "HSS"
+ YUG_HSS_neutrality_party_long:0 "Hrvatska Seljačka Stranka"
+ 
+ YUG_UST_fascism_party:0 "Ustaša"
+ YUG_UST_fascism_party_long:0 "Ustaša – Hrvatski Revolucionarni Pokret"
+ YUG_ZBR_fascism_party:0 "ZBOR"
+ YUG_ZBR_fascism_party_long:0 "Jugoslovenski Narodni pokret Zbor"
+ 
+ #SER
+ SER_KMV_fascism_party:0 "Komesarska vlada"
+ SER_KMV_fascism_party_long:0 "Komesarska vlada"

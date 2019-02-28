@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_YUG_min"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_min.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_saponia"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_saponia.dds"
+	}
+}

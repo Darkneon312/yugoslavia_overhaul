@@ -1,6 +1,5 @@
 ﻿capital = 102
 set_research_slots = 3
-oob = "SLO_1939"
 
 set_technology = {
 	gw_artillery = 1
