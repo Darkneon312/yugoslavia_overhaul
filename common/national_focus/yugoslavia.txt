@@ -58,7 +58,7 @@ focus_tree = {
 		id = YUG_stojadinovic_assassination
 		icon = GFX_goal_YUG_stojadinovic_assassination
 		mutually_exclusive = {  }
-		x = 2
+		x = 12
 		y = 0
 
 		cost = 10
@@ -78,9 +78,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
 
 		complete_tooltip = {
 
