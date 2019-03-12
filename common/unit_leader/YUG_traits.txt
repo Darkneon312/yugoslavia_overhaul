@@ -6,10 +6,15 @@ leader_traits = {
 		
 		new_commander_weight = {
 			factor = 0  # Scripted starting leaders only
-			modifier = {
-				add = 1
-				tag = YUG
-			}
+		}		
+	}
+	
+	YUG_croatian_duplicate = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
 		}		
 	}
 	
@@ -19,10 +24,15 @@ leader_traits = {
 		
 		new_commander_weight = {
 			factor = 0  # Scripted starting leaders only
-			modifier = {
-				add = 1
-				tag = YUG
-			}
+		}		
+	}
+	
+	YUG_serbian_duplicate = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
 		}		
 	}
 	
@@ -32,10 +42,15 @@ leader_traits = {
 		
 		new_commander_weight = {
 			factor = 0  # Scripted starting leaders only
-			modifier = {
-				add = 1
-				tag = YUG
-			}
+		}
+	}
+	
+	YUG_slovenian_duplicate = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
 		}
 	}
 	
@@ -45,10 +60,15 @@ leader_traits = {
 		
 		new_commander_weight = {
 			factor = 0  # Scripted starting leaders only
-			modifier = {
-				add = 1
-				tag = YUG
-			}
+		}		
+	}
+	
+	YUG_bosnian_duplicate = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
 		}		
 	}
 	
@@ -58,10 +78,15 @@ leader_traits = {
 		
 		new_commander_weight = {
 			factor = 0  # Scripted starting leaders only
-			modifier = {
-				add = 1
-				tag = YUG
-			}
+		}		
+	}
+	
+	YUG_montenegrin_duplicate = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
 		}		
 	}
 	
@@ -71,10 +96,15 @@ leader_traits = {
 		
 		new_commander_weight = {
 			factor = 0  # Scripted starting leaders only
-			modifier = {
-				add = 1
-				tag = YUG
-			}
+		}		
+	}
+	
+	YUG_macedonian_duplicate = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
 		}		
 	}
 	

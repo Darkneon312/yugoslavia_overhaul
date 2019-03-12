@@ -7,15 +7,21 @@ ideas = {
 			picture = generic_fascism_banned
 
 			allowed = {
-				always = no
+				
 			}
-
+			
 			allowed_civil_war = {
 				NOT = {
 					has_government = fascism
 				}
 			}
 
+			available = {
+				GER = {
+					has_government = fascism
+				}
+			}
+			
 			removal_cost = -1
 			
 			modifier = {
@@ -23,11 +29,11 @@ ideas = {
 				war_support_factor = 0.05
 			}
 			
-			targeted_modifier = {
-				tag = GER
-				attack_bonus_against = 0.03
-				defense_bonus_against = 0.03
-			}
+			#targeted_modifier = {
+			#	tag = GER
+			#	attack_bonus_against = 0.03
+			#	defense_bonus_against = 0.03
+			#}
 		}
 		
 		YUG_yugoslav_regency = {
@@ -55,12 +61,33 @@ ideas = {
 			}
 		}
 		
-		YUG_serbian_favortism = {
+		YUG_communism_banned = {
+			
+			picture = anti_soviet_pact
+			
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				communism_drift = -0.05
+			}
+		}
+		
+		YUG_internal_instabilty_1 = {
+		
+			picture = generic_neutrality_drift_bonus
 			
 			allowed = {
 				original_tag = YUG
 			}
-			
+
 			allowed_civil_war = {
 				
 			}
@@ -68,20 +95,24 @@ ideas = {
 			available = {
 				
 			}
-			
+
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = -0.3
+				war_support_factor = -0.1
+				mobilization_speed = -0.1
 			}
 		}
 		
-		YUG_the_croatian_question = {
+		YUG_croatian_question = {
+		
+			picture = chi_incompetent_officers
 			
 			allowed = {
 				original_tag = YUG
 			}
-			
+
 			allowed_civil_war = {
 				
 			}
@@ -97,53 +128,213 @@ ideas = {
 					}
 				}
 			}
-			
+
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.3
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				conscription_factor = -0.2
 			}
 		}
 		
-		YUG_slovene_nationalism = {
+		YUG_serbian_general_staff = {
+
+			allowed = {
+				original_tag = YUG
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.1
+				military_leader_cost_factor = 0.5
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.1
+			}
+		}
+		
+		YUG_divided_army = {
+		
+			picture = prc_low_popular_support2
+
+			allowed = {
+				original_tag = YUG
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.1
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
+			}
+		}
+		
+		YUG_agricultural_nation_1 = {
+			
+			picture = generic_agrarian_society
 			
 			allowed = {
 				original_tag = YUG
 			}
 			
 			allowed_civil_war = {
-				
-			}
-			
-			available = {
-				
+			    always = yes	
 			}
 			
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.05
+				consumer_goods_factor = 0.1
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_arms_factory_factor = -0.2
+		    }
+			
+			research_bonus = { 
+				industry = -0.1
 			}
 		}
 		
-		YUG_vmro = {
+		YUG_agricultural_nation_2 = {
+			
+			picture = generic_agrarian_society
 			
 			allowed = {
 				original_tag = YUG
 			}
 			
 			allowed_civil_war = {
-				
-			}
-			
-			available = {
-				
+			    always = yes	
 			}
 			
 			removal_cost = -1
 			
 			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.15
+		    }
+			
+			research_bonus = { 
+				industry = -0.1
+			}
+		}
+		
+		YUG_agricultural_nation_3 = {
+			
+			picture = generic_agrarian_society
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+			    always = yes	
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+		    }
+			
+			research_bonus = { 
+				industry = -0.05
+			}
+		}
+		
+		YUG_dalmatian_shipping = {
+		
+			picture = generic_navy_bonus
+			
+			allowed = {
+				original_tag = YUG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				convoy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		YUG_expanded_mining_industry = {
+			
+			picture = generic_exploit_mines
+
+			allowed = {
+				original_tag = YUG
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+		
+		YUG_kosovo_gold = {
+			
+			picture = ast_all_in
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+			    owns_state = 108
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				consumer_goods_factor = -0.05
+		    }
+		}
+		
+		YUG_expanded_opium_industry = {
+			
+			picture = prc_permit_opium_trade
+
+			allowed = {
+				original_tag = YUG
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
 				stability_factor = -0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 		
@@ -186,10 +377,6 @@ ideas = {
 				
 			}
 			
-			research_bonus = { 
-				industry = -0.05
-			}
-			
 			modifier = {
 				production_speed_industrial_complex_factor = -0.05
 				production_speed_arms_factory_factor = -0.05
@@ -222,6 +409,561 @@ ideas = {
 			}
 		
 		}
+		
+		#################
+		###	DOD Ideas ###
+		#################
+		
+		YUG_idea_serbian_general_staff = {
+			
+			picture = YUG_serbian_general_staff
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				military_leader_cost_factor = 0.50
+				max_planning = 0.1
+			}
+		}
+
+		YUG_idea_yugoslavian_general_staff = {
+			
+			picture = YUG_yugoslavian_general_staff
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.1
+			}
+		}
+		
+		YUG_idea_federal_defense_council = {
+			
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.1
+				defence = 0.1
+			}
+		}
+		
+		YUG_idea_expanded_mining_industry = {
+			
+			picture = generic_exploit_mines
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+		
+		YUG_idea_local_self_management = {
+			
+			picture = generic_local_self_management
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		YUG_idea_central_management = {
+			
+			picture = generic_central_management
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		YUG_idea_peasant_councils = {
+
+			picture = generic_communism_drift_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.2
+			}
+		}
+		
+		YUG_idea_empowered_peasant_councils = {
+			
+			picture = generic_communism_drift_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.4
+			}
+		}
+		
+		YUG_idea_very_empowered_peasant_councils = {
+			
+			picture = generic_communism_drift_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.6
+			}
+		}
+		
+		YUG_idea_economic_aid = {
+
+			picture = generic_goods_red_bonus
+			
+			available = {
+				YUG = {
+					NOT = { has_war_with = SOV }
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		YUG_artillery_regiments = {
+			
+			picture = generic_artillery_regiments
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		YUG_tank_licenses = {
+			
+			picture = generic_acquire_tanks
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				license_armor_purchase_cost = -0.5
+			}
+		}
+		
+		YUG_idea_foreign_capital = {
+			
+			picture = generic_foreign_capital
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		YUG_idea_orthodox_church_support = {
+			
+			picture = YUG_orthodox_church_support
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+			}
+		}
+		
+		YUG_idea_all_yugoslavian_regiments = {
+			
+			picture = YUG_all_yugoslavian_regiments
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		
+		YUG_idea_croatian_opposition = {
+			
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+			}
+		}
+
+		YUG_idea_macedonian_opposition = {
+			
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				always = no
+				country_exists = BUL
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = 0.25
+				trade_laws_cost_factor = 0.25
+				mobilization_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+			}
+		}
+		
+		YUG_idea_slovene_nationalism = {
+			
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+
+		YUG_idea_slovene_nationalism_2 = {
+			
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		
+		YUG_idea_croats_suppressed = {
+			
+			picture = generic_secret_police
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+		
+		YUG_idea_religious_freedoms_guaranteed = {
+			
+			picture = generic_constitutional_guarantees
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		
+		YUG_idea_local_militias = {
+			
+			picture = YUG_local_militias
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		YUG_air_payment = {
+			
+			picture = generic_fighter_production_diverted
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		YUG_fighter_production_diverted = {
+			
+			picture = generic_fighter_production_diverted
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = 0.1
+					instant = yes
+				}
+			}
+		}
+
+		YUG_bomber_production_diverted = {
+			
+			picture = generic_bomber_production_diverted
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			equipment_bonus = {
+				tac_bomber_equipment = {
+					build_cost_ic = 0.1
+					instant = yes
+				}
+			}
+		}
+
+		YUG_license_production = {
+
+			picture = generic_license_production
+
+			allowed = {
+				original_tag = YUG
+				has_dlc = "Death or Dishonor"
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				license_air_purchase_cost = -0.5
+			}
+		}
+
+		YUG_idea_tank_conversions = {
+			
+			picture = generic_artillery_manufacturer_2
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				equipment_conversion_speed = 0.05
+			}
+		}
 	}
 
 	political_advisor = {
@@ -245,7 +987,7 @@ ideas = {
 			}
 		}
 
-		YUG_milovan_djilas = {
+		YUG_milan_grol = { #YUG_milovan_djilas
 
 			picture = generic_democratic_europe
 			
@@ -378,25 +1120,6 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}
-		
-		YUG_milan_grol = {
-
-			picture = YUG_milan_grol
-
-			allowed = {
-				original_tag = YUG
-			}
-			
-			available = {
-			
-			}
-			
-			traits = { grol_minister }
-			
-			ai_will_do = {
-				factor = 1
-			}
 		}	
 		
 		YUG_milan_stojadinovic = {
@@ -421,13 +1144,17 @@ ideas = {
 	
 	industrial_concern = {
 	
-		YUG_min = {
+		YUG_state_railways = {
 			
 			allowed = {
 				original_tag = YUG
 			}
 			
-			traits = { industrial_concern }
+			available = {
+				
+			}
+			
+			traits = { state_railways }
 			
 			research_bonus = {
 				industry = 0.075
@@ -445,17 +1172,107 @@ ideas = {
 				factor = 1
 			}
 		}
-		
-		YUG_saponia = {
+	
+		YUG_min = {
 			
-			allowed = { 
+			allowed = {
 				original_tag = YUG
 			}
 			
 			available = {
-				NOT = {
-					has_idea = YUG_the_croatian_question
-				}
+				has_completed_focus = YUG_modernize_belgrade_nis_railroad
+			}
+			
+			traits = { industrial_concern }
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			modifier = {
+			    
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_trepca = {
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				has_completed_focus = YUG_kosovo_gold
+			}
+			
+			traits = { mining_company }
+			
+			research_bonus = {
+				industry = 0.05
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			modifier = {
+			    local_resources_factor = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_ei = {
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				
+			}
+			
+			visible = {
+				always = no
+			}
+			
+			traits = { electronics_concern }
+			
+			research_bonus = {
+				electronics = 0.1
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			modifier = {
+			    
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_saponia = {
+		
+			picture = CRO_saponia
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
 				CRO = {
 					OR = {
 						exists = no
@@ -477,16 +1294,13 @@ ideas = {
 		
 		YUG_koncar_elektroindustrija = {
 			
-			picture = generic_electronics_concern_3
+			picture = CRO_koncar_elektroindustrija
 			
 			allowed = { 
 				original_tag = YUG
 			}
 			
 			available = {
-				NOT = {
-					has_idea = YUG_the_croatian_question
-				}
 				CRO = {
 					OR = {
 						exists = no
@@ -1014,13 +1828,16 @@ ideas = {
 		
 		designer = yes
 		
-		jadransko_brodogradiliste = {
+		YUG_jadransko_brodogradiliste_bijela = {
 			
 			picture = generic_naval_manufacturer_2
-
 			
 			allowed = {
 				original_tag = YUG
+			}
+			
+			available = {
+				
 			}
 			
 			equipment_bonus = {
@@ -1032,10 +1849,9 @@ ideas = {
 			}
 			
 			modifier = {
-			    production_speed_dockyard_factor = 0.1   	
+			    production_speed_dockyard_factor = 0.1
 			}
 			
-			#traits = { naval_manufacturer }
 			traits = { coastal_defence_naval_manufacturer }
 			
 			ai_will_do = {
@@ -1043,35 +1859,46 @@ ideas = {
 			}
 		}
 		
-	}
-	
-	aircraft_manufacturer = {
-		
-		designer = yes
-		
-		ikarus = {
+		YUG_brodosplit = {
 			
-			picture = generic_air_manufacturer_3
-
+			picture = CRO_brodosplit
+			
 			allowed = {
 				original_tag = YUG
-				NOT = { has_dlc = "Death or Dishonor" }		
 			}
 			
-			research_bonus = {
-				air_equipment = 0.10
+			available = {
+				CRO = {
+					OR = {
+						exists = no
+						is_subject_of = YUG
+					}
+				}
 			}
 			
 			equipment_bonus = {
-				# produced under licence: Hawker Fury, Potez 25, Avia BH-33, own flying boats and recon aircrafts
+				# generic shipyard?
 			}
 			
-			traits = { light_aircraft_manufacturer }
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+			
+			modifier = {
+			
+			}
+			
+			traits = { naval_manufacturer }
 			
 			ai_will_do = {
 				factor = 1
 			}
 		}
+	}
+	
+	aircraft_manufacturer = {
+		
+		designer = yes
 
 		YUG_ikarus = {
 		
@@ -1079,11 +1906,10 @@ ideas = {
 
 			allowed = {
 				original_tag = YUG
-				has_dlc = "Death or Dishonor"
 			}
 			
 			available = {
-				has_completed_focus = YUG_ikarus
+				#has_completed_focus = YUG_ikarus
 			}
 			
 			research_bonus = {
@@ -1095,30 +1921,6 @@ ideas = {
 			}
 			
 			traits = { light_aircraft_manufacturer }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		rogozarski = {
-			
-			picture = generic_air_manufacturer_2
-
-			allowed = {
-				original_tag = YUG
-				NOT = { has_dlc = "Death or Dishonor" }
-			}
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			equipment_bonus = {
-				# trainers and fighter airplanes Rogozarski PVT
-			}
-			
-			traits = { medium_aircraft_manufacturer }
 			
 			ai_will_do = {
 				factor = 1
@@ -1131,11 +1933,10 @@ ideas = {
 
 			allowed = {
 				original_tag = YUG
-				has_dlc = "Death or Dishonor"
 			}
 			
 			available = {
-				has_completed_focus = YUG_rogozarski
+				#has_completed_focus = YUG_rogozarski
 			}
 			
 			research_bonus = {
@@ -1153,41 +1954,16 @@ ideas = {
 			}
 		}
 
-		zmaj = {
-			
-			picture = generic_air_manufacturer_1
-
-			allowed = {
-				original_tag = YUG
-				NOT = { has_dlc = "Death or Dishonor" }
-			}
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			equipment_bonus = {
-				# trainers and bombers
-			}
-			
-			traits = { heavy_aircraft_manufacturer }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
 		YUG_zmaj = {
 
 			picture = generic_air_manufacturer_1
 
 			allowed = {
 				original_tag = YUG
-				has_dlc = "Death or Dishonor"
 			}
 			
 			available = {
-				has_completed_focus = YUG_zmaj				
+				#has_completed_focus = YUG_zmaj				
 			}
 			
 			research_bonus = {

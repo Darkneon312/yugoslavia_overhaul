@@ -1,0 +1,33 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_trait_YUG_croatian"
+		texturefile = "gfx/interface/traits/personal/trait_YUG_croatian.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_YUG_serbian"
+		texturefile = "gfx/interface/traits/personal/trait_YUG_serbian.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_YUG_slovenian"
+		texturefile = "gfx/interface/traits/personal/trait_YUG_slovenian.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_YUG_bosnian"
+		texturefile = "gfx/interface/traits/personal/trait_YUG_bosnian.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_YUG_montenegrin"
+		texturefile = "gfx/interface/traits/personal/trait_YUG_montenegrin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_YUG_macedonian"
+		texturefile = "gfx/interface/traits/personal/trait_YUG_macedonian.dds"
+	}
+	
+}

@@ -314,11 +314,7 @@ country_event = {
 			}
 			HUN = {
 				add_state_core = 45
-				#add_state_core = 769
-				#add_state_core = 772
 				set_state_controller = 45
-				#set_state_controller = 769
-				#set_state_controller = 772
 			}
 		}
 		
@@ -334,9 +330,7 @@ country_event = {
 			}
 			BUL = {
 				add_state_core = 106
-				#add_state_core = 765
 				set_state_controller = 106
-				#set_state_controller = 765
 			}
 		}
 		
@@ -403,14 +397,9 @@ country_event = {
 			CRO = {
 				transfer_state = 103
 				transfer_state = 109
-				#transfer_state = 768
 				
 				add_state_core = 104
-				#add_state_core = 771
-				#add_state_core = 775
 				set_state_controller = 104
-				#set_state_controller = 771
-				#set_state_controller = 775
 				load_oob = "CRO_YUG_independence"
 			}
 			puppet = CRO
@@ -427,51 +416,15 @@ country_event = {
 				}
 			}
 			CRO = {
-				#transfer_state = 768
-				
 				add_state_core = 104
-				#add_state_core = 771
-				#add_state_core = 775
 				set_state_controller = 104
-				#set_state_controller = 771
-				#set_state_controller = 775
 			}
 		}
-		
-		#if = {
-		#	limit = {
-		#		ALB = {
-		#			exists = yes
-		#			OR = {
-		#				is_subject_of = ITA
-		#				is_in_faction_with = ITA
-		#			}
-		#		}
-		#	}
-		#	ALB = {
-		#		set_state_controller = 763
-		#		set_state_controller = 764
-		#	}
-		#}
-		
-		#if = {
-		#	limit = {
-		#		ALB = {
-		#			exists = no
-		#		}
-		#	}
-		#	ITA = {
-		#		set_state_controller = 763
-		#		set_state_controller = 764
-		#		set_state_controller = 776
-		#	}
-		#}
 		
 		SER = {
 			transfer_state = 107
 			transfer_state = 108
-			#transfer_state = 766
-			#transfer_state = 767
+			transfer_state = 764
 			load_oob = "SER_GER_puppet"
 			
 			set_cosmetic_tag = KMV
@@ -480,6 +433,8 @@ country_event = {
 				name = SER_KMV_fascism_party
 				long_name = SER_KMV_fascism_party_long
 			}
+			
+			remove_ideas = anti_german_military
 		}
 		
 		puppet = SER
@@ -488,7 +443,7 @@ country_event = {
 		
 		if = {
 			limit = {
-				SVN = {
+				SLV = {
 					exists = yes
 					OR = {
 						is_subject_of = GER
@@ -497,23 +452,23 @@ country_event = {
 					has_country_flag = wrong
 				}
 			}
-			SVN = {
+			SLV = {
 				transfer_state = 102
 			}
 		}
 		
 		if = {
 			limit = {
-				SVN = {
+				SLV = {
 					exists = no
 					has_country_flag = wrong
 				}
 			}
-			SVN = {
+			SLV = {
 				transfer_state = 102
 			}
 			GER = {
-				puppet = SVN
+				puppet = SLV
 			}
 		}
 		

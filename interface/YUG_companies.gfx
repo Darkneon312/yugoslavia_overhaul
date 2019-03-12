@@ -1,12 +1,42 @@
 spriteTypes = {
 	
 	spriteType = {
-		name = "GFX_idea_YUG_min"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_min.dds"
+		name = "GFX_idea_YUG_state_railways"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_state_railways.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_saponia"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_saponia.dds"
+		name = "GFX_idea_YUG_min"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_min.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_ei"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_ei.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_trepca"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_trepca.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_saponia"
+		texturefile = "gfx/interface/ideas/CRO/companies/idea_CRO_saponia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_brodosplit"
+		texturefile = "gfx/interface/ideas/CRO/companies/idea_CRO_brodosplit.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_koncar_elektroindustrija"
+		texturefile = "gfx/interface/ideas/CRO/companies/idea_CRO_koncar_elektroindustrija.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_rudolf_fizir"
+		texturefile = "gfx/interface/ideas/CRO/companies/idea_CRO_rudolf_fizir.dds"
 	}
 }

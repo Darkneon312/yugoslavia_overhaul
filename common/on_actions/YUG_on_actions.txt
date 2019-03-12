@@ -11,31 +11,6 @@ on_actions = {
 			163 = {
 				add_extra_state_shared_building_slots = 3
 			}
-			
-			#CRO = {
-			#	
-			#}
-			
-			#ALB = {
-			#	create_country_leader = {
-			#		name = "Enver Hoxha"
-			#		desc = "POLITICS_ENVER_HOXHA_DESC"
-			#		picture = "Portrait_Albania_Enver_Hoxha.tga"
-			#		expire = "1965.1.1"
-			#		ideology = stalinism
-			#		traits = {
-			#			#
-			#		}
-			#	}
-			#}
-			
-			#SVN = {
-			#	add_state_core = 102
-			#}
-			
-			#BIH = {
-			#	add_state_core = 104
-			#}
 		}
 	}
 	
@@ -88,5 +63,80 @@ on_actions = {
 				remove_core_of = YGO
 			}
 		}	
+	}
+	
+	#ROOT is subject FROM is previous overlord
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = {
+					tag = CRO
+				}
+				YUG = {
+					every_unit_leader = {
+						limit = {
+							has_trait = YUG_croatian
+						}
+						set_nationality = CRO
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					tag = SLV
+				}
+				YUG = {
+					every_unit_leader = {
+						limit = {
+							has_trait = YUG_slovenian
+						}
+						set_nationality = SLV
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					tag = BOS
+				}
+				YUG = {
+					every_unit_leader = {
+						limit = {
+							has_trait = YUG_bosnian
+						}
+						set_nationality = BOS
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					tag = MNT
+				}
+				YUG = {
+					every_unit_leader = {
+						limit = {
+							has_trait = YUG_montenegrin
+						}
+						set_nationality = MNT
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					tag = MAC
+				}
+				YUG = {
+					every_unit_leader = {
+						limit = {
+							has_trait = YUG_macedonian
+						}
+						set_nationality = MAC
+					}
+				}
+			}
+		}
 	}
 }

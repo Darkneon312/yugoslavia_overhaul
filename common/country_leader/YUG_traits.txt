@@ -33,7 +33,7 @@ leader_traits = {
 	grol_minister = {
 		random = no
 		production_speed_industrial_complex_factor = 0.05
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 
 		ai_will_do = {
 			factor = 1
@@ -67,6 +67,24 @@ leader_traits = {
 		political_power_factor = 0.1
 		stability_factor = -0.05
 		#negative in ideas file
+		
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+	
+	##################################
+	
+	state_railways = {
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+	
+	mining_company = {
+		random = no
 		
 		ai_will_do = {
 			factor = 1

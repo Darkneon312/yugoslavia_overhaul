@@ -1,5 +1,18 @@
 ﻿l_english:
 
+ YUG_jadransko_brodogradiliste_bijela:0 "Jadransko Brodogradilište Bijela"
+ YUG_brodosplit:0 "Brodosplit"
+ 
+ YUG_state_railways:0 "Jugoslovenske Železnice"
  YUG_min:0 "Mašinska Industrija Niš"
+ YUG_ei:0 "Elektronska Industrija Niš"
+ YUG_trepca:0 "Trepča Mines"
  YUG_saponia:0 "Saponia"
  YUG_koncar_elektroindustrija:0 "Končar Elektroindustrija"
+ 
+ ###########################################################
+ 
+ CRO_brodosplit:0 "Brodosplit"
+ 
+ CRO_saponia:0 "Saponia"
+ CRO_koncar_elektroindustrija:0 "Končar Elektroindustrija"

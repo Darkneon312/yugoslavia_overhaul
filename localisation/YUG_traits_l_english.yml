@@ -4,17 +4,27 @@
  the_rightful_successor:0 "The Rightful Successor"
  push_for_equality:0 "Push for Equality"
  man_of_compromise:0 "Man of Compromise"
- grol_minister:0 "Minister of Education"
+ grol_minister:0 "Education Reformer"
  titoism:0 "Titoism"
  
  ### Advisior Traits
  famous_poet:0 "Famous Poet"
  political_military_figure:0 "Political Military Figure"
  
+ ### Companies
+ state_railways:0 "State Railways"
+ mining_company:0 "Mining Company"
+ 
  ### General Traits
  YUG_croatian:0 "Croatian"
+ YUG_croatian_duplicate:0 "Croatian"
  YUG_serbian:0 "Serbian"
+ YUG_serbian_duplicate:0 "Serbian"
  YUG_slovenian:0 "Slovenian"
+ YUG_slovenian_duplicate:0 "Slovenian"
  YUG_bosnian:0 "Bosnian"
+ YUG_bosnian_duplicate:0 "Bosnian"
  YUG_montenegrin:0 "Montenegrin"
+ YUG_montenegrin_duplicate:0 "Montenegrin"
  YUG_macedonian:0 "Macedonian"
+ YUG_macedonian_duplicate:0 "Macedonian"
