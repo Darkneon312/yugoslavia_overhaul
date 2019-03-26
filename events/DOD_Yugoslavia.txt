@@ -22,6 +22,7 @@ country_event = {
 			has_government = fascism
 			is_faction_leader = yes
 		}
+		has_country_flag = wrong
 	}
 
 	mean_time_to_happen = { days = 2 }
@@ -250,6 +251,7 @@ country_event = {
 			}
 			109 = { is_owned_and_controlled_by = YUG }
 		}
+		has_country_flag = wrong
 	}
 	
 	mean_time_to_happen = {
@@ -945,6 +947,7 @@ country_event = {
 				is_subject_of = GER
 			}
 		}
+		has_country_flag = wrong
 	}
 	
 	option = { # put the squeeze on them
@@ -1002,6 +1005,7 @@ country_event = {
 				focus_progress = { focus = YUG_join_axis progress > 0 } #that would just be mean
 			}
 		}
+		has_country_flag = wrong
 	}
 	
 	option = { # put the squeeze on them
@@ -1127,6 +1131,7 @@ country_event = {
 		YUG = { NOT = { has_war_with = GER } }
 		YUG = { exists = yes }
 		is_historical_focus_on = no
+		has_country_flag = wrong
 	}
 
 	mean_time_to_happen = { days = 4 }
@@ -1180,6 +1185,7 @@ country_event = {
 			is_in_faction = no
 		}
 		has_war_with = GER
+		has_country_flag = wrong
 	}
 	
 	option = { # put the squeeze on them

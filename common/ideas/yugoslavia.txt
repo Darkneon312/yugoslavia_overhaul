@@ -1632,7 +1632,8 @@ ideas = {
 			
 			}
 			
-			traits = { air_chief_safety_2 }
+			#traits = { air_chief_safety_2 }
+			traits = { air_air_superiority_2 }
 			
 			ai_will_do = {
 				factor = 1

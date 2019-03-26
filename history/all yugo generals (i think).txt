@@ -1,12 +1,12 @@
 ﻿# gonna have to make some pattern for ids
-# chetniks - 4000
-# ustashe - 3000
+# chetniks - 2200
+# ustashe - 2100
 # royal army - 2000
-# national salvation (milan nedic) - 5000
-# communist / tito - 6000
-# slovene guard - 7000
-# greens/montenegro - 8000
-# bosnians - 9000
+# national salvation (milan nedic) - 2300
+# communist / tito - 2400
+# slovene guard - 2500
+# greens/montenegro - 2600
+# bosnians - 2700
 
 #############################
 ### GENERALS AND MARSHALS ###

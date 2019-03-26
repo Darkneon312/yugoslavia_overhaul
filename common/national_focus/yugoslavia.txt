@@ -145,7 +145,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_modernization_plan
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -263,7 +263,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				SLV = {
+					exists = yes
+					owns_state = 102
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				SLV = {
+					exists = yes
+					NOT = {
+						owns_state = 102
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 102
+					}
+					SLV = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -314,7 +337,18 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				SLV = {
+					exists = yes
+					owns_state = 102
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				NOT = {
+					owns_state = 102
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -365,7 +399,33 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				CRO = {
+					exists = yes
+					owns_state = 103
+					owns_state = 109
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				CRO = {
+					exists = yes
+					NOT = {
+						owns_state = 103
+						owns_state = 109
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 103
+						owns_state = 109
+					}
+					CRO = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -432,7 +492,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				CRO = {
+					exists = yes
+					owns_state = 103
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				CRO = {
+					exists = yes
+					NOT = {
+						owns_state = 103
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 103
+					}
+					CRO = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -520,7 +603,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				BOS = {
+					exists = yes
+					owns_state = 104
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				BOS = {
+					exists = yes
+					NOT = {
+						owns_state = 104
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 104
+					}
+					BOS = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -571,7 +677,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				BOS = {
+					exists = yes
+					owns_state = 104
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				BOS = {
+					exists = yes
+					NOT = {
+						owns_state = 104
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 104
+					}
+					BOS = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -672,7 +801,64 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			#NOT = {
+			#	owns_state = 103
+			#	owns_state = 105
+			#	owns_state = 109
+			#}
+			AND = {
+				OR = {
+					CRO = {
+						exists = yes
+						owns_state = 103
+						owns_state = 109
+						NOT = {
+							is_subject_of = ROOT
+						}
+					}
+					CRO = {
+						exists = yes
+						NOT = {
+							owns_state = 103
+							owns_state = 109
+						}
+						is_subject_of = ROOT
+					}
+					AND = {
+						NOT = {
+							owns_state = 103
+							owns_state = 109
+						}
+						CRO = {
+							exists = no
+						}
+					}
+				}
+				OR = {
+					MNT = {
+						exists = yes
+						owns_state = 105
+						NOT = {
+							is_subject_of = ROOT
+						}
+					}
+					MNT = {
+						exists = yes
+						NOT = {
+							owns_state = 105
+						}
+						is_subject_of = ROOT
+					}
+					AND = {
+						NOT = {
+							owns_state = 105
+						}
+						MNT = {
+							exists = no
+						}
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -743,7 +929,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				SER = {
+					exists = yes
+					owns_state = 108
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				SER = {
+					exists = yes
+					NOT = {
+						owns_state = 108
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 108
+					}
+					SER = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -789,7 +998,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				SER = {
+					exists = yes
+					owns_state = 45
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				SER = {
+					exists = yes
+					NOT = {
+						owns_state = 45
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 45
+					}
+					SER = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -835,7 +1067,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				SER = {
+					exists = yes
+					owns_state = 108
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				SER = {
+					exists = yes
+					NOT = {
+						owns_state = 108
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 108
+					}
+					SER = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -904,7 +1159,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_modernization_plan
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1008,7 +1263,33 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				SER = {
+					exists = yes
+					owns_state = 107
+					owns_state = 108
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				SER = {
+					exists = yes
+					NOT = {
+						owns_state = 107
+						owns_state = 108
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 107
+						owns_state = 108
+					}
+					SER = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1049,7 +1330,6 @@ focus_tree = {
 		id = YUG_modernize_belgrade_nis_railroad
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = YUG_serbian_industry }
-		mutually_exclusive = { focus = YUG_prioritize_montenegro }
 		x = -1
 		y = 1
 		relative_position_id = YUG_serbian_industry
@@ -1068,7 +1348,33 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				SER = {
+					exists = yes
+					owns_state = 107
+					owns_state = 108
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				SER = {
+					exists = yes
+					NOT = {
+						owns_state = 107
+						owns_state = 108
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 107
+						owns_state = 108
+					}
+					SER = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1161,7 +1467,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				MNT = {
+					exists = yes
+					owns_state = 105
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				MNT = {
+					exists = yes
+					NOT = {
+						owns_state = 105
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 105
+					}
+					MNT = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1217,7 +1546,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				MNT = {
+					exists = yes
+					owns_state = 105
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				MNT = {
+					exists = yes
+					NOT = {
+						owns_state = 105
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 105
+					}
+					MNT = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1270,7 +1622,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				MAC = {
+					exists = yes
+					owns_state = 106
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				MAC = {
+					exists = yes
+					NOT = {
+						owns_state = 106
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 106
+					}
+					MAC = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1321,7 +1696,30 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				MAC = {
+					exists = yes
+					owns_state = 106
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				MAC = {
+					exists = yes
+					NOT = {
+						owns_state = 106
+					}
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						owns_state = 106
+					}
+					MAC = {
+						exists = no
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1389,7 +1787,6 @@ focus_tree = {
 		id = YUG_military_rearmament
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = YUG_army_modernization }
-		prerequisite = { focus = YUG_modernization_plan }
 		x = -5
 		y = 1
 		relative_position_id = YUG_army_modernization

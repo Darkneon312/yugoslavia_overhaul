@@ -2,15 +2,15 @@
 ### MORE YUGOSLAVIA EVENTS ###
 ##############################
 
-add_namespace = moreyugoslavia
-add_namespace = moreyugoslaviaocc
-add_namespace = moreyugoslaviatag
+add_namespace = YO_yugoslavia
+add_namespace = YO_yugoslaviaocc
+add_namespace = YO_yugoslaviatag
 
 # Attempted Assassination on Milan Stojadinovic
 country_event = {
-	id = moreyugoslavia.1
-	title = moreyugoslavia.1.t
-	desc = moreyugoslavia.1.d
+	id = YO_yugoslavia.1
+	title = YO_yugoslavia.1.t
+	desc = YO_yugoslavia.1.d
 	picture = GFX_report_event_milan_stojadinovic
 
 	trigger = {
@@ -25,7 +25,7 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		name = moreyugoslavia.5.a
+		name = YO_yugoslavia.5.a
 		ai_chance = {
 			factor = 90
 		}
@@ -35,146 +35,14 @@ country_event = {
 		set_country_flag = attempted_assassination_stojadinovic
 		
 		hidden_effect = {
-			country_event = { days = 3 id = moreyugoslavia.6 }
+			country_event = { days = 3 id = YO_yugoslavia.6 }
 		}
-	}
-}
-
-# Ljubomir Davidovic dies
-country_event = {
-	id = moreyugoslavia.2
-	title = moreyugoslavia.2.t
-	desc = moreyugoslavia.2.d
-	picture = GFX_report_event_generic_funeral
-	
-	fire_only_once = yes
-
-	trigger = {
-		tag = YUG
-		date > 1940.2.19
-	}
-
-	mean_time_to_happen = { days = 7 }
-	
-	option = {
-		name = moreyugoslavia.2.a
-		ai_chance = {
-			factor = 90
-		}
-		
-		create_country_leader = {
-			name = "Milan Grol"
-			desc = "POLITICS_MILAN_GROL_DESC"
-			picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Grol.dds"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {
-				
-			}
-		}
-	}
-}
-
-# Dragiša Cvetković comes to power
-country_event = {
-	id = moreyugoslavia.3
-	title = moreyugoslavia.3.t
-	desc = moreyugoslavia.3.d
-	picture = GFX_report_event_generic_parliament
-	
-	fire_only_once = yes
-
-	trigger = {
-		tag = YUG
-		date > 1939.2.5
-		has_idea = YUG_yugoslav_regency
-		has_idea = YUG_idea_croatian_opposition
-		NOT = {
-			has_country_flag = vladko_elected
-		}
-	}
-
-	mean_time_to_happen = { days = 7 }
-	
-	option = {
-		name = moreyugoslavia.3.a
-		ai_chance = {
-			factor = 90
-		}
-		
-		create_country_leader = {
-			name = "Dragiša Cvetković"
-			desc = "POLITICS_MILAN_GROL_DESC"
-			picture = "gfx/leaders/YUG/Portrait_YUG_Dragisa_Cvetkovic.tga"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				#
-			}
-		}
-		
-		set_country_flag = dragisa_in_power
-	}
-}
-
-#1938 Election
-country_event = {
-	id = moreyugoslaviaelection.4
-	title = moreyugoslaviaelection.4.t
-	desc = moreyugoslaviaelection.4.d
-	picture = GFX_report_event_yug_1938_election
-	
-	fire_only_once = yes
-
-	trigger = {
-		tag = YUG
-		date > 1938.12.1
-		date < 1939.1.1
-		has_government = neutrality
-		has_idea = YUG_yugoslav_regency
-	}
-
-	mean_time_to_happen = { days = 7 }
-	
-	option = {
-		name = moreyugoslaviaelection.4.a
-		ai_chance = {
-			factor = 80
-		}
-		
-		add_political_power = 20
-		
-		set_country_flag = stojadinovic_reelected
-	}
-	
-	option = {
-		name = moreyugoslaviaelection.4.b
-		ai_chance = {
-			factor = 20
-		}
-		
-		create_country_leader = {
-			name = "Vladko Maček"
-			desc = "POLITICS_MILAN_GROL_DESC"
-			picture = "gfx/leaders/CRO/Portrait_CRO_Vladko_Macek.tga"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				#
-			}
-		}
-		
-		remove_ideas = YUG_idea_croatian_opposition
-		
-		set_country_flag = vladko_elected
-		
-		add_political_power = 10
 	}
 }
 
 # Axis invitation, but with coup
 country_event = {
-	id = moreyugoslaviajoinaxis.1
+	id = YO_yugoslaviajoinaxis.1
 	title = generic.2.t
 	desc = { # FROM and ROOT are different ideologies
 		text = generic.2.d.e
@@ -270,9 +138,9 @@ country_event = {
 
 # Yugoslav Occupation
 country_event = {
-	id = moreyugoslaviaocc.1
-	title = moreyugoslaviaocc.1.t
-	desc = moreyugoslaviaocc.1.d
+	id = YO_yugoslaviaocc.1
+	title = YO_yugoslaviaocc.1.t
+	desc = YO_yugoslaviaocc.1.d
 	picture = GFX_report_event_generic_sign_treaty2
 	
 	fire_only_once = yes
@@ -300,7 +168,7 @@ country_event = {
 	
 	option = { # puppet serbia
 		ai_chance = { factor = 90 }
-		name = moreyugoslaviaocc.1.a
+		name = YO_yugoslaviaocc.1.a
 		
 		if = {
 			limit = {
@@ -489,23 +357,23 @@ country_event = {
 		
 		hidden_effect = {
 			country_event = axispuppetsserbia.1
-			YUG = { country_event = moreyugoslaviatag.3 }
+			YUG = { country_event = YO_yugoslaviatag.3 }
 		}
 		
 		add_political_power = 50
 	}
 	option = { #occupy them
 		ai_chance = { factor = 90 }
-		name = moreyugoslaviaocc.1.b
+		name = YO_yugoslaviaocc.1.b
 		
 		add_political_power = -25
 	}
 }
 
 country_event = {
-	id = moreyugoslaviatag.1
-	#title = moreyugoslaviatag.1.t
-	#desc = moreyugoslaviatag.1.d
+	id = YO_yugoslaviatag.1
+	#title = YO_yugoslaviatag.1.t
+	#desc = YO_yugoslaviatag.1.d
 	title = "Croatia breaks away!"
 	desc = "After having their demands not met, the croatian governmet has ceded from Yugoslavia and have formed their own forces to combat our own."
 	picture = GFX_report_event_hitler_parade
@@ -513,7 +381,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		#name = moreyugoslaviatag.1.a
+		#name = YO_yugoslaviatag.1.a
 		name = "Traitors!"
 		ai_chance = {
 			factor = 90
@@ -521,7 +389,7 @@ country_event = {
 	}
 	
 	option = {
-		#name = moreyugoslaviatag.1.b
+		#name = YO_yugoslaviatag.1.b
 		name = "We should have done something about this...(Play as Croatia)"
 		trigger = { is_ai = no }
 		
@@ -532,9 +400,9 @@ country_event = {
 }
 
 country_event = {
-	id = moreyugoslaviatag.2
-	#title = moreyugoslaviatag.1.t
-	#desc = moreyugoslaviatag.1.d
+	id = YO_yugoslaviatag.2
+	#title = YO_yugoslaviatag.1.t
+	#desc = YO_yugoslaviatag.1.d
 	title = "Banovina of Croatia"
 	desc = "By establishing a semi-autonomous Banate of Croatia we can hopefully quell calls for true independence."
 	picture = GFX_report_event_hitler_parade
@@ -542,7 +410,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		#name = moreyugoslaviatag.1.a
+		#name = YO_yugoslaviatag.1.a
 		name = "Excellent! This should ease tensions."
 		ai_chance = {
 			factor = 90
@@ -550,7 +418,7 @@ country_event = {
 	}
 	
 	option = {
-		#name = moreyugoslaviatag.1.b
+		#name = YO_yugoslaviatag.1.b
 		name = "We still have to be careful...(Play as Croatia)"
 		trigger = { is_ai = no }
 		
@@ -561,9 +429,9 @@ country_event = {
 }
 
 country_event = {
-	id = moreyugoslaviatag.3
-	#title = moreyugoslaviatag.2.t
-	#desc = moreyugoslaviatag.2.d
+	id = YO_yugoslaviatag.3
+	#title = YO_yugoslaviatag.2.t
+	#desc = YO_yugoslaviatag.2.d
 	title = "Our lands have been split!"
 	desc = "After our capitulation the lands that were unde rour control have been split into ethnic occupation zones. Croatia, Serbia and Montenegro submited to the great powers of Germany and Italy."
 	picture = GFX_report_event_hitler_parade
@@ -571,7 +439,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		#name = moreyugoslaviatag.2.a
+		#name = YO_yugoslaviatag.2.a
 		name = "Traitors!"
 		ai_chance = {
 			factor = 90
@@ -579,7 +447,7 @@ country_event = {
 	}
 	
 	option = {
-		#name = moreyugoslaviatag.2.b
+		#name = YO_yugoslaviatag.2.b
 		name = "They will do anything to save themselves...(Play as Croatia)"
 		trigger = { is_ai = no }
 		CRO = {
@@ -588,7 +456,7 @@ country_event = {
 	}
 	
 	option = {
-		#name = moreyugoslaviatag.2.c
+		#name = YO_yugoslaviatag.2.c
 		name = "They will do anything to save themselves...(Play as Serbia)"
 		trigger = { is_ai = no }
 		SER = {
@@ -597,7 +465,7 @@ country_event = {
 	}
 	
 	option = {
-		#name = moreyugoslaviatag.2.c
+		#name = YO_yugoslaviatag.2.c
 		name = "They will do anything to save themselves...(Play as Montenegro)"
 		trigger = { is_ai = no }
 		MNT = {

@@ -1,0 +1,30 @@
+﻿l_english:
+
+ YUG_primary_ethnicities_category:0 "Yugoslav "Primary" Ethnicities"
+ YUG_primary_ethnicities_category_desc:0 "Yugoslav Ethnicities"
+ ser_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.ser_temper|+0]"
+ ser_temper_icon_value:0 "[?Root.ser_temper|0H]"
+ cro_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.cro_temper|+0]"
+ cro_temper_icon_value:0 "[?Root.cro_temper|0H]"
+ slv_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.slv_temper|+0]"
+ slv_temper_icon_value:0 "[?Root.slv_temper|0H]"
+ 
+ YUG_secondary_ethnicities_category:0 "Yugoslav "Secondary" Ethnicities"
+ YUG_secondary_ethnicities_category_desc:0 "Yugoslav Secondary Ethnicities"
+ bos_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.bos_temper|+0]"
+ bos_temper_icon_value:0 "[?Root.bos_temper|0H]"
+ mnt_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.mnt_temper|+0]"
+ mnt_temper_icon_value:0 "[?Root.mnt_temper|0H]"
+ mac_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.mac_temper|+0]"
+ mac_temper_icon_value:0 "[?Root.mac_temper|0H]"
+ 
+ YUG_minorities_category:0 "Yugoslav Minorities"
+ YUG_minorities_category_desc:0 "Yugoslav Minorities"
+ ita_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.ita_temper|+0]"
+ ita_temper_icon_value:0 "[?Root.ita_temper|0H]"
+ hun_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.hun_temper|+0]"
+ hun_temper_icon_value:0 "[?Root.hun_temper|0H]"
+ alb_temper_value_full_breakdown:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?Root.alb_temper|+0]"
+ alb_temper_icon_value:0 "[?Root.alb_temper|0H]"
+ 
+ YUG_recall_spasoje_tesic:0 "Recall Spasoje Tešić"

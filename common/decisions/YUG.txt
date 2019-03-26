@@ -1,0 +1,56 @@
+YUG_primary_ethnicities_category = {
+	
+	
+	
+}
+
+YUG_secondary_ethnicities_category = {
+	
+	
+	
+}
+
+YUG_minorities_category = {
+	
+	
+	
+}
+
+political_actions = {
+
+	YUG_recall_generals = {
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		available = {
+			
+		}
+		
+		visible = {
+			has_war_with = GER
+		}
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			create_corps_commander = {
+				name = "Spasoje Tešić"
+				portrait_path = "gfx/leaders/YUG/Portriat_YUG_Spasoje_Tesic.tga"
+				traits = { YUG_serbian old_guard }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+				id = 2009
+			}
+		}
+	}
+
+}

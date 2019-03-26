@@ -1,6 +1,14 @@
-﻿capital = 104
+﻿capital = 107
 
-set_technology = {	
+oob = "YUG_1936"
+
+set_research_slots = 3
+
+add_ideas = {
+	anti_german_military
+}
+
+set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_mountaineers = 1
@@ -13,8 +21,6 @@ set_technology = {
 	early_light_cruiser = 1
 	early_submarine = 1
 }
-
-set_convoys = 5
 
 1939.1.1 = {
 
@@ -69,10 +75,13 @@ set_convoys = 5
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		synth_oil_experiments = 1
+		oil_processing = 1
 		construction1 = 1
 		concentrated_industry = 1
 	}
 }
+
+set_convoys = 0
 
 set_politics = {
 
@@ -82,16 +91,16 @@ set_politics = {
 		}
 
 		fascism = {
-			popularity = 10
+			popularity = 30
 		}
 		
 		communism = {
-			popularity = 30
+			popularity = 20
 			#banned = no #default is no
 		}
 		
 		neutrality = { 
-			popularity = 40
+			popularity = 30
 		}
 	}
 	
@@ -106,30 +115,35 @@ set_politics = {
 
 		parties = {
 			democratic = { 
-				popularity = 25
+				popularity = 20
 			}
 
 			fascism = {
-				popularity = 20
+				popularity = 30
 			}
 			
 			communism = {
-				popularity = 55
+				popularity = 20
 				#banned = no #default is no
+			}
+			
+			neutrality = { 
+				popularity = 30
 			}
 		}
 		
-		ruling_party = communism
-		last_election = "1937.7.3"
+		ruling_party = neutrality
+		last_election = "1938.1.1"
 		election_frequency = 36
 		elections_allowed = yes
 	}
 }
+set_stability = 0.6
 
 create_country_leader = {
-	name = "Mehmed Spaho"
+	name = "Draza Mihailović"
 	desc = ""
-	picture = "gfx/leaders/BOS/Portriat_BOS_Mehmed_Spaho.tga"
+	picture = "gfx/leaders/YUG/Portrait_YUG_Draza_Mihailovic.tga"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
@@ -137,32 +151,66 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Osman Kulenović"	
-	desc = "ANTE_PAVELIC_DESC"
-	picture = "gfx/leaders/BOS/Portriat_BOS_Osman_Beg_Kulenovic.tga"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		
-	}
-}
+#create_country_leader = {
+#	name = "Milan Nedić"
+#	desc = ""
+#	picture = "gfx/leaders/YUG/Portrait_YUG_Milan_Nedic.tga"
+#	expire = "1965.1.1"
+#	ideology = fascism_ideology
+#	traits = {
+#		#
+#	}
+#}
 
 create_country_leader = {
-	name = "Mehmed Spaho"
+	name = "Milan Aćimović"
 	desc = ""
-	picture = "gfx/leaders/BOS/Portriat_BOS_Mehmed_Spaho.tga"
+	picture = "gfx/leaders/SER/Portrait_SER_Milan_Acimovic.tga"
 	expire = "1965.1.1"
-	ideology = moderatism
+	ideology = fascism_ideology
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Djuro Pucar"
+	name = "Petar II"
 	desc = ""
-	picture = "gfx/leaders/BOS/Portrait_BOS_Djuro_Pucar.tga"
+	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Peter_II.dds"
+	expire = "1965.1.1"
+	ideology = Despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Prince Paul"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Prince_Paul.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		prince_paul_trait
+		paul_sugg1
+	}
+}
+
+create_country_leader = {
+	name = "Zivorad Jovanović"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Filip Filipović"
+	desc = ""
+	picture = "Portrait_Serbia_Filip_Filipovic.tga"
 	expire = "1965.1.1"
 	ideology = leninism
 	traits = {

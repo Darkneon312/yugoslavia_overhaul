@@ -40,31 +40,20 @@ set_politics = {
 	elections_allowed = no
 }
 
-#create_country_leader = {
-#	name = "Sekula Drljević"
-#	desc = ""
-#	picture = "gfx/leaders/MNT/Portrait_MNT_Sekula_Drljevic.tga"
-#	expire = "1953.3.1"
-#	ideology = fascism_ideology
-#	traits = {
-#		
-#	}
-#}
-
 create_country_leader = {
 	name = "Krsto Popović"
-	desc = ""
+	desc = "POLITICS_KRSTO_POPOVIC_DESC"
 	picture = "gfx/leaders/MNT/Portrait_MNT_Krsto_Popovic.tga"
 	expire = "1953.3.1"
 	ideology = fascism_ideology
 	traits = {
-		
+		#
 	}
 }
 
 #create_country_leader = {
 #	name = "Novica Radović"
-#	desc = ""
+#	desc = "POLITICS_NOVICA_RADOVIC_DESC"
 #	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 #	expire = "1953.3.1"
 #	ideology = oligarchism
@@ -73,35 +62,35 @@ create_country_leader = {
 #	}
 #}
 
-#create_country_leader = {
-#	name = "Danilo II"
-#	desc = ""
-#	picture = "gfx/leaders/MNT/Portrait_MNT_Danilo_II.tga"
-#	expire = "1953.3.1"
-#	ideology = despotism
-#	traits = {
-#		#
-#	}	
-#}
+create_country_leader = {
+	name = "Danilo II"
+	desc = "POLITICS_DANILO_II_DESC"
+	picture = "gfx/leaders/MNT/Portrait_MNT_Danilo_II.tga"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		#
+	}	
+}
 
 create_country_leader = {
 	name = "Sekula Drljević"
-	desc = ""
+	desc = "POLITICS_SEKULA_DRLJEVIC_DESC"
 	picture = "gfx/leaders/MNT/Portrait_MNT_Sekula_Drljevic.tga"
 	expire = "1953.3.1"
 	ideology = oligarchism
 	traits = {
-		
+		#
 	}
 }
 
 create_country_leader = {
 	name = "Blažo Jovanović"
-	desc = ""
+	desc = "POLITICS_BLAZO_JOVANOVIC_DESC"
 	picture = "gfx/leaders/MNT/Portrait_MNT_Blazo_Jovanovic.tga"
 	expire = "1953.3.1"
 	ideology = leninism
 	traits = {
-		
+		#
 	}
 }
