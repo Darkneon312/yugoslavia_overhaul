@@ -1,7 +1,14 @@
 ﻿l_english:
-
+ 
+ YUG_vojnotehnicki_institut_beograd:0 "Vojnotehnicki Institut Beograd"
+ YUG_imk_14_oktobar:0 "IMK - 14. Oktobar"
+ 
  YUG_jadransko_brodogradiliste_bijela:0 "Jadransko Brodogradilište Bijela"
  YUG_brodosplit:0 "Brodosplit"
+ 
+ YUG_zastava_firearms:0 "Zastava Firearms"
+ YUG_zastava_automobili:0 "Zastava Automobili"
+ YUG_zastava_artillery:0 "Zastava Artillery"
  
  YUG_state_railways:0 "Jugoslovenske Železnice"
  YUG_min:0 "Mašinska Industrija Niš"

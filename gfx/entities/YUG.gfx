@@ -1,0 +1,27 @@
+objectTypes = {
+	pdxmesh = {
+		name = "YUG_POL_tank_light_mesh"
+		file = "gfx/models/units/pol_dlc/POL_tank_light.mesh"
+
+		animation = { id = "attack"			type = "POL_tank_light_attack_animation" }
+		animation = { id = "idle"			type = "POL_tank_light_idle_animation" }
+		animation = { id = "move"			type = "POL_tank_light_moving_animation" }
+		
+		scale = 0.8
+		
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "YUG_POL_tank_light_tks_mesh"
+		file = "gfx/models/units/pol_dlc/POL_tank_light_tks.mesh"
+
+		animation = { id = "attack"			type = "POL_tank_light_tks_attack_animation" }
+		animation = { id = "idle"			type = "POL_tank_light_tks_idle_animation" }
+		animation = { id = "move"			type = "POL_tank_light_tks_moving_animation" }
+		
+		scale = 1.2
+		
+	}
+}

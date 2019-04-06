@@ -1,9 +1,14 @@
 ﻿l_english:
 
- YUG_vladimir_nazor:0 "Vladimir Nazor"
- YUG_petar_kosic_war_industrialist:0 "Petar Kosić"
+ ### Yugoslav/Serbian
+
  YUG_milan_grol:0 "Milan Grol"
  YUG_milan_stojadinovic:0 "Milan Stojadinović"
+ YUG_dragisa_cvetkovic:0 "Dragiša Cvetković"
+ YUG_aleksandar_cincar_markovic:0 "Aleksandar Cincar-Marković"
+ YUG_vladimir_nazor:0 "Vladimir Nazor"
+ YUG_vladko_macek:0 "Vladko Maček"
+ YUG_anton_korosec:0 "Anton Korošec"
  
  YUG_petar_bojovic_theorist:0 "Petar Bojović"
  YUG_draza_mihailovic_theorist:0 "Draža Mihailović"
@@ -17,3 +22,12 @@
  YUG_marijan_polic_navy_chief:0 "Marijan Polić"
  
  YUG_ljubomir_maric_high_command:0 "Ljubomir Marić"
+ YUG_milan_nedic_high_command:0 "Milan Nedić"
+ YUG_dusan_simovic_high_command:0 "Dušan Simović"
+ YUG_milojko_jankovic:0 "Milojko Janković"
+ YUG_dusan_trifunovic:0 "Dušan Trifunović"
+ YUG_ivan_kern:0 "Ivan Kern"
+ YUG_aleksandar_beric:0 "Aleksandar Berić"
+ YUG_marijan_polic_high_command:0 "Marijan Polić"
+ 
+ ### Croatian

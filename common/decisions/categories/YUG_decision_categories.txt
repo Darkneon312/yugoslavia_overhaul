@@ -11,36 +11,6 @@ YUG_primary_ethnicities_category = {
 	priority = {
 		base = 10
 	}
-	
-	custom_icon = {
-		tag = SER
-		value = ser_temper_icon_value
-		desc = ser_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
-	}
-	
-	custom_icon = {
-		tag = CRO
-		value = cro_temper_icon_value
-		desc = cro_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
-	}
-	
-	custom_icon = {
-		tag = SLV
-		value = slv_temper_icon_value
-		desc = slv_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
-	}
 
 	visible_when_empty = yes
 
@@ -61,36 +31,6 @@ YUG_secondary_ethnicities_category = {
 	
 	priority = {
 		base = 10
-	}
-	
-	custom_icon = {
-		tag = BOS
-		value = bos_temper_icon_value
-		desc = bos_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
-	}
-	
-	custom_icon = {
-		tag = MNT
-		value = mnt_temper_icon_value
-		desc = mnt_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
-	}
-	
-	custom_icon = {
-		tag = MAC
-		value = mac_temper_icon_value
-		desc = mac_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
 	}
 
 	visible_when_empty = yes
@@ -113,39 +53,45 @@ YUG_minorities_category = {
 	priority = {
 		base = 10
 	}
-	
-	custom_icon = {
-		tag = ITA
-		value = ita_temper_icon_value
-		desc = ita_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
-	}
-	
-	custom_icon = {
-		tag = HUN
-		value = hun_temper_icon_value
-		desc = hun_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
-	}
-	
-	custom_icon = {
-		tag = ALB
-		value = alb_temper_icon_value
-		desc = alb_temper_value_full_breakdown
-
-		visible = {
-			always = yes
-		}
-	}
 
 	visible_when_empty = yes
 
+	#visible = {
+	#	always = yes
+	#}
+}
+
+YUG_tank_imports_category = {
+	
+	icon = ger_military_buildup
+
+	allowed = {
+		original_tag = YUG
+	}
+	
+	visible = {
+		has_capitulated = no
+		has_completed_focus = YUG_import_tankettes
+	}
+	
+	#visible = {
+	#	always = yes
+	#}
+}
+
+YUG_expand_land_fortifications = {
+	
+	icon = generic_border_conflicts
+
+	allowed = {
+		original_tag = YUG
+	}
+	
+	visible = {
+		has_capitulated = no
+		has_completed_focus = YUG_construct_the_rupnik_line
+	}
+	
 	#visible = {
 	#	always = yes
 	#}

@@ -55,8 +55,9 @@ ideas = {
 			modifier = {
 				stability_factor = 0.05
 				democratic_drift = 0.01
-				fascism_acceptance = 35
-				democratic_acceptance = 50
+				neutrality_drift = 0.01
+				fascism_acceptance = 25
+				democratic_acceptance = 25
 				mobilization_speed = -0.1
 			}
 		}
@@ -81,6 +82,8 @@ ideas = {
 		}
 		
 		YUG_internal_instabilty_1 = {
+		
+			name = YUG_internal_instabilty
 		
 			picture = generic_neutrality_drift_bonus
 			
@@ -132,9 +135,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				conscription_factor = -0.1
 				stability_factor = -0.2
 				war_support_factor = -0.2
-				conscription_factor = -0.2
 			}
 		}
 		
@@ -175,13 +178,16 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = -0.1
-				army_attack_factor = -0.25
-				army_defence_factor = -0.25
+				conscription_factor = -0.2
+				army_org_Factor = -0.2
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
 			}
 		}
 		
 		YUG_agricultural_nation_1 = {
+		
+			name = YUG_agricultural_nation
 			
 			picture = generic_agrarian_society
 			
@@ -207,6 +213,8 @@ ideas = {
 		}
 		
 		YUG_agricultural_nation_2 = {
+		
+			name = YUG_agricultural_nation
 			
 			picture = generic_agrarian_society
 			
@@ -232,6 +240,8 @@ ideas = {
 		}
 		
 		YUG_agricultural_nation_3 = {
+		
+			name = YUG_agricultural_nation
 			
 			picture = generic_agrarian_society
 			
@@ -256,7 +266,7 @@ ideas = {
 			}
 		}
 		
-		YUG_dalmatian_shipping = {
+		YUG_dalmatian_shipping_idea = {
 		
 			picture = generic_navy_bonus
 			
@@ -280,7 +290,7 @@ ideas = {
 			}
 		}
 		
-		YUG_expanded_mining_industry = {
+		YUG_expanded_mining_industry_idea = {
 			
 			picture = generic_exploit_mines
 
@@ -299,7 +309,7 @@ ideas = {
 			}
 		}
 		
-		YUG_kosovo_gold = {
+		YUG_kosovo_gold_idea = {
 			
 			picture = ast_all_in
 			
@@ -318,7 +328,7 @@ ideas = {
 		    }
 		}
 		
-		YUG_expanded_opium_industry = {
+		YUG_expanded_opium_industry_idea = {
 			
 			picture = prc_permit_opium_trade
 
@@ -408,6 +418,135 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		
+		}
+		
+		YUG_mass_motorization_idea = {
+
+			picture = motorized_focus
+
+			allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			available = {
+				
+			}
+			
+		   removal_cost = -1
+
+			modifier = {	
+				industrial_capacity_factory = 0.05
+				army_speed_factor = 0.05
+		    }
+
+			equipment_bonus = {
+			    motorized_equipment = {
+				    build_cost_ic = -0.1 instant = yes
+			    }
+			}
+		}
+		
+		YUG_local_militias_idea = {
+		
+			picture = YUG_local_militias
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		YUG_belgrade_artiljerijska_skola_idea = {
+		
+			picture = generic_army_war_college
+
+		    allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			available = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			    max_command_power = 20
+			}
+		}
+		
+		YUG_yugoslav_artillery_idea = {
+
+			picture = generic_artillery_regiments
+
+		    allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			available = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			    army_artillery_defence_factor = 0.1
+			}
+			
+			equipment_bonus = {
+			    artillery = {
+				    build_cost_ic = -0.1
+					instant = yes
+			    }
+			}
+		}
+		
+		YUG_defensive_preparations_idea = {
+			
+			picture = generic_wall_line
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			allowed_civil_war = {
+			    always = yes
+			}
+			
+			available = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {	
+				conscription = 0.01
+				max_planning = 0.1
+				planning_speed = 0.1
+				army_defence_factor = 0.1
+				production_speed_bunker_factor = 0.1
+		    }
 		}
 		
 		#################
@@ -1043,27 +1182,6 @@ ideas = {
 				factor = 1
 			}
 		}
-		
-		YUG_vladimir_nazor = {
-
-			picture = generic_political_advisor_europe_1
-			
-			allowed = {
-				original_tag = YUG
-			}
-			
-			available = {
-			
-			}
-			
-			cost = 200
-			
-			traits = { famous_poet }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 
 		YUG_ivan_ribar = {
 
@@ -1083,25 +1201,6 @@ ideas = {
 				factor = 1
 			}
 		}
-		
-		YUG_petar_kosic_war_industrialist = {
-			
-			picture = YUG_petar_kosic
-			
-			allowed = {
-				original_tag = YUG
-			}
-			
-			available = {
-			
-			}
-			
-			traits = { war_industrialist }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 
 		YUG_milan_nedic = {
 
@@ -1115,7 +1214,8 @@ ideas = {
 			
 			}
 			
-			traits = { prince_of_terror }
+			#traits = { prince_of_terror }
+			traits = { war_industrialist }
 			
 			ai_will_do = {
 				factor = 1
@@ -1123,8 +1223,6 @@ ideas = {
 		}	
 		
 		YUG_milan_stojadinovic = {
-
-			picture = YUG_milan_stojadinovic
 
 			allowed = {
 				original_tag = YUG
@@ -1134,12 +1232,133 @@ ideas = {
 			
 			}
 			
+			visible = {
+				NOT = {
+					has_country_leader =  {
+						name = "Milan Stojadinović"
+						ruling_only = yes
+					}
+				}
+			}
+			
 			traits = { financial_expert }
 			
 			ai_will_do = {
 				factor = 1
 			}
-		}	
+		}
+		
+		YUG_dragisa_cvetkovic = {
+
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				#"U njegovoj vladi bio je ministar socijalne politike i narodnog zdravlja i v. d. ministra za fizičko vaspitanje naroda"
+				#1936 Jugoslovenski radnicki savez - kao focus?
+			}
+			
+			traits = { popular_figurehead2 great_architect_yug }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_aleksandar_cincar_markovic = {
+
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				#foreign minster from 1939
+				NOT = {
+					has_country_leader =  {
+						name = "Milan Stojadinović"
+						ruling_only = yes
+					}
+				}
+			}
+			
+			traits = { compassionate_gentleman }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_vladimir_nazor = {
+
+			picture = CRO_vladimir_nazor
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+			
+			visible = {
+				always = no
+			}
+			
+			cost = 200
+			
+			traits = { famous_poet }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_vladko_macek = {
+
+			picture = CRO_vladko_macek
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				
+			}
+			
+			visible = {
+				
+			}
+			
+			traits = { silent_workhorse }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_anton_korosec = {
+
+			picture = SLV_anton_korosec
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				
+			}
+			
+			visible = {
+				
+			}
+			
+			traits = { social_reformer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	
 	industrial_concern = {
@@ -1353,6 +1572,11 @@ ideas = {
 			}
 			
 			available = {
+				
+			}
+			
+			visible = {
+				always = no
 				NOT = {
 					has_country_flag = bojovic_passed_away
 				}
@@ -1363,7 +1587,7 @@ ideas = {
 			picture = YUG_petar_bojovic
 			
 			research_bonus = {
-				cat_grand_battle_plan = 0.10
+				cat_grand_battle_plan = 0.15
 			}
 			
 			traits = { grand_battle_plan_expert }
@@ -1382,16 +1606,16 @@ ideas = {
 			}
 			
 			available = {
-			
+				has_completed_focus = YUG_modern_tactics
 			}
 			
 			cost = 250
 			
 			research_bonus = {
-				cat_mobile_warfare = 0.10
+				cat_superior_firepower = 0.10
 			}
 			
-			traits = { mobile_warfare_expert }
+			traits = { superior_firepower_expert }
 			
 			ai_will_do = {
 				factor = 1
@@ -1407,16 +1631,16 @@ ideas = {
 			}
 			
 			available = {
-			
+				has_completed_focus = YUG_defense_of_the_homeland
 			}
 			
 			cost = 250
 			
 			research_bonus = {
-				cat_superior_firepower = 0.10
+				cat_grand_battle_plan = 0.10
 			}
 		
-			traits = { superior_firepower_expert }
+			traits = { grand_battle_plan_expert }
 			
 			ai_will_do = {
 				factor = 1
@@ -1517,18 +1741,22 @@ ideas = {
 		}
 		
 		YUG_petar_bojovic = {
+		
+			picture = generic_army_europe_5
 
 			allowed = {
 				original_tag = YUG
 			}
 			
 			available = {
+				
+			}
+			
+			visible = {
 				NOT = {
 					has_country_flag = bojovic_passed_away
 				}
 			}
-			
-			picture = generic_army_europe_5
 			
 			traits = { army_entrenchment_3 }
 			
@@ -1536,10 +1764,10 @@ ideas = {
 				factor = 1
 			}
 		}
-
+	
 		YUG_milutin_nedic = {
 			
-			picture = generic_army_europe_6
+			picture = YUG_milan_nedic
 			
 			allowed = {
 				original_tag = YUG
@@ -1584,10 +1812,11 @@ ideas = {
 			}
 			
 			available = {
-				OR = {
-					has_government = communism
-					has_country_flag = communists_allowed_in_government
-				}
+				
+			}
+			
+			visible = {
+				always = no
 			}
 			
 			traits = { army_chief_morale_2 }
@@ -1616,50 +1845,7 @@ ideas = {
 			}
 		}
 	}
-
-	air_chief = {
-		
-
-		YUG_dusan_simovic = {
-			
-			picture = generic_air_europe_1
-			
-			allowed = {
-				original_tag = YUG
-			}
-			
-			available = {
-			
-			}
-			
-			#traits = { air_chief_safety_2 }
-			traits = { air_air_superiority_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		YUG_petar_vukcevic = {
-			
-			picture = generic_air_europe_2
-			
-			allowed = {
-				original_tag = YUG
-			}
-			
-			available = {
-			
-			}
-			
-			traits = { air_chief_ground_support_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-
+	
 	navy_chief = {
 
 		YUG_bogoljub_ilic = {
@@ -1714,7 +1900,49 @@ ideas = {
 			
 			}
 			
-			traits = { navy_fleet_logistics_2 }
+			traits = { navy_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+
+		YUG_dusan_simovic = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		YUG_petar_vukcevic = {
+			
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+			
+			traits = { air_chief_ground_support_2 }
 			
 			ai_will_do = {
 				factor = 1
@@ -1733,7 +1961,18 @@ ideas = {
 			}
 			
 			available = {
-				
+				MNT = {
+					OR = {
+						exists = no
+						is_subject_of = YUG
+						AND = {
+							exists = yes
+							NOT = {
+								has_government = fascism
+							}
+						}
+					}
+				}
 			}
 			
 			traits = {
@@ -1755,6 +1994,15 @@ ideas = {
 			}
 			
 			available = {
+				CRO = {
+					OR = {
+						exists = no
+						is_subject_of = YUG
+					}
+				}
+			}
+			
+			visible = {
 				
 			}
 			
@@ -1783,25 +2031,6 @@ ideas = {
 				factor = 1
 			}
 		}
-
-		YUG_borivoje_mirkovic = {
-			
-			picture = generic_air_europe_2
-			
-			allowed = {
-				original_tag = YUG
-			}
-			
-			available = {
-			
-			}
-
-			traits = { air_bomber_interception_1 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 		YUG_ljubomir_maric_high_command = {
 		
@@ -1820,10 +2049,203 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}	
+		}
+		
+		YUG_borivoje_mirkovic = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+
+			traits = { air_bomber_interception_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_milojko_jankovic = {
+			
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+
+			traits = { air_close_air_support_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_dusan_trifunovic = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+
+			traits = { air_tactical_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_ivan_kern = {
+		
+			picture = SLV_ivan_kern
+
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				
+			}
+
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_aleksandar_beric = {
+
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				
+			}
+
+			traits = { navy_anti_submarine_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_marijan_polic_high_command = {
+			
+			picture = YUG_marijan_polic
+	
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+			
+			visible = {
+				
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_milan_nedic_high_command = {
+			
+			picture = YUG_milan_nedic
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+			
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 
 	# TECHNOLOGY
+	
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		YUG_vojnotehnicki_institut_beograd = {
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				has_completed_focus = YUG_expand_the_university_of_belgrad
+				has_completed_focus = YUG_initiate_a_tank_programm
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { heavy_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+
+		}
+		
+		YUG_imk_14_oktobar = {
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			available = {
+				
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+
+		}
+	}
 	
 	naval_manufacturer = { 
 		
@@ -1987,17 +2409,16 @@ ideas = {
 
 		designer = yes
 		
-		zastava_arms = {
+		YUG_zastava_firearms = {
 			
-			picture = generic_infantry_equipment_manufacturer_3
-
+			picture = zastava_arms
 			
 			allowed = {
 				original_tag = YUG
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.1
 			}
 			
 			equipment_bonus = {
@@ -2005,6 +2426,53 @@ ideas = {
 			}
 			
 			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_zastava_artillery = {
+			
+			picture = zastava_arms
+
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			research_bonus = {
+				artillery = 0.1
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		YUG_zastava_automobili = {
+		
+			picture = generic_infantry_equipment_manufacturer_2
+			
+			allowed = {
+				original_tag = YUG
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			traits = { motorized_equipment_manufacturer }
 			
 			ai_will_do = {
 				factor = 1

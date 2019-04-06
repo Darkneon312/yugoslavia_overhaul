@@ -19,4 +19,14 @@ spriteTypes = {
 		name = "GFX_goal_YUG_orthodox_church_support"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_orthodox_church_support.dds"			
 	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_anti_tank"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_anti_tank.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_yugoslav_defense"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_defense.dds"			
+	}
 }

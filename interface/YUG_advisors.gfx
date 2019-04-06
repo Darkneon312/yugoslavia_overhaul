@@ -1,4 +1,13 @@
 spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_YUG_bogoljub_ilic"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_bogoljub_ilic.dds"
+	}
+	
+	#############
+	
+	### yug/ser
 	
 	spriteType = {
 		name = "GFX_idea_YUG_milan_grol"
@@ -8,6 +17,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_YUG_milan_stojadinovic"
 		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_milan_stojadinovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_dragisa_cvetkovic"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_dragisa_cvetkovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_aleksandar_cincar_markovic"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_aleksandar_cincar_markovic.dds"
 	}
 	
 	spriteType = {
@@ -21,13 +40,41 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_vladimir_nazor"
-		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_vladimir_nazor.dds"
+		name = "GFX_idea_YUG_milojko_jankovic"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_milojko_jankovic.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_bogoljub_ilic"
-		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_bogoljub_ilic.dds"
+		name = "GFX_idea_YUG_dusan_trifunovic"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_dusan_trifunovic.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_idea_YUG_aleksandar_beric"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_aleksandar_beric.dds"
+	}
+	
+	### cro
+	
+	spriteType = {
+		name = "GFX_idea_CRO_vladimir_nazor"
+		texturefile = "gfx/interface/ideas/CRO/advisors/idea_CRO_vladimir_nazor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_vladko_macek"
+		texturefile = "gfx/interface/ideas/CRO/advisors/idea_CRO_vladko_macek.dds"
+	}
+	
+	### slv
+	
+	spriteType = {
+		name = "GFX_idea_SLV_anton_korosec"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_anton_korosec.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SLV_ivan_kern"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_ivan_kern.dds"
+	}
 }

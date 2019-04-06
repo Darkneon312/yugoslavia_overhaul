@@ -21,6 +21,36 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_YUG_vojnotehnicki_institut_beograd"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_vojnotehnicki_institut_beograd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_imk_14_oktobar"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_imk_14_oktobar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_zastava_firearms"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_zastava_firearms.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_zastava_artillery"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_zastava_artillery.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_zastava_automobili"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_zastava_automobili.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_ikarbus"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_ikarbus.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_CRO_saponia"
 		texturefile = "gfx/interface/ideas/CRO/companies/idea_CRO_saponia.dds"
 	}
@@ -39,4 +69,5 @@ spriteTypes = {
 		name = "GFX_idea_CRO_rudolf_fizir"
 		texturefile = "gfx/interface/ideas/CRO/companies/idea_CRO_rudolf_fizir.dds"
 	}
+	
 }

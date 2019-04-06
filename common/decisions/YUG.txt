@@ -1,18 +1,279 @@
+### Ethnicites
+
 YUG_primary_ethnicities_category = {
+
+	YUG_serbian_temper = {
 	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
+
+	YUG_croatian_temper = {
 	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
+	
+	YUG_slovene_temper = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
 	
 }
 
 YUG_secondary_ethnicities_category = {
 	
+	YUG_bosnian_temper = {
 	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
 	
+	YUG_macedonian_temper = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
+	
+	YUG_montenegrin_temper = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
 }
 
 YUG_minorities_category = {
 	
+	YUG_italian_temper = {
 	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
+	
+	YUG_hungarian_temper = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
+	
+	YUG_albanian_temper = {
+	
+		icon = generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+		
+		}
+	}
+}
+
+### tank imports
+
+YUG_tank_imports_category = {
+
+	YUG_import_czech_tanks = {
+	
+		icon = generic_tank
+	
+		available = {
+			has_completed_focus = YUG_import_tankettes
+		}
+		
+		visible = {
+			has_capitulated = no
+			CZE = {
+				exists = yes
+				has_capitulated = no
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+				}
+				CZE = {
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				CZE = {
+					has_government = communism
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				CZE = {
+					has_government = fascism
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_2
+				amount = 20
+				producer = CZE
+			}
+		}
+	}
+
+	YUG_import_french_tanks = {
+	
+		icon = generic_tank
+	
+		available = {
+			has_completed_focus = YUG_import_tankettes
+		}
+		
+		visible = {
+			has_capitulated = no
+			FRA = {
+				exists = yes
+				has_capitulated = no
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+				}
+				FRA = {
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				FRA = {
+					has_government = communism
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				FRA = {
+					has_government = fascism
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_2
+				amount = 20
+				producer = FRA
+			}
+		}
+	}
 	
 }
 
@@ -30,6 +291,9 @@ political_actions = {
 		
 		visible = {
 			has_war_with = GER
+			NOT = {
+				has_government = communism
+			}
 		}
 		
 		fire_only_once = yes

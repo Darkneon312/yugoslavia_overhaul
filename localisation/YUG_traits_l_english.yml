@@ -10,6 +10,8 @@
  ### Advisior Traits
  famous_poet:0 "Famous Poet"
  political_military_figure:0 "Political Military Figure"
+ yug_great_architect:0 "Great Architect"
+ yug_fascist_militia_leader:0 "Fascist Milita Leader"
  
  ### Companies
  state_railways:0 "State Railways"

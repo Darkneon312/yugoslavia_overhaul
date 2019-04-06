@@ -1,3 +1,8 @@
 ﻿l_english:
 
- 
+ YUG_mass_motorization_tooltip:0 "Gain a Motorized unit with §Y9 Motorized§! batallions.\n"
+ YUG_import_tankettes_tooltip:0 "§Y8§! units of §YŠkoda Š-I-D§! is added to the national stockpile.\n"
+ YUG_yugoslav_artillery_tooltip:0 "Gain an Artillery unit with §Y4 Infantry§! and §Y3 Artillery§! batallions.\n"
+ YUG_construct_rupnik_line_tooltip:0 "Place §YLand Forts§! across §YSlovenia§!.\n"
+ YUG_construct_rupnik_line_warning_tooltip:0 "§RNot every province along the Austrian-German border.§!\n"
+ YUG_armor_tooltip:0 "Gain an Tank unit with §Y4 Light Tank§! and §Y3 Infantry§! batallions.\n"

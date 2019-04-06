@@ -9,6 +9,24 @@ if = {
 	}
 }
 
+add_equipment_to_stockpile = {
+	type = fighter_equipment_0
+	amount = 600
+	producer = FRA
+}
+
+add_equipment_to_stockpile = {
+	type = fighter_equipment_0
+	amount = 10
+	producer = ENG
+}
+
+add_equipment_to_stockpile = {
+	type = tac_bomber_equipment_0
+	amount = 6
+	producer = GER
+}
+
 set_research_slots = 3
 
 add_ideas = {
@@ -40,7 +58,7 @@ set_technology = {
 	infantry_weapons1 = 1
 	interwar_antitank = 1
 	gw_artillery = 1
-	superior_firepower = 1
+	#superior_firepower = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -158,6 +176,7 @@ if = {
 		support_weapons = 1
 
 		#doctrines
+		grand_battle_plan = 1
 		air_superiority = 1
 		fleet_in_being = 1
 		battlefleet_concentration = 1
@@ -279,62 +298,17 @@ set_party_name = {
 set_stability = 0.6
 
 create_country_leader = {
-	name = "Petar II"
-	desc = "POLITICS_PETER_II_DESC"
-	picture = "Portrait_Yugoslavia_Peter_II.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#the_rightful_successor
-	}
-}
-
-create_country_leader = {
-	name = "Prince Paul"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		push_for_equality
-		paul_sugg1
-	}
-}
-
-create_country_leader = {
 	name = "Milan Stojadinović"
 	desc = "POLITICS_MILAN_STOJADINOVIC_DESC"
 	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Stojadinovic.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
-		#
+		financial_expert
 	}
 }
 
 ###
-
-create_country_leader = {
-	name = "Ante Pavelić"
-	desc = "ANTE_PAVELIC_DESC"
-	picture = "gfx/leaders/CRO/Portrait_Croatia_Ante_Pavelic.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Milan Stojadinović"
-	desc = "POLITICS_MILAN_STOJADINOVIC_DESC"
-	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Stojadinovic.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
 
 create_country_leader = {
 	name = "Dimitrije Ljotić"
@@ -343,11 +317,22 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
-		#
+		yug_fascist_militia_leader
 	}
 }
 
 ###
+
+create_country_leader = {
+	name = "Slobodan Jovanović"
+	desc = "POLITICS_LJUBOMIR_DAVIDOVIC_DESC"
+	picture = "gfx/leaders/YUG/Portrait_YUG_Slobodan_Jovanovic.tga"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
 
 create_country_leader = {
 	name = "Milan Grol"
@@ -412,18 +397,18 @@ create_corps_commander = {
 	id = 2000
 }
 
-create_corps_commander = {
-	name = "Ivan Gošnjak"
-	gfx = GFX_Portrait_yugoslavia_ivan_gosnjak
-	traits = { YUG_croatian politically_connected urban_assault_specialist }
-	skill = 3
-	
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-	id = 2001
-}
+#create_corps_commander = { #communist
+#	name = "Ivan Gošnjak"
+#	gfx = GFX_Portrait_yugoslavia_ivan_gosnjak
+#	traits = { YUG_croatian politically_connected urban_assault_specialist }
+#	skill = 3
+#	
+#	attack_skill = 3
+#	defense_skill = 2
+#	planning_skill = 2
+#	logistics_skill = 3
+#	id = 2400
+#}
 
 create_field_marshal = {
 	name = "Danilo Kalafatović"
@@ -434,7 +419,7 @@ create_field_marshal = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2002
+	id = 2001
 }
 
 create_field_marshal = {
@@ -446,7 +431,7 @@ create_field_marshal = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
-	id = 2003
+	id = 2002
 }
 
 create_corps_commander = {
@@ -458,7 +443,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2004
+	id = 2003
 }
 
 create_navy_leader = {
@@ -470,7 +455,7 @@ create_navy_leader = {
 	defense_skill = 2
 	maneuvering_skill = 1
 	coordination_skill = 2
-	id = 2005
+	id = 2004
 }
 
 ### moded here ###
@@ -486,7 +471,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
-	id = 2006
+	id = 2005
 }
 
 create_field_marshal = {
@@ -498,7 +483,7 @@ create_field_marshal = {
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 3
-	id = 2007
+	id = 2006
 }
 
 create_corps_commander = {
@@ -510,10 +495,10 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2008
+	id = 2007
 }
 
-#create_corps_commander = { #added through decision
+#create_corps_commander = { #retired/ added through decision
 #	name = "Spasoje Tešić"
 #	portrait_path = "gfx/leaders/YUG/Portriat_YUG_Spasoje_Tesic.tga"
 #	traits = { YUG_serbian old_guard }
@@ -522,7 +507,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 3
 #	logistics_skill = 2
-#	id = 2009
+#	id = 2008
 #}
 
 create_corps_commander = {
@@ -534,7 +519,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2010
+	id = 2009
 }
 
 create_corps_commander = {
@@ -546,7 +531,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2011
+	id = 2010
 }
 
 create_corps_commander = {
@@ -558,7 +543,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2012
+	id = 2011
 }
 
 create_corps_commander = {
@@ -570,7 +555,7 @@ create_corps_commander = {
 	defense_skill = 4
 	planning_skill = 4
 	logistics_skill = 2
-	id = 2013
+	id = 2012
 }
 
 create_corps_commander = {
@@ -582,7 +567,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
-	id = 2014
+	id = 2013
 }
 
 create_corps_commander = {
@@ -594,7 +579,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2015
+	id = 2014
 }
 
 #create_corps_commander = { #becomes general 1937 december 1.
@@ -606,7 +591,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 2
 #	logistics_skill = 2
-#	id = 2016
+#	id = 2015
 #}
 
 #create_corps_commander = { #becomes general 1938 january
@@ -618,32 +603,32 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 2
 #	logistics_skill = 2
-#	id = 2017
+#	id = 2016
 #}
 
-#create_corps_commander = { #becomes general 1939 december 1.
-#	name = "Milojko Janković"
-#	portrait_path = "gfx/leaders/YUG/Portriat_YUG_Milojko_Jankovic.tga"
-#	traits = { YUG_serbian career_officer }
-#	skill = 3
-#	attack_skill = 3
-#	defense_skill = 2
-#	planning_skill = 1
-#	logistics_skill = 2
-#	id = 2018
-#}
+create_corps_commander = {
+	name = "Milojko Janković"
+	portrait_path = "gfx/leaders/YUG/Portriat_YUG_Milojko_Jankovic.tga"
+	traits = { YUG_serbian career_officer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 2017
+}
 
-#create_corps_commander = { #becomes general 1939 december 1.
-#	name = "Jovan Naumović"
-#	portrait_path = "gfx/leaders/YUG/Portriat_YUG_Jovan_Naumovic.tga"
-#	traits = { YUG_serbian old_guard career_officer infantry_officer }
-#	skill = 3
-#	attack_skill = 3
-#	defense_skill = 2
-#	planning_skill = 1
-#	logistics_skill = 2
-#	id = 2019
-#}
+create_corps_commander = {
+	name = "Jovan Naumović"
+	portrait_path = "gfx/leaders/YUG/Portriat_YUG_Jovan_Naumovic.tga"
+	traits = { YUG_serbian old_guard career_officer infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 2018
+}
 
 create_corps_commander = {
     name = "Milan Milovanović"
@@ -654,19 +639,19 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2020
+	id = 2019
 }
 
 create_navy_leader = {
 	name = "Aleksandar Berić"
-	portrait_path = "gfx/leaders/SER/Portrait_SER_Aleksandar_Beric.tga"
+	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Aleksandar_Beric.tga"
 	traits = { navy_career_officer gentlemanly fleet_protector }
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
 	maneuvering_skill = 2
 	coordination_skill = 2
-	id = 2021
+	id = 2020
 }
 
 ## chetniks
@@ -723,17 +708,17 @@ create_corps_commander = {
 	id = 2100
 }
 
-create_corps_commander = {
-	name = "Vladimir Laxa"
-	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Vladimir_Laxa.tga"
-	traits = { YUG_croatian old_guard ranger }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-	id = 2101
-}
+#create_corps_commander = { #becomes general in NDH
+#	name = "Vladimir Laxa"
+#	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Vladimir_Laxa.tga"
+#	traits = { YUG_croatian old_guard ranger }
+#	skill = 3
+#	attack_skill = 3
+#	defense_skill = 1
+#	planning_skill = 3
+#	logistics_skill = 2
+#	id = 2101
+#}
 
 ## slovenes
 
@@ -845,7 +830,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 2
 #	logistics_skill = 2
-#	id = 2400
+#	id = 2401
 #}
 
 ### VARIANTS ###

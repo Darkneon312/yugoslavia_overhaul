@@ -153,14 +153,19 @@ focus_tree = {
 
 		available = {
 			OR = {
-				#has_full_control_of_state = 102
-				#has_full_control_of_state = 103
-				#has_full_control_of_state = 104
-				#has_full_control_of_state = 109
 				controls_state = 102
 				controls_state = 103
 				controls_state = 104
 				controls_state = 109
+				any_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 102
+						controls_state = 103
+						controls_state = 104
+						controls_state = 109
+					}
+				}
 			}
 		}
 
@@ -177,29 +182,64 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			subtract_from_variable = { var = cro_temper value = 5 }
+			subtract_from_variable = { var = slv_temper value = 5 }
+			subtract_from_variable = { var = bos_temper value = 5 }
 			if = {
-				limit = { controls_state = 102 }
+				limit = {
+					OR = {
+						controls_state = 102
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 102
+						}
+					}
+				}
 				102 = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
 
 			if = {
-				limit = { controls_state = 103 }
+				limit = {
+					OR = {
+						controls_state = 103
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 103
+						}
+					}
+				}
 				103 = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
 			
 			if = {
-				limit = { controls_state = 104 }
+				limit = {
+					OR = {
+						controls_state = 104
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 104
+						}
+					}
+				}
 				104 = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
 
 			if = {
-				limit = { controls_state = 109 }
+				limit = {
+					OR = {
+						controls_state = 109
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 109
+						}
+					}
+				}
 				109 = {
 					add_extra_state_shared_building_slots = 1
 				}
@@ -258,8 +298,13 @@ focus_tree = {
 		}
 
 		available = {
-			#has_full_control_of_state = 102
-			controls_state = 102
+			OR = {
+				controls_state = 102
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 102
+				}
+			}
 		}
 
 		bypass = {
@@ -298,9 +343,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			102 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+			subtract_from_variable = { var = slv_temper value = 10 }
+			if = {
+				limit = {
+					OR = {
+						controls_state = 102
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 102
+						}
+					}
+				}
+				102 = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
@@ -332,8 +386,13 @@ focus_tree = {
 		}
 
 		available = {
-			#has_full_control_of_state = 102
-			controls_state = 102
+			OR = {
+				controls_state = 102
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 102
+				}
+			}
 		}
 
 		bypass = {
@@ -360,9 +419,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			102 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+			subtract_from_variable = { var = slv_temper value = 10 }
+			if = {
+				limit = {
+					OR = {
+						controls_state = 102
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 102
+						}
+					}
+				}
+				102 = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
@@ -391,10 +459,15 @@ focus_tree = {
 
 		available = {
 			OR = {
-				#has_full_control_of_state = 103
-				#has_full_control_of_state = 109
 				controls_state = 103
 				controls_state = 109
+				any_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 103
+						controls_state = 109
+					}
+				}
 			}
 		}
 
@@ -437,9 +510,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			103 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+			subtract_from_variable = { var = cro_temper value = 10 }
+			if = {
+				limit = {
+					OR = {
+						controls_state = 103
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 103
+						}
+					}
+				}
+				103 = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
@@ -453,9 +535,17 @@ focus_tree = {
 					}
 				}
 			}
-			109 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+			if = {
+				limit = {
+					OR = {
+						controls_state = 109
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 109
+						}
+					}
+				}
+				109 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -488,7 +578,13 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 103
+			OR = {
+				has_full_control_of_state = 103
+				any_country = {
+					is_subject_of = ROOT
+					has_full_control_of_state = 103
+				}
+			}
 		}
 
 		bypass = {
@@ -527,10 +623,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = YUG_dalmatian_shipping
-			103 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+			add_ideas = YUG_dalmatian_shipping_idea
+			if = {
+				limit = {
+					OR = {
+						controls_state = 103
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 103
+						}
+					}
+				}
+				103 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -598,8 +702,13 @@ focus_tree = {
 		}
 
 		available = {
-			#has_full_control_of_state = 104
-			controls_state = 104
+			OR = {
+				controls_state = 104
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 104
+				}
+			}
 		}
 
 		bypass = {
@@ -638,9 +747,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			104 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+			if = {
+				limit = {
+					OR = {
+						controls_state = 104
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 104
+						}
+					}
+				}
+				104 = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
@@ -672,8 +789,13 @@ focus_tree = {
 		}
 
 		available = {
-			#has_full_control_of_state = 104
-			controls_state = 104
+			OR = {
+				controls_state = 104
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 104
+				}
+			}
 		}
 
 		bypass = {
@@ -712,9 +834,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			104 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+			if = {
+				limit = {
+					OR = {
+						controls_state = 104
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 104
+						}
+					}
+				}
+				104 = {
 					add_resource = {
 						type = aluminium
 						amount = 10
@@ -763,7 +893,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = YUG_expanded_mining_industry
+			add_ideas = YUG_expanded_mining_industry_idea
 			random_owned_controlled_state = {
 				limit = { is_controlled_by = ROOT }
 				add_resource = {
@@ -791,12 +921,17 @@ focus_tree = {
 
 		available = {
 			OR = {
-				#has_full_control_of_state = 103
-				#has_full_control_of_state = 105
-				#has_full_control_of_state = 109
 				controls_state = 103
 				controls_state = 105
 				controls_state = 109
+				any_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 103
+						controls_state = 105
+						controls_state = 109
+					}
+				}
 			}
 		}
 
@@ -872,7 +1007,13 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					controls_state = 103
+					OR = {
+						controls_state = 103
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 103
+						}
+					}
 				}
 				103 = {
 					add_resource = {
@@ -884,7 +1025,13 @@ focus_tree = {
 			
 			if = {
 				limit = {
-					controls_state = 105
+					OR = {
+						controls_state = 105
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 105
+						}
+					}
 				}
 				105 = {
 					add_resource = {
@@ -896,7 +1043,13 @@ focus_tree = {
 
 			if = {
 				limit = {
-					controls_state = 109
+					OR = {
+						controls_state = 109
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 109
+						}
+					}
 				}
 				109 = {
 					add_resource = {
@@ -924,8 +1077,13 @@ focus_tree = {
 		}
 
 		available = {
-			#has_full_control_of_state = 108
-			controls_state = 108
+			OR = {
+				controls_state = 108
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 108
+				}
+			}
 		}
 
 		bypass = {
@@ -964,11 +1122,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			108 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
+			if = {
+				limit = {
+					OR = {
+						controls_state = 108
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 108
+						}
 					}
+				}
+				108 = {
 					add_resource = {
 						type = steel
 						amount = 12
@@ -993,8 +1157,13 @@ focus_tree = {
 		}
 
 		available = {
-			#has_full_control_of_state = 45
-			controls_state = 45
+			OR = {
+				controls_state = 45
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 45
+				}
+			}
 		}
 
 		bypass = {
@@ -1035,7 +1204,13 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					controls_state = 45
+					OR = {
+						controls_state = 45
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 45
+						}
+					}
 				}
 				45 = {
 					add_resource = {
@@ -1063,7 +1238,13 @@ focus_tree = {
 
 		available = {
 			#has_full_control_of_state = 108
-			controls_state = 108
+			OR = {
+				controls_state = 108
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 108
+				}
+			}
 		}
 
 		bypass = {
@@ -1102,7 +1283,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_ideas = YUG_kosovo_gold
+			add_ideas = YUG_kosovo_gold_idea
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = YUG_trepca
 		}
@@ -1167,18 +1348,23 @@ focus_tree = {
 
 		available = {
 			OR = {
-				#has_full_control_of_state = 45
-				#has_full_control_of_state = 105
-				#has_full_control_of_state = 106
-				#has_full_control_of_state = 107
-				#has_full_control_of_state = 108
-				#has_full_control_of_state = 764
 				controls_state = 45
 				controls_state = 105
 				controls_state = 106
 				controls_state = 107
 				controls_state = 108
 				controls_state = 764
+				any_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 45
+						controls_state = 105
+						controls_state = 106
+						controls_state = 107
+						controls_state = 108
+						controls_state = 764
+					}
+				}
 			}
 		}
 
@@ -1195,43 +1381,94 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			subtract_from_variable = { var = ser_temper value = 5 }
+			subtract_from_variable = { var = mac_temper value = 5 }
+			subtract_from_variable = { var = mnt_temper value = 5 }
 			if = {
-				limit = { controls_state = 45 }
+				limit = {
+					OR = {
+						controls_state = 45
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 45
+						}
+					}
+				}
 				45 = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
 
 			if = {
-				limit = { controls_state = 105 }
+				limit = {
+					OR = {
+						controls_state = 105
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 105
+						}
+					}
+				}
 				105 = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
 			
 			if = {
-				limit = { controls_state = 106 }
+				limit = {
+					OR = {
+						controls_state = 106
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 106
+						}
+					}
+				}
 				106 = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
 
 			if = {
-				limit = { controls_state = 107 }
+				limit = {
+					OR = {
+						controls_state = 107
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 107
+						}
+					}
+				}
 				107 = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
 
 			if = {
-				limit = { controls_state = 108 }
+				limit = {
+					OR = {
+						controls_state = 108
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 108
+						}
+					}
+				}
 				108 = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
 			
 			if = {
-				limit = { controls_state = 764 }
+				limit = {
+					OR = {
+						controls_state = 764
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 764
+						}
+					}
+				}
 				764 = {
 					add_extra_state_shared_building_slots = 1
 				}
@@ -1255,10 +1492,15 @@ focus_tree = {
 
 		available = {
 			OR = {
-				#has_full_control_of_state = 107
-				#has_full_control_of_state = 108
 				controls_state = 107
 				controls_state = 108
+				any_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 107
+						controls_state = 108
+					}
+				}
 			}
 		}
 
@@ -1301,12 +1543,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			subtract_from_variable = { var = ser_temper value = 10 }
 			107 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
-					add_extra_state_shared_building_slots = 1
+					limit = {
+						OR = {
+							ROOT = {
+								controls_state = 107
+							}
+							any_country = {
+								is_subject_of = ROOT
+								controls_state = 107
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
 						level = 1
 						instant_build = yes
 					}
@@ -1314,8 +1572,23 @@ focus_tree = {
 			}
 			108 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
-					add_extra_state_shared_building_slots = 1
+					limit = {
+						OR = {
+							ROOT = {
+								controls_state = 108
+							}
+							any_country = {
+								is_subject_of = ROOT
+								controls_state = 108
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -1343,8 +1616,19 @@ focus_tree = {
 		available = {
 			#has_full_control_of_state = 107
 			#has_full_control_of_state = 108
-			controls_state = 107
-			controls_state = 108
+			OR = {
+				AND = {
+					controls_state = 107
+					controls_state = 108
+				}
+				any_country = {
+					is_subject_of = ROOT
+					AND = {
+						controls_state = 107
+						controls_state = 108
+					}
+				}
+			}
 		}
 
 		bypass = {
@@ -1388,7 +1672,17 @@ focus_tree = {
 		completion_reward = {
 			107 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = {
+						OR = {
+							ROOT = {
+								controls_state = 107
+							}
+							any_country = {
+								is_subject_of = ROOT
+								controls_state = 107
+							}
+						}
+					}
 					add_building_construction = {
 						type = infrastructure
 						level = 2
@@ -1398,7 +1692,17 @@ focus_tree = {
 			}
 			108 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = {
+						OR = {
+							ROOT = {
+								controls_state = 108
+							}
+							any_country = {
+								is_subject_of = ROOT
+								controls_state = 108
+							}
+						}
+					}
 					add_building_construction = {
 						type = infrastructure
 						level = 2
@@ -1463,7 +1767,13 @@ focus_tree = {
 
 		available = {
 			#has_full_control_of_state = 105
-			controls_state = 105
+			OR = {
+				controls_state = 105
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 105
+				}
+			}
 		}
 
 		bypass = {
@@ -1504,7 +1814,17 @@ focus_tree = {
 		completion_reward = {
 			105 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = {
+						OR = {
+							ROOT = {
+								controls_state = 105
+							}
+							any_country = {
+								is_subject_of = ROOT
+								controls_state = 105
+							}
+						}
+					}
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
@@ -1542,7 +1862,13 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 105
+			OR = {
+				has_full_control_of_state = 105
+				any_country = {
+					is_subject_of = ROOT
+					has_full_control_of_state = 105
+				}
+			}
 		}
 
 		bypass = {
@@ -1583,7 +1909,17 @@ focus_tree = {
 		completion_reward = {
 			105 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = {
+						OR = {
+							ROOT = {
+								has_full_control_of_state = 105
+							}
+							any_country = {
+								is_subject_of = ROOT
+								has_full_control_of_state = 105
+							}
+						}
+					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -1618,7 +1954,13 @@ focus_tree = {
 
 		available = {
 			#has_full_control_of_state = 106
-			controls_state = 106
+			OR = {
+				controls_state = 106
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 106
+				}
+			}
 		}
 
 		bypass = {
@@ -1659,7 +2001,17 @@ focus_tree = {
 		completion_reward = {
 			106 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = {
+						OR = {
+							ROOT = {
+								controls_state = 106
+							}
+							any_country = {
+								is_subject_of = ROOT
+								controls_state = 106
+							}
+						}
+					}
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
@@ -1692,7 +2044,13 @@ focus_tree = {
 
 		available = {
 			#has_full_control_of_state = 106
-			controls_state = 106
+			OR = {
+				controls_state = 106
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 106
+				}
+			}
 		}
 
 		bypass = {
@@ -1731,10 +2089,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = YUG_expanded_opium_industry
+			add_ideas = YUG_expanded_opium_industry_idea
 			106 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = {
+						OR = {
+							ROOT = {
+								controls_state = 106
+							}
+							any_country = {
+								is_subject_of = ROOT
+								controls_state = 106
+							}
+						}
+					}
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
@@ -1751,9 +2119,9 @@ focus_tree = {
 	################
 	
 	focus = {
-		id = YUG_army_modernization
+		id = YUG_army_reorganization
 		icon = GFX_focus_generic_commonwealth_build_infantry
-		x = 43
+		x = 45
 		y = 0
 
 		cost = 10
@@ -1779,17 +2147,999 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 25
+			army_experience = 30
+			add_tech_bonus = {
+				name = YUG_army_reorganization
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	
 	focus = {
-		id = YUG_military_rearmament
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = YUG_army_modernization }
+		id = YUG_modern_tactics
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = YUG_army_reorganization }
+		mutually_exclusive = { focus = YUG_defense_of_the_homeland }
 		x = -5
 		y = 1
-		relative_position_id = YUG_army_modernization
+		relative_position_id = YUG_army_reorganization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_modern_tactics
+				bonus = 1.0
+				uses = 2
+				category = cat_superior_firepower
+			}
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = YUG_milan_nedic_theorist
+		}
+	}
+	
+	focus = {
+		id = YUG_initiate_a_tank_programm
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = YUG_modern_tactics }
+		x = 0
+		y = 1
+		relative_position_id = YUG_modern_tactics
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { controls_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = YUG_initiate_a_tank_programm
+				bonus = 3.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_mass_motorization
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = YUG_initiate_a_tank_programm }
+		x = -2
+		y = 1
+		relative_position_id = YUG_initiate_a_tank_programm
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_tech = motorised_infantry
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_mass_motorization_idea
+			custom_effect_tooltip = YUG_mass_motorization_tooltip
+			hidden_effect = {
+                division_template = {
+	                name = "Motorna Divizija"
+					division_names_group = YUG_MOT_01
+	                regiments = {
+		                motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+						
+		                motorized = { x = 1 y = 0 }
+		                motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+						
+						motorized = { x = 2 y = 0 }
+		                motorized = { x = 2 y = 1 }
+						motorized = { x = 2 y = 2 }
+	                }
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_tank = { x = 0 y = 2 }
+					}
+                }
+				
+				#set_division_template_lock = { division_template = "Motorna Divizija" is_locked = yes }
+				
+				random_owned_controlled_state = {
+					prioritize = { 107 }
+    				create_unit = {
+						division = "name = \"1. Motorna Divizija\" division_template = \"Motorna Divizija\" start_experience_factor = 0.3" 
+						owner = YUG
+				    }
+				}
+            }
+		}
+	}
+	
+	focus = {
+		id = YUG_motorized_logistics
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = YUG_mass_motorization }
+		x = -2
+		y = 1
+		relative_position_id = YUG_mass_motorization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_motorized_logistics
+				bonus = 1.0
+				uses = 2
+				category = hospital_tech
+				category = logistics_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_armored_cavalry
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = YUG_mass_motorization }
+		x = 0
+		y = 1
+		relative_position_id = YUG_mass_motorization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_armored_cavalry
+				bonus = 2.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_form_a_proper_tank_battalion
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = YUG_initiate_a_tank_programm }
+		x = 0
+		y = 1
+		relative_position_id = YUG_initiate_a_tank_programm
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_tech = improved_light_tank
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = YUG_armor_tooltip
+			hidden_effect = {
+                division_template = {
+					name = "Novi Tenkovski Bataljon"
+					division_names_group = YUG_ARM_01
+	                regiments = {
+		                light_armor = { x = 0 y = 0 }
+						light_armor = { x = 0 y = 1 }
+						
+		                light_armor = { x = 1 y = 0 }
+		                light_armor = { x = 1 y = 1 }
+						
+						infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+	                }
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+                }
+				
+				#set_division_template_lock = { division_template = "Motorna Divizija" is_locked = yes }
+				
+				random_owned_controlled_state = {
+					prioritize = { 107 }
+    				create_unit = {
+						division = "name = \"1. Tenkovski Bataljon\" division_template = \"Novi Tenkovski Bataljon\" start_experience_factor = 0.3" 
+						owner = YUG
+				    }
+				}
+            }
+		}
+	}
+	
+	focus = {
+		id = YUG_tank_plant
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = YUG_form_a_proper_tank_battalion }
+		x = -1
+		y = 2
+		relative_position_id = YUG_form_a_proper_tank_battalion
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 108 }
+				limit = {
+					ROOT = { controls_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_learn_from_foreign_designs
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = YUG_import_tanks }
+		prerequisite = { focus = YUG_form_a_proper_tank_battalion }
+		x = 1
+		y = 1
+		relative_position_id = YUG_form_a_proper_tank_battalion
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_learn_from_foreign_designs
+				bonus = 2.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_mobile_bastions
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = YUG_learn_from_foreign_designs }
+		mutually_exclusive = { focus = YUG_tank_destroyer_focus }
+		x = 0
+		y = 1
+		relative_position_id = YUG_learn_from_foreign_designs
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_mobile_bastions
+				bonus = 2.0
+				uses = 2
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_tank_destroyer_focus
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = YUG_learn_from_foreign_designs }
+		mutually_exclusive = { focus = YUG_mobile_bastions }
+		x = 2
+		y = 1
+		relative_position_id = YUG_learn_from_foreign_designs
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_tank_destroyer_focus
+				bonus = 2.0
+				uses = 2
+				technology = basic_light_td
+				technology = improved_light_td
+				technology = advanced_light_td
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_import_tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = YUG_update_our_arsenal focus = YUG_initiate_a_tank_programm }
+		x = -3
+		y = 1
+		relative_position_id = YUG_update_our_arsenal
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+					CZE = {
+						exists = yes
+						OR = {
+							has_government = neutrality
+							has_government = democratic
+						}
+					}
+				}
+				custom_effect_tooltip = YUG_import_tankettes_tooltip
+				hidden_effect = {
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_2
+						amount = 8
+						producer = CZE
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+					CZE = {
+						exists = yes
+						has_government = fascism
+					}
+				}
+				custom_effect_tooltip = YUG_import_tankettes_tooltip
+				hidden_effect = {
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_2
+						amount = 8
+						producer = CZE
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+					CZE = {
+						exists = yes
+						has_government = communism
+					}
+				}
+				custom_effect_tooltip = YUG_import_tankettes_tooltip
+				hidden_effect = {
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_2
+						amount = 8
+						producer = CZE
+					}
+				}
+			}
+			unlock_decision_category_tooltip = YUG_tank_imports_category
+			add_tech_bonus = {
+				name = YUG_import_tankettes
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_update_our_arsenal
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = YUG_modern_tactics focus = YUG_defense_of_the_homeland }
+		x = 0
+		y = 2
+		relative_position_id = YUG_army_reorganization
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_update_our_arsenal
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = support_companies
+				Bonus = 1.0
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_bicycle_battalions
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = YUG_update_our_arsenal }
+		x = -1
+		y = 1
+		relative_position_id = YUG_update_our_arsenal
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			set_technology = { bicycle_infantry = 1 }
+		}
+	}
+	
+	focus = {
+		id = YUG_motorize_the_cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = YUG_bicycle_battalions }
+		x = 0
+		y = 1
+		relative_position_id =  YUG_bicycle_battalions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			has_tech = motorised_infantry
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_motorize_the_cavalry
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_local_militias
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = YUG_update_our_arsenal }
+		x = 1
+		y = 1
+		relative_position_id = YUG_update_our_arsenal
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			add_ideas = YUG_local_militias_idea
+		}
+	}
+	
+	focus = {
+		id = YUG_mountain_brigades
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = YUG_local_militias }
+		x = 0
+		y = 1
+		relative_position_id = YUG_local_militias
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_mountain_brigades
+				bonus = 2.0
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_belgrade_artiljerijska_skola
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = YUG_motorize_the_cavalry focus = YUG_mountain_brigades }
+		x = -1
+		y = 1
+		relative_position_id = YUG_mountain_brigades
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = YUG_belgrade_artiljerijska_skola_idea
+			add_tech_bonus = {
+				name = YUG_belgrade_artiljerijska_skola
+				bonus = 2.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	### marines - navy tree
+	### paratroopers - air tree
+	
+	focus = {
+		id = YUG_yugoslav_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = YUG_update_our_arsenal focus = YUG_expand_rifle_factories }
+		x = 3
+		y = 1
+		relative_position_id = YUG_update_our_arsenal
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_yugoslav_artillery_idea
+         	custom_effect_tooltip = YUG_yugoslav_artillery_tooltip
+			hidden_effect = {
+				division_template = {
+					name = "Artiljerijska Divizija"
+					priority = 2
+					division_names_group = YUG_ART_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						
+						#infantry = { x = 1 y = 0 }
+						#infantry = { x = 1 y = 1 }
+						#infantry = { x = 1 y = 2 }
+						
+						infantry = { x = 1 y = 0 }
+						artillery_brigade = { x = 1 y = 1 }
+						artillery_brigade = { x = 1 y = 2 }
+						artillery_brigade = { x = 1 y = 3 }
+					}
+					
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+				}
+				
+				#set_division_template_lock = { division_template = "Artiljerijska Divizija" is_locked = yes }
+				
+				random_owned_controlled_state = {
+					prioritize = { 107 }
+    				create_unit = {
+						division = "name = \"1. Artiljerijska Divizija\" division_template = \"Artiljerijska Divizija\" start_experience_factor = 0.5" 
+						owner = YUG
+				    }
+				}
+			}
+			add_tech_bonus = {
+				name = YUG_yugoslav_artillery
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_anti_tank_defenses
+		icon = GFX_goal_YUG_anti_tank
+		prerequisite = { focus = YUG_yugoslav_artillery }
+		x = 0
+		y = 1
+		relative_position_id = YUG_yugoslav_artillery
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_anti_tank_defenses
+				bonus = 1.0
+				uses = 2
+				category = cat_anti_tank
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_defense_of_the_homeland
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = YUG_army_reorganization }
+		mutually_exclusive = { focus = YUG_modern_tactics }
+		x = 5
+		y = 1
+		relative_position_id = YUG_army_reorganization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_defense_of_the_homeland
+				bonus = 1.0
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = YUG_draza_mihailovic_theorist
+		}
+	}
+	
+	focus = {
+		id = YUG_expand_rifle_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = YUG_defense_of_the_homeland }
+		x = 0
+		y = 1
+		relative_position_id = YUG_defense_of_the_homeland
 
 		cost = 10
 
@@ -1825,6 +3175,267 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_independent_engineer_regiments
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = YUG_yugoslav_artillery focus = YUG_defensive_preparations }
+		x = 2
+		y = 1
+		relative_position_id = YUG_yugoslav_artillery
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_independent_engineer_regiments
+				bonus = 2.0
+				uses = 2
+				category = engineers_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_defensive_preparations
+		icon =  GFX_goal_generic_construct_military
+		prerequisite = { focus = YUG_expand_rifle_factories }
+		x = 2
+		y = 1
+		relative_position_id = YUG_expand_rifle_factories
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_defensive_preparations_idea
+		}
+	}
+	
+	focus = {
+		id = YUG_construct_the_rupnik_line
+		icon = GFX_goal_YUG_yugoslav_defense
+		dynamic = yes
+		prerequisite = { focus = YUG_defensive_preparations }
+		x = 0
+		y = 1
+		relative_position_id = YUG_defensive_preparations
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				AND = {
+					has_full_control_of_state = 102
+					has_full_control_of_state = 103
+				}
+				any_country = {
+					is_subject_of = YUG
+					has_full_control_of_state = 102
+					has_full_control_of_state = 103
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = YUG_construct_rupnik_line_tooltip
+			custom_effect_tooltip = YUG_construct_rupnik_line_warning_tooltip
+			set_country_flag = rupnik_line_ready
+			
+			hidden_effect = {
+				103 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11564
+						instant_build = yes
+					}
+				}
+				102 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9627
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3631
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 596
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 665
+						instant_build = yes
+					}
+				}
+			}
+			unlock_decision_category_tooltip = YUG_expand_land_fortifications
+		}
+	}
+	
+	focus = {
+		id = YUG_anti_air_defenses
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = YUG_defensive_preparations }
+		x = 2
+		y = 1
+		relative_position_id = YUG_defensive_preparations
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 104 }
+				limit = {
+					ROOT = { controls_state = PREV }
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { controls_state = PREV }
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	############################
+	######## AIR FORCE #########
+	############################
+	
+	focus = {
+		id = YUG_reorganize_the_air_force
+		icon = GFX_goal_generic_build_airforce
+		x = 62
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 30
+			add_tech_bonus = {
+				name = YUG_reorganize_the_air_force
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
 			}
 		}
 	}
