@@ -3,6 +3,10 @@
  #YUG
  YUG_JRZ_neutrality_party:0 "JRZ"
  YUG_JRZ_neutrality_party_long:0 "Jugoslovenska Radikalna Zajednica"
+ YUG_JNS_neutrality_party:0 "JNS"
+ YUG_JNS_neutrality_party_long:0 "Jugoslovenska Nacionalna Stranka"
+ YUG_JRS_neutrality_party:0 "JRS"
+ YUG_JRS_neutrality_party_long:0 "Jugoslovenski Radnički Savez"
  YUG_HSS_neutrality_party:0 "HSS"
  YUG_HSS_neutrality_party_long:0 "Hrvatska Seljačka Stranka"
  

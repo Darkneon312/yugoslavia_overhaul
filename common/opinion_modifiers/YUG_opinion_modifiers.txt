@@ -1,10 +1,6 @@
 opinion_modifiers = {
-	
-	banovina_established_YUG = {
-		value = 130
-	}
-	
-	banovina_established_CRO = {
-		value = 50
+
+	YUG_accept_italian_naval_dominance_opinion = {
+		value = 25
 	}
 }

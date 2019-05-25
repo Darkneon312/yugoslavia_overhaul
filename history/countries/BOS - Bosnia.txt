@@ -127,17 +127,6 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Mehmed Spaho"
-	desc = ""
-	picture = "gfx/leaders/BOS/Portriat_BOS_Mehmed_Spaho.tga"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
 	name = "Osman Kulenović"	
 	desc = "ANTE_PAVELIC_DESC"
 	picture = "gfx/leaders/BOS/Portriat_BOS_Osman_Beg_Kulenovic.tga"
@@ -153,16 +142,27 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/BOS/Portriat_BOS_Mehmed_Spaho.tga"
 	expire = "1965.1.1"
-	ideology = moderatism
+	ideology = conservatism
 	traits = {
-		#
+		popular_figurehead
 	}
 }
 
 create_country_leader = {
-	name = "Djuro Pucar"
+	name = "Mehmed Spaho"
 	desc = ""
-	picture = "gfx/leaders/BOS/Portrait_BOS_Djuro_Pucar.tga"
+	picture = "gfx/leaders/BOS/Portriat_BOS_Mehmed_Spaho.tga"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+		popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Rodoljub Čolaković"
+	desc = ""
+	picture = "gfx/leaders/BOS/Portrait_BOS_Rodoljub_Colakovic.tga"
 	expire = "1965.1.1"
 	ideology = leninism
 	traits = {

@@ -1,8 +1,51 @@
 ﻿l_english:
 
+ YUG_stojadinovic_assassination_tt:0 "The Assassination Attempt on Stojadinović in March has occured."
+ 
  YUG_mass_motorization_tooltip:0 "Gain a Motorized unit with §Y9 Motorized§! batallions.\n"
  YUG_import_tankettes_tooltip:0 "§Y8§! units of §YŠkoda Š-I-D§! is added to the national stockpile.\n"
  YUG_yugoslav_artillery_tooltip:0 "Gain an Artillery unit with §Y4 Infantry§! and §Y3 Artillery§! batallions.\n"
  YUG_construct_rupnik_line_tooltip:0 "Place §YLand Forts§! across §YSlovenia§!.\n"
  YUG_construct_rupnik_line_warning_tooltip:0 "§RNot every province along the Austrian-German border.§!\n"
  YUG_armor_tooltip:0 "Gain an Tank unit with §Y4 Light Tank§! and §Y3 Infantry§! batallions.\n"
+ 
+ YUG_ik3_unlock_tooltip:0 "Add technology: §YIK-3§!.\n"
+ 
+ YUG_italian_ships_tooltip:0 "Gain a §YFleet§! with a §Y2 Light Cruiser§!, §Y4 Destroyers§! and §Y4 Submarines§!.\n"
+ 
+ 
+ 
+ YUG_decrease_SER_temper:0 "§GDecreases§! Serbian §YTemper§!.\n"
+ YUG_increases_SER_temper:0 "§RIncreases§! Serbian §YTemper§!.\n"
+ 
+ YUG_decrease_CRO_temper:0 "§GDecreases§! Croatian §YTemper§!.\n"
+ YUG_increase_CRO_temper:0 "§RIncreases§! Croatian §YTemper§!.\n"
+ 
+ YUG_decrease_SLV_temper:0 "§GDecreases§! Slovene §YTemper§!.\n"
+ YUG_increase_SLV_temper:0 "§RIncreases§! Slovene §YTemper§!.\n"
+ 
+ 
+ YUG_decrease_BOS_temper:0 "§GDecreases§! Bosnian §YTemper§!.\n"
+ YUG_increase_BOS_temper:0 "§RIncreases§! Bosnian §YTemper§!."
+ 
+ YUG_decrease_MNT_temper:0 "§GDecreases§! Montenegrin §YTemper§!.\n"
+ YUG_increase_MNT_temper:0 "§RIncreases§! Montenegrin §YTemper§!.\n"
+ 
+ YUG_decrease_MAC_temper:0 "§GDecreases§! Macedonian §YTemper§!.\n"
+ YUG_increase_MAC_temper:0 "§RIncreases§! Macedonian §YTemper§!.\n"
+ 
+ 
+ YUG_decrease_ITA_temper:0 "§GDecreases§! Italian §YTemper§!.\n"
+ YUG_increase_ITA_temper:0 "§RIncreases§! Italian §YTemper§!.\n"
+ 
+ YUG_decrease_HUN_temper:0 "§GDecreases§! Hungarian §YTemper§!.\n"
+ YUG_increases_HUN_temper:0 "§RIncreases§! Hungarian §YTemper§!.\n"
+ 
+ YUG_decrease_BUL_temper:0 "§GDecreases§! Bulgarian §YTemper§!.\n"
+ YUG_increase_BUL_temper:0 "§RIncreases§! Bulgarian §YTemper§!.\n"
+ 
+ YUG_decrease_ALB_temper:0 "§GDecreases§! Albanian §YTemper§!.\n"
+ YUG_increase_ALB_temper:0 "§RIncreases§! Albanian §YTemper§!.\n"
+ 
+ 
+ YUG_increase_all_temper:0 "§RIncreases§! §YTemper§! §Rof all Ethnicities§!.\n"

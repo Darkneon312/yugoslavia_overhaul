@@ -1,5 +1,6 @@
 spriteTypes = {
 
+	#politics
 	spriteType = {
 		name = "GFX_idea_YUG_yugoslav_regency"
 		texturefile = "gfx/interface/ideas/YUG/idea_YUG_yugoslav_regency.dds"
@@ -23,5 +24,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_YUG_vmro"
 		texturefile = "gfx/interface/ideas/YUG/idea_YUG_vmro.dds"
+	}
+	
+	#navy
+	
+	spriteType = {
+		name = "GFX_idea_YUG_yugoslavia_rules_the_waves"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_yugoslavia_rules_the_waves.dds"
 	}
 }

@@ -1,8 +1,10 @@
 ﻿l_english:
  
- YO_yugoslavia.1.t:0 "Attempted Assassination in Parliament!"
- YO_yugoslavia.1.d:0 "Milan Stojadinović, our Prime Minister, was holding an Exposé in Parliament today, when a man identified as Damjan Arnautović, a macedonian teacher, attempted to assassinate him! Many MPs can confirm that he was annoying the PM during his speech and was asked to keep quiet. Moments later he stood up from his seat and approched the speaking booth. At this point everyone noticed he was drunk, then suddenly he pulled out a revolver and tried to shoot Stojadinović, however he was rescued by Stojadin Dimitrijević, a young MP."
- YO_yugoslavia.1.a:0 "This is getting out of hand."
+ YO_yugoslavia.1.t:0 "One day in Parliament..."
+ #YO_yugoslavia.1.d:0 "Milan Stojadinović, our Prime Minister, was holding an Exposé in Parliament today, when a man identified as Damjan Arnautović, a macedonian teacher, attempted to assassinate him! Many MPs can confirm that he was annoying the PM during his speech and was asked to keep quiet. Moments later he stood up from his seat and approched the speaking booth. At this point everyone noticed he was drunk, then suddenly he pulled out a revolver and tried to shoot Stojadinović, however he was rescued by Stojadin Dimitrijević, a young MP."
+ YO_yugoslavia.1.d:0 "Milan Stojadinović, our Prime Minister, is holding an Exposé in Parliament today, however there is an annoying and suspicious memeber in the audience."
+ YO_yugoslavia.1.a:0 "The Man fails at assassinating the PM."
+ YO_yugoslavia.1.b:0 "The Man is successful at assassinating the PM."
  
  #YO_yugoslavia.2.t:0 "Ljubomir Davidović passes away"
  #YO_yugoslavia.2.d:0 "Ljubomir Davidović, the creator of Demokratska Stranka has recently passed away. As one of the oldest members of the Serbian Parliament and as prime minister, he played an important role in shaping then Serbia and today Yugoslavia. His actions will never be forgotten. His successor will be one of his young friends, Milan Grol."
@@ -14,6 +16,56 @@
  #YO_yugoslavia.4.d:0 "The time has come for the parliamentary elections of 1938. The previous election of 1935 resulted in a victory for the JRZ now under Milan Stojadinović. The United Opposition primariy consisting of croatian parties under Vladko Maček are running against Stojadinović. What will be the outcome?"
  #YO_yugoslavia.4.a:0 "The JRZ wins the Election!"
  #YO_yugoslavia.4.b:0 "The United Opposition wins the Election!"
+ 
+ YO_yugoslaviaplanepurchase.1.t:0 "What should we ask for?"
+ YO_yugoslaviaplanepurchase.1.d:0 " "
+ YO_yugoslaviaplanepurchase.1.a:0 "Fighters."
+ YO_yugoslaviaplanepurchase.1.b:0 "CAS."
+ YO_yugoslaviaplanepurchase.1.c:0 "Bombers."
+ 
+ YO_yugoslaviaplanepurchase.2.t:0 "Yugoslavia asks us for Fighters"
+ YO_yugoslaviaplanepurchase.2.d:0 " "
+ YO_yugoslaviaplanepurchase.2.a:0 "Send a lot of Fighters."
+ YO_yugoslaviaplanepurchase.2.b:0 "Send some Fighters."
+ YO_yugoslaviaplanepurchase.2.c:0 "We can't afford to send Fighters."
+ 
+ YO_yugoslaviaplanepurchase.3.t:0 "Yugoslavia asks us for CAS"
+ YO_yugoslaviaplanepurchase.3.d:0 " "
+ YO_yugoslaviaplanepurchase.3.a:0 "Send a lot of CAS."
+ YO_yugoslaviaplanepurchase.3.b:0 "Send some CAS."
+ YO_yugoslaviaplanepurchase.3.c:0 "We can't afford to send CAS."
+ 
+ YO_yugoslaviaplanepurchase.4.t:0 "Yugoslavia asks us for Bombers"
+ YO_yugoslaviaplanepurchase.4.d:0 " "
+ YO_yugoslaviaplanepurchase.4.a:0 "Send a lot of Bombers."
+ YO_yugoslaviaplanepurchase.4.b:0 "Send some Bombers."
+ YO_yugoslaviaplanepurchase.4.c:0 "We can't afford to send Bombers."
+ 
+ YO_yugoslaviaplanepurchase.5.t:0 "[From.GetNameDefCap] agrees!"
+ YO_yugoslaviaplanepurchase.5.d:0 " "
+ YO_yugoslaviaplanepurchase.5.a:0 "We will put these to good use."
+ 
+ YO_yugoslaviaplanepurchase.6.t:0 "[From.GetNameDefCap] declines..."
+ YO_yugoslaviaplanepurchase.6.d:0 " "
+ YO_yugoslaviaplanepurchase.6.a:0 "This will hinder our aeronautical development."
+ 
+ YO_yugoslavianavyitaly.1.t:0 "[YUG.GetNameDefCap] asks us to purchase our ships"
+ YO_yugoslavianavyitaly.1.d:0 " "
+ YO_yugoslavianavyitaly.1.a:0 "They are our friends."
+ YO_yugoslavianavyitaly.1.b:0 "Those are our ships!"
+ 
+ YO_yugoslavianavyitaly.2.t:0 "[From.GetNameDefCap] agrees!"
+ YO_yugoslavianavyitaly.2.d:0 " "
+ YO_yugoslavianavyitaly.2.a:0 "We are very greatful."
+ 
+ YO_yugoslavianavyitaly.3.t:0 "[From.GetNameDefCap] declines..."
+ YO_yugoslavianavyitaly.3.d:0 " "
+ YO_yugoslavianavyitaly.3.a:0 "This will hinder our naval development."
+ 
+ YO_yugoslavianavyitaly.4.t:0 "Joint Naval Exercises"
+ YO_yugoslavianavyitaly.4.d:0 " "
+ YO_yugoslavianavyitaly.4.a:0 "Exercise on the Yugoslav Coast."
+ YO_yugoslavianavyitaly.4.b:0 "Exercise on the Italian Coast."
  
  YO_yugoslaviaocc.1.t:0 "The Yugoslav Question"
  YO_yugoslaviaocc.1.d:0 "The Yugoslav Government has decided to officially surrender but refuse to cooperate in any way. However the autonomous governments have decided to go against Yugoslavia and are willing to assist us. How should we proceed?"

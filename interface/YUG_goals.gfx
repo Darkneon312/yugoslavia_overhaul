@@ -1,16 +1,6 @@
 spriteTypes = {
 	
 	SpriteType = {
-		name = "GFX_goal_YUG_stojadinovic_assassination"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_stojadinovic_assassination.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_YUG_secert_police"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_secret_police.dds"			
-	}
-	
-	SpriteType = {
 		name = "GFX_goal_YUG_limited_selfgoverment"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_limited_selfgoverment.dds"			
 	}
@@ -20,6 +10,134 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_orthodox_church_support.dds"			
 	}
 	
+	###############
+	
+	#politics
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_stojadinovic_assassination" #removed
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_stojadinovic_assassination.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_stojadinovic"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_stojadinovic.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_follow_stojadinovic"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_follow_stojadinovic.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_pavle"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_pavle.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_yugoslavism"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslavism.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_stojadinovic_assassinated"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_stojadinovic_assassinated.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_ljotic"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_ljotic.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_cave_to_zivkovic"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_cave_to_zivkovic.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_cooperation_with_italy"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_cooperation_with_italy.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_secret_police"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_secret_police.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_go_yugoslavia"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_go_yugoslavia.dds"
+	}
+	
+	#industry
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_northern_focus"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_northern_focus.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_slovene_industry"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_slovene_industry.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_croatian_industry"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_croatian_industry.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_croatian_science"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_croatian_science.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_damatian_shipping"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_damatian_shipping.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_bosnian_industry"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_bosnian_industry.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_southern_focus"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_southern_focus.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_serbian_industry"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_industry.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_serbian_steel"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_steel.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_serbian_science"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_science.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_montenegrin_industry"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_montenegrin_industry.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_macedonian_industry"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_macedonian_industry.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_yugoslav_infrastructure"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_infrastructure.dds"			
+	}
+	
+	#army
+	
 	SpriteType = {
 		name = "GFX_goal_YUG_anti_tank"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_anti_tank.dds"			
@@ -28,5 +146,34 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_YUG_yugoslav_defense"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_defense.dds"			
+	}
+	
+	#air
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_rudolf_fizir"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_rudolf_fizir.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_fizir_designs"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_fizir_designs.dds"			
+	}
+	
+	#navy
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_italian_supremacy_over_yugoslavia"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_italian_supremacy_over_yugoslavia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_buy_italian_ships"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_buy_italian_ships.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_yugoslavia_rules_the_waves"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslavia_rules_the_waves.dds"
 	}
 }

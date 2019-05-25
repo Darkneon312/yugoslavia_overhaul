@@ -1,0 +1,341 @@
+
+add_namespace = YO_yugoslaviaocc
+add_namespace = YO_yugoslaviatag
+
+# Yugoslav Occupation
+country_event = {
+	id = YO_yugoslaviaocc.1
+	title = YO_yugoslaviaocc.1.t
+	desc = YO_yugoslaviaocc.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		has_government = fascism
+		OR = {
+			GER = {
+				has_full_control_of_state = 107
+			}
+			any_country = {
+				is_in_faction_with = GER
+				has_full_control_of_state = 107
+			}
+		}
+		YUG = {
+			#surrender_progress > 0.9
+			has_capitulated = yes
+			has_war_with = GER
+		}
+	}
+	
+	mean_time_to_happen = { days = 7 }
+	
+	option = { # puppet serbia
+		ai_chance = { factor = 90 }
+		name = YO_yugoslaviaocc.1.a
+		
+		if = {
+			limit = {
+				HUN = {
+					exists = yes
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			HUN = {
+				add_state_core = 45
+				set_state_controller = 45
+			}
+		}
+		
+		if = {
+			limit = {
+				BUL = {
+					exists = yes
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			BUL = {
+				add_state_core = 106
+				set_state_controller = 106
+			}
+		}
+		
+		if = {
+			limit = {
+				ITA = {
+					exists = yes
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			MNT = {
+				transfer_state = 105
+				load_oob = "MNT_ITA_puppet"
+			}
+			ITA = {
+				puppet = MNT
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = no
+				}
+			}
+			CRO = {
+				transfer_state = 103
+				transfer_state = 109
+				#transfer_state = 768
+				add_state_core = 104
+				set_state_controller = 104
+			}
+			puppet = CRO
+		}
+		
+		if = {
+			limit = {
+				YUG = {
+					NOT = {
+						has_completed_focus = YUG_establish_the_banovina_of_croatia
+					}
+				}
+			}			
+			CRO = {
+				load_oob = "CRO_YUG_independence"
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = yes
+					NOT = {
+						OR = {
+							is_in_faction_with = GER
+							is_subject_of = GER
+						}
+					}
+				}
+			}
+			CRO = {
+				transfer_state = 103
+				transfer_state = 109
+				
+				add_state_core = 104
+				set_state_controller = 104
+				load_oob = "CRO_YUG_independence"
+			}
+			puppet = CRO
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = yes
+					OR = {
+						is_in_faction_with = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			CRO = {
+				add_state_core = 104
+				set_state_controller = 104
+			}
+		}
+		
+		SER = {
+			transfer_state = 107
+			transfer_state = 108
+			transfer_state = 764
+			load_oob = "SER_GER_puppet"
+			
+			set_cosmetic_tag = KMV
+			set_party_name = { 
+				ideology = fascism
+				name = SER_KMV_fascism_party
+				long_name = SER_KMV_fascism_party_long
+			}
+			
+			remove_ideas = anti_german_military
+		}
+		
+		puppet = SER
+		
+		set_state_controller = 102
+		
+		if = {
+			limit = {
+				SLV = {
+					exists = yes
+					OR = {
+						is_subject_of = GER
+						is_in_faction_with = GER
+					}
+					has_country_flag = wrong
+				}
+			}
+			SLV = {
+				transfer_state = 102
+			}
+		}
+		
+		if = {
+			limit = {
+				SLV = {
+					exists = no
+					has_country_flag = wrong
+				}
+			}
+			SLV = {
+				transfer_state = 102
+			}
+			GER = {
+				puppet = SLV
+			}
+		}
+		
+		#YUG = {
+		#	remove_unit_leader = 900
+		#	remove_unit_leader = 901
+		#	remove_unit_leader = 902
+		#	remove_unit_leader = 903
+		#	remove_unit_leader = 904
+		#	remove_unit_leader = 905
+		#	remove_unit_leader = 906
+		#	remove_unit_leader = 907
+		#	remove_unit_leader = 908
+		#	remove_unit_leader = 909
+		#	remove_unit_leader = 910
+		#	remove_unit_leader = 1000
+		#}
+		
+		hidden_effect = {
+			country_event = axispuppetsserbia.1
+			YUG = { country_event = YO_yugoslaviatag.3 }
+		}
+		
+		add_political_power = 50
+	}
+	option = { #occupy them
+		ai_chance = { factor = 90 }
+		name = YO_yugoslaviaocc.1.b
+		
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviatag.1
+	#title = YO_yugoslaviatag.1.t
+	#desc = YO_yugoslaviatag.1.d
+	title = "Croatia breaks away!"
+	desc = "After having their demands not met, the croatian governmet has ceded from Yugoslavia and have formed their own forces to combat our own."
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = YO_yugoslaviatag.1.a
+		name = "Traitors!"
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		#name = YO_yugoslaviatag.1.b
+		name = "We should have done something about this...(Play as Croatia)"
+		trigger = { is_ai = no }
+		
+		CRO = {
+			change_tag_from = YUG
+		}
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviatag.2
+	#title = YO_yugoslaviatag.1.t
+	#desc = YO_yugoslaviatag.1.d
+	title = "Banovina of Croatia"
+	desc = "By establishing a semi-autonomous Banate of Croatia we can hopefully quell calls for true independence."
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = YO_yugoslaviatag.1.a
+		name = "Excellent! This should ease tensions."
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		#name = YO_yugoslaviatag.1.b
+		name = "We still have to be careful...(Play as Croatia)"
+		trigger = { is_ai = no }
+		
+		CRO = {
+			change_tag_from = YUG
+		}
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviatag.3
+	#title = YO_yugoslaviatag.2.t
+	#desc = YO_yugoslaviatag.2.d
+	title = "Our lands have been split!"
+	desc = "After our capitulation the lands that were unde rour control have been split into ethnic occupation zones. Croatia, Serbia and Montenegro submited to the great powers of Germany and Italy."
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = YO_yugoslaviatag.2.a
+		name = "Traitors!"
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		#name = YO_yugoslaviatag.2.b
+		name = "They will do anything to save themselves...(Play as Croatia)"
+		trigger = { is_ai = no }
+		CRO = {
+			change_tag_from = YUG
+		}
+	}
+	
+	option = {
+		#name = YO_yugoslaviatag.2.c
+		name = "They will do anything to save themselves...(Play as Serbia)"
+		trigger = { is_ai = no }
+		SER = {
+			change_tag_from = YUG
+		}
+	}
+	
+	option = {
+		#name = YO_yugoslaviatag.2.c
+		name = "They will do anything to save themselves...(Play as Montenegro)"
+		trigger = { is_ai = no }
+		MNT = {
+			change_tag_from = YUG
+		}
+	}
+}

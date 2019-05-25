@@ -5,6 +5,8 @@
  
  YUG_jadransko_brodogradiliste_bijela:0 "Jadransko Brodogradilište Bijela"
  YUG_brodosplit:0 "Brodosplit"
+ YUG_kraljevica:0 "Kraljevica"
+ YUG_kladovo_shipyard:0 "Kladovo Shipyard"
  
  YUG_zastava_firearms:0 "Zastava Firearms"
  YUG_zastava_automobili:0 "Zastava Automobili"
@@ -14,8 +16,6 @@
  YUG_min:0 "Mašinska Industrija Niš"
  YUG_ei:0 "Elektronska Industrija Niš"
  YUG_trepca:0 "Trepča Mines"
- YUG_saponia:0 "Saponia"
- YUG_koncar_elektroindustrija:0 "Končar Elektroindustrija"
  
  ###########################################################
  

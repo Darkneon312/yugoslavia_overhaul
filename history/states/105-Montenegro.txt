@@ -26,7 +26,8 @@ state={
 
 	provinces={
 		937 6913 9809 9821 11858
-		3922 6940 9849 9874 #1 akward western province and southern kosovo
+		3922 #1 akward western province and 
+		6940 9849 9874 #1 akward western province and southern kosovo
 		833 867 #western part of mac
 	}
 	manpower=895500

@@ -1,148 +1,21 @@
 ### Ethnicites
 
 YUG_primary_ethnicities_category = {
-
-	YUG_serbian_temper = {
 	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
-
-	YUG_croatian_temper = {
 	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
-	
-	YUG_slovene_temper = {
-	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
 	
 }
 
 YUG_secondary_ethnicities_category = {
 	
-	YUG_bosnian_temper = {
 	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
 	
-	YUG_macedonian_temper = {
-	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
-	
-	YUG_montenegrin_temper = {
-	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
 }
 
 YUG_minorities_category = {
 	
-	YUG_italian_temper = {
 	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
 	
-	YUG_hungarian_temper = {
-	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
-	
-	YUG_albanian_temper = {
-	
-		icon = generic_political_discourse
-		
-		available = {
-			always = no
-		}
-		
-		fire_only_once = yes
-
-		complete_effect = {
-		
-		}
-	}
 }
 
 ### tank imports
@@ -274,7 +147,903 @@ YUG_tank_imports_category = {
 			}
 		}
 	}
+}
+
+### Expand Land Fortifications
+
+YUG_expand_land_fortifications_category = {
+
 	
+
+}
+
+### Aircraft Importation
+
+YUG_aircraft_importation_category = {
+
+	### FRA
+
+	YUG_import_french_fighers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_french_purchase
+			FRA = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			FRA = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_fighter_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			FRA = {
+				send_equipment = {
+					equipment = fighter_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_french_cas = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_french_purchase
+			FRA = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			FRA = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_cas_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			FRA = {
+				send_equipment = {
+					equipment = CAS_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_french_bombers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_french_purchase
+			FRA = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			FRA = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = bomber_tt
+					is_available_tac_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			FRA = {
+				send_equipment = {
+					equipment = tac_bomber_equipment
+					amount = 15
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	### ENG
+	
+	YUG_import_british_fighers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_british_purchase
+			ENG = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			ENG = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_fighter_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			ENG = {
+				send_equipment = {
+					equipment = fighter_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_acquire_the_new_hurricane = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+		
+		fire_only_once = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_british_purchase
+		}
+		
+		visible = {
+			has_capitulated = no
+			ENG = {
+				exists = yes
+				has_capitulated = no
+				has_tech = fighter1
+			}
+			has_dlc = "Death or Dishonor"
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			ENG = {
+				create_production_license = {
+					target = ROOT
+					equipment = {
+						type = fighter_equipment_1
+					}
+					cost_factor = 0
+				}
+			}
+		}
+	}
+	
+	YUG_acquire_the_new_blenheim = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+		
+		fire_only_once = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_british_purchase
+		}
+		
+		visible = {
+			has_capitulated = no
+			ENG = {
+				exists = yes
+				has_capitulated = no
+				has_tech = heavy_fighter1
+			}
+			has_dlc = "Death or Dishonor"
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			ENG = {
+				create_production_license = {
+					target = ROOT
+					equipment = {
+						type = heavy_fighter_equipment_1
+					}
+					cost_factor = 0
+				}
+			}
+		}
+	}
+	
+	YUG_import_british_cas = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_british_purchase
+			ENG = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			ENG = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_cas_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			ENG = {
+				send_equipment = {
+					equipment = CAS_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_british_bombers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_british_purchase
+			ENG = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			ENG = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = bomber_tt
+					is_available_tac_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			ENG = {
+				send_equipment = {
+					equipment = tac_bomber_equipment
+					amount = 15
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	### ITA
+	
+	YUG_import_italian_fighers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_italian_purchase
+			ITA = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			ITA = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_fighter_YUG = yes
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_government = fascism
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			ITA = {
+				send_equipment = {
+					equipment = fighter_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_italian_cas = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_italian_purchase
+			ITA = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_government = fascism
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			ITA = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_cas_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			ITA = {
+				send_equipment = {
+					equipment = CAS_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_italian_bombers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_italian_purchase
+			ITA = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			ITA = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = bomber_tt
+					is_available_tac_YUG = yes
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_government = fascism
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			ITA = {
+				send_equipment = {
+					equipment = tac_bomber_equipment
+					amount = 15
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	### GER
+	
+	YUG_import_german_fighers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_german_purchase
+			GER = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			GER = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_fighter_YUG = yes
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			GER = {
+				send_equipment = {
+					equipment = fighter_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_german_cas = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_german_purchase
+			GER = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			GER = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_cas_YUG = yes
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			GER = {
+				send_equipment = {
+					equipment = CAS_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_german_bombers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_german_purchase
+			GER = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			GER = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = bomber_tt
+					is_available_tac_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			GER = {
+				send_equipment = {
+					equipment = tac_bomber_equipment
+					amount = 15
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	### SOV
+	
+	YUG_import_soviet_fighers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_soviet_purchase
+			SOV = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			SOV = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_fighter_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			SOV = {
+				send_equipment = {
+					equipment = fighter_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_soviet_cas = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_soviet_purchase
+			SOV = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			SOV = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = fighter_tt
+					is_available_cas_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			SOV = {
+				send_equipment = {
+					equipment = CAS_equipment
+					amount = 25
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
+	
+	YUG_import_soviet_bombers = {
+	
+		icon = hol_war_on_pacifism
+		
+		selectable_mission = yes
+	
+		available = {
+			has_completed_focus = YUG_further_aircraft_importation
+			has_completed_focus = YUG_soviet_purchase
+			SOV = {
+				NOT = {
+					has_idea = YUG_air_payment
+				}
+			}
+		}
+		
+		visible = {
+			has_capitulated = no
+			SOV = {
+				exists = yes
+				has_capitulated = no
+				custom_trigger_tooltip = {
+					tooltip = bomber_tt
+					is_available_tac_YUG = yes
+				}
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		days_remove = 150
+		
+		complete_effect = {
+			SOV = {
+				send_equipment = {
+					equipment = tac_bomber_equipment
+					amount = 15
+					target = ROOT
+				}
+				add_timed_idea = { idea = YUG_air_payment days = 150 }
+			}
+		}
+	}
 }
 
 political_actions = {

@@ -2,6 +2,82 @@ ideas = {
 
 
 	political_advisor = {
+	
+		CRO_milan_budak = {
+			
+			picture = generic_fascist_demagogue_western_european_2d
+			
+			allowed = {
+				original_tag = CRO
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			traits = { fascist_demagogue }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		CRO_vladko_macek = {
+			
+			picture = generic_democratic_demagogue_western_european_2d
+			
+			allowed = {
+				original_tag = CRO
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			traits = { democratic_reformer }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		CRO_ivo_lola_ribar = {
+		
+			name = YUG_ivo_lola_ribar
+			
+			picture = YUG_ivo_lola_ribar
+			
+			#picture = generic_democratic_demagogue_western_european_2d
+			
+			allowed = {
+				original_tag = CRO
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			visible = {
+				NOT = {
+					has_global_flag = ivo_lola_ribar_dead
+				}
+			}
+			
+			traits = { communist_revolutionary }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
 
 		CRO_ivan_subasic = {
 
@@ -11,19 +87,39 @@ ideas = {
 				original_tag = CRO
 			}
 			
-			traits = { backroom_backstabber }
-
-			ai_will_do = {
-				factor = 0
+			available = {
+				NOT  = {
+					has_governemt = communism
+				}
 			}
+			
+			visible = {
+				NOT  = {
+					has_governemt = communism
+				}
+			}
+			
+			traits = { backroom_backstabber }
 		}
 
 		CRO_alojzije_stepinac = {
 
 			picture = generic_political_advisor_europe_2
-				
+		
 			allowed = {
 				original_tag = CRO
+			}
+			
+			available = {
+				NOT  = {
+					has_governemt = communism
+				}
+			}
+			
+			visible = {
+				NOT  = {
+					has_governemt = communism
+				}
 			}
 			
 			traits = { ideological_crusader }
@@ -38,6 +134,44 @@ ideas = {
 			}
 			
 			traits = { captain_of_industry }
+		}
+		
+		CRO_pot_comm = {
+
+			picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = CRO
+			}
+			
+			available = {
+				has_governemt = communism
+			}
+			
+			visible = {
+				has_governemt = communism
+			}
+			
+			traits = { prince_of_terror }
+		}
+		
+		CRO_sw_comm = {
+
+			picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = CRO
+			}
+			
+			available = {
+				has_governemt = communism
+			}
+			
+			visible = {
+				has_governemt = communism
+			}
+			
+			traits = { silent_workhorse }
 		}
 	}
 	
@@ -127,13 +261,13 @@ ideas = {
 	army_chief = {
 
 		CRO_vladimir_laxa = {
-			
+		
 			picture = generic_army_europe_4
 			
 			allowed = {
 				original_tag = CRO
 			}
-						
+		
 			traits = { army_chief_defensive_2 }
 			
 			ai_will_do = {
@@ -142,17 +276,15 @@ ideas = {
 		}
 
 		CRO_fedor_dragojlov = {
-			
+		
 			picture = generic_army_europe_2
 			
 			allowed = {
 				original_tag = CRO
 			}
-			
-
-			
+		
 			traits = { army_chief_maneuver_2 }
-			
+		
 			ai_will_do = {
 				factor = 1
 			}
@@ -160,7 +292,6 @@ ideas = {
 	}
 
 	air_chief = {
-		
 
 		CRO_friedrich_navratil = {
 			
@@ -178,15 +309,15 @@ ideas = {
 		}
 
 		CRO_adalbert_rogulja = {
-			
+		
 			picture = generic_air_europe_3
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-						
+		
 			traits = { air_chief_ground_support_2 }
-			
+		
 			ai_will_do = {
 				factor = 1
 			}
@@ -196,28 +327,28 @@ ideas = {
 	navy_chief = {
 
 		CRO_edgar_angeli = {
-			
+		
 			picture = generic_navy_europe_2
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-						
+		
 			traits = { navy_chief_maneuver_2 }
-			
+		
 			ai_will_do = {
 				factor = 1
 			}
 		}
 
 		CRO_nikola_steinfl = {
-			
+		
 			picture = generic_navy_europe_3
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-						
+		
 			traits = { navy_chief_decisive_battle_2 }
 			
 			ai_will_do = {
@@ -230,30 +361,30 @@ ideas = {
 	high_command = {
 
 		CRO_slavko_stancer = {
-
+		
 			picture = generic_army_europe_2
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-			
+		
 			traits = { army_artillery_2 }
-			
+		
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		
 		CRO_vilko_begic = {
-
+		
 			picture = generic_army_europe_5
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-			
+		
 			traits = { army_armored_2 }
-			
+		
 			ai_will_do = {
 				factor = 1
 			}
@@ -275,30 +406,30 @@ ideas = {
 		}
 
 		CRO_vladimir_kren = {
-
+		
 			picture = generic_air_europe_1
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-			
+		
 			traits = { air_air_superiority_2 }
-			
+		
 			ai_will_do = {
 				factor = 1
 			}
 		}
 
 		CRO_djuro_jakcin = {
-
+		
 			picture = generic_navy_europe_3
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-			
+		
 			traits = { navy_screen_2 }
-			
+		
 			ai_will_do = {
 				factor = 1
 			}
@@ -307,48 +438,49 @@ ideas = {
 
 
 	theorist = {
+	
 		CRO_sismundo_pejacevic = {
-			
+		
 			picture = generic_army_europe_3
-
+		
 			allowed = {
 				original_tag = CRO
 			}
-			
+		
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.1
 			}
-			
+		
 			traits = { military_theorist }
 		}
 
 		CRO_ivan_crnkovic = {
-
+		
 			picture = generic_navy_europe_2
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-			
+		
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.1
 			}
-			
+		
 			traits = { naval_theorist }
 		}
 
 		CRO_mihajlo_tomasic = {
-
+		
 			picture = generic_air_europe_2
-			
+		
 			allowed = {
 				original_tag = CRO
 			}
-			
+		
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.1
 			}
-			
+		
 			traits = { air_warfare_theorist }
 		}
 

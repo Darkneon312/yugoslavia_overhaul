@@ -2,32 +2,57 @@
 
  ### Yugoslav/Serbian
 
+ YUG_mosa_pijade:0 "Moša Pijade"
  YUG_milan_grol:0 "Milan Grol"
  YUG_milan_stojadinovic:0 "Milan Stojadinović"
- YUG_dragisa_cvetkovic:0 "Dragiša Cvetković"
- YUG_aleksandar_cincar_markovic:0 "Aleksandar Cincar-Marković"
- YUG_vladimir_nazor:0 "Vladimir Nazor"
- YUG_vladko_macek:0 "Vladko Maček"
- YUG_anton_korosec:0 "Anton Korošec"
+ YUG_ivo_andric:0 "Ivo Andrić"
+ SER_dragisa_cvetkovic:0 "Dragiša Cvetković"
+ SER_aleksandar_cincar_markovic:0 "Aleksandar Cincar-Marković"
+ SER_aleksandar_rankovic:0 "Aleksandar Ranković"
+ SER_sreten_zujovic:0 "Sreten Zujović"
+ SER_dobrivoje_radosavljevic:0 "Dobrivoje Radosavljević"
  
- YUG_petar_bojovic_theorist:0 "Petar Bojović"
- YUG_draza_mihailovic_theorist:0 "Draža Mihailović"
- YUG_milan_nedic_theorist:0 "Milan Nedić"
- YUG_dusan_simovic_theorist:0 "Dušan Simović"
+ YUG_rudolf_fizir:0 "Rudolf Fizir"
  
- YUG_petar_zivkovic_army:0 "Petar Zivković"
+ YUG_pavle_savic:0 "Pavle Savić"
+ 
+ YUG_petar_zivkovic:0 "Petar Zivković"
  YUG_petar_bojovic:0 "Petar Bojović"
- YUG_ljubomir_maric_army_chief:0 "Ljubomir Marić"
  
- YUG_marijan_polic_navy_chief:0 "Marijan Polić"
- 
- YUG_ljubomir_maric_high_command:0 "Ljubomir Marić"
- YUG_milan_nedic_high_command:0 "Milan Nedić"
- YUG_dusan_simovic_high_command:0 "Dušan Simović"
  YUG_milojko_jankovic:0 "Milojko Janković"
  YUG_dusan_trifunovic:0 "Dušan Trifunović"
- YUG_ivan_kern:0 "Ivan Kern"
  YUG_aleksandar_beric:0 "Aleksandar Berić"
- YUG_marijan_polic_high_command:0 "Marijan Polić"
  
  ### Croatian
+ 
+ CRO_vladko_macek:0 "Vladko Maček"
+ CRO_milan_budak:0 "Mile Budak"
+ CRO_vladimir_nazor:0 "Vladimir Nazor"
+ CRO_ante_pavelic:0 "Ante Pavelić"
+ 
+ ### Slovene
+ 
+ SLV_bogumil_vosnjak:0 "Bogumil Vosnjak"
+ SLV_niko_silih:0 "Niko Silih"
+ SLV_vuk_rupnik:0 "Vuk Rupnik"
+ SLV_boris_furlan:0 "Boris Furlan"
+ SLV_leon_rupnik:0 "Leon Rupnik"
+ SLV_franc_kulovec:0 "Franc Kulovec"
+ SLV_anton_korosec:0 "Anton Korošec"
+ SLV_boris_kidric:0 "Boris Kidrič"
+ SLV_edvard_kardelj:0 "Edvard Kardelj"
+ SLV_ivan_kern:0 "Ivan Kern"
+ 
+ ### Bosnian
+ 
+ BOS_djuro_pucar:0 "Djuro Pučar"
+ BOS_dzafer_kulenovic:0 "Džafer Kulenović"
+ BOS_osman_kulenovic:0 "Osman Kulenović"
+ BOS_mehmed_alajbegovic:0 "Mehmed Alajbegović"
+ BOS_mehmed_spaho:0 "Mehmed Spaho"
+ BOS_hakija_hadzic:0 "Hakija Hadžić"
+ BOS_husejin_biscevic:0 "Husejin Biščević"
+ BOS_halim_malkoc:0 "Halim Malkoč"
+ BOS_adalbert_rogulja:0 "Adalbert Rogulja"
+ BOS_dobroslav_jevdevic:0 "Dobroslav Jevdević"
+ BOS_muhamed_hadziefendic:0 "Muhamed Hadžiefendić"

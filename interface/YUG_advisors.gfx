@@ -10,6 +10,11 @@ spriteTypes = {
 	### yug/ser
 	
 	spriteType = {
+		name = "GFX_idea_YUG_mosa_pijade"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_mosa_pijade.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_YUG_milan_grol"
 		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_milan_grol.dds"
 	}
@@ -20,18 +25,33 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_dragisa_cvetkovic"
-		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_dragisa_cvetkovic.dds"
+		name = "GFX_idea_YUG_ivo_andric"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_ivo_andric.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_aleksandar_cincar_markovic"
-		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_aleksandar_cincar_markovic.dds"
+		name = "GFX_idea_YUG_ljubomir_davidovic"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_ljubomir_davidovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SER_dragisa_cvetkovic"
+		texturefile = "gfx/interface/ideas/SER/advisors/idea_SER_dragisa_cvetkovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SER_aleksandar_cincar_markovic"
+		texturefile = "gfx/interface/ideas/SER/advisors/idea_SER_aleksandar_cincar_markovic.dds"
 	}
 	
 	spriteType = {
 		name = "GFX_idea_YUG_petar_bojovic"
 		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_petar_bojovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_pavle_savic"
+		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_pavle_savic.dds"
 	}
 	
 	spriteType = {
@@ -54,6 +74,31 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/YUG/advisors/idea_YUG_aleksandar_beric.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_idea_SER_aleksandar_rankovic"
+		texturefile = "gfx/interface/ideas/SER/advisors/idea_SER_aleksandar_rankovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SER_sreten_zujovic"
+		texturefile = "gfx/interface/ideas/SER/advisors/idea_SER_sreten_zujovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SER_dobrivoje_radosavljevic"
+		texturefile = "gfx/interface/ideas/SER/advisors/idea_SER_dobrivoje_radosavljevic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SER_koca_popovic"
+		texturefile = "gfx/interface/ideas/SER/advisors/idea_SER_koca_popovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SER_koca_popovic_army"
+		texturefile = "gfx/interface/ideas/SER/advisors/idea_SER_koca_popovic_army.dds"
+	}
+	
 	### cro
 	
 	spriteType = {
@@ -66,7 +111,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/CRO/advisors/idea_CRO_vladko_macek.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_idea_CRO_ante_pavelic"
+		texturefile = "gfx/interface/ideas/CRO/advisors/idea_CRO_ante_pavelic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_ivan_subasic"
+		texturefile = "gfx/interface/ideas/CRO/advisors/idea_CRO_ivan_subasic.dds"
+	}
+	
 	### slv
+	
+	spriteType = {
+		name = "GFX_idea_SLV_bogumil_vosnjak"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_bogumil_vosnjak.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_SLV_anton_korosec"
@@ -74,7 +134,44 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_SLV_marko_natlacen"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_marko_natlacen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SLV_miha_krek"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_miha_krek.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SLV_edvard_kardelj"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_edvard_kardelj.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SLV_boris_kidric"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_boris_kidric.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_SLV_ivan_kern"
 		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_ivan_kern.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SLV_leon_rupnik"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_leon_rupnik.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SLV_leon_rupnik_army"
+		texturefile = "gfx/interface/ideas/SLV/advisors/idea_SLV_leon_rupnik_army.dds"
+	}
+	
+	### bos
+	
+	spriteType = {
+		name = "GFX_idea_BOS_mehmed_spaho"
+		texturefile = "gfx/interface/ideas/BOS/advisors/idea_BOS_mehmed_spaho.dds"
 	}
 }

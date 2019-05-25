@@ -1,5 +1,7 @@
 ﻿capital = 107
 
+set_global_flag = YO_mod_enabled
+
 oob = "YUG_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -27,15 +29,29 @@ add_equipment_to_stockpile = {
 	producer = GER
 }
 
+if = {
+	limit = {
+		has_dlc = "Death or Dishonor"
+	}
+	ENG = {
+		create_production_license = {
+			target = YUG
+			equipment = {
+				type = fighter_equipment_0
+			}
+			cost_factor = 0
+		}
+	}
+}
+
 set_research_slots = 3
 
 add_ideas = {
-	anti_german_military
+	#anti_german_military
 	
 	YUG_yugoslav_regency
-	#YUG_communism_banned
 	
-	YUG_internal_instabilty_1
+	YUG_ethnic_nationalism_1
 	YUG_croatian_question
 	
 	YUG_serbian_general_staff
@@ -47,6 +63,20 @@ add_ideas = {
 add_ideas = {
 	YUG_petar_zivkovic_army
 }
+
+set_variable = { var = ser_temper value = -100 }
+set_variable = { var = cro_temper value = 100 }
+set_variable = { var = slv_temper value = 50 }
+
+set_variable = { var = bos_temper value = 25 }
+set_variable = { var = mnt_temper value = -75 }
+set_variable = { var = mac_temper value = 75 }
+
+set_variable = { var = ita_temper value = 25 }
+set_variable = { var = hun_temper value = 25 }
+set_variable = { var = bul_temper value = 25 }
+set_variable = { var = alb_temper value = 25 }
+#set_variable = { var = rom_temper value = -50 }
 
 set_technology = {
 	tech_support = 1		
@@ -112,49 +142,6 @@ if = {
 
 	add_political_power = 1198
 	
-	if = {
-		limit = {
-			has_dlc = "Death or Dishonor"
-		}
-		complete_national_focus = YUG_western_focus
-		complete_national_focus = YUG_friendship_treaty_with_italy
-		complete_national_focus = YUG_attract_foreign_capital
-		complete_national_focus = YUG_industrialization_program
-		complete_national_focus = YUG_limited_self_government
-		complete_national_focus = YUG_army_modernization
-		complete_national_focus = YUG_mountain_brigades
-		complete_national_focus = YUG_expand_the_mining_industry
-		complete_national_focus = YUG_modernize_the_air_force
-		complete_national_focus = YUG_develop_civilian_industry
-		complete_national_focus = YUG_purchase_foreign
-		complete_national_focus = YUG_license_production
-		complete_national_focus = YUG_fighter_license
-		complete_national_focus = YUG_rare_minerals_exploitation
-		complete_national_focus = YUG_traditional_values
-		complete_national_focus = YUG_greater_yugoslavia
-		complete_national_focus = YUG_establish_the_banovina_of_croatia
-		complete_national_focus = YUG_small_arms 
-		complete_national_focus = YUG_domestic_artillery_production
-		complete_national_focus = YUG_expand_the_serbian_shipyards
-		complete_national_focus = YUG_coastal_defense
-	}
-	
-	if = {
-		limit = {
-			NOT = { has_dlc = "Death or Dishonor" }
-		}
-		#generic focuses
-		complete_national_focus = army_effort
-		complete_national_focus = equipment_effort
-		complete_national_focus = motorization_effort
-		complete_national_focus = aviation_effort
-		complete_national_focus = naval_effort
-		complete_national_focus = flexible_navy
-		complete_national_focus = industrial_effort
-		complete_national_focus = construction_effort
-		complete_national_focus = production_effort
-	}
-	
 	oob = "YUG_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
@@ -218,7 +205,8 @@ if = {
 		expire = "1965.1.1"
 		ideology = despotism
 		traits = {
-			#
+			popular_figurehead2
+			yug_great_architect
 		}
 	}
 
@@ -230,7 +218,7 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 20
+			popularity = 15
 		}
 
 		fascism = {
@@ -238,7 +226,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 0
+			popularity = 5
 			#banned = no #default is no
 		}
 		
@@ -249,7 +237,7 @@ set_politics = {
 	
 	ruling_party = neutrality
 	last_election = "1935.5.3"
-	election_frequency = 36
+	election_frequency = 43
 	elections_allowed = yes
 }
 
@@ -258,11 +246,11 @@ set_politics = {
 
 		parties = {
 			democratic = { 
-				popularity = 5
+				popularity = 10
 			}
 
 			fascism = {
-				popularity = 20
+				popularity = 15
 			}
 			
 			communism = {
@@ -298,6 +286,17 @@ set_party_name = {
 set_stability = 0.6
 
 create_country_leader = {
+	name = "Pavle Karađorđević"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
 	name = "Milan Stojadinović"
 	desc = "POLITICS_MILAN_STOJADINOVIC_DESC"
 	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Stojadinovic.dds"
@@ -311,13 +310,24 @@ create_country_leader = {
 ###
 
 create_country_leader = {
+	name = "Milan Stojadinović"
+	desc = "POLITICS_MILAN_STOJADINOVIC_DESC"
+	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Stojadinovic.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		financial_expert
+	}
+}
+
+create_country_leader = {
 	name = "Dimitrije Ljotić"
 	desc = "POLITICS_MILAN_STOJADINOVIC_DESC"
 	picture = "gfx/leaders/SER/Portrait_SER_Dimitrije_Ljotic.tga"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
-		yug_fascist_militia_leader
+		fascist_militia_leader
 	}
 }
 
@@ -487,12 +497,12 @@ create_field_marshal = {
 }
 
 create_corps_commander = {
-	name = "Milan Kostić" #SERB
+	name = "Milan Kostić"
 	portrait_path = "gfx/leaders/SER/Portrait_SER_Milan_Kostic.tga"
-	traits = { YUG_serbian }
+	traits = { YUG_serbian trait_engineer }
 	skill = 2
 	attack_skill = 1
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
 	id = 2007
@@ -621,7 +631,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Jovan Naumović"
 	portrait_path = "gfx/leaders/YUG/Portriat_YUG_Jovan_Naumovic.tga"
-	traits = { YUG_serbian old_guard career_officer infantry_officer }
+	traits = { YUG_serbian old_guard career_officer infantry_officer infantry_leader }
 	skill = 3
 	attack_skill = 3
 	defense_skill = 2
@@ -633,7 +643,7 @@ create_corps_commander = {
 create_corps_commander = {
     name = "Milan Milovanović"
     portrait_path = "gfx/leaders/YUG/Portrait_YUG_Milan_Milovanovic.tga"
-	traits = { YUG_serbian old_guard }
+	traits = { YUG_serbian old_guard infantry_officer infantry_leader }
 	skill = 3
 	attack_skill = 1
 	defense_skill = 1

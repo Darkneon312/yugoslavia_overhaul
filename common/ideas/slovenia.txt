@@ -3,6 +3,61 @@ ideas = {
 
 	political_advisor = {
 
+		SLV_bogumil_vosnjak = {
+		
+			picture = generic_political_advisor_europe_1
+		
+			allowed = {
+				original_tag = SLV
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			traits = { democratic_reformer }
+		}
+		
+		
+		SLV_niko_silih = {
+		
+			picture = generic_political_advisor_europe_2
+		
+			allowed = {
+				original_tag = SLV
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			traits = { communist_revolutionary }
+		}
+		
+		SLV_vuk_rupnik = {
+		
+			picture =  generic_political_advisor_europe_3
+		
+			allowed = {
+				original_tag = SLV
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			traits = { fascist_demagogue }
+		}
+
 		SLV_anton_korosec = {
 		
 			picture = generic_political_advisor_europe_1
@@ -11,7 +66,16 @@ ideas = {
 				original_tag = SLV
 			}
 			
-			#traits = { war_industrialist }
+			visible = {
+				NOT = {
+					has_country_leader =  {
+						name = "Anton Korošec"
+						ruling_only = yes
+					}
+					has_global_flag = anton_korosec_dead
+				}
+			}
+			
 			traits = { popular_figurehead }
 		}
 		
@@ -46,40 +110,6 @@ ideas = {
 			traits = { fortification_engineer }
 		}
 		
-		SLV_bogumil_vosnjak = {
-		
-			picture = generic_democratic_europe
-		
-			allowed = {
-				original_tag = SLV
-			}
-			
-			traits = { democratic_reformer }
-		}
-		
-		
-		SLV_niko_silih = {
-		
-			picture = generic_political_advisor_europe_2
-		
-			allowed = {
-				original_tag = SLV
-			}
-			
-			traits = { communist_revolutionary }
-		}
-		
-		SLV_vuk_rupnik = {
-		
-			picture =  generic_political_advisor_europe_3
-		
-			allowed = {
-				original_tag = SLV
-			}
-			
-			traits = { fascist_demagogue }
-		}
-		
 		#SLV_marko_natlacen = {
 		#
 		#	allowed = {
@@ -108,6 +138,8 @@ ideas = {
 	army_chief = {
 
 		SLV_franc_krenner = {
+		
+			picture = generic_army_europe_2
 			
 			allowed = {
 				original_tag = SLV
@@ -121,8 +153,10 @@ ideas = {
 		}
 
 		SLV_leon_rupnik_army_chief = {
+		
+			name = SLV_leon_rupnik
 			
-			#picture = SLV_leon_rupnik
+			picture = SLV_leon_rupnik_army
 			
 			allowed = {
 				original_tag = SLV
@@ -220,9 +254,12 @@ ideas = {
 
 	high_command = {
 		
-		SLV_vuk_rupnik_high_command = {
-
-			picture = SLV_vuk_rupnik
+		SLV_vuk_rupnik_army = {
+		
+			name = SLV_vuk_rupnik
+			
+			picture = generic_army_europe_1
+			#picture = SLV_vuk_rupnik
 			
 			allowed = {
 				original_tag = SLV
@@ -236,6 +273,8 @@ ideas = {
 		}
 		
 		SLV_ernest_peterlin = {
+		
+			picture = generic_army_europe_2
 			
 			allowed = {
 				original_tag = SLV
@@ -249,8 +288,10 @@ ideas = {
 		}
 	
 		SLV_niko_silih_high_command = {
-
-			picture = SLV_niko_silih
+			
+			name = SLV_niko_silih
+			
+			picture = generic_army_europe_3
 		
 			allowed = {
 				original_tag = SLV
@@ -313,37 +354,37 @@ ideas = {
 
 	theorist = {
 		
-		SLV_random_army = {
+		SLV_mt = {
 			
-			picture = generic_army_europe_3
+			picture = generic_army_europe_6
 
 			allowed = {
 				original_tag = SLV
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
 		}
+		
+		SLV_nt = {
 
-		SLV_random_navy = {
-
-			picture = generic_navy_europe_2
+			picture = generic_navy_europe_3
 			
 			allowed = {
 				original_tag = SLV
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
-		}
+		}	
 
-		SLV_random_air = {
+		SLV_awt = {
 
 			picture = generic_air_europe_2
 			
@@ -352,10 +393,10 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
-			traits = { naval_theorist }
+			traits = { air_warfare_theorist }
 		}
 
 	}

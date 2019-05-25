@@ -1,0 +1,237 @@
+
+add_namespace = YO_yugoslavia_deaths
+
+#Death of Ljubomir Davidovic - 19 february 1940
+country_event = {
+	id = YO_yugoslavia_deaths.1
+	title = YO_yugoslavia_deaths.1.t
+	desc = YO_yugoslavia_deaths.1.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		tag = YUG
+		date > 1940.2.12
+		date < 1940.2.19
+	}
+	
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = ljubomir_davidovic_dead
+		if = {
+			limit = {
+				has_country_leader =  {
+					name = "Ljubomir Davidović"
+					ruling_only = yes
+				}
+			}
+			kill_country_leader = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_leader =  {
+						name = "Ljubomir Davidović"
+						ruling_only = yes
+					}
+				}
+			}
+			create_country_leader = {
+				name = "Milan Grol"
+				desc = "POLITICS_MILAN_GROL_DESC"
+				picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Grol.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = YO_yugoslavia_deaths.1.a
+		ai_chance = {
+			factor = 90
+		}
+	}
+}
+
+#Death of Svetozar Pribicevic - 15 september 1936
+country_event = {
+	id = YO_yugoslavia_deaths.2
+	title = YO_yugoslavia_deaths.2.t
+	desc = YO_yugoslavia_deaths.2.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		tag = YUG
+		date > 1936.9.8
+		date < 1936.9.15
+	}
+	
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = svetozar_pribicevic_dead
+	}
+	
+	option = {
+		name = YO_yugoslavia_deaths.2.a
+		ai_chance = {
+			factor = 90
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.025
+		}
+	}
+}
+
+#Death of Anton Korošec - 14 december 1940
+country_event = {
+	id = YO_yugoslavia_deaths.3
+	title = YO_yugoslavia_deaths.3.t
+	desc = YO_yugoslavia_deaths.3.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		tag = YUG
+		date > 1940.12.7
+		date < 1940.12.15
+	}
+	
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = anton_korosec_dead
+	}
+	
+	option = {
+		name = YO_yugoslavia_deaths.3.a
+		ai_chance = {
+			factor = 90
+		}
+	}
+}
+
+#Death of Mehmed Spaho - 29 june 1939
+country_event = {
+	id = YO_yugoslavia_deaths.4
+	title = YO_yugoslavia_deaths.4.t
+	desc = YO_yugoslavia_deaths.4.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		tag = YUG
+		date > 1939.6.24
+		date < 1939.6.30
+	}
+	
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = mehmed_spaho_dead
+	}
+	
+	option = {
+		name = YO_yugoslavia_deaths.4.a
+		ai_chance = {
+			factor = 90
+		}
+	}
+}
+
+#Death of Milan Gorkić - 1 november 1937 (Purge)
+country_event = {
+	id = YO_yugoslavia_deaths.5
+	title = YO_yugoslavia_deaths.5.t
+	desc = YO_yugoslavia_deaths.5.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		tag = YUG
+		SOV = {
+			has_government = communism
+			focus_progress = { focus = SOV_great_purge progress > 0.9 }
+		}
+		#date > 1937.10.27
+		#date < 1937.11.2
+	}
+	
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = milan_gorkic_dead
+		create_country_leader = {
+			name = "Josip Broz Tito"
+			desc = "POLITICS_JOSIP_BROZ_TITO_DESC"
+			picture = "Portrait_Yugoslavia_Josip_Broz_Tito.dds"
+			expire = "1965.1.1"
+			ideology = leninism
+			traits = {
+				#
+			}
+		}
+	}
+	
+	option = {
+		name = YO_yugoslavia_deaths.5.a
+		ai_chance = {
+			factor = 90
+		}
+	}
+}
+
+#Death of Ivo Lola Ribar - 27 november 1943 (He was killed by a German bomb in 1943 near Glamoč while boarding an airplane for Cairo, where he was to become the first representative of Communist Yugoslavia to the Middle East Command} not truly random, using this as placeholder
+country_event = {
+	id = YO_yugoslavia_deaths.6
+	title = YO_yugoslavia_deaths.6.t
+	desc = YO_yugoslavia_deaths.6.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		tag = YUG
+		has_capitulated = yes
+		has_war_with = GER
+		GER = {
+			has_government = fascism
+		}
+		owns_state = 104
+		any_enemy_country = {
+			is_in_faction_with = GER
+			controls_state = 104
+		}
+		date > 1943.1.1
+		#date < 1943.11.27
+	}
+	
+	mean_time_to_happen = { days = 365 }
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = ivo_lola_ribar_dead
+	}
+	
+	option = {
+		name = YO_yugoslavia_deaths.6.a
+		ai_chance = {
+			factor = 90
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.025
+		}
+	}
+}

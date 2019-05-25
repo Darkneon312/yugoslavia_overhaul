@@ -1,4 +1,11 @@
 spriteTypes = {
+
+	#yug/ser
+	
+	spriteType = {
+		name = "GFX_idea_YUG_kladovo_shipyard"
+		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_kladovo_shipyard.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_YUG_state_railways"
@@ -45,10 +52,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_zastava_automobili.dds"
 	}
 	
-	spriteType = {
-		name = "GFX_idea_YUG_ikarbus"
-		texturefile = "gfx/interface/ideas/YUG/companies/idea_YUG_ikarbus.dds"
-	}
+	#cro
 	
 	spriteType = {
 		name = "GFX_idea_CRO_saponia"
@@ -63,6 +67,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CRO_koncar_elektroindustrija"
 		texturefile = "gfx/interface/ideas/CRO/companies/idea_CRO_koncar_elektroindustrija.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CRO_kraljevica"
+		texturefile = "gfx/interface/ideas/CRO/companies/idea_CRO_kraljevica.dds"
 	}
 	
 	spriteType = {

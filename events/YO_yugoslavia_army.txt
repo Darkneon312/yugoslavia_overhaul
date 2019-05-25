@@ -1,0 +1,2961 @@
+##############################
+### MORE YUGOSLAVIA EVENTS ###
+##############################
+
+add_namespace = YO_yugoslaviaplanepurchase
+add_namespace = YO_yugoslavianavyitaly
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.1 # What to buy? - FRA
+	title = YO_yugoslaviaplanepurchase.1.t
+	desc = YO_yugoslaviaplanepurchase.1.d
+	picture = GFX_report_event_generic_sign_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.a # Fighter
+		trigger = {
+			FRA = {
+				is_available_fighter_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		FRA = { country_event = { id = YO_yugoslaviaplanepurchase.2 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.b # CAS
+		trigger = {
+			FRA = {
+				is_available_cas_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		FRA = { country_event = { id = YO_yugoslaviaplanepurchase.3 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.c # Bombers
+		trigger = {
+			FRA = {
+				is_available_tac_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		FRA = { country_event = { id = YO_yugoslaviaplanepurchase.4 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.2 # Fighters
+	title = YO_yugoslaviaplanepurchase.2.t
+	desc = YO_yugoslaviaplanepurchase.2.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { fighter_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.5 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { fighter_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.5 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.3 # CAS
+	title = YO_yugoslaviaplanepurchase.3.t
+	desc = YO_yugoslaviaplanepurchase.3.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { CAS_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.5 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { CAS_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.5 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.4 # Bombers
+	title = YO_yugoslaviaplanepurchase.4.t
+	desc = YO_yugoslaviaplanepurchase.4.d
+	picture = GFX_report_event_generic_bombers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment > 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 30
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.5 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment < 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 15
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.5 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.5 # Recipient
+	title = YO_yugoslaviaplanepurchase.5.t
+	desc = YO_yugoslaviaplanepurchase.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.5.a
+		ai_chance = {
+			factor = 25
+		}
+		add_opinion_modifier = { target = FROM modifier = YUG_sold_planes }
+		FROM = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+		if = {
+			limit = {
+				FRA = {
+					has_country_flag = send_a_lot_of_fighters
+				}
+			}
+			FRA = {
+				clr_country_flag = send_a_lot_of_fighters
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 50
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 50
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 50
+					producer = FRA
+				}
+			}
+		}
+		if = {
+			limit = {
+				FRA = {
+					has_country_flag = send_some_fighters
+				}
+			}
+			FRA = {
+				clr_country_flag = send_some_fighters
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 25
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 25
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 25
+					producer = FRA
+				}
+			}
+		}
+		if = {
+			limit = {
+				FRA = {
+					has_country_flag = send_a_lot_of_cas
+				}
+			}
+			FRA = {
+				clr_country_flag = send_a_lot_of_cas
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 50
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 50
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 50
+					producer = FRA
+				}
+			}
+		}
+		if = {
+			limit = {
+				FRA = {
+					has_country_flag = send_some_cas
+				}
+			}
+			FRA = {
+				clr_country_flag = send_some_cas
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 25
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 25
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 25
+					producer = FRA
+				}
+			}
+		}
+		if = {
+			limit = {
+				FRA = {
+					has_country_flag = send_a_lot_of_bombers
+				}
+			}
+			FRA = {
+				clr_country_flag = send_a_lot_of_bombers
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 30
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 30
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 30
+					producer = FRA
+				}
+			}
+		}
+		if = {
+			limit = {
+				FRA = {
+					has_country_flag = send_some_bombers
+				}
+			}
+			FRA = {
+				clr_country_flag = send_some_bombers
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 15
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 15
+					producer = FRA
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 15
+					producer = FRA
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.7 # What to buy? - ENG
+	title = YO_yugoslaviaplanepurchase.1.t
+	desc = YO_yugoslaviaplanepurchase.1.d
+	picture = GFX_report_event_generic_sign_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.a # Fighter
+		trigger = {
+			ENG = {
+				is_available_fighter_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		ENG = { country_event = { id = YO_yugoslaviaplanepurchase.8 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.b # CAS
+		trigger = {
+			ENG = {
+				is_available_cas_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		ENG = { country_event = { id = YO_yugoslaviaplanepurchase.9 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.c # Bombers
+		trigger = {
+			ENG = {
+				is_available_tac_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		ENG = { country_event = { id = YO_yugoslaviaplanepurchase.10 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.8 # Fighters
+	title = YO_yugoslaviaplanepurchase.2.t
+	desc = YO_yugoslaviaplanepurchase.2.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { fighter_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.11 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { fighter_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.11 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.9 # CAS
+	title = YO_yugoslaviaplanepurchase.3.t
+	desc = YO_yugoslaviaplanepurchase.3.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { CAS_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.11 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { CAS_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.11 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.10 # Bombers
+	title = YO_yugoslaviaplanepurchase.4.t
+	desc = YO_yugoslaviaplanepurchase.4.d
+	picture = GFX_report_event_generic_bombers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment > 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 30
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.11 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment < 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 15
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.11 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.11 # Recipient
+	title = YO_yugoslaviaplanepurchase.5.t
+	desc = YO_yugoslaviaplanepurchase.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.5.a
+		ai_chance = {
+			factor = 25
+		}
+		add_opinion_modifier = { target = FROM modifier = YUG_sold_planes }
+		FROM = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+		if = {
+			limit = {
+				ENG = {
+					has_country_flag = send_a_lot_of_fighters
+				}
+			}
+			ENG = {
+				clr_country_flag = send_a_lot_of_fighters
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 50
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 50
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 50
+					producer = ENG
+				}
+			}
+		}
+		if = {
+			limit = {
+				ENG = {
+					has_country_flag = send_some_fighters
+				}
+			}
+			ENG = {
+				clr_country_flag = send_some_fighters
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 25
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 25
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 25
+					producer = ENG
+				}
+			}
+		}
+		if = {
+			limit = {
+				ENG = {
+					has_country_flag = send_a_lot_of_cas
+				}
+			}
+			ENG = {
+				clr_country_flag = send_a_lot_of_cas
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 50
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 50
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 50
+					producer = ENG
+				}
+			}
+		}
+		if = {
+			limit = {
+				ENG = {
+					has_country_flag = send_some_cas
+				}
+			}
+			ENG = {
+				clr_country_flag = send_some_cas
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 25
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 25
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 25
+					producer = ENG
+				}
+			}
+		}
+		if = {
+			limit = {
+				ENG = {
+					has_country_flag = send_a_lot_of_bombers
+				}
+			}
+			ENG = {
+				clr_country_flag = send_a_lot_of_bombers
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 30
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 30
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 30
+					producer = ENG
+				}
+			}
+		}
+		if = {
+			limit = {
+				ENG = {
+					has_country_flag = send_some_bombers
+				}
+			}
+			ENG = {
+				clr_country_flag = send_some_bombers
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 15
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 15
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 15
+					producer = ENG
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.13 # What to buy? - ITA
+	title = YO_yugoslaviaplanepurchase.1.t
+	desc = YO_yugoslaviaplanepurchase.1.d
+	picture = GFX_report_event_generic_sign_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.a # Fighter
+		trigger = {
+			ITA = {
+				is_available_fighter_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		ITA = { country_event = { id = YO_yugoslaviaplanepurchase.14 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.b # CAS
+		trigger = {
+			ITA = {
+				is_available_cas_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		ITA = { country_event = { id = YO_yugoslaviaplanepurchase.15 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.c # Bombers
+		trigger = {
+			ITA = {
+				is_available_tac_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		ITA = { country_event = { id = YO_yugoslaviaplanepurchase.16 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.14 # Fighters
+	title = YO_yugoslaviaplanepurchase.2.t
+	desc = YO_yugoslaviaplanepurchase.2.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { fighter_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.17 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { fighter_equipment > 25 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.17 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.15 # CAS
+	title = YO_yugoslaviaplanepurchase.3.t
+	desc = YO_yugoslaviaplanepurchase.3.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { CAS_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.17 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { CAS_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.17 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.16 # Bombers
+	title = YO_yugoslaviaplanepurchase.4.t
+	desc = YO_yugoslaviaplanepurchase.4.d
+	picture = GFX_report_event_generic_bombers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment > 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 30
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.17 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment < 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 15
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.17 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.17 # Recipient
+	title = YO_yugoslaviaplanepurchase.5.t
+	desc = YO_yugoslaviaplanepurchase.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.5.a
+		ai_chance = {
+			factor = 25
+		}
+		add_opinion_modifier = { target = FROM modifier = YUG_sold_planes }
+		FROM = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+		if = {
+			limit = {
+				ITA = {
+					has_country_flag = send_a_lot_of_fighters
+				}
+			}
+			ITA = {
+				clr_country_flag = send_a_lot_of_fighters
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 50
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 50
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 50
+					producer = ITA
+				}
+			}
+		}
+		if = {
+			limit = {
+				ITA = {
+					has_country_flag = send_some_fighters
+				}
+			}
+			ITA = {
+				clr_country_flag = send_some_fighters
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 25
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 25
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 25
+					producer = ITA
+				}
+			}
+		}
+		if = {
+			limit = {
+				ITA = {
+					has_country_flag = send_a_lot_of_cas
+				}
+			}
+			ITA = {
+				clr_country_flag = send_a_lot_of_cas
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 50
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 50
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 50
+					producer = ITA
+				}
+			}
+		}
+		if = {
+			limit = {
+				ITA = {
+					has_country_flag = send_some_cas
+				}
+			}
+			ITA = {
+				clr_country_flag = send_some_cas
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 25
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 25
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 25
+					producer = ITA
+				}
+			}
+		}
+		if = {
+			limit = {
+				ITA = {
+					has_country_flag = send_a_lot_of_bombers
+				}
+			}
+			ITA = {
+				clr_country_flag = send_a_lot_of_bombers
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 30
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 30
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 30
+					producer = ITA
+				}
+			}
+		}
+		if = {
+			limit = {
+				ITA = {
+					has_country_flag = send_some_bombers
+				}
+			}
+			ITA = {
+				clr_country_flag = send_some_bombers
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 15
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 15
+					producer = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 15
+					producer = ITA
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.19 # What to buy? - GER
+	title = YO_yugoslaviaplanepurchase.1.t
+	desc = YO_yugoslaviaplanepurchase.1.d
+	picture = GFX_report_event_generic_sign_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.a # Fighter
+		trigger = {
+			GER = {
+				is_available_fighter_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		GER = { country_event = { id = YO_yugoslaviaplanepurchase.20 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.b # CAS
+		trigger = {
+			GER = {
+				is_available_cas_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		GER = { country_event = { id = YO_yugoslaviaplanepurchase.21 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.c # Bombers
+		trigger = {
+			GER = {
+				is_available_tac_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		GER = { country_event = { id = YO_yugoslaviaplanepurchase.22 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.20 # Fighters
+	title = YO_yugoslaviaplanepurchase.2.t
+	desc = YO_yugoslaviaplanepurchase.2.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { fighter_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.23 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { fighter_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.23 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.21 # CAS
+	title = YO_yugoslaviaplanepurchase.3.t
+	desc = YO_yugoslaviaplanepurchase.3.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { CAS_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.23 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { CAS_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.23 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.22 # Bombers
+	title = YO_yugoslaviaplanepurchase.4.t
+	desc = YO_yugoslaviaplanepurchase.4.d
+	picture = GFX_report_event_generic_bombers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment > 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 30
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.23 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment < 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 15
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.23 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.23 # Recipient
+	title = YO_yugoslaviaplanepurchase.5.t
+	desc = YO_yugoslaviaplanepurchase.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.5.a
+		ai_chance = {
+			factor = 25
+		}
+		add_opinion_modifier = { target = FROM modifier = YUG_sold_planes }
+		FROM = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = send_a_lot_of_fighters
+				}
+			}
+			GER = {
+				clr_country_flag = send_a_lot_of_fighters
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 50
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 50
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 50
+					producer = GER
+				}
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = send_some_fighters
+				}
+			}
+			GER = {
+				clr_country_flag = send_some_fighters
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 25
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 25
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 25
+					producer = GER
+				}
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = send_a_lot_of_cas
+				}
+			}
+			GER = {
+				clr_country_flag = send_a_lot_of_cas
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 50
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 50
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 50
+					producer = GER
+				}
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = send_some_cas
+				}
+			}
+			GER = {
+				clr_country_flag = send_some_cas
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 25
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 25
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 25
+					producer = GER
+				}
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = send_a_lot_of_bombers
+				}
+			}
+			GER = {
+				clr_country_flag = send_a_lot_of_bombers
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 30
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 30
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 30
+					producer = GER
+				}
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					has_country_flag = send_some_bombers
+				}
+			}
+			GER = {
+				clr_country_flag = send_some_bombers
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 15
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 15
+					producer = GER
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 15
+					producer = GER
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.24 # What to buy? - SOV
+	title = YO_yugoslaviaplanepurchase.1.t
+	desc = YO_yugoslaviaplanepurchase.1.d
+	picture = GFX_report_event_generic_sign_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.a # Fighter
+		trigger = {
+			SOV = {
+				is_available_fighter_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		SOV = { country_event = { id = YO_yugoslaviaplanepurchase.25 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.b # CAS
+		trigger = {
+			SOV = {
+				is_available_cas_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		SOV = { country_event = { id = YO_yugoslaviaplanepurchase.26 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.1.c # Bombers
+		trigger = {
+			SOV = {
+				is_available_tac_YUG = yes
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+		SOV = { country_event = { id = YO_yugoslaviaplanepurchase.27 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.25 # Fighters
+	title = YO_yugoslaviaplanepurchase.2.t
+	desc = YO_yugoslaviaplanepurchase.2.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { fighter_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.28 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { fighter_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = fighter_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_fighters
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.28 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.2.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.26 # CAS
+	title = YO_yugoslaviaplanepurchase.3.t
+	desc = YO_yugoslaviaplanepurchase.3.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { CAS_equipment > 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 50
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.28 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { CAS_equipment < 50 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = CAS_equipment
+				amount = 25
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_cas
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.28 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.3.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.27 # Bombers
+	title = YO_yugoslaviaplanepurchase.4.t
+	desc = YO_yugoslaviaplanepurchase.4.d
+	picture = GFX_report_event_generic_bombers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.a #50
+		ai_chance = {
+			factor = 25
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment > 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 30
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_a_lot_of_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.28 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.b #25
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_equipment = { tac_bomber_equipment < 30 }
+		}
+		effect_tooltip = {
+			send_equipment = {
+				equipment = tac_bomber_equipment
+				amount = 15
+				target = FROM
+			}
+			add_timed_idea = { idea = YUG_air_payment days = 180 }
+		}
+		set_country_flag = send_some_bombers
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.28 hours = 6 } }
+	}
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.4.c #none
+		ai_chance = {
+			factor = 5
+		}
+		#set_country_flag = lol_no
+		FROM = { country_event = { id = YO_yugoslaviaplanepurchase.6 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.28 # Recipient
+	title = YO_yugoslaviaplanepurchase.5.t
+	desc = YO_yugoslaviaplanepurchase.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.5.a
+		ai_chance = {
+			factor = 25
+		}
+		add_opinion_modifier = { target = FROM modifier = YUG_sold_planes }
+		FROM = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+		if = {
+			limit = {
+				SOV = {
+					has_country_flag = send_a_lot_of_fighters
+				}
+			}
+			SOV = {
+				clr_country_flag = send_a_lot_of_fighters
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 50
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 50
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 50
+					producer = SOV
+				}
+			}
+		}
+		if = {
+			limit = {
+				SOV = {
+					has_country_flag = send_some_fighters
+				}
+			}
+			SOV = {
+				clr_country_flag = send_some_fighters
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = fighter1
+						NOT = {
+							has_tech = fighter2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 25
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = fighter2
+						NOT = {
+							has_tech = fighter3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_2
+					amount = 25
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = fighter3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_3
+					amount = 25
+					producer = SOV
+				}
+			}
+		}
+		if = {
+			limit = {
+				SOV = {
+					has_country_flag = send_a_lot_of_cas
+				}
+			}
+			SOV = {
+				clr_country_flag = send_a_lot_of_cas
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 50
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 50
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 50
+					producer = SOV
+				}
+			}
+		}
+		if = {
+			limit = {
+				SOV = {
+					has_country_flag = send_some_cas
+				}
+			}
+			SOV = {
+				clr_country_flag = send_some_cas
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = CAS1
+						NOT = {
+							has_tech = CAS2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 25
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = CAS2
+						NOT = {
+							has_tech = CAS3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_2
+					amount = 25
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = CAS3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_3
+					amount = 25
+					producer = SOV
+				}
+			}
+		}
+		if = {
+			limit = {
+				SOV = {
+					has_country_flag = send_a_lot_of_bombers
+				}
+			}
+			SOV = {
+				clr_country_flag = send_a_lot_of_bombers
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 30
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 30
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 30
+					producer = SOV
+				}
+			}
+		}
+		if = {
+			limit = {
+				SOV = {
+					has_country_flag = send_some_bombers
+				}
+			}
+			SOV = {
+				clr_country_flag = send_some_bombers
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = tactical_bomber1
+						NOT = {
+							has_tech = tactical_bomber2
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1
+					amount = 15
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = tactical_bomber2
+						NOT = {
+							has_tech = tactical_bomber3
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_2
+					amount = 15
+					producer = SOV
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_tech = tactical_bomber3
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_3
+					amount = 15
+					producer = SOV
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = YO_yugoslaviaplanepurchase.6 # You get nothing
+	title = YO_yugoslaviaplanepurchase.6.t
+	desc = YO_yugoslaviaplanepurchase.6.d
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = YO_yugoslaviaplanepurchase.6.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+###################################################################
+
+country_event = {
+	id = YO_yugoslavianavyitaly.1
+	title = YO_yugoslavianavyitaly.1.t
+	desc = YO_yugoslavianavyitaly.1.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavianavyitaly.1.a
+		ai_chance = {
+			factor = 65
+		}
+		
+		YUG = { custom_effect_tooltip = YUG_italian_ships_tooltip }
+		YUG = { country_event = { id = YO_yugoslavianavyitaly.2 hours = 6 } }
+		add_timed_idea = { idea = YUG_sold_ships days = 210 }
+    }
+	
+	option = {
+		name = YO_yugoslavianavyitaly.1.b
+		ai_chance = {
+		    factor = 35
+		}
+		
+        FROM = { country_event = { id = YO_yugoslavianavyitaly.3 hours = 6 } }
+    }
+}
+
+country_event = {
+    id = YO_yugoslavianavyitaly.2
+	title = YO_yugoslavianavyitaly.2.t
+	desc = YO_yugoslavianavyitaly.2.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes 
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavianavyitaly.2.a
+		
+		add_timed_idea = { idea = YUG_bought_ships days = 210 }
+		custom_effect_tooltip = YUG_italian_ships_tooltip
+		hidden_effect = {
+			FROM = {
+				transfer_ship = {
+			        type = light_cruiser
+			        target = YUG
+			    }
+			    transfer_ship = {
+					type = light_cruiser
+					target = YUG
+			    }
+				transfer_ship = {
+					type = destroyer
+					target = YUG
+			    }
+				transfer_ship = {
+					type = destroyer
+					target = YUG
+			    }
+				transfer_ship = {
+					type = destroyer
+					target = YUG
+			    }
+				transfer_ship = {
+					type = destroyer
+					target = YUG
+			    }
+				transfer_ship = {
+					type = submarine
+					target = YUG
+			    }
+				transfer_ship = {
+					type = submarine
+					target = YUG
+			    }
+				transfer_ship = {
+					type = submarine
+					target = YUG
+			    }
+				transfer_ship = {
+					type = submarine
+					target = YUG
+			    }
+			}
+		}
+		#hidden_effect = {
+		#	if = {
+		#		limit = { has_dlc = "Man the Guns" }
+		#		load_oob = YUG_bought_italian_navy_MTG
+		#	}
+		#	if = {
+		#		limit = { NOT  = { has_dlc = "Man the Guns" } }
+		#		load_oob = YUG_bought_italian_navy_legacy
+		#	}
+		#}
+    }
+}
+
+country_event = {
+    id = YO_yugoslavianavyitaly.3
+	title = YO_yugoslavianavyitaly.3.t
+	desc = YO_yugoslavianavyitaly.3.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes 
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavianavyitaly.3.a
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+country_event = {
+    id = YO_yugoslavianavyitaly.4
+	title = YO_yugoslavianavyitaly.4.t
+	desc = YO_yugoslavianavyitaly.4.d
+	picture = report_event_soldiers_marching
+	
+	is_triggered_only = yes 
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavianavyitaly.4.a
+		ai_chance = {
+			factor = 50
+		}
+		random_owned_controlled_state = {
+			prioritize = { 103 }
+			limit = {
+				is_coastal = yes
+				OR = {
+					ROOT = { has_full_control_of_state = PREV }
+					any_country = {
+						is_subject_of = ROOT
+						has_full_control_of_state = PREV
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		navy_experience = 50
+		army_experience = 25
+		add_political_power = 50
+    }
+	
+	option = {
+		name = YO_yugoslavianavyitaly.4.b
+		ai_chance = {
+			factor = 50
+		}
+		navy_experience = 75
+		army_experience = 50
+		ITA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_increase
+			}
+		}
+    }
+}

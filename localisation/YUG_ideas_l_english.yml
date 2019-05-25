@@ -3,12 +3,13 @@
  YUG_yugoslav_regency:0 "Yugoslav Regency"
  YUG_yugoslav_regency_desc:0 "After our king's assassination a council of regents was established under Prince Paul. He has attempted to create a unified south slavic nation ever since. He believes that establishing an equal and democratic nation would be the best solution."
  YUG_communism_banned:0 "Communism Banned"
- YUG_internal_instabilty:0 "Internal Instabilty"
+ YUG_ethnic_nationalism:0 "Ethnic Nationalism"
  YUG_croatian_question:0 "The Croatian Question"
  YUG_serbian_general_staff:0 "Serbian General Staff"
  YUG_divided_army:0 "Divided Army"
  YUG_agricultural_nation:0 "Agricultural Nation"
  YUG_agricultural_nation_desc:0 "The Slavs of the Balkans have a Reputation of Agrarianism which dates as far as back to the 6th Century. With the begginning of the 19th century mechanization was introduced to everydays work and new, modern and more profitable jobs are available, but the Slavic people seem to be slow to adapting to the changes."
+ 
  YUG_dalmatian_shipping_idea:0 "Dalmatian Shipping"
  YUG_expanded_mining_industry_idea:0 "Expanded Mining Industry"
  YUG_kosovo_gold_idea:0 "Kosovo Gold"
@@ -19,6 +20,13 @@
  YUG_local_militias_idea:0 "Local Militias"
  YUG_yugoslav_artillery_idea:0 "Yugoslav Artillery"
  YUG_defensive_preparations_idea:0 "Defensive Preparations"
+ 
+ YUG_local_development_idea:0 "Local Development"
+ YUG_pancevo_pilotska_skola_idea:0 "Pančevo "Pilotska Škola""
+ 
+ YUG_bought_ships:0 "Bought Ships"
+ YUG_sold_ships:0 "Sold Ships"
+ YUG_rule_the_adriatic_idea:0 "Rule the Adriatic"
  
  YUG_peter_II:0 "Peter II"
  YUG_industrialization_program_idea:0 "Industrialization Programm"

@@ -1,0 +1,12 @@
+﻿navy = {
+	name = "Kupljeni Italijanski Brodovi"
+	base = 9809
+	location = 9809
+	
+	ship = { name = "KB Kralj Emanuel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = YUG } } }
+	
+	ship = { name = "KB Italijan" definition = submarine equipment = { submarine_1 = { amount = 1 owner = YUG } } }
+	ship = { name = "KB Jadranski Unistitelj" definition = submarine equipment = { submarine_1 = { amount = 1 owner = YUG } } }
+	ship = { name = "KB Osvetnik II" definition = submarine equipment = { submarine_1 = { amount = 1 owner = YUG } } }
+	ship = { name = "KB Osvetnik II" definition = submarine equipment = { submarine_1 = { amount = 1 owner = YUG } } }
+}

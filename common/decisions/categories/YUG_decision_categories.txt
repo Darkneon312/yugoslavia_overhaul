@@ -1,63 +1,203 @@
 YUG_primary_ethnicities_category = {
 	
 	icon = generic_formable_nations
+	
+	picture = GFX_decision_cat_picture_government_in_exile
 
 	allowed = {
 		original_tag = YUG
 	}
 
-	picture = GFX_decision_cat_picture_government_in_exile
+	visible = {
+		has_capitulated = no
+	}
+	
+	visible_when_empty = yes
 	
 	priority = {
 		base = 10
 	}
-
-	visible_when_empty = yes
-
-	#visible = {
-	#	always = yes
-	#}
+	
+	custom_icon = {
+		tag = SER
+		value = ser_temper_icon_value
+		desc = ser_temper_desc
+	
+		visible = {
+			SER = {
+				OR = {
+					exists = no
+					is_subject_of = YUG
+				}
+			}
+		}
+	}
+	
+	custom_icon = {
+		tag = CRO
+		value = cro_temper_icon_value
+		desc = cro_temper_desc
+	
+		visible = {
+			CRO = {
+				OR = {
+					exists = no
+					is_subject_of = YUG
+				}
+			}
+		}
+	}
+	
+	custom_icon = {
+		tag = SLV
+		value = slv_temper_icon_value
+		desc = slv_temper_desc
+	
+		visible = {
+			SLV = {
+				OR = {
+					exists = no
+					is_subject_of = YUG
+				}
+			}
+		}
+	}
 }
 
 YUG_secondary_ethnicities_category = {
 	
 	icon = generic_formable_nations
+	
+	picture = GFX_decision_cat_picture_government_in_exile
 
 	allowed = {
 		original_tag = YUG
 	}
 
-	picture = GFX_decision_cat_picture_government_in_exile
+	visible = {
+		has_capitulated = no
+	}
+	
+	visible_when_empty = yes
 	
 	priority = {
 		base = 10
 	}
-
-	visible_when_empty = yes
-
-	#visible = {
-	#	always = yes
-	#}
+	
+	custom_icon = {
+		tag = BOS
+		value = bos_temper_icon_value
+		desc = bos_temper_desc
+	
+		visible = {
+			BOS = {
+				OR = {
+					exists = no
+					is_subject_of = YUG
+				}
+			}
+		}
+	}
+	
+	custom_icon = {
+		tag = MNT
+		value = mnt_temper_icon_value
+		desc = mnt_temper_desc
+	
+		visible = {
+			MNT = {
+				OR = {
+					exists = no
+					is_subject_of = YUG
+				}
+			}
+		}
+	}
+	
+	custom_icon = {
+		tag = MAC
+		value = mac_temper_icon_value
+		desc = mac_temper_desc
+	
+		visible = {
+			MAC = {
+				OR = {
+					exists = no
+					is_subject_of = YUG
+				}
+			}
+		}
+	}
 }
 
 YUG_minorities_category = {
 	
 	icon = generic_formable_nations
+	
+	picture = GFX_decision_cat_picture_government_in_exile
 
 	allowed = {
 		original_tag = YUG
 	}
 
-	picture = GFX_decision_cat_picture_government_in_exile
+	visible = {
+		has_capitulated = no
+	}
+	
+	visible_when_empty = yes
 	
 	priority = {
 		base = 10
 	}
-
-	visible_when_empty = yes
-
-	#visible = {
-	#	always = yes
+	
+	custom_icon = {
+		tag = ITA
+		value = ita_temper_icon_value
+		desc = ita_temper_desc
+	
+		visible = {
+			always = yes
+		}
+	}
+	
+	custom_icon = {
+		tag = HUN
+		value = hun_temper_icon_value
+		desc = hun_temper_desc
+	
+		visible = {
+			always = yes
+		}
+	}
+	
+	custom_icon = {
+		tag = BUL
+		value = bul_temper_icon_value
+		desc = bul_temper_desc
+	
+		visible = {
+			always = yes
+		}
+	}
+	
+	custom_icon = {
+		tag = ALB
+		value = alb_temper_icon_value
+		desc = alb_temper_desc
+	
+		visible = {
+			always = yes
+		}
+	}
+	
+	#custom_icon = {
+	#	tag = ROM
+	#	value = rom_temper_icon_value
+	#	desc = rom_temper_desc
+	#
+	#	visible = {
+	#		always = yes
+	#	}
 	#}
 }
 
@@ -73,13 +213,9 @@ YUG_tank_imports_category = {
 		has_capitulated = no
 		has_completed_focus = YUG_import_tankettes
 	}
-	
-	#visible = {
-	#	always = yes
-	#}
 }
 
-YUG_expand_land_fortifications = {
+YUG_expand_land_fortifications_category = {
 	
 	icon = generic_border_conflicts
 
@@ -91,8 +227,20 @@ YUG_expand_land_fortifications = {
 		has_capitulated = no
 		has_completed_focus = YUG_construct_the_rupnik_line
 	}
+}
+
+YUG_aircraft_importation_category = {
 	
-	#visible = {
-	#	always = yes
-	#}
+	icon = generic_foreign_policy
+	
+	picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+
+	allowed = {
+		original_tag = YUG
+	}
+	
+	visible = {
+		has_capitulated = no
+		has_completed_focus = YUG_further_aircraft_importation
+	}
 }
