@@ -1,23 +1,24 @@
 ﻿l_english:
  
  ### Country Leader Traits
- the_rightful_successor:0 "The Rightful Successor"
- push_for_equality:0 "Push for Equality"
- man_of_compromise:0 "Man of Compromise"
- grol_minister:0 "Education Reformer"
- titoism:0 "Titoism"
- deliverer_of_the_kings_last_words:0 "Deliverer of the King's Last Words"
- face_of_the_january_sixth_dictatorship:0 "Face of the January 6th Dictatorship"
- opposition_suppressor:0 "Opposition Suppressor"
+ YUG_the_rightful_successor:0 "The Rightful Successor"
+ YUG_push_for_equality:0 "Push for Equality"
+ YUG_man_of_compromise:0 "Man of Compromise"
+ YUG_grol_minister:0 "Education Reformer"
+ YUG_titoism:0 "Titoism"
+ YUG_deliverer_of_the_kings_last_words:0 "Deliverer of the King's Last Words"
+ YUG_face_of_the_january_sixth_dictatorship:0 "Face of the January 6th Dictatorship"
+ YUG_opposition_suppressor:0 "Opposition Suppressor"
+ YUG_resistance_fighter:0 "Resistance Fighter"
  
  ### Advisior Traits
- famous_poet:0 "Famous Poet"
- yug_great_architect:0 "Great Architect"
- aircraft_designer:0 "Aircraft Designer"
+ YUG_famous_poet:0 "Famous Poet"
+ YUG_great_architect:0 "Great Architect"
+ YUG_aircraft_designer:0 "Aircraft Designer"
  
  ### Companies
- state_railways:0 "State Railways"
- mining_company:0 "Mining Company"
+ YUG_state_railways:0 "State Railways"
+ YUG_mining_company:0 "Mining Company"
  
  ### General Traits
  YUG_croatian:0 "Croatian"

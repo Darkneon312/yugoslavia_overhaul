@@ -40,6 +40,46 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_goal_YUG_yugoslav_militarism"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_militarism.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_purge"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_purge.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_crush_the_ustasa"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_crush_the_ustasa.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_chetniks"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_chetniks.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_zbor"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_zbor.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_sdk"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_sdk.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_befriend_romania"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_befriend_romania.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_proclaim_greater_yugoslavia_neutral"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_proclaim_greater_yugoslavia_neutral.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_goal_YUG_stojadinovic_assassinated"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_stojadinovic_assassinated.dds"
 	}

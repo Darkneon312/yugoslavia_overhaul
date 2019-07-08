@@ -2,6 +2,13 @@ on_actions = {
 
 	on_startup = {
 		effect = {
+			SER = {
+				remove_state_core = 45
+				remove_state_core = 107
+				remove_state_core = 108
+				remove_state_core = 764
+			}
+			
 			YUG = {
 				remove_state_core = 736
 				add_state_claim = 736
@@ -44,6 +51,39 @@ on_actions = {
 					set_country_flag = pan_slavic_congress_research
 					add_to_tech_sharing_group = pan_slavic_research
 				}
+			}
+		}
+	}
+	
+	on_government_change = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = YUG
+					has_completed_focus = YUG_invite_ljotic_into_government
+					has_government = fascism
+				}
+				add_ideas = YUG_weak_grip
+			}
+		}
+	}
+	
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = YUG
+					}
+					FROM = {
+						tag = CRO
+					}
+					has_global_flag = croatian_revolt
+					NOT = {
+						has_global_flag = croatian_revolt_over
+					}
+				}
+				set_global_flag = croatian_revolt_over
 			}
 		}
 	}

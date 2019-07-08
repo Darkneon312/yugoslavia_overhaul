@@ -1,11 +1,5 @@
 spriteTypes = {
 
-	#politics
-	spriteType = {
-		name = "GFX_idea_YUG_yugoslav_regency"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_yugoslav_regency.dds"
-	}
-	
 	spriteType = {
 		name = "GFX_idea_YUG_croatian_question"
 		texturefile = "gfx/interface/ideas/YUG/idea_YUG_croatian_question.dds"
@@ -24,6 +18,27 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_YUG_vmro"
 		texturefile = "gfx/interface/ideas/YUG/idea_YUG_vmro.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_peter_II"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_peter_II.dds"
+	}
+	
+	#politics
+	spriteType = {
+		name = "GFX_idea_YUG_yugoslav_regency"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_yugoslav_regency.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_ZBOR_militia"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_ZBOR_militia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_sdk_idea"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_sdk_idea.dds"
 	}
 	
 	#navy

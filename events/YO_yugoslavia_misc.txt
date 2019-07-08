@@ -1,4 +1,5 @@
 
+add_namespace = YO_yugoslaviamisc
 add_namespace = YO_yugoslaviaocc
 add_namespace = YO_yugoslaviatag
 
@@ -156,6 +157,10 @@ country_event = {
 		}
 		
 		SER = {
+			add_state_core = 45
+			add_state_core = 107
+			add_state_core = 108
+			add_state_core = 764
 			transfer_state = 107
 			transfer_state = 108
 			transfer_state = 764

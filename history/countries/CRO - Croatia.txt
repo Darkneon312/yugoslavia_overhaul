@@ -65,6 +65,7 @@ set_convoys = 5
 		dispersed_industry2 = 1
 	}
 }
+
 set_politics = {
 
 	parties = {
@@ -87,57 +88,43 @@ set_politics = {
 	elections_allowed = no # none after offset 1
 }
 
+set_popularities = {
+	democratic = 15
+	fascism = 75
+	communism = 10
+	neutrality = 0
+}
+
 1939.1.1 = {
 	#set_politics = {
-	#
-	#	parties = {
-	#		democratic = { 
-	#			popularity = 15
-	#		}
-	#
-	#		fascism = {
-	#			popularity = 75
-	#		}
-	#		
-	#		communism = {
-	#			popularity = 10
-	#		}
-	#	}
-	#	
 	#	ruling_party = fascism
 	#	last_election = "1935.6.9"
 	#	election_frequency = 12
 	#	elections_allowed = no # none after offset 1
 	#}
 	
-	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 10
-			}
-
-			fascism = {
-				popularity = 15
-			}
-		
-			communism = {
-				popularity = 5
-				#banned = no #default is no
-			}
-		
-			neutrality = { 
-				popularity = 60
-			}
-		}
+	#set_popularities = {
+	#	democratic = 15
+	#	fascism = 75
+	#	communism = 10
+	#	neutrality = 0
+	#}
 	
+	set_politics = {
 		ruling_party = neutrality
 		last_election = "1938.12.1"
 		election_frequency = 36
 		elections_allowed = yes
 	}
 	
-	set_cosmetic_tag = CRO_YUGO
+	set_popularities = {
+		democratic = 10
+		fascism = 15
+		communism = 5
+		neutrality = 60
+	}
+	
+	#set_cosmetic_tag = CRO_YUGO
 }
 
 create_country_leader = {

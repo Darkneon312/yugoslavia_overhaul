@@ -2,6 +2,9 @@
 
  YUG_stojadinovic_assassination_tt:0 "The Assassination Attempt on Stojadinović in March has occured."
  
+ YUG_weak_grip_warning:0 "§RWhen in Power, will recieve idea:§!\n"
+ YUG_execution_warning:0 "§RThis might have consequences for the future.§!\n"
+ 
  YUG_mass_motorization_tooltip:0 "Gain a Motorized unit with §Y9 Motorized§! batallions.\n"
  YUG_import_tankettes_tooltip:0 "§Y8§! units of §YŠkoda Š-I-D§! is added to the national stockpile.\n"
  YUG_yugoslav_artillery_tooltip:0 "Gain an Artillery unit with §Y4 Infantry§! and §Y3 Artillery§! batallions.\n"
@@ -16,7 +19,7 @@
  
  
  YUG_decrease_SER_temper:0 "§GDecreases§! Serbian §YTemper§!.\n"
- YUG_increases_SER_temper:0 "§RIncreases§! Serbian §YTemper§!.\n"
+ YUG_increase_SER_temper:0 "§RIncreases§! Serbian §YTemper§!.\n"
  
  YUG_decrease_CRO_temper:0 "§GDecreases§! Croatian §YTemper§!.\n"
  YUG_increase_CRO_temper:0 "§RIncreases§! Croatian §YTemper§!.\n"
@@ -47,5 +50,5 @@
  YUG_decrease_ALB_temper:0 "§GDecreases§! Albanian §YTemper§!.\n"
  YUG_increase_ALB_temper:0 "§RIncreases§! Albanian §YTemper§!.\n"
  
- 
+ YUG_decrease_all_temper:0 "§GDecreases§! §YTemper§! §Gof all Ethnicities§!.\n"
  YUG_increase_all_temper:0 "§RIncreases§! §YTemper§! §Rof all Ethnicities§!.\n"

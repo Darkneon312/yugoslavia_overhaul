@@ -102,33 +102,11 @@ set_politics = {
 	elections_allowed = yes
 }
 
-1939.1.1 = {
-	set_politics = {
-
-		parties = {
-			democratic = {
-				popularity = 5
-			}
-
-			fascism = {
-				popularity = 35
-			}
-			
-			communism = {
-				popularity = 30
-				#banned = no #default is no
-			}
-			
-			neutrality = { 
-				popularity = 30
-			}
-		}
-		
-		ruling_party = fascism
-		last_election = "1937.7.3"
-		election_frequency = 36
-		elections_allowed = yes
-	}
+set_popularities = {
+	democratic = 5
+	fascism = 35
+	communism = 30
+	neutrality = 30
 }
 
 create_country_leader = {

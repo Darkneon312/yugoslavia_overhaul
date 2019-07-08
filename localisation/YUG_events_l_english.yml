@@ -5,6 +5,14 @@
  YO_yugoslavia.1.d:0 "Milan Stojadinović, our Prime Minister, is holding an Exposé in Parliament today, however there is an annoying and suspicious memeber in the audience."
  YO_yugoslavia.1.a:0 "The Man fails at assassinating the PM."
  YO_yugoslavia.1.b:0 "The Man is successful at assassinating the PM."
+ YO_yugoslavia.2.t:0 "The Question of the Regent"
+ YO_yugoslavia.2.d:0 " "
+ YO_yugoslavia.2.a:0 "Exile him and make Peter II the Monarch."
+ YO_yugoslavia.2.b:0 "Execute him and make Peter II the Monarch."
+ 
+ YO_yugoslavia.15.t:0 "The Croats Revolt"
+ YO_yugoslavia.15.d:0 " "
+ YO_yugoslavia.15.a:0 "Traitors"
  
  #YO_yugoslavia.2.t:0 "Ljubomir Davidović passes away"
  #YO_yugoslavia.2.d:0 "Ljubomir Davidović, the creator of Demokratska Stranka has recently passed away. As one of the oldest members of the Serbian Parliament and as prime minister, he played an important role in shaping then Serbia and today Yugoslavia. His actions will never be forgotten. His successor will be one of his young friends, Milan Grol."

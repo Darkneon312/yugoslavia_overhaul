@@ -18,6 +18,97 @@ YUG_minorities_category = {
 	
 }
 
+YUG_internal_affairs_category = {
+	
+	YUG_monument_to_the_unknown_hero = {
+
+		icon = generic_construction
+
+		allowed = {
+			original_tag = YUG
+		}
+		
+		available = {
+			has_capitulated = no
+			NOT = {
+				has_country_flag = yug_project_cancelled
+			}
+			owns_state = 107
+			controls_state = 107
+		}
+
+		fire_only_once = yes
+		
+		days_mission_timeout = 909
+
+		activation = {
+			107 = {
+				owner = { tag = ROOT }
+				controller = { tag = ROOT }
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			add_stability = 0.05
+			add_political_power = 25
+			
+			subtract_from_variable = { var = ser_temper value = 10 }
+			subtract_from_variable = { var = cro_temper value = 10 }
+			subtract_from_variable = { var = slv_temper value = 10 }
+			subtract_from_variable = { var = bos_temper value = 10 }
+			subtract_from_variable = { var = mnt_temper value = 10 }
+			subtract_from_variable = { var = mac_temper value = 10 }
+			custom_effect_tooltip = YUG_decrease_all_temper
+		}
+	}
+	
+	YUG_reintegrate_croatia = {
+		
+		allowed = {
+			original_tag = YUG
+		}
+		
+		available = {
+			has_stability > 0.5
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			political_power_gain = -0.25
+		}
+		
+		visible = {
+			has_global_flag = croatian_revolt_over
+			103 = { NOT = { is_core_of = YUG } }
+			109 = { NOT = { is_core_of = YUG } }
+			CRO = { NOT = {  exists = yes } }
+			owns_state = 103
+			owns_state = 109
+		}
+		
+		cost = 25
+
+		fire_only_once = yes
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YUG_reintegrate_croatia"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YUG_reintegrate_croatia"
+			add_state_core = 103
+			add_state_core = 109
+		}
+	}
+	
+}
+
 ### tank imports
 
 YUG_tank_imports_category = {

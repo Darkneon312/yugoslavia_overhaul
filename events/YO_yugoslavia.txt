@@ -56,13 +56,717 @@ country_event = {
 			ideology = despotism
 			traits = {
 				popular_figurehead2
-				yug_great_architect
+				YUG_great_architect
 			}
 		}
 		hidden_effect = {
 			complete_national_focus = YUG_stojadinovic_assassination
 			complete_national_focus = YUG_stojadinovic_assassinated
 			set_country_flag = stojadinovic_assassinated
+		}
+	}
+}
+
+#
+country_event = {
+	id = YO_yugoslavia.2
+	title = YO_yugoslavia.2.t
+	desc = YO_yugoslavia.2.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#
+	option = {
+		name = YO_yugoslavia.2.a
+		ai_chance = {
+			factor = 40
+		}
+		
+	}
+
+	#
+	option = {
+		name = YO_yugoslavia.2.b
+		ai_chance = {
+			factor = 40
+		}
+		
+	}
+}
+
+#Demand Istra and Zadar (istria and zara)
+country_event = {
+	id = YO_yugoslavia.3
+	title = YO_yugoslavia.3.t
+	desc = YO_yugoslavia.3.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Give in
+	option = {
+		name = YO_yugoslavia.3.a
+		ai_chance = {
+			factor = 40
+		}
+		YUG = {
+			country_event = { days = 1 id = YO_yugoslavia.4 }
+		}
+		effect_tooltip = {
+			YUG = {
+				transfer_state = 163
+				transfer_state = 736
+			}
+		}
+	}
+
+	#Deny
+	option = {
+		name = YO_yugoslavia.3.b
+		ai_chance = {
+			factor = 40
+		}
+		YUG = {
+			country_event = { days = 1 id = YO_yugoslavia.5 }
+		}
+	}
+}
+
+#Italy agrees
+country_event = {
+	id = YO_yugoslavia.4
+	title = YO_yugoslavia.4.t
+	desc = YO_yugoslavia.4.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Excellent
+	option = {
+		name = YO_yugoslavia.4.a
+		ai_chance = {
+			factor = 40
+		}
+		transfer_state = 163
+		transfer_state = 736
+	}
+}
+
+#Italy rejects
+country_event = {
+	id = YO_yugoslavia.5
+	title = YO_yugoslavia.5.t
+	desc = YO_yugoslavia.5.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Then this means war
+	option = {
+		name = YO_yugoslavia.5.a
+		ai_chance = {
+			factor = 40
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = ITA
+			generator = { 163 736 }
+		}
+	}
+	
+	#They are too powerful
+	option = {
+		name = YO_yugoslavia.5.a
+		ai_chance = {
+			factor = 40
+		}
+		add_war_support = -0.1
+	}
+}
+
+#Demand Albanian Membership
+country_event = {
+	id = YO_yugoslavia.6
+	title = YO_yugoslavia.6.t
+	desc = YO_yugoslavia.6.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Give in
+	option = {
+		name = YO_yugoslavia.6.a
+		ai_chance = {
+			factor = 40
+		}
+		YUG = {
+			country_event = { days = 1 id = YO_yugoslavia.7 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	#Deny
+	option = {
+		name = YO_yugoslavia.6.b
+		ai_chance = {
+			factor = 40
+		}
+		YUG = {
+			country_event = { days = 1 id = YO_yugoslavia.8 }
+		}
+	}
+}
+
+#Albania agrees
+country_event = {
+	id = YO_yugoslavia.7
+	title = YO_yugoslavia.7.t
+	desc = YO_yugoslavia.7.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Excellent
+	option = {
+		name = YO_yugoslavia.7.a
+		ai_chance = {
+			factor = 40
+		}
+		annex_country = { target = ALB }
+	}
+}
+
+#Albania rejects
+country_event = {
+	id = YO_yugoslavia.8
+	title = YO_yugoslavia.8.t
+	desc = YO_yugoslavia.8.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Then this means war
+	option = {
+		name = YO_yugoslavia.8.a
+		ai_chance = {
+			factor = 40
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = ALB
+			generator = { 44 }
+		}
+	}
+	
+	#We can't waste time with them
+	option = {
+		name = YO_yugoslavia.8.a
+		ai_chance = {
+			factor = 40
+		}
+		add_war_support = -0.05
+	}
+}
+
+#Demand Salonika and Thrace
+country_event = {
+	id = YO_yugoslavia.9
+	title = YO_yugoslavia.9.t
+	desc = YO_yugoslavia.9.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Give in
+	option = {
+		name = YO_yugoslavia.9.a
+		ai_chance = {
+			factor = 40
+		}
+		YUG = {
+			country_event = { days = 1 id = YO_yugoslavia.10 }
+		}
+		effect_tooltip = {
+			YUG = {
+				transfer_state = 184
+				transfer_state = 731
+			}
+		}
+	}
+
+	#Deny
+	option = {
+		name = YO_yugoslavia.9.b
+		ai_chance = {
+			factor = 40
+		}
+		YUG = {
+			country_event = { days = 1 id = YO_yugoslavia.11 }
+		}
+	}
+}
+
+#Greece agrees
+country_event = {
+	id = YO_yugoslavia.10
+	title = YO_yugoslavia.10.t
+	desc = YO_yugoslavia.10.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Excellent
+	option = {
+		name = YO_yugoslavia.10.a
+		ai_chance = {
+			factor = 40
+		}
+		transfer_state = 184
+		transfer_state = 731
+	}
+}
+
+#Greece rejects
+country_event = {
+	id = YO_yugoslavia.11
+	title = YO_yugoslavia.11.t
+	desc = YO_yugoslavia.11.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Then this means war
+	option = {
+		name = YO_yugoslavia.11.a
+		ai_chance = {
+			factor = 40
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = GRE
+			generator = { 184 731 }
+		}
+	}
+	
+	#They are too powerful
+	option = {
+		name = YO_yugoslavia.11.a
+		ai_chance = {
+			factor = 40
+		}
+		add_war_support = -0.1
+	}
+}
+
+#Demand Bulgarian Membership
+country_event = {
+	id = YO_yugoslavia.12
+	title = YO_yugoslavia.12.t
+	desc = YO_yugoslavia.12.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Give in
+	option = {
+		name = YO_yugoslavia.12.a
+		ai_chance = {
+			factor = 40
+		}
+		YUG = {
+			country_event = { days = 1 id = YO_yugoslavia.13 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	#Deny
+	option = {
+		name = YO_yugoslavia.12.b
+		ai_chance = {
+			factor = 40
+		}
+		YUG = {
+			country_event = { days = 1 id = YO_yugoslavia.14 }
+		}
+	}
+}
+
+#Bulgaria agrees
+country_event = {
+	id = YO_yugoslavia.13
+	title = YO_yugoslavia.13.t
+	desc = YO_yugoslavia.13.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Excellent
+	option = {
+		name = YO_yugoslavia.13.a
+		ai_chance = {
+			factor = 40
+		}
+		annex_country = { target = BUL }
+	}
+}
+
+#Bulgaria rejects
+country_event = {
+	id = YO_yugoslavia.14
+	title = YO_yugoslavia.14.t
+	desc = YO_yugoslavia.14.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	#Then this means war
+	option = {
+		name = YO_yugoslavia.14.a
+		ai_chance = {
+			factor = 40
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = BUL
+		}
+	}
+}
+
+#Croatian Revolt
+country_event = {
+	id = YO_yugoslavia.15
+	title = YO_yugoslavia.15.t
+	desc = YO_yugoslavia.15.d
+	picture = GFX_report_event_yugoslavia_partisans
+	
+	trigger = {
+		tag = YUG
+		#has_idea = YUG_croatian_question
+		YUG = {
+			check_variable = { var = YUG.cro_temper value = 200 compare = greater_than_or_equals }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+
+	option = { 
+		name = YO_yugoslavia.15.a
+		ai_chance = {
+			factor = 40
+		}
+		
+		if = {
+			limit = {
+				has_idea = YUG_croatian_question
+			}
+			remove_ideas = YUG_croatian_question
+		}
+		if = {
+			limit = {
+				has_idea = YUG_croats_suppressed
+			}
+			remove_ideas = YUG_croats_suppressed
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = YUG_crush_the_ustasa_zivkovic_ljotic
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_3
+				}
+				remove_ideas = YUG_ethnic_nationalism_3
+			}
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_2
+				}
+				swap_ideas = {
+					remove_idea = YUG_ethnic_nationalism_2
+					add_idea = YUG_ethnic_nationalism_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_1
+				}
+				swap_ideas = {
+					remove_idea = YUG_ethnic_nationalism_1
+					add_idea = YUG_ethnic_nationalism_2
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_4
+				}
+				remove_ideas = YUG_divided_army_4
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_3
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_3
+					add_idea = YUG_divided_army_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_2
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_2
+					add_idea = YUG_divided_army_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_1
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_1
+					add_idea = YUG_divided_army_2
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = no
+				}
+				109 = { is_owned_and_controlled_by = YUG }
+			}
+			
+			CRO = { transfer_state = 109 }
+			if = {
+				limit = {
+					103 = { is_owned_and_controlled_by = YUG }
+				}
+				CRO = { transfer_state = 103 }
+			}
+			
+			CRO = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+				load_oob = "CRO_YUG_independence"
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = yes
+					is_subject_of = YUG
+				}
+			}
+			
+			set_autonomy = { target = CRO autonomy_state = autonomy_free }
+			CRO = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+			}
+		}
+		
+		set_global_flag = croatian_revolt
+		remove_state_core = 103
+		remove_state_core = 109
+		
+		every_unit_leader = {
+			limit = {
+				has_trait = YUG_croatian
+			}
+			set_nationality = CRO
+		}
+	}
+}
+
+#Croatian Revolt - is_triggered_only
+country_event = {
+	id = YO_yugoslavia.16
+	title = YO_yugoslavia.15.t
+	desc = YO_yugoslavia.15.d
+	picture = GFX_report_event_yugoslavia_partisans
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = YO_yugoslavia.15.a
+		ai_chance = {
+			factor = 40
+		}
+		
+		if = {
+			limit = {
+				has_idea = YUG_croatian_question
+			}
+			remove_ideas = YUG_croatian_question
+		}
+		if = {
+			limit = {
+				has_idea = YUG_croats_suppressed
+			}
+			remove_ideas = YUG_croats_suppressed
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = YUG_crush_the_ustasa_zivkovic_ljotic
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_3
+				}
+				remove_ideas = YUG_ethnic_nationalism_3
+			}
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_2
+				}
+				swap_ideas = {
+					remove_idea = YUG_ethnic_nationalism_2
+					add_idea = YUG_ethnic_nationalism_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_1
+				}
+				swap_ideas = {
+					remove_idea = YUG_ethnic_nationalism_1
+					add_idea = YUG_ethnic_nationalism_2
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_4
+				}
+				remove_ideas = YUG_divided_army_4
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_3
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_3
+					add_idea = YUG_divided_army_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_2
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_2
+					add_idea = YUG_divided_army_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_1
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_1
+					add_idea = YUG_divided_army_2
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = no
+				}
+				109 = { is_owned_and_controlled_by = YUG }
+			}
+			
+			CRO = { transfer_state = 109 }
+			if = {
+				limit = {
+					103 = { is_owned_and_controlled_by = YUG }
+				}
+				CRO = { transfer_state = 103 }
+			}
+			
+			CRO = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+				load_oob = "CRO_YUG_independence"
+			}
+		}
+		
+		if = {
+			limit = {
+				CRO = {
+					exists = yes
+					is_subject_of = YUG
+				}
+			}
+			
+			set_autonomy = { target = CRO autonomy_state = autonomy_free }
+			CRO = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+			}
+		}
+		
+		set_global_flag = croatian_revolt
+		remove_state_core = 103
+		remove_state_core = 109
+		
+		every_unit_leader = {
+			limit = {
+				has_trait = YUG_croatian
+			}
+			set_nationality = CRO
 		}
 	}
 }

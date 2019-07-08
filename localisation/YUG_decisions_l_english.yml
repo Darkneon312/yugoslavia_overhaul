@@ -31,6 +31,11 @@
  rom_temper_desc:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?YUG.rom_temper|-0]"
  rom_temper_icon_value:0 "[?YUG.rom_temper|-0]"
  
+ YUG_internal_affairs_category:0 "Internal Affairs"
+ YUG_internal_affairs_category_desc:0 " "
+ YUG_monument_to_the_unknown_hero:0 "Monument to the Unknown Hero"
+ YUG_reintegrate_croatia:0 "Reintegrate Croatia"
+ 
  YUG_tank_imports_category:0 "Tank Imports"
  YUG_tank_imports_category_desc:0 " "
  YUG_import_french_tanks:0 "Import French Tanks"

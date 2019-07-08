@@ -1,0 +1,30 @@
+state={
+	id=45
+	name="STATE_45"
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 6
+		}
+		victory_points = { #novi sad
+			619 3
+		}
+		victory_points = { #subotica
+			3623 2
+		}
+		#victory_points = { #beli manastir
+		#	9608 2
+		#}
+		add_core_of = YUG
+		add_core_of = SER
+
+	}
+
+	provinces={
+		619 3617 3623 9608 9621
+	}
+	manpower=838621
+	buildings_max_level_factor=1.000
+	state_category=town
+}

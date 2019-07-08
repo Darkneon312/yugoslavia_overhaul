@@ -8,7 +8,16 @@ state={
 
 	history={
 		victory_points = {
-			9809 3
+			9809 2
+		}
+		victory_points = {
+			9821 3
+		}
+		victory_points = { #prizren, kosovo
+			9849 2
+		}
+		victory_points = { #prishtina, kosovo
+			9874 2
 		}
 		owner = YUG
 		add_core_of = MNT

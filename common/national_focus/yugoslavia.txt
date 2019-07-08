@@ -91,7 +91,39 @@ focus_tree = {
 		icon = GFX_goal_YUG_stojadinovic
 		prerequisite = { focus = YUG_stojadinovic_assassination }
 		mutually_exclusive = { focus = YUG_stojadinovic_assassinated }
-		x = -6
+		x = -8
+		y = 1
+		relative_position_id = YUG_stojadinovic_assassination
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = YUG_stojadinovic_assassinated
+		icon = GFX_goal_YUG_stojadinovic_assassinated
+		prerequisite = { focus = YUG_stojadinovic_assassination }
+		mutually_exclusive = { focus = YUG_stojadinovic_survives }
+		x = 8
 		y = 1
 		relative_position_id = YUG_stojadinovic_assassination
 
@@ -122,7 +154,7 @@ focus_tree = {
 		id = YUG_follow_stojadonvics_lead
 		icon = GFX_goal_YUG_follow_stojadinovic
 		prerequisite = { focus = YUG_stojadinovic_survives }
-		mutually_exclusive = { focus = YUG_schedule_reelections focus = YUG_compromise_with_zivkovic focus = YUG_grant_the_regent_emergency_powers }
+		mutually_exclusive = { focus = YUG_schedule_reelections focus = YUG_compromise_with_zivkovic }
 		x = -4
 		y = 1
 		relative_position_id = YUG_stojadinovic_survives
@@ -154,7 +186,7 @@ focus_tree = {
 		id = YUG_schedule_reelections
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = YUG_stojadinovic_survives }
-		mutually_exclusive = { focus = YUG_follow_stojadonvics_lead focus = YUG_compromise_with_zivkovic focus = YUG_grant_the_regent_emergency_powers }
+		mutually_exclusive = { focus = YUG_follow_stojadonvics_lead focus = YUG_compromise_with_zivkovic }
 		x = 0
 		y = 1
 		relative_position_id = YUG_stojadinovic_survives
@@ -186,8 +218,8 @@ focus_tree = {
 		id = YUG_compromise_with_zivkovic
 		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = YUG_stojadinovic_survives }
-		mutually_exclusive = { focus = YUG_follow_stojadonvics_lead focus = YUG_schedule_reelections focus = YUG_grant_the_regent_emergency_powers }
-		x = 4
+		mutually_exclusive = { focus = YUG_follow_stojadonvics_lead focus = YUG_schedule_reelections }
+		x = 6
 		y = 1
 		relative_position_id = YUG_stojadinovic_survives
 
@@ -218,10 +250,12 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = despotism
 				traits = {
-					deliverer_of_the_kings_last_words
+					YUG_deliverer_of_the_kings_last_words
 				}
 			}
-			remove_ideas = YUG_petar_zivkovic_army
+			hidden_effect = {
+				remove_ideas = YUG_petar_zivkovic_army
+			}
 		}
 	}
 	
@@ -229,9 +263,9 @@ focus_tree = {
 		id = YUG_promote_yugoslavism
 		icon = GFX_goal_YUG_yugoslavism
 		prerequisite = { focus = YUG_compromise_with_zivkovic focus = YUG_cave_to_zivkovic }
-		x = 2
-		y = 1
-		relative_position_id = YUG_compromise_with_zivkovic
+		x = 0
+		y = 3
+		relative_position_id = YUG_stojadinovic_assassination
 
 		cost = 10
 
@@ -267,22 +301,37 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_stojadinovic_assassinated
-		icon = GFX_goal_YUG_stojadinovic_assassinated
-		prerequisite = { focus = YUG_stojadinovic_assassination }
-		mutually_exclusive = { focus = YUG_stojadinovic_survives }
-		x = 6
-		y = 1
-		relative_position_id = YUG_stojadinovic_assassination
+		id = YUG_yugoslav_militarism
+		icon = GFX_goal_YUG_yugoslav_militarism
+		prerequisite = { focus = YUG_promote_yugoslavism }
+		prerequisite = { focus = YUG_empower_the_army }
+		x = 0
+		y = 2
+		relative_position_id = YUG_promote_yugoslavism
 
-		cost = 0
+		cost = 10
 
 		ai_will_do = {
 			factor = 40
 		}
 
 		available = {
-		
+			NOT = {
+				OR = {
+					has_idea = YUG_ethnic_nationalism_1
+					has_idea = YUG_ethnic_nationalism_2
+					has_idea = YUG_ethnic_nationalism_3
+				}
+			}
+			NOT = {
+				has_idea = YUG_croatian_question
+			}
+			NOT = {
+				OR = {
+					has_idea = YUG_divided_army_1
+					has_idea = YUG_divided_army_2
+				}
+			}
 		}
 
 		bypass = {
@@ -294,7 +343,16 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
+			#add_to_variable = { var = ser_temper value = 25 }
+			#add_to_variable = { var = cro_temper value = 25 }
+			#add_to_variable = { var = slv_temper value = 25 }
+			#add_to_variable = { var = bos_temper value = 25 }
+			#add_to_variable = { var = mnt_temper value = 25 }
+			#add_to_variable = { var = mac_temper value = 25 }
+			#custom_effect_tooltip = YUG_increase_all_temper
 			
+			add_war_support = 0.1
+			add_ideas = YUG_yugoslav_militarism_idea
 		}
 	}
 	
@@ -302,8 +360,8 @@ focus_tree = {
 		id = YUG_cave_to_zivkovic
 		icon = GFX_goal_YUG_cave_to_zivkovic
 		prerequisite = { focus = YUG_stojadinovic_assassinated }
-		mutually_exclusive = { focus = YUG_grant_the_regent_emergency_powers focus = YUG_invite_ljotic_into_government focus = YUG_unban_communism }
-		x = -4
+		mutually_exclusive = { focus = YUG_invite_ljotic_into_government focus = YUG_unban_communism }
+		x = -6
 		y = 1
 		relative_position_id = YUG_stojadinovic_assassinated
 
@@ -314,7 +372,7 @@ focus_tree = {
 		}
 
 		available = {
-		
+			is_subject = no
 		}
 
 		bypass = {
@@ -338,22 +396,25 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = despotism
 				traits = {
-					face_of_the_january_sixth_dictatorship
-					opposition_suppressor
+					YUG_face_of_the_january_sixth_dictatorship
+					#YUG_opposition_suppressor
 				}
 			}
-			remove_ideas = YUG_petar_zivkovic_army
+			add_ideas = YUG_weak_grip
+			hidden_effect = {
+				remove_ideas = YUG_petar_zivkovic_army
+			}
 		}
 	}
 	
 	focus = {
-		id = YUG_invite_ljotic_into_government
-		icon = GFX_goal_YUG_ljotic
-		prerequisite = { focus = YUG_stojadinovic_assassinated }
-		mutually_exclusive = { focus = YUG_unban_communism focus = YUG_cave_to_zivkovic focus = YUG_grant_the_regent_emergency_powers }
+		id = YUG_empower_the_army
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = YUG_cave_to_zivkovic }
+		prerequisite = { focus = YUG_strengthen_our_grip }
 		x = 0
-		y = 1
-		relative_position_id = YUG_stojadinovic_assassinated
+		y = 2
+		relative_position_id = YUG_cave_to_zivkovic
 
 		cost = 10
 
@@ -374,10 +435,1054 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
+			add_ideas = YUG_empowered_army
+			hidden_effect = {
+				create_corps_commander = {
+					portrait_path = "gfx/leaders/YUG/Portrait_YUG_royal_guard_1.tga"
+					traits = { YUG_serbian }
+					skill = 1
+					
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_crush_the_ustasa_zivkovic_ljotic
+		text = YUG_crush_the_ustasa
+		icon = GFX_goal_YUG_crush_the_ustasa
+		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
+		x = 1
+		y = 1
+		relative_position_id = YUG_empower_the_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			#ITA = {
+			#	NOT = { has_war_with = ROOT }
+			#	exists = yes
+			#	has_capitulated = no
+			#}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = cro_temper value = 50 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_3
+				}
+				remove_ideas = YUG_ethnic_nationalism_3
+			}
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_2
+				}
+				swap_ideas = {
+					remove_idea = YUG_ethnic_nationalism_2
+					add_idea = YUG_ethnic_nationalism_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_ethnic_nationalism_1
+				}
+				swap_ideas = {
+					remove_idea = YUG_ethnic_nationalism_1
+					add_idea = YUG_ethnic_nationalism_2
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_4
+				}
+				remove_ideas = YUG_divided_army_4
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_3
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_3
+					add_idea = YUG_divided_army_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_2
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_2
+					add_idea = YUG_divided_army_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YUG_divided_army_1
+				}
+				swap_ideas = {
+					remove_idea = YUG_divided_army_1
+					add_idea = YUG_divided_army_2
+				}
+			}
+			
+			remove_ideas = YUG_croatian_question
+			add_timed_idea = {
+				idea = YUG_croats_suppressed
+				days = 365
+			}
+			#swap_ideas = {
+			#	remove_idea = YUG_croatian_question
+			#	add_idea = YUG_idea_croats_suppressed
+			#}
+		}
+	}
+	
+	focus = {
+		id = YUG_incorporate_the_chetniks
+		icon = GFX_goal_YUG_chetniks
+		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
+		mutually_exclusive = { focus = YUG_sdk_jdk }
+		x = 2
+		y = 2
+		relative_position_id = YUG_empower_the_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			
+			add_ideas = YUG_chetniks
+		}
+	}
+	
+	focus = {
+		id = YUG_militaristic_reforms
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = YUG_empower_the_army }
+		prerequisite = { focus = YUG_handle_the_regent }
+		x = -1
+		y = 2
+		relative_position_id = YUG_empower_the_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUG_militaristic_reforms_idea
+		}
+	}
+	
+	##############
+	### Shared ###
+	##############
+	
+	focus = {
+		id = YUG_strengthen_our_grip
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = YUG_cave_to_zivkovic focus = YUG_invite_ljotic_into_government }
+		x = 3
+		y = 1
+		relative_position_id = YUG_cave_to_zivkovic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			has_idea = YUG_weak_grip
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_weak_grip
+				add_idea = YUG_strengthen_our_grip_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_eliminate_the_opposition
+		icon = GFX_goal_YUG_purge
+		prerequisite = { focus = YUG_strengthen_our_grip }
+		x = 0
+		y = 1
+		relative_position_id = YUG_strengthen_our_grip
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_completed_focus = YUG_cave_to_zivkovic
+				}
+				always = yes
+			}
+			if = {
+				limit = {
+					has_completed_focus = YUG_invite_ljotic_into_government
+				}
+				has_government = fascism
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = YUG_strengthen_our_grip_idea
+			if = {
+				limit = {
+					has_completed_focus = YUG_cave_to_zivkovic
+				}
+				add_popularity = { ideology = fascism popularity = -0.05 }
+				add_popularity = { ideology = democratic popularity = -0.05 }
+				add_popularity = { ideology = communism popularity = -0.05 }
+			}
+			if = {
+				limit = {
+					has_completed_focus = YUG_invite_ljotic_into_government
+				}
+				add_popularity = { ideology = neutrality popularity = -0.2 }
+				add_popularity = { ideology = democratic popularity = -0.05 }
+				add_popularity = { ideology = communism popularity = -0.05 }
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_handle_the_regent
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = YUG_eliminate_the_opposition }
+		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
+		x = 0
+		y = 1
+		relative_position_id = YUG_eliminate_the_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			
+			remove_ideas = YUG_yugoslav_regency
+			add_ideas = YUG_peter_II
+		}
+	}
+	
+	###############
+	### Fascism ###
+	###############
+	
+	focus = {
+		id = YUG_invite_ljotic_into_government
+		icon = GFX_goal_YUG_ljotic
+		prerequisite = { focus = YUG_stojadinovic_assassinated }
+		mutually_exclusive = { focus = YUG_unban_communism focus = YUG_cave_to_zivkovic }
+		x = 0
+		y = 1
+		relative_position_id = YUG_stojadinovic_assassinated
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = ser_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_SER_temper
+			
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = YUG_dimitrije_ljotic
+			add_ideas = YUG_dimitrije_ljotic
 			add_stability = -0.05
 			add_popularity = { ideology = fascism popularity = 0.05 }
+			custom_effect_tooltip = YUG_weak_grip_warning
+			show_ideas_tooltip = YUG_weak_grip
+		}
+	}
+	
+	focus = {
+		id = YUG_support_the_middle_class
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = YUG_invite_ljotic_into_government }
+		x = -1
+		y = 1
+		relative_position_id = YUG_invite_ljotic_into_government
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { controls_state = PREV }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 108 }
+				limit = {
+					ROOT = { controls_state = PREV }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_appeal_to_the_public
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = YUG_invite_ljotic_into_government }
+		x = 1
+		y = 1
+		relative_position_id = YUG_invite_ljotic_into_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+	}
+	
+	focus = {
+		id = YUG_empower_the_militia
+		icon = GFX_goal_YUG_zbor
+		prerequisite = { focus = YUG_invite_ljotic_into_government }
+		prerequisite = { focus = YUG_strengthen_our_grip }
+		x = 0
+		y = 2
+		relative_position_id = YUG_invite_ljotic_into_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUG_ZBOR_militia
+		}
+	}
+	
+	focus = {
+		id = YUG_sds_jds
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
+		x = -1
+		y = 1
+		relative_position_id = YUG_empower_the_militia
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUG_sds_jds_idea
+		}
+	}
+	
+	focus = {
+		id = YUG_sdk_jdk
+		icon = GFX_goal_YUG_sdk
+		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
+		mutually_exclusive = { focus = YUG_incorporate_the_chetniks }
+		x = -2
+		y = 2
+		relative_position_id = YUG_empower_the_militia
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUG_sdk_jdk_idea
+		}
+	}
+	
+	focus = {
+		id = YUG_traditional_values_ljotic
+		text = YUG_traditional_values
+		icon = GFX_goal_YUG_orthodox_church_support
+		prerequisite = { focus = YUG_handle_the_regent }
+		prerequisite = { focus = YUG_empower_the_militia }
+		x = 1
+		y = 2
+		relative_position_id = YUG_empower_the_militia
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			add_to_variable = { var = slv_temper value = 15 }
+			custom_effect_tooltip = YUG_increase_SLV_temper
+			subtract_from_variable = { var = ser_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_SER_temper
+			
+			add_ideas = YUG_idea_orthodox_church_support
+		}
+	}
+	
+	focus = {
+		id = YUG_consolidate_our_rule
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = YUG_handle_the_regent }
+		x = 0
+		y = 2
+		relative_position_id = YUG_handle_the_regent
+
+		cost = 4.4
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = croatian_revolt
+					}
+				}
+				has_country_flag = yug_all_dangers_eliminated
+			}
+			if = {
+				limit = {
+					has_global_flag = croatian_revolt
+				}
+				has_global_flag = croatian_revolt_over
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = YUG_serbo_romanian_friendship
+		icon = GFX_goal_YUG_befriend_romania
+		prerequisite = { focus = YUG_consolidate_our_rule }
+		#mutually_exclusive = { focus = YUG_approach_germany }
+		x = -2
+		y = 1
+		relative_position_id = YUG_consolidate_our_rule
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			ROM = {
+				has_capitulated = no
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = ROM
+					has_war_with = ROOT
+				}
+			}
+			has_completed_focus = YUG_cave_to_zivkovic
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			ROM = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_reform_the_balkan_pact
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = YUG_serbo_romanian_friendship }
+		x = 0
+		y = 1
+		relative_position_id = YUG_serbo_romanian_friendship
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "Balkan Entente"
+			ROM = {
+				country_event = generic.5
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_approach_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = YUG_consolidate_our_rule }
+		#mutually_exclusive = { focus = YUG_serbo_romanian_friendship }
+		x = 2
+		y = 1
+		relative_position_id = YUG_consolidate_our_rule
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			GER = {
+				NOT = { has_war_with = ROOT }
+				has_government = fascism
+				has_capitulated = no
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = ROOT
+				}
+			}
+			has_completed_focus = YUG_invite_ljotic_into_government
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_join_axis_ljotic
+		text = YUG_join_axis
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = YUG_approach_germany }
+		x = 0
+		y = 1
+		relative_position_id = YUG_approach_germany
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			OR = {
+				GER = {
+					NOT = { has_war_with = ROOT }
+					has_government = fascism
+					has_capitulated = no
+					is_faction_leader = yes
+				}
+				any_other_country = {
+					is_major = yes
+					has_government = fascism
+					is_faction_leader = yes
+				}
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = YUG
+				}
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = GER
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						is_faction_leader = yes
+					}
+				}
+				GER = { country_event = generic.2 }
+			}
+			else = {
+				get_best_alliance_match_fascism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_yugoslav_irrenditism
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = YUG_consolidate_our_rule }
+		x = 0
+		y = 2
+		relative_position_id = YUG_consolidate_our_rule
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			#has_civil_war = no
+			NOT = {
+				OR = {
+					has_idea = YUG_ethnic_nationalism_1
+					has_idea = YUG_ethnic_nationalism_2
+					has_idea = YUG_ethnic_nationalism_3
+				}
+			}
+			NOT = {
+				has_idea = YUG_croatian_question
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_state_claim = 44
+			add_state_claim = 48
+			add_state_claim = 163
+			add_state_claim = 184
+			add_state_claim = 211
+			add_state_claim = 212
+			add_state_claim = 731
+			add_state_claim = 736
+		}
+	}
+	
+	focus = {
+		id = YUG_demand_albanian_membership
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = YUG_yugoslav_irrenditism }
+		x = -3
+		y = 1
+		relative_position_id = YUG_yugoslav_irrenditism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			ALB = { country_event = YO_yugoslavia.6 }
+		}
+	}
+	
+	focus = {
+		id = YUG_demand_istra_and_zadar
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = YUG_yugoslav_irrenditism }
+		x = -1
+		y = 1
+		relative_position_id = YUG_yugoslav_irrenditism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			ITA = { country_event = YO_yugoslavia.3 }
+		}
+	}
+	
+	focus = {
+		id = YUG_demand_salonika_and_thrace
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = YUG_yugoslav_irrenditism }
+		x = 1
+		y = 1
+		relative_position_id = YUG_yugoslav_irrenditism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			GRE = { country_event = YO_yugoslavia.9 }
+		}
+	}
+	
+	focus = {
+		id = YUG_demand_bulgarian_membership
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = YUG_yugoslav_irrenditism }
+		x = 3
+		y = 1
+		relative_position_id = YUG_yugoslav_irrenditism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			BUL = { country_event = YO_yugoslavia.12 }
+		}
+	}
+	
+	focus = {
+		id = YUG_proclaim_greater_yugoslavia
+		icon = GFX_goal_YUG_proclaim_greater_yugoslavia_neutral
+		prerequisite = { focus = YUG_demand_albanian_membership focus = YUG_demand_istra_and_zadar focus = YUG_demand_salonika_and_thrace focus = YUG_demand_bulgarian_membership }
+		x = 0
+		y = 2
+		relative_position_id = YUG_yugoslav_irrenditism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 44
+			controls_state = 48
+			controls_state = 163
+			controls_state = 184
+			controls_state = 211
+			controls_state = 212
+			controls_state = 731
+			controls_state = 736
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.2
+			add_political_power = 100
+			set_cosmetic_tag = YUG_GREATER
 		}
 	}
 	
@@ -385,7 +1490,7 @@ focus_tree = {
 		id = YUG_unban_communism
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = YUG_stojadinovic_assassinated }
-		mutually_exclusive = { focus = YUG_grant_the_regent_emergency_powers focus = YUG_invite_ljotic_into_government focus = YUG_cave_to_zivkovic }
+		mutually_exclusive = { focus = YUG_invite_ljotic_into_government focus = YUG_cave_to_zivkovic }
 		x = 4
 		y = 1
 		relative_position_id = YUG_stojadinovic_assassinated
@@ -397,7 +1502,7 @@ focus_tree = {
 		}
 
 		available = {
-		
+			is_subject = no
 		}
 
 		bypass = {
@@ -499,13 +1604,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			subtract_from_variable = { var = cro_temper value = 5 }
+			subtract_from_variable = { var = cro_temper value = 10 }
 			custom_effect_tooltip = YUG_decrease_CRO_temper
 			
-			subtract_from_variable = { var = slv_temper value = 5 }
+			subtract_from_variable = { var = slv_temper value = 10 }
 			custom_effect_tooltip = YUG_decrease_SLV_temper
 			
-			subtract_from_variable = { var = bos_temper value = 5 }
+			subtract_from_variable = { var = bos_temper value = 10 }
 			custom_effect_tooltip = YUG_decrease_BOS_temper
 			
 			if = {
@@ -1653,13 +2758,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			subtract_from_variable = { var = ser_temper value = 5 }
+			subtract_from_variable = { var = ser_temper value = 10 }
 			custom_effect_tooltip = YUG_decrease_SER_temper
 			
-			subtract_from_variable = { var = mac_temper value = 5 }
+			subtract_from_variable = { var = mac_temper value = 10 }
 			custom_effect_tooltip = YUG_decrease_MAC_temper
 			
-			subtract_from_variable = { var = mnt_temper value = 5 }
+			subtract_from_variable = { var = mnt_temper value = 10 }
 			custom_effect_tooltip = YUG_decrease_MNT_temper
 			
 			if = {
@@ -5476,59 +6581,59 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = YUG_replace_the_dubrovnik
-		icon = GFX_focus_generic_destroyer
-		prerequisite = { focus = YUG_expand_the_split_shipyards focus = YUG_expand_the_kotor_shipyards }
-		x = 5
-		y = 1
-		relative_position_id = YUG_expand_the_split_shipyards
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-			OR = {
-				any_owned_state = {
-					is_coastal = yes
-				}
-				any_country = {
-					is_subject_of = ROOT
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = YUG_modern_destroyers
-				bonus = 1.0
-				uses = 2
-				category = dd_tech
-			}
-		}
-	}
+	#focus = {
+	#	id = YUG_replace_the_dubrovnik
+	#	icon = GFX_focus_generic_destroyer
+	#	prerequisite = { focus = YUG_expand_the_split_shipyards focus = YUG_expand_the_kotor_shipyards }
+	#	x = 5
+	#	y = 1
+	#	relative_position_id = YUG_expand_the_split_shipyards
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 40
+	#	}
+	#
+	#	available = {
+	#		OR = {
+	#			any_owned_state = {
+	#				is_coastal = yes
+	#			}
+	#			any_country = {
+	#				is_subject_of = ROOT
+	#				any_owned_state = {
+	#					is_coastal = yes
+	#				}
+	#			}
+	#		}
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	completion_reward = {
+	#		add_tech_bonus = {
+	#			name = YUG_modern_destroyers
+	#			bonus = 1.0
+	#			uses = 2
+	#			category = dd_tech
+	#		}
+	#	}
+	#}
 	
 	focus = {
 		id = YUG_expand_the_submarine_fleet
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = YUG_replace_the_dubrovnik focus = YUG_finish_the_beograd_class_destroyer }
-		x = 0
+		prerequisite = { focus = YUG_finish_the_beograd_class_destroyer } #focus = YUG_replace_the_dubrovnik
+		x = -1
 		y = 1
-		relative_position_id = YUG_replace_the_dubrovnik
+		relative_position_id = YUG_finish_the_beograd_class_destroyer
 
 		cost = 10
 
@@ -5639,8 +6744,8 @@ focus_tree = {
 	focus = {
 		id = YUG_finish_the_beograd_class_destroyer
 		icon = GFX_focus_generic_navy_battleship2
-		prerequisite = { focus = YUG_expand_the_kotor_shipyards }
-		x = 0
+		prerequisite = { focus = YUG_expand_the_split_shipyards focus = YUG_expand_the_kotor_shipyards }
+		x = -2
 		y = 1
 		relative_position_id = YUG_expand_the_kotor_shipyards
 
@@ -5773,10 +6878,123 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = YUG_coastal_defense
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = YUG_expand_the_kotor_shipyards }
+		x = 0
+		y = 1
+		relative_position_id = YUG_expand_the_kotor_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 103
+				has_full_control_of_state = 105
+				any_country = {
+					is_subject_of = ROOT
+					OR = {
+						has_full_control_of_state = 103
+						has_full_control_of_state = 105
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#forts on coast and harbor
+			if = {
+				limit = {
+					OR = {
+						has_full_control_of_state = 103
+						any_country = {
+							is_subject_of = ROOT
+							has_full_control_of_state = 103
+						}
+					}
+				}
+				103 = {
+					custom_effect_tooltip = YUG_coastal_defense_effect_tt1
+					custom_effect_tooltip = YUG_coastal_defense_effect_tt2
+					hidden_effect = {
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes
+							}
+							level = 2
+							instant_build = yes
+						}			
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						has_full_control_of_state = 105
+						any_country = {
+							is_subject_of = ROOT
+							has_full_control_of_state = 105
+						}
+					}
+				}
+				105 = {
+					custom_effect_tooltip = YUG_coastal_defense_effect_tt1
+					custom_effect_tooltip = YUG_coastal_defense_effect_tt2
+					hidden_effect = {
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes
+							}
+							level = 2
+							instant_build = yes
+						}			
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = YUG_montenegrin_sailing_school
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = YUG_finish_the_beograd_class_destroyer }
-		x = 0
+		prerequisite = { focus = YUG_coastal_defense }
+		x = 2
 		y = 1
 		relative_position_id = YUG_finish_the_beograd_class_destroyer
 
@@ -5935,122 +7153,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_coastal_defense
-		icon = GFX_focus_generic_coastal_fort
-		prerequisite = { focus = YUG_expand_the_kotor_shipyards }
-		x = 2
-		y = 1
-		relative_position_id = YUG_expand_the_kotor_shipyards
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-			OR = {
-				has_full_control_of_state = 103
-				has_full_control_of_state = 105
-				any_country = {
-					is_subject_of = ROOT
-					OR = {
-						has_full_control_of_state = 103
-						has_full_control_of_state = 105
-					}
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			#forts on coast and harbor
-			if = {
-				limit = {
-					OR = {
-						has_full_control_of_state = 103
-						any_country = {
-							is_subject_of = ROOT
-							has_full_control_of_state = 103
-						}
-					}
-				}
-				103 = {
-					custom_effect_tooltip = YUG_coastal_defense_effect_tt1
-					custom_effect_tooltip = YUG_coastal_defense_effect_tt2
-					hidden_effect = {
-						add_building_construction = {
-							type = coastal_bunker
-							province = {
-								all_provinces = yes
-								limit_to_coastal = yes
-							}
-							level = 2
-							instant_build = yes
-						}			
-						add_building_construction = {
-							type = coastal_bunker
-							province = {
-								all_provinces = yes
-								limit_to_naval_base = yes
-							}
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-			}
-			
-			if = {
-				limit = {
-					OR = {
-						has_full_control_of_state = 105
-						any_country = {
-							is_subject_of = ROOT
-							has_full_control_of_state = 105
-						}
-					}
-				}
-				105 = {
-					custom_effect_tooltip = YUG_coastal_defense_effect_tt1
-					custom_effect_tooltip = YUG_coastal_defense_effect_tt2
-					hidden_effect = {
-						add_building_construction = {
-							type = coastal_bunker
-							province = {
-								all_provinces = yes
-								limit_to_coastal = yes
-							}
-							level = 2
-							instant_build = yes
-						}			
-						add_building_construction = {
-							type = coastal_bunker
-							province = {
-								all_provinces = yes
-								limit_to_naval_base = yes
-							}
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
 		id = YUG_coastal_defense_ships
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = YUG_finish_the_beograd_class_destroyer }
-		x = 2
+		prerequisite = { focus = YUG_coastal_defense }
+		x = 4
 		y = 1
 		relative_position_id = YUG_finish_the_beograd_class_destroyer
 

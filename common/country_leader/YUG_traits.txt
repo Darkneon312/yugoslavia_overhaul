@@ -1,6 +1,6 @@
 leader_traits = {
 
-	the_rightful_successor = {
+	YUG_the_rightful_successor = {
 		random = no
 		political_power_factor = 0.1
 		stability_factor = 0.1
@@ -10,7 +10,7 @@ leader_traits = {
 		}
 	}
 
-	push_for_equality = {
+	YUG_push_for_equality = {
 		random = no
 		political_power_factor = 0.05
 		stability_factor = 0.05
@@ -20,7 +20,7 @@ leader_traits = {
 		}
 	}
 	
-	man_of_compromise = {
+	YUG_man_of_compromise = {
 		random = no
 		fascism_acceptance = 35
 		democratic_acceptance = 50
@@ -30,7 +30,7 @@ leader_traits = {
 		}
 	}
 	
-	grol_minister = {
+	YUG_grol_minister = {
 		random = no
 		production_speed_industrial_complex_factor = 0.05
 		research_speed_factor = 0.01
@@ -40,7 +40,7 @@ leader_traits = {
 		}
 	}
 	
-	titoism = {
+	YUG_titoism = {
 		random = no
 		stability_factor = 0.05
 		communism_acceptance = 35
@@ -51,7 +51,7 @@ leader_traits = {
 		}	
 	}
 
-	famous_poet = {
+	YUG_famous_poet = {
 		random = no
 		stability_factor = 0.1
 		political_power_factor = 0.05
@@ -61,7 +61,7 @@ leader_traits = {
 		}	
 	}
 	
-	deliverer_of_the_kings_last_words = {
+	YUG_deliverer_of_the_kings_last_words = {
 		random = no
 		stability_factor = 0.05
 		
@@ -70,7 +70,7 @@ leader_traits = {
 		}	
 	}
 	
-	face_of_the_january_sixth_dictatorship = {
+	YUG_face_of_the_january_sixth_dictatorship = {
 		random = no
 		political_power_factor = -0.05
 		stability_factor = -0.05
@@ -80,7 +80,7 @@ leader_traits = {
 		}	
 	}
 	
-	opposition_suppressor = {
+	YUG_opposition_suppressor = {
 		random = no
 		#drift_defence_factor = 0.25
 		democratic_drift = -0.03
@@ -92,7 +92,7 @@ leader_traits = {
 		}	
 	}
 	
-	yug_great_architect = {
+	YUG_great_architect = {
 		random = no
 		production_speed_buildings_factor = 0.05
 		
@@ -101,9 +101,22 @@ leader_traits = {
 		}
 	}
 	
+	YUG_resistance_fighter = {
+		sprite = 5
+		random = no
+		#conscription = 0.005
+		partisan_effect = 0.1
+		special_forces_attack_factor = 0.1
+	    special_forces_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	##################################
 	
-	state_railways = {
+	YUG_state_railways = {
 		random = no
 		
 		ai_will_do = {
@@ -111,7 +124,7 @@ leader_traits = {
 		}	
 	}
 	
-	mining_company = {
+	YUG_mining_company = {
 		random = no
 		
 		ai_will_do = {
@@ -119,7 +132,7 @@ leader_traits = {
 		}	
 	}
 	
-	aircraft_designer = {
+	YUG_aircraft_designer = {
 		random = no
 		
 		ai_will_do = {

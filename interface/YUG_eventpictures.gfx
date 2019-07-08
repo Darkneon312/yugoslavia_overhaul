@@ -1,0 +1,22 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_report_event_yug_1938_election"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_1938_election.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_milan_stojadinovic"
+		texturefile = "gfx/event_pictures/YUG/report_event_milan_stojadinovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_petar_zivkovic"
+		texturefile = "gfx/event_pictures/YUG/report_event_petar_zivkovic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_yug_regency"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_regency.dds"
+	}
+}

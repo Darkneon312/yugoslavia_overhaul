@@ -45,6 +45,9 @@ YUG_primary_ethnicities_category = {
 					is_subject_of = YUG
 				}
 			}
+			NOT = {
+				has_global_flag = croatian_revolt
+			}
 		}
 	}
 	
@@ -199,6 +202,27 @@ YUG_minorities_category = {
 	#		always = yes
 	#	}
 	#}
+}
+
+YUG_internal_affairs_category = {
+
+	icon = generic_political_actions
+	
+	picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+
+	allowed = {
+		original_tag = YUG
+	}
+	
+	visible = {
+		has_capitulated = no
+	}
+	
+	visible_when_empty = yes
+	
+	priority = {
+		base = 9
+	}
 }
 
 YUG_tank_imports_category = {
