@@ -66,12 +66,12 @@ country_event = {
 	id = YO_yugoslavia_deaths.2
 	title = YO_yugoslavia_deaths.2.t
 	desc = YO_yugoslavia_deaths.2.d
-	picture = GFX_report_event_generic_funeral
+	picture = GFX_report_event_yug_svetozar_pribicevic
 
 	trigger = {
 		tag = YUG
 		date > 1936.9.8
-		date < 1936.9.15
+		date < 1936.9.20
 	}
 	
 	mean_time_to_happen = { days = 7 }
@@ -244,6 +244,40 @@ country_event = {
 		add_popularity = {
 			ideology = communism
 			popularity = 0.025
+		}
+	}
+}
+
+#Death of Patriarch Varnava - 23 july 1937
+country_event = {
+	id = YO_yugoslavia_deaths.7
+	title = YO_yugoslavia_deaths.7.t
+	desc = YO_yugoslavia_deaths.7.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		tag = YUG
+		NOT = {
+			has_country_flag = patriarch_varnava_dead
+		}
+		date > 1937.7.17
+		date < 1937.7.30
+	}
+	
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = patriarch_varnava_dead
+		}
+	}
+	
+	option = {
+		name = YO_yugoslavia_deaths.7.a
+		ai_chance = {
+			factor = 90
 		}
 	}
 }

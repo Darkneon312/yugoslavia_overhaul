@@ -1,5 +1,4 @@
 
-add_namespace = YO_yugoslaviamisc
 add_namespace = YO_yugoslaviaocc
 add_namespace = YO_yugoslaviatag
 

@@ -3,8 +3,18 @@
  vladko_elected:0 "Vladko Maček is elected as PM."
  petar_bojovic_dead:0 "Petar Bojović has passed away."
  attempted_assassination_stojadinovic:0 "Attempted Assassination on Milan Stojadinović occurred."
- zivkovic_out_of_office:0 "Petar Zivković kicked out out of office."
- yug_all_dangers_eliminated:0 "All potential Dangers threatening our Regime have been eliminated."
- croatian_revolt:0 "The Croats have revolted!"
- croatian_revolt_over:0 "The Croatian Revolt has been suppressed."
+ zivkovic_solved:0 "Disputes with Živković have been solved."
+ yug_all_dangers_eliminated:0 "All potential dangers threatening our regime have been eliminated."
+ yug_croatian_revolt:0 "The Croats have revolted!"
+ yug_croatian_revolt_over:0 "The Croatian Revolt has been suppressed."
+ yug_slovene_opposition_1_removed:0 "The Slovene Opposition has been taken care of."
+ yug_slovene_opposition_2_removed:0 "The Slovene Opposition has been taken care of."
+ yug_croatian_question_solved:0 "The Croatian Question has been solved."
+ yug_macedonian_opposition_removed:0 "The Macedonian Opposition has been taken care of."
+ yug_bosnian_opposition_removed:0 "The Bosnian Opposition has been taken care of."
+ yug_ethnic_divide_solved:0 "The Ethnic Divide has been solved."
  yug_project_cancelled:0 "Project has been cancelled."
+ 
+ 
+ 
+ yug_regency_allows_the_concordat:0 "The Regency has allowed the Concordat to pass through Parliament."

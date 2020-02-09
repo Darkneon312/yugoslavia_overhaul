@@ -1,18 +1,13 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_idea_YUG_anti_german_military"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_anti_german_military.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_YUG_croatian_question"
 		texturefile = "gfx/interface/ideas/YUG/idea_YUG_croatian_question.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_idea_YUG_serbian_favortism"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_serbian_favortism.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_idea_YUG_slovene_nationalism"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_slovene_nationalism.dds"
 	}
 	
 	spriteType = {
@@ -32,13 +27,28 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_ZBOR_militia"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_ZBOR_militia.dds"
+		name = "GFX_idea_YUG_realist_yugoslavism_idea"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_realist_yugoslavism.dds"
 	}
 	
 	spriteType = {
 		name = "GFX_idea_YUG_sdk_idea"
 		texturefile = "gfx/interface/ideas/YUG/idea_YUG_sdk_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_yugoslav_state_guard_idea"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_yugoslav_state_guard_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_yugoslav_mobilization"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_yugoslav_mobilization.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_YUG_chetniks"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_chetniks.dds"
 	}
 	
 	#navy

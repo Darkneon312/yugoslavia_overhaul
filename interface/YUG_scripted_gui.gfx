@@ -1,0 +1,7 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_YUG_resistance_button"
+		texturefile = "gfx/YUG_resistance_button.dds"
+		legacy_lazy_load = no
+	}

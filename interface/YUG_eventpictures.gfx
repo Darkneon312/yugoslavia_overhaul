@@ -1,13 +1,8 @@
 spriteTypes = {
-
-	spriteType = {
-		name = "GFX_report_event_yug_1938_election"
-		texturefile = "gfx/event_pictures/YUG/report_event_yug_1938_election.dds"
-	}
 	
 	spriteType = {
-		name = "GFX_report_event_milan_stojadinovic"
-		texturefile = "gfx/event_pictures/YUG/report_event_milan_stojadinovic.dds"
+		name = "GFX_report_event_yug_milan_stojadinovic"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_milan_stojadinovic.dds"
 	}
 	
 	spriteType = {
@@ -16,7 +11,42 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_report_event_yug_patriarch_varnava"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_patriarch_varnava.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_yug_bloody_walkout"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_bloody_walkout.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_report_event_yug_regency"
 		texturefile = "gfx/event_pictures/YUG/report_event_yug_regency.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_yug_royal_army"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_royal_army.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_yug_tank_r35_royal"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_tank_r35_royal.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_yug_tito"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_tito.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_yug_tank_pz2_partisans"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_tank_pz2_partisans.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_yug_svetozar_pribicevic"
+		texturefile = "gfx/event_pictures/YUG/report_event_yug_svetozar_pribicevic.dds"
 	}
 }

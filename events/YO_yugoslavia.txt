@@ -102,7 +102,7 @@ country_event = {
 	id = YO_yugoslavia.3
 	title = YO_yugoslavia.3.t
 	desc = YO_yugoslavia.3.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_generic_rally
 
 	is_triggered_only = yes
 	
@@ -142,7 +142,7 @@ country_event = {
 	id = YO_yugoslavia.4
 	title = YO_yugoslavia.4.t
 	desc = YO_yugoslavia.4.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_generic_sign_treaty2
 
 	is_triggered_only = yes
 	
@@ -164,7 +164,7 @@ country_event = {
 	id = YO_yugoslavia.5
 	title = YO_yugoslavia.5.t
 	desc = YO_yugoslavia.5.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_soldiers_marching
 
 	is_triggered_only = yes
 	
@@ -198,7 +198,7 @@ country_event = {
 	id = YO_yugoslavia.6
 	title = YO_yugoslavia.6.t
 	desc = YO_yugoslavia.6.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_generic_rally
 
 	is_triggered_only = yes
 	
@@ -233,7 +233,7 @@ country_event = {
 	id = YO_yugoslavia.7
 	title = YO_yugoslavia.7.t
 	desc = YO_yugoslavia.7.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_generic_sign_treaty2
 
 	is_triggered_only = yes
 	
@@ -254,7 +254,7 @@ country_event = {
 	id = YO_yugoslavia.8
 	title = YO_yugoslavia.8.t
 	desc = YO_yugoslavia.8.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_soldiers_marching
 
 	is_triggered_only = yes
 	
@@ -288,7 +288,7 @@ country_event = {
 	id = YO_yugoslavia.9
 	title = YO_yugoslavia.9.t
 	desc = YO_yugoslavia.9.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_generic_rally
 
 	is_triggered_only = yes
 	
@@ -328,7 +328,7 @@ country_event = {
 	id = YO_yugoslavia.10
 	title = YO_yugoslavia.10.t
 	desc = YO_yugoslavia.10.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_generic_sign_treaty2
 
 	is_triggered_only = yes
 	
@@ -350,7 +350,7 @@ country_event = {
 	id = YO_yugoslavia.11
 	title = YO_yugoslavia.11.t
 	desc = YO_yugoslavia.11.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_soldiers_marching
 
 	is_triggered_only = yes
 	
@@ -384,7 +384,7 @@ country_event = {
 	id = YO_yugoslavia.12
 	title = YO_yugoslavia.12.t
 	desc = YO_yugoslavia.12.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_generic_rally
 
 	is_triggered_only = yes
 	
@@ -419,7 +419,7 @@ country_event = {
 	id = YO_yugoslavia.13
 	title = YO_yugoslavia.13.t
 	desc = YO_yugoslavia.13.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_generic_sign_treaty2
 
 	is_triggered_only = yes
 	
@@ -440,7 +440,7 @@ country_event = {
 	id = YO_yugoslavia.14
 	title = YO_yugoslavia.14.t
 	desc = YO_yugoslavia.14.d
-	picture = GFX_report_event_yug_regency
+	picture = GFX_report_event_soldiers_marching
 
 	is_triggered_only = yes
 	
@@ -486,6 +486,23 @@ country_event = {
 			factor = 40
 		}
 		
+		hidden_effect = {
+			103 = {
+				add_state_modifier = {
+					modifier = {
+						local_manpower = 0.3
+					}
+				}
+			}
+			109 = {
+				add_state_modifier = {
+					modifier = {
+						local_manpower = 0.3
+					}
+				}
+			}
+		}
+		
 		if = {
 			limit = {
 				has_idea = YUG_croatian_question
@@ -497,72 +514,6 @@ country_event = {
 				has_idea = YUG_croats_suppressed
 			}
 			remove_ideas = YUG_croats_suppressed
-		}
-		
-		if = {
-			limit = {
-				NOT = {
-					has_completed_focus = YUG_crush_the_ustasa_zivkovic_ljotic
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_3
-				}
-				remove_ideas = YUG_ethnic_nationalism_3
-			}
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_2
-				}
-				swap_ideas = {
-					remove_idea = YUG_ethnic_nationalism_2
-					add_idea = YUG_ethnic_nationalism_3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_1
-				}
-				swap_ideas = {
-					remove_idea = YUG_ethnic_nationalism_1
-					add_idea = YUG_ethnic_nationalism_2
-				}
-			}
-			
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_4
-				}
-				remove_ideas = YUG_divided_army_4
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_3
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_3
-					add_idea = YUG_divided_army_4
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_2
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_2
-					add_idea = YUG_divided_army_3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_1
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_1
-					add_idea = YUG_divided_army_2
-				}
-			}
 		}
 		
 		if = {
@@ -607,7 +558,7 @@ country_event = {
 			}
 		}
 		
-		set_global_flag = croatian_revolt
+		set_global_flag = yug_croatian_revolt
 		remove_state_core = 103
 		remove_state_core = 109
 		
@@ -652,72 +603,6 @@ country_event = {
 		
 		if = {
 			limit = {
-				NOT = {
-					has_completed_focus = YUG_crush_the_ustasa_zivkovic_ljotic
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_3
-				}
-				remove_ideas = YUG_ethnic_nationalism_3
-			}
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_2
-				}
-				swap_ideas = {
-					remove_idea = YUG_ethnic_nationalism_2
-					add_idea = YUG_ethnic_nationalism_3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_1
-				}
-				swap_ideas = {
-					remove_idea = YUG_ethnic_nationalism_1
-					add_idea = YUG_ethnic_nationalism_2
-				}
-			}
-			
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_4
-				}
-				remove_ideas = YUG_divided_army_4
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_3
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_3
-					add_idea = YUG_divided_army_4
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_2
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_2
-					add_idea = YUG_divided_army_3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_1
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_1
-					add_idea = YUG_divided_army_2
-				}
-			}
-		}
-		
-		if = {
-			limit = {
 				CRO = {
 					exists = no
 				}
@@ -758,7 +643,7 @@ country_event = {
 			}
 		}
 		
-		set_global_flag = croatian_revolt
+		set_global_flag = yug_croatian_revolt
 		remove_state_core = 103
 		remove_state_core = 109
 		
@@ -768,5 +653,411 @@ country_event = {
 			}
 			set_nationality = CRO
 		}
+	}
+}
+
+#Field Promotions
+country_event = {
+	id = YO_yugoslavia.17
+	title = YO_yugoslavia.17.t
+	desc = YO_yugoslavia.17.d
+	picture = GFX_report_event_yug_royal_army
+
+	trigger = {
+		tag = YUG
+		NOT = {
+			has_government = communism
+		}
+		date > 1937.11.30
+		date < 1937.12.7
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.17.a
+		ai_chance = {
+			factor = 40
+		}
+		create_corps_commander = { #becomes general 1937 december 1.
+			name = "Borivoje Mirković"
+			portrait_path = "gfx/leaders/YUG/Portrait_YUG_Birivoje_Mirkovic.tga"
+			traits = { YUG_serbian career_officer commando paratrooper }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			id = 2015
+		}
+	}
+}
+
+#Field Promotions
+country_event = {
+	id = YO_yugoslavia.18
+	title = YO_yugoslavia.17.t
+	desc = YO_yugoslavia.17.d
+	picture = GFX_report_event_yug_royal_army
+
+	trigger = {
+		tag = YUG
+		NOT = {
+			has_government = communism
+		}
+		date > 1938.1.1
+		date < 1938.1.30
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.17.a
+		ai_chance = {
+			factor = 40
+		}
+		create_corps_commander = { #becomes general 1938 january
+			name = "Dušan Simović"
+			portrait_path = "gfx/leaders/YUG/Portrait_YUG_Dusan_Simovic.tga"
+			traits = { YUG_serbian career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			id = 2016
+		}
+	}
+}
+
+#Boris III visits Yugoslavia
+country_event = {
+	id = YO_yugoslavia.19
+	title = YO_yugoslavia.19.t
+	desc = YO_yugoslavia.19.d
+	picture = GFX_report_event_vienna_award_negotiations
+
+	trigger = {
+		tag = YUG
+		date > 1936.2.1
+		date < 1936.2.28
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.19.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 10
+		BUL = {
+			add_political_power = 10
+		}
+	}
+}
+
+#Concordat Authorized - concordat storyline
+country_event = {
+	id = YO_yugoslavia.20
+	title = YO_yugoslavia.20.t
+	desc = YO_yugoslavia.20.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	trigger = {
+		tag = YUG
+		has_idea = YUG_yugoslav_regency
+		OR = {
+			has_country_leader =  {
+				name = "Milan Stojadinović"
+				ruling_only = yes
+			}
+			has_country_leader =  {
+				name = "Bogoljub Jevtić"
+				ruling_only = yes
+			}
+		}
+		date > 1936.11.1
+		date < 1936.11.30
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.20.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 20
+		set_country_flag = yug_regency_allows_the_concordat
+	}
+}
+
+#SPC - Serbian Orthodox Church responds
+country_event = {
+	id = YO_yugoslavia.21
+	title = YO_yugoslavia.21.t
+	desc = YO_yugoslavia.21.d
+	picture = GFX_report_event_finnish_letter
+
+	trigger = {
+		tag = YUG
+		has_country_flag = yug_regency_allows_the_concordat
+		date > 1936.12.1
+		date < 1936.12.15
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.21.a
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+#Serbian Protests of the Concordat
+country_event = {
+	id = YO_yugoslavia.22
+	title = YO_yugoslavia.22.t
+	desc = YO_yugoslavia.22.d
+	picture = GFX_report_event_gathering_protest
+
+	trigger = {
+		tag = YUG
+		has_country_flag = yug_regency_allows_the_concordat
+		NOT = {
+			has_country_flag =  yug_concordat_end
+		}
+		date > 1937.1.1
+		date < 1937.7.23
+	}
+	
+	mean_time_to_happen = {
+		days = 25
+	}
+	
+	#fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.22.a
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.01
+	}
+}
+
+#Disputes in the National Representitive
+country_event = {
+	id = YO_yugoslavia.23
+	title = YO_yugoslavia.23.t
+	desc = YO_yugoslavia.23.d
+	picture = GFX_report_event_generic_conference
+
+	trigger = {
+		tag = YUG
+		has_country_flag = yug_regency_allows_the_concordat
+		date > 1937.3.1
+		date < 1937.3.30
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.23.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -20
+	}
+}
+
+#Serbian Clergy in support of Vrnava
+country_event = {
+	id = YO_yugoslavia.24
+	title = YO_yugoslavia.24.t
+	desc = YO_yugoslavia.24.d
+	picture = GFX_report_event_finnish_letter
+
+	trigger = {
+		tag = YUG
+		has_country_flag = yug_regency_allows_the_concordat
+		date > 1937.4.1
+		date < 1937.4.20
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.24.a
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+#Serbian Clergy and opposition launch campaign against Stojadinović
+country_event = {
+	id = YO_yugoslavia.25
+	title = YO_yugoslavia.25.t
+	desc = YO_yugoslavia.25.d
+	picture = GFX_report_event_finnish_letter
+
+	trigger = {
+		tag = YUG
+		has_country_flag = yug_regency_allows_the_concordat
+		date > 1937.4.1
+		date < 1937.4.20
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.25.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -10
+		add_stability = -0.03
+	}
+}
+
+#Patriarch Varnava's health worsening
+country_event = {
+	id = YO_yugoslavia.26
+	title = YO_yugoslavia.26.t
+	desc = YO_yugoslavia.26.d
+	picture = GFX_report_event_yug_patriarch_varnava
+
+	trigger = {
+		tag = YUG
+		has_country_flag = yug_regency_allows_the_concordat
+		date > 1937.5.1
+		date < 1937.5.20
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.26.a
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+#Bloody Walkout
+country_event = {
+	id = YO_yugoslavia.27
+	title = YO_yugoslavia.27.t
+	desc = YO_yugoslavia.27.d
+	picture = GFX_report_event_yug_bloody_walkout
+
+	trigger = {
+		tag = YUG
+		has_country_flag = yug_regency_allows_the_concordat
+		date > 1937.7.7
+		date < 1937.7.20
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.27.a
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = { days = 5 id = YO_yugoslavia.28 }
+		}
+	}
+}
+
+#Concordat passes Parliament
+country_event = {
+	id = YO_yugoslavia.28
+	title = YO_yugoslavia.28.t
+	desc = YO_yugoslavia.28.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.28.a
+		ai_chance = {
+			factor = 40
+		}
+		
+		#set_country_flag = yug_concordat_end
+		set_country_flag = patriarch_varnava_dead
+		hidden_effect = {
+			country_event = { days = 17 id = YO_yugoslavia.29 }
+		}
+	}
+}
+
+#Concordat passes Parliament
+country_event = {
+	id = YO_yugoslavia.29
+	title = YO_yugoslavia.29.t
+	desc = YO_yugoslavia.29.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.29.a
+		ai_chance = {
+			factor = 40
+		}
+		
+		set_country_flag = yug_concordat_end
 	}
 }

@@ -30,6 +30,16 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_goal_YUG_befriend_italy"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_befriend_italy.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_befriend_bulgaria"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_befriend_bulgaria.dds"			
+	}
+	
+	SpriteType = {
 		name = "GFX_goal_YUG_pavle"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_pavle.dds"
 	}
@@ -70,6 +80,11 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_goal_YUG_yugoslav_state_guard"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_state_guard.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_goal_YUG_befriend_romania"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_befriend_romania.dds"
 	}
@@ -92,11 +107,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_YUG_cave_to_zivkovic"
 		texturefile = "gfx/interface/goals/YUG/goal_YUG_cave_to_zivkovic.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_goal_YUG_cooperation_with_italy"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_cooperation_with_italy.dds"			
 	}
 	
 	SpriteType = {
@@ -143,49 +153,84 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_southern_focus"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_southern_focus.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_southern_focus.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_serbian_industry"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_industry.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_industry.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_serbian_steel"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_steel.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_steel.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_serbian_science"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_science.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_science.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_montenegrin_industry"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_montenegrin_industry.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_montenegrin_industry.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_macedonian_industry"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_macedonian_industry.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_macedonian_industry.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_yugoslav_infrastructure"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_infrastructure.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_infrastructure.dds"
 	}
 	
 	#army
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_anti_tank"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_anti_tank.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_anti_tank.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_goal_YUG_yugoslav_defense"
-		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_defense.dds"			
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_yugoslav_defense.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_army_problems"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_army_problems.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_serbian_favouritism_army"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_serbian_favouritism_army.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_non_discriminating_officer_promotions"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_non_discriminating_officer_promotions.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_anti_german"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_anti_german.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_investigate_the_army"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_investigate_the_army.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_force_conscription"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_force_conscription.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_YUG_local_militas"
+		texturefile = "gfx/interface/goals/YUG/goal_YUG_local_militas.dds"
 	}
 	
 	#air

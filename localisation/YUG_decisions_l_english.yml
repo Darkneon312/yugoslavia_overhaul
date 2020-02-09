@@ -8,6 +8,7 @@
  cro_temper_icon_value:0 "[?YUG.cro_temper|-0]"
  slv_temper_desc:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?YUG.slv_temper|-0]"
  slv_temper_icon_value:0 "[?YUG.slv_temper|-0]"
+ YUG_slovene_opposition:0 "Slovene Opposition"
  
  YUG_secondary_ethnicities_category:0 "Yugoslav "Secondary" Ethnicities"
  YUG_secondary_ethnicities_category_desc:0 "Yugoslav "Secondary" Ethnicities"
@@ -17,6 +18,8 @@
  mnt_temper_icon_value:0 "[?YUG.mnt_temper|-0]"
  mac_temper_desc:0 "[Root.GetAdjectiveCap] §HTemper§!\n is at [?YUG.mac_temper|-0]"
  mac_temper_icon_value:0 "[?YUG.mac_temper|-0]"
+ YUG_macedonian_opposition:0 "Macedonian Opposition"
+ YUG_bosnian_opposition:0 "Bosnian Opposition"
  
  YUG_minorities_category:0 "Yugoslav Minorities"
  YUG_minorities_category_desc:0 "Yugoslav Minorities"
@@ -32,9 +35,11 @@
  rom_temper_icon_value:0 "[?YUG.rom_temper|-0]"
  
  YUG_internal_affairs_category:0 "Internal Affairs"
- YUG_internal_affairs_category_desc:0 " "
+ #YUG_internal_affairs_category_desc:0 " "
  YUG_monument_to_the_unknown_hero:0 "Monument to the Unknown Hero"
+ YUG_za_kralja_i_otadzbinu:0 "Za Kralja i Otadžbinu"
  YUG_reintegrate_croatia:0 "Reintegrate Croatia"
+ YUG_rename_podgorica_to_titograd:0 "Rename Podgorica to Titograd"
  
  YUG_tank_imports_category:0 "Tank Imports"
  YUG_tank_imports_category_desc:0 " "

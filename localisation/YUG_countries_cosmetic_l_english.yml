@@ -32,3 +32,12 @@
  YUG_SER_democratic_DEF:0 "the Republic of Serbia"
  YUG_SER_communism_DEF:0 "the Socialist Republic of Serbia"
  YUG_SER_neutrality_DEF:0 "the Kingdom of Serbia"
+ 
+ YUG_UO_fascism:0 "Radical Yugoslavia"
+ YUG_UO_democratic:0 "DF Yugoslavia"
+ YUG_UO_communism:0 "SFR Yugoslavia"
+ YUG_UO_neutrality:0 "Kingdom of Yugoslavia"
+ YUG_UO_fascism_DEF:0 "Radical Yugoslavia"
+ YUG_UO_democratic_DEF:0 "Democratic Federal Yugoslavia"
+ YUG_UO_communism_DEF:0 "the Socialist Federal Republic of Yugoslavia"
+ YUG_UO_neutrality_DEF:0 "the Kingdom of Yugoslavia"

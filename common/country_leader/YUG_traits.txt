@@ -72,12 +72,24 @@ leader_traits = {
 	
 	YUG_face_of_the_january_sixth_dictatorship = {
 		random = no
-		political_power_factor = -0.05
-		stability_factor = -0.05
+		political_power_factor = -0.1
 		
 		ai_will_do = {
 			factor = 1
 		}	
+	}
+	
+	YUG_accused_of_homosexuality = {
+		random = no
+		opinion_gain_monthly_factor = -0.2
+		political_advisor_cost_factor = 0.25
+		trade_laws_cost_factor = 0.25
+		mobilization_laws_cost_factor = 0.25
+		economy_cost_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	
 	YUG_opposition_suppressor = {
@@ -101,7 +113,7 @@ leader_traits = {
 		}
 	}
 	
-	YUG_resistance_fighter = {
+	YUG_resistance_organizer = {
 		sprite = 5
 		random = no
 		#conscription = 0.005
@@ -116,7 +128,7 @@ leader_traits = {
 	
 	##################################
 	
-	YUG_state_railways = {
+	YUG_state_railways_trait = {
 		random = no
 		
 		ai_will_do = {

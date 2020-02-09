@@ -29,6 +29,10 @@ add_equipment_to_stockpile = {
 	producer = GER
 }
 
+activate_decision = YUG_slovene_opposition_1
+activate_decision = YUG_macedonian_opposition
+activate_decision = YUG_bosnian_opposition
+
 if = {
 	limit = {
 		has_dlc = "Death or Dishonor"
@@ -47,17 +51,14 @@ if = {
 set_research_slots = 3
 
 add_ideas = {
-	#anti_german_military
-	
 	YUG_yugoslav_regency
-	
-	YUG_ethnic_nationalism_1
-	YUG_croatian_question
-	
-	YUG_serbian_general_staff
-	YUG_divided_army_1
-	
+	YUG_serbian_general_staff_1
+	anti_german_military
 	YUG_agricultural_nation_1
+	
+	YUG_croatian_question
+	YUG_idea_macedonian_opposition #"The Macedonian Question"
+	YUG_idea_slovene_nationalism
 }
 
 add_ideas = {
@@ -76,7 +77,44 @@ set_variable = { var = ita_temper value = 25 }
 set_variable = { var = hun_temper value = 25 }
 set_variable = { var = bul_temper value = 25 }
 set_variable = { var = alb_temper value = 25 }
-#set_variable = { var = rom_temper value = -50 }
+
+YUG = {
+	102 = {
+		add_state_modifier = {
+			modifier = {
+				local_manpower = -0.1
+			}
+		}
+	}
+	103 = {
+		add_state_modifier = {
+			modifier = {
+				local_manpower = -0.3
+			}
+		}
+	}
+	109 = {
+		add_state_modifier = {
+			modifier = {
+				local_manpower = -0.3
+			}
+		}
+	}
+	104 = {
+		add_state_modifier = {
+			modifier = {
+				local_manpower = -0.15
+			}
+		}
+	}
+	106 = {
+		add_state_modifier = {
+			modifier = {
+				local_manpower = -0.2
+			}
+		}
+	}
+}
 
 set_technology = {
 	tech_support = 1		
@@ -254,7 +292,7 @@ set_party_name = {
 	long_name = YUG_ZBR_fascism_party_long
 }
 
-set_stability = 0.75
+set_stability = 0.5
 
 create_country_leader = {
 	name = "Pavle Karađorđević"
@@ -331,7 +369,7 @@ create_country_leader = {
 	desc = "POLITICS_LJUBOMIR_DAVIDOVIC_DESC"
 	picture = "gfx/leaders/YUG/Portrait_YUG_Ljubomir_Davidovic.tga"
 	expire = "1965.1.1"
-	ideology = conservatism
+	ideology = liberalism
 	traits = {
 		#
 	}
@@ -375,7 +413,7 @@ create_corps_commander = {
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 2
-	id = 2000
+	id = 7000
 }
 
 #create_corps_commander = { #communist
@@ -388,7 +426,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 2
 #	logistics_skill = 3
-#	id = 2400
+#	id = 7400
 #}
 
 create_field_marshal = {
@@ -400,7 +438,7 @@ create_field_marshal = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2001
+	id = 7001
 }
 
 create_field_marshal = {
@@ -412,7 +450,7 @@ create_field_marshal = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
-	id = 2002
+	id = 7002
 }
 
 create_corps_commander = {
@@ -424,7 +462,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2003
+	id = 7003
 }
 
 create_navy_leader = {
@@ -436,7 +474,7 @@ create_navy_leader = {
 	defense_skill = 2
 	maneuvering_skill = 1
 	coordination_skill = 2
-	id = 2004
+	id = 7004
 }
 
 ### moded here ###
@@ -452,7 +490,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
-	id = 2005
+	id = 7005
 }
 
 create_field_marshal = {
@@ -464,7 +502,7 @@ create_field_marshal = {
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 3
-	id = 2006
+	id = 7006
 }
 
 create_corps_commander = {
@@ -476,7 +514,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2007
+	id = 7007
 }
 
 #create_corps_commander = { #retired/ added through decision
@@ -488,7 +526,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 3
 #	logistics_skill = 2
-#	id = 2008
+#	id = 7008
 #}
 
 create_corps_commander = {
@@ -500,7 +538,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2009
+	id = 7009
 }
 
 create_corps_commander = {
@@ -512,7 +550,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2010
+	id = 7010
 }
 
 create_corps_commander = {
@@ -524,7 +562,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2011
+	id = 7011
 }
 
 create_corps_commander = {
@@ -536,7 +574,7 @@ create_corps_commander = {
 	defense_skill = 4
 	planning_skill = 4
 	logistics_skill = 2
-	id = 2012
+	id = 7012
 }
 
 create_corps_commander = {
@@ -548,7 +586,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
-	id = 2013
+	id = 7013
 }
 
 create_corps_commander = {
@@ -560,7 +598,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	id = 2014
+	id = 7014
 }
 
 #create_corps_commander = { #becomes general 1937 december 1.
@@ -572,7 +610,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 2
 #	logistics_skill = 2
-#	id = 2015
+#	id = 7015
 #}
 
 #create_corps_commander = { #becomes general 1938 january
@@ -584,7 +622,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 2
 #	logistics_skill = 2
-#	id = 2016
+#	id = 7016
 #}
 
 create_corps_commander = {
@@ -596,7 +634,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
-	id = 2017
+	id = 7017
 }
 
 create_corps_commander = {
@@ -608,7 +646,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
-	id = 2018
+	id = 7018
 }
 
 create_corps_commander = {
@@ -620,7 +658,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
-	id = 2019
+	id = 7019
 }
 
 create_navy_leader = {
@@ -632,21 +670,22 @@ create_navy_leader = {
 	defense_skill = 2
 	maneuvering_skill = 2
 	coordination_skill = 2
-	id = 2020
+	id = 7020
 }
 
 ## chetniks
 
-create_field_marshal = {
+#create_field_marshal
+create_corps_commander = {
 	name = "Draža Mihailović"
 	portrait_path = "gfx/leaders/YUG/Portrait_YUG_Draza_Mihailovic.tga"
-	traits = { YUG_serbian inflexible_strategist trait_cautious thorough_planner logistics_wizard }
+	traits = { YUG_serbian inflexible_strategist commando trickster }
 	skill = 3
 	attack_skill = 1
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 3
-	id = 2200
+	id = 7200
 }
 
 ## national salvation government
@@ -660,7 +699,7 @@ create_corps_commander = {
 	planning_skill = 2
 	logistics_skill = 1
 	skill = 3
-	id = 2300
+	id = 7300
 }
 
 #create_corps_commander = { #colonel in yugo, commander in serbia
@@ -672,7 +711,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 1
 #	logistics_skill = 2
-#	id = 2301
+#	id = 7301
 #}
 
 ## NDH
@@ -686,7 +725,7 @@ create_corps_commander = {
 	planning_skill = 2
 	logistics_skill = 2
 	skill = 2
-	id = 2100
+	id = 7100
 }
 
 #create_corps_commander = { #becomes general in NDH
@@ -698,7 +737,7 @@ create_corps_commander = {
 #	defense_skill = 1
 #	planning_skill = 3
 #	logistics_skill = 2
-#	id = 2101
+#	id = 7101
 #}
 
 ## slovenes
@@ -712,7 +751,7 @@ create_field_marshal = {
 	defense_skill = 1
 	planning_skill = 3
 	logistics_skill = 3
-	id = 2500
+	id = 7500
 }
 
 #create_corps_commander = { #not actaully a commander
@@ -759,7 +798,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 3
 	logistics_skill = 2
-	id = 2600
+	id = 7600
 }
 
 #create_corps_commander = { #not a commander in yugo
@@ -771,7 +810,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 4
 #	logistics_skill = 2
-#	id = 2601
+#	id = 7601
 #}
 
 ## bosnians
@@ -785,7 +824,7 @@ create_corps_commander = {
 #	defense_skill = 1
 #	planning_skill = 1
 #	logistics_skill = 2
-#	id = 2700
+#	id = 7700
 #}	
 
 #create_corps_commander = { #not a commander in yugo
@@ -797,7 +836,7 @@ create_corps_commander = {
 #	defense_skill = 3
 #	planning_skill = 1
 #	logistics_skill = 2
-#	id = 2701
+#	id = 7701
 #}
 
 #commies
@@ -811,7 +850,7 @@ create_corps_commander = {
 #	defense_skill = 2
 #	planning_skill = 2
 #	logistics_skill = 2
-#	id = 2401
+#	id = 7401
 #}
 
 ### VARIANTS ###

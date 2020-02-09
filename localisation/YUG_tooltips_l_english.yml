@@ -2,15 +2,23 @@
 
  YUG_stojadinovic_assassination_tt:0 "The Assassination Attempt on Stojadinović in March has occured."
  
+ YUG_pact_of_eternal_friendship_warning:0 "§RIf it so happens that Stojadinović loses power, "The Macedonian Question" national spirit will return and all claims revised.§!\n"
+ YUG_army_threat_warning:0 "§RTaking this focus before solving the Anti-german sentiment in the military might have consequences!§!\n"
+ 
  YUG_weak_grip_warning:0 "§RWhen in Power, will recieve idea:§!\n"
  YUG_execution_warning:0 "§RThis might have consequences for the future.§!\n"
  
- YUG_mass_motorization_tooltip:0 "Gain a Motorized unit with §Y9 Motorized§! batallions.\n"
+ YUG_slovene_opposition_economoic_debuff_remove:0 "The §YEconomic§! debuff of the §YSlovene Opposition§! will be removed.\n"
+ YUG_the_croatian_question_will_be_solved:0 "The §YCroatian Question§! will be solved.\n"
+ YUG_ethnic_opposition_remove:0 "The Ethnic Oppositions will be removed.\n"
+ 
+ YUG_army_motorization_tooltip:0 "Gain a Motorized unit with §Y9 Motorized§! batallions.\n"
  YUG_import_tankettes_tooltip:0 "§Y8§! units of §YŠkoda Š-I-D§! is added to the national stockpile.\n"
  YUG_yugoslav_artillery_tooltip:0 "Gain an Artillery unit with §Y4 Infantry§! and §Y3 Artillery§! batallions.\n"
  YUG_construct_rupnik_line_tooltip:0 "Place §YLand Forts§! across §YSlovenia§!.\n"
  YUG_construct_rupnik_line_warning_tooltip:0 "§RNot every province along the Austrian-German border.§!\n"
  YUG_armor_tooltip:0 "Gain an Tank unit with §Y4 Light Tank§! and §Y3 Infantry§! batallions.\n"
+ YUG_army_no_longer_a_threat:0 "The Army will no longer be able to execute a coup if dissatisfied."
  
  YUG_ik3_unlock_tooltip:0 "Add technology: §YIK-3§!.\n"
  
@@ -29,7 +37,7 @@
  
  
  YUG_decrease_BOS_temper:0 "§GDecreases§! Bosnian §YTemper§!.\n"
- YUG_increase_BOS_temper:0 "§RIncreases§! Bosnian §YTemper§!."
+ YUG_increase_BOS_temper:0 "§RIncreases§! Bosnian §YTemper§!.\n"
  
  YUG_decrease_MNT_temper:0 "§GDecreases§! Montenegrin §YTemper§!.\n"
  YUG_increase_MNT_temper:0 "§RIncreases§! Montenegrin §YTemper§!.\n"
@@ -52,3 +60,9 @@
  
  YUG_decrease_all_temper:0 "§GDecreases§! §YTemper§! §Gof all Ethnicities§!.\n"
  YUG_increase_all_temper:0 "§RIncreases§! §YTemper§! §Rof all Ethnicities§!.\n"
+ 
+ YUG_value_10:0 "By §Y10§!.\n"
+ YUG_value_15:0 "By §Y15§!.\n"
+ YUG_value_20:0 "By §Y20§!.\n"
+ YUG_value_25:0 "By §Y25§!.\n"
+ YUG_value_50:0 "By §Y50§!.\n"

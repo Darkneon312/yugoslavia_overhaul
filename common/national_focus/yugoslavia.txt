@@ -57,7 +57,7 @@ focus_tree = {
 	focus = {
 		id = YUG_stojadinovic_assassination
 		icon = GFX_goal_generic_secret_weapon
-		x = 15
+		x = 16
 		y = 0
 
 		cost = 0
@@ -151,15 +151,15 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_follow_stojadonvics_lead
-		icon = GFX_goal_YUG_follow_stojadinovic
+		id = YUG_end_of_the_peasant_debts
+		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = YUG_stojadinovic_survives }
 		mutually_exclusive = { focus = YUG_schedule_reelections focus = YUG_compromise_with_zivkovic }
-		x = -4
+		x = -5
 		y = 1
 		relative_position_id = YUG_stojadinovic_survives
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -178,7 +178,225 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 120
+			add_stability = 0.1
+			add_timed_idea = {
+				idea = YUG_end_of_the_peasant_debts_idea
+				days = 90
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_attract_foreign_capital
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = YUG_end_of_the_peasant_debts }
+		mutually_exclusive = { }
+		x = -2
+		y = 1
+		relative_position_id = YUG_end_of_the_peasant_debts
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			#NOT = {
+			#	has_idea = YUG_end_of_the_peasant_debts_idea
+			#}
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUG_idea_foreign_capital
+		}
+	}
+	
+	focus = {
+		id = YUG_new_trading_partner
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = YUG_attract_foreign_capital }
+		prerequisite = { focus = YUG_realist_yugoslavism }
+		mutually_exclusive = { }
+		x = -1
+		y = 1
+		relative_position_id = YUG_attract_foreign_capital
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			GER = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+				add_ideas = YUG_yugoslav_economic_partner
+			}
+			add_ideas = YUG_german_economic_partner
+		}
+	}
+	
+	focus = {
+		id = YUG_friendship_treaty_with_italy
+		icon = GFX_goal_YUG_befriend_italy
+		prerequisite = { focus = YUG_new_trading_partner }
+		mutually_exclusive = { }
+		x = 0
+		y = 1
+		relative_position_id = YUG_new_trading_partner
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			ITA = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_realist_yugoslavism
+		icon = GFX_goal_YUG_go_yugoslavia
+		prerequisite = { focus = YUG_end_of_the_peasant_debts }
+		mutually_exclusive = { }
+		x = 0
+		y = 1
+		relative_position_id = YUG_end_of_the_peasant_debts
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = YUG_realist_yugoslavism_idea
+		}
+	}
+	
+	focus = {
+		id = YUG_pact_of_eternal_friendship
+		icon = GFX_goal_YUG_befriend_bulgaria
+		prerequisite = { focus = YUG_realist_yugoslavism }
+		prerequisite = { focus = YUG_continue_the_centralisation_effort }
+		mutually_exclusive = { }
+		x = -1
+		y = 2
+		relative_position_id = YUG_realist_yugoslavism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			BUL = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = YUG_idea_macedonian_opposition
+			BUL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			diplomatic_relation = {
+				country = BUL
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = BUL
+				value = 200
+			}
+			add_state_claim = 731
+			BUL = {
+				remove_state_core = 106
+				add_state_claim = 184
+			}
+			custom_effect_tooltip = YUG_pact_of_eternal_friendship_warning
 		}
 	}
 	
@@ -186,7 +404,7 @@ focus_tree = {
 		id = YUG_schedule_reelections
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = YUG_stojadinovic_survives }
-		mutually_exclusive = { focus = YUG_follow_stojadonvics_lead focus = YUG_compromise_with_zivkovic }
+		mutually_exclusive = { focus = YUG_end_of_the_peasant_debts focus = YUG_compromise_with_zivkovic }
 		x = 0
 		y = 1
 		relative_position_id = YUG_stojadinovic_survives
@@ -210,7 +428,261 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.15 }
+		}
+	}
+	
+	focus = {
+		id = YUG_the_democratic_party
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = YUG_schedule_reelections }
+		mutually_exclusive = { focus = YUG_the_united_opposition }
+		x = -2
+		y = 1
+		relative_position_id = YUG_schedule_reelections
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.1 }
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			effect_tooltip = {
+				create_country_leader = {
+					name = "Ljubomir Davidović"
+					desc = "POLITICS_LJUBOMIR_DAVIDOVIC_DESC"
+					picture = "gfx/leaders/YUG/Portrait_YUG_Ljubomir_Davidovic.tga"
+					expire = "1965.1.1"
+					ideology = liberalism
+					traits = {
+						#
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_continue_the_centralisation_effort
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = YUG_realist_yugoslavism focus = YUG_the_democratic_party }
+		x = -1
+		y = 1
+		relative_position_id = YUG_the_democratic_party
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+			
+			subtract_from_variable = { var = ser_temper value = 25	}
+			custom_effect_tooltip = YUG_decrease_SER_temper
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			add_to_variable = { var = slv_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_SLV_temper
+			add_to_variable = { var = bos_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_BOS_temper
+			add_to_variable = { var = mac_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_MAC_temper
+			custom_effect_tooltip = YUG_value_25
+		}
+	}
+	
+	focus = {
+		id = YUG_traditional_values
+		icon = GFX_goal_YUG_orthodox_church_support
+		prerequisite = { focus = YUG_the_democratic_party }
+		x = 1
+		y = 1
+		relative_position_id = YUG_the_democratic_party
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_orthodox_church_support
+		}
+	}
+	
+	focus = {
+		id = YUG_the_united_opposition
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = YUG_schedule_reelections }
+		mutually_exclusive = { focus = YUG_the_democratic_party }
+		x = 2
+		y = 1
+		relative_position_id = YUG_schedule_reelections
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			#set_cosmetic_tag = YUG_UO
+			set_party_name = {
+				ideology = democratic
+				name = YUG_UO_neutrality_party
+				long_name = YUG_UO_neutrality_party_long
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			create_country_leader = {
+				name = "Vladko Maček"
+				desc = "POLITICS_VLADKO_MACEK_DESC"
+				picture = "gfx/leaders/CRO/Portrait_CRO_Vladko_Macek.tga"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_guarantee_religious_liberties
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = YUG_the_united_opposition }
+		x = -1
+		y = 1
+		relative_position_id = YUG_the_united_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_religious_freedoms_guaranteed
+		}
+	}
+	
+	focus = {
+		id = YUG_begin_the_federalization_process
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = YUG_the_united_opposition }
+		x = 1
+		y = 1
+		relative_position_id = YUG_the_united_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = ser_temper value = 25	}
+			custom_effect_tooltip = YUG_increase_SER_temper
+			subtract_from_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_CRO_temper
+			subtract_from_variable = { var = slv_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_SLV_temper
+			subtract_from_variable = { var = bos_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_BOS_temper
+			subtract_from_variable = { var = mac_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_MAC_temper
+			custom_effect_tooltip = YUG_value_25
 		}
 	}
 	
@@ -218,7 +690,7 @@ focus_tree = {
 		id = YUG_compromise_with_zivkovic
 		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = YUG_stojadinovic_survives }
-		mutually_exclusive = { focus = YUG_follow_stojadonvics_lead focus = YUG_schedule_reelections }
+		mutually_exclusive = { focus = YUG_end_of_the_peasant_debts focus = YUG_schedule_reelections }
 		x = 6
 		y = 1
 		relative_position_id = YUG_stojadinovic_survives
@@ -254,6 +726,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+				set_country_flag = zivkovic_solved
 				remove_ideas = YUG_petar_zivkovic_army
 			}
 		}
@@ -293,6 +766,7 @@ focus_tree = {
 			add_to_variable = { var = mnt_temper value = 25 }
 			add_to_variable = { var = mac_temper value = 25 }
 			custom_effect_tooltip = YUG_increase_all_temper
+			custom_effect_tooltip = YUG_value_25
 			
 			add_stability = 0.1
 			add_war_support = 0.1
@@ -316,22 +790,7 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				OR = {
-					has_idea = YUG_ethnic_nationalism_1
-					has_idea = YUG_ethnic_nationalism_2
-					has_idea = YUG_ethnic_nationalism_3
-				}
-			}
-			NOT = {
-				has_idea = YUG_croatian_question
-			}
-			NOT = {
-				OR = {
-					has_idea = YUG_divided_army_1
-					has_idea = YUG_divided_army_2
-				}
-			}
+			has_country_flag = yug_ethnic_divide_solved
 		}
 
 		bypass = {
@@ -384,6 +843,9 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			custom_effect_tooltip = YUG_value_25
 			set_party_name = {
 				ideology = neutrality
 				name = YUG_JNS_neutrality_party
@@ -397,11 +859,13 @@ focus_tree = {
 				ideology = despotism
 				traits = {
 					YUG_face_of_the_january_sixth_dictatorship
+					YUG_accused_of_homosexuality
 					#YUG_opposition_suppressor
 				}
 			}
 			add_ideas = YUG_weak_grip
 			hidden_effect = {
+				set_country_flag = zivkovic_solved
 				remove_ideas = YUG_petar_zivkovic_army
 			}
 		}
@@ -411,9 +875,8 @@ focus_tree = {
 		id = YUG_empower_the_army
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = YUG_cave_to_zivkovic }
-		prerequisite = { focus = YUG_strengthen_our_grip }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = YUG_cave_to_zivkovic
 
 		cost = 10
@@ -452,11 +915,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_crush_the_ustasa_zivkovic_ljotic
-		text = YUG_crush_the_ustasa
-		icon = GFX_goal_YUG_crush_the_ustasa
-		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
-		x = 1
+		id = YUG_privatization
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = YUG_empower_the_army }
+		prerequisite = { focus = YUG_strengthen_our_grip }
+		x = 0
 		y = 1
 		relative_position_id = YUG_empower_the_army
 
@@ -467,132 +930,19 @@ focus_tree = {
 		}
 
 		available = {
-			#ITA = {
-			#	NOT = { has_war_with = ROOT }
-			#	exists = yes
-			#	has_capitulated = no
-			#}
+		
 		}
 
 		bypass = {
-
+			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = cro_temper value = 50 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_3
-				}
-				remove_ideas = YUG_ethnic_nationalism_3
-			}
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_2
-				}
-				swap_ideas = {
-					remove_idea = YUG_ethnic_nationalism_2
-					add_idea = YUG_ethnic_nationalism_3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_ethnic_nationalism_1
-				}
-				swap_ideas = {
-					remove_idea = YUG_ethnic_nationalism_1
-					add_idea = YUG_ethnic_nationalism_2
-				}
-			}
-			
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_4
-				}
-				remove_ideas = YUG_divided_army_4
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_3
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_3
-					add_idea = YUG_divided_army_4
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_2
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_2
-					add_idea = YUG_divided_army_3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = YUG_divided_army_1
-				}
-				swap_ideas = {
-					remove_idea = YUG_divided_army_1
-					add_idea = YUG_divided_army_2
-				}
-			}
-			
-			remove_ideas = YUG_croatian_question
-			add_timed_idea = {
-				idea = YUG_croats_suppressed
-				days = 365
-			}
-			#swap_ideas = {
-			#	remove_idea = YUG_croatian_question
-			#	add_idea = YUG_idea_croats_suppressed
-			#}
-		}
-	}
-	
-	focus = {
-		id = YUG_incorporate_the_chetniks
-		icon = GFX_goal_YUG_chetniks
-		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
-		mutually_exclusive = { focus = YUG_sdk_jdk }
-		x = 2
-		y = 2
-		relative_position_id = YUG_empower_the_army
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			
-			add_ideas = YUG_chetniks
+			add_ideas = YUG_privatization_idea
 		}
 	}
 	
@@ -603,7 +953,7 @@ focus_tree = {
 		prerequisite = { focus = YUG_handle_the_regent }
 		x = -1
 		y = 2
-		relative_position_id = YUG_empower_the_army
+		relative_position_id = YUG_privatization
 
 		cost = 5
 
@@ -725,10 +1075,41 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = YUG_attract_foreign_capital_zivkovic_ljotic
+		text = YUG_attract_foreign_capital
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = YUG_privatization focus = YUG_corporatism }
+		x = -2
+		y = 1
+		relative_position_id = YUG_eliminate_the_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUG_idea_foreign_capital
+		}
+	}
+	
+	focus = {
 		id = YUG_handle_the_regent
 		icon = GFX_focus_rom_abdicate
 		prerequisite = { focus = YUG_eliminate_the_opposition }
-		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
 		x = 0
 		y = 1
 		relative_position_id = YUG_eliminate_the_opposition
@@ -754,24 +1135,20 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { var = cro_temper value = 25 }
 			custom_effect_tooltip = YUG_increase_CRO_temper
+			custom_effect_tooltip = YUG_value_25
 			
 			remove_ideas = YUG_yugoslav_regency
 			add_ideas = YUG_peter_II
 		}
 	}
 	
-	###############
-	### Fascism ###
-	###############
-	
 	focus = {
-		id = YUG_invite_ljotic_into_government
-		icon = GFX_goal_YUG_ljotic
-		prerequisite = { focus = YUG_stojadinovic_assassinated }
-		mutually_exclusive = { focus = YUG_unban_communism focus = YUG_cave_to_zivkovic }
-		x = 0
+		id = YUG_negotiate_with_slovene_industrialists
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = YUG_privatization focus = YUG_corporatism }
+		x = 2
 		y = 1
-		relative_position_id = YUG_stojadinovic_assassinated
+		relative_position_id = YUG_eliminate_the_opposition
 
 		cost = 10
 
@@ -780,38 +1157,94 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+			
 		}
 
 		bypass = {
-			
+			has_country_flag = yug_slovene_opposition_2_removed
 		}
 
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = ser_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_SER_temper
-			
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = YUG_dimitrije_ljotic
-			add_ideas = YUG_dimitrije_ljotic
-			add_stability = -0.05
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			custom_effect_tooltip = YUG_weak_grip_warning
-			show_ideas_tooltip = YUG_weak_grip
+			swap_ideas = {
+				remove_idea = YUG_idea_slovene_nationalism
+				add_idea = YUG_idea_slovene_nationalism_2
+			}
+			subtract_from_variable = { var = slv_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_SLV_temper
+			custom_effect_tooltip = YUG_value_25
 		}
 	}
 	
 	focus = {
-		id = YUG_support_the_middle_class
-		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = YUG_invite_ljotic_into_government }
+		id = YUG_crush_the_separatists
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = YUG_handle_the_regent }
 		x = -1
 		y = 1
-		relative_position_id = YUG_invite_ljotic_into_government
+		relative_position_id = YUG_handle_the_regent
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			#ITA = {
+			#	NOT = { has_war_with = ROOT }
+			#	exists = yes
+			#	has_capitulated = no
+			#}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = slv_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_SLV_temper
+			add_to_variable = { var = bos_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_BOS_temper
+			add_to_variable = { var = mac_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_MAC_temper
+			custom_effect_tooltip = YUG_value_25
+			add_to_variable = { var = cro_temper value = 50 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			custom_effect_tooltip = YUG_value_50
+			
+			remove_ideas = YUG_croatian_question
+			remove_ideas = YUG_idea_macedonian_opposition
+			if = {
+				limit = {
+					has_idea = YUG_idea_slovene_nationalism
+				}
+				remove_ideas = YUG_idea_slovene_nationalism
+			}
+			if = {
+				limit = {
+					has_idea = YUG_idea_slovene_nationalism2
+				}
+				remove_ideas = YUG_idea_slovene_nationalism2
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_yugoslav_state_guard
+		icon = GFX_goal_YUG_yugoslav_state_guard
+		prerequisite = { focus = YUG_handle_the_regent }
+		x = 1
+		y = 1
+		relative_position_id = YUG_handle_the_regent
 
 		cost = 5
 
@@ -832,75 +1265,19 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = { ideology = fascism popularity = 0.1 }
-			random_owned_controlled_state = {
-				prioritize = { 107 }
-				limit = {
-					ROOT = { controls_state = PREV }
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 108 }
-				limit = {
-					ROOT = { controls_state = PREV }
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
+			add_ideas = YUG_yugoslav_state_guard_idea
 		}
 	}
 	
 	focus = {
-		id = YUG_appeal_to_the_public
-		icon = GFX_focus_generic_concessions
-		prerequisite = { focus = YUG_invite_ljotic_into_government }
+		id = YUG_yugoslav_volunteer_corps
+		icon = GFX_goal_YUG_sdk
+		prerequisite = { focus = YUG_yugoslav_state_guard }
 		x = 1
 		y = 1
-		relative_position_id = YUG_invite_ljotic_into_government
+		relative_position_id = YUG_yugoslav_state_guard
 
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-			
-		}
-
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
-
-		completion_reward = {
-			add_stability = 0.05
-			add_popularity = { ideology = fascism popularity = 0.1 }
-		}
-	}
-	
-	focus = {
-		id = YUG_empower_the_militia
-		icon = GFX_goal_YUG_zbor
-		prerequisite = { focus = YUG_invite_ljotic_into_government }
-		prerequisite = { focus = YUG_strengthen_our_grip }
-		x = 0
-		y = 2
-		relative_position_id = YUG_invite_ljotic_into_government
-
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -919,120 +1296,18 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = YUG_ZBOR_militia
-		}
-	}
-	
-	focus = {
-		id = YUG_sds_jds
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
-		x = -1
-		y = 1
-		relative_position_id = YUG_empower_the_militia
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-			
-		}
-
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = YUG_sds_jds_idea
-		}
-	}
-	
-	focus = {
-		id = YUG_sdk_jdk
-		icon = GFX_goal_YUG_sdk
-		prerequisite = { focus = YUG_empower_the_army focus = YUG_empower_the_militia }
-		mutually_exclusive = { focus = YUG_incorporate_the_chetniks }
-		x = -2
-		y = 2
-		relative_position_id = YUG_empower_the_militia
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-			
-		}
-
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = YUG_sdk_jdk_idea
-		}
-	}
-	
-	focus = {
-		id = YUG_traditional_values_ljotic
-		text = YUG_traditional_values
-		icon = GFX_goal_YUG_orthodox_church_support
-		prerequisite = { focus = YUG_handle_the_regent }
-		prerequisite = { focus = YUG_empower_the_militia }
-		x = 1
-		y = 2
-		relative_position_id = YUG_empower_the_militia
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
-
-		completion_reward = {
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			add_to_variable = { var = slv_temper value = 15 }
-			custom_effect_tooltip = YUG_increase_SLV_temper
-			subtract_from_variable = { var = ser_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_SER_temper
-			
-			add_ideas = YUG_idea_orthodox_church_support
+			add_ideas = YUG_yugoslav_volunteer_corps_idea
 		}
 	}
 	
 	focus = {
 		id = YUG_consolidate_our_rule
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = YUG_handle_the_regent }
-		x = 0
-		y = 2
-		relative_position_id = YUG_handle_the_regent
+		prerequisite = { focus = YUG_crush_the_separatists }
+		prerequisite = { focus = YUG_yugoslav_state_guard }
+		x = 1
+		y = 1
+		relative_position_id = YUG_crush_the_separatists
 
 		cost = 4.4
 
@@ -1041,20 +1316,7 @@ focus_tree = {
 		}
 
 		available = {
-			if = {
-				limit = {
-					NOT = {
-						has_global_flag = croatian_revolt
-					}
-				}
-				has_country_flag = yug_all_dangers_eliminated
-			}
-			if = {
-				limit = {
-					has_global_flag = croatian_revolt
-				}
-				has_global_flag = croatian_revolt_over
-			}
+			
 		}
 
 		bypass = {
@@ -1068,205 +1330,6 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_political_power = 50
-		}
-	}
-	
-	focus = {
-		id = YUG_serbo_romanian_friendship
-		icon = GFX_goal_YUG_befriend_romania
-		prerequisite = { focus = YUG_consolidate_our_rule }
-		#mutually_exclusive = { focus = YUG_approach_germany }
-		x = -2
-		y = 1
-		relative_position_id = YUG_consolidate_our_rule
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-			ROM = {
-				has_capitulated = no
-				NOT = { has_war_with = ROOT }
-			}
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = ROM
-					has_war_with = ROOT
-				}
-			}
-			has_completed_focus = YUG_cave_to_zivkovic
-		}
-
-		bypass = {
-			
-		}
-
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
-
-		completion_reward = {
-			ROM = {
-				add_opinion_modifier = { 
-					target = ROOT
-					modifier = large_increase
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = YUG_reform_the_balkan_pact
-		icon = GFX_goal_anschluss
-		prerequisite = { focus = YUG_serbo_romanian_friendship }
-		x = 0
-		y = 1
-		relative_position_id = YUG_serbo_romanian_friendship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-			is_subject = no
-			is_in_faction = no
-		}
-
-		bypass = {
-			
-		}
-
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
-
-		completion_reward = {
-			set_rule = { can_create_factions = yes }
-			create_faction = "Balkan Entente"
-			ROM = {
-				country_event = generic.5
-			}
-		}
-	}
-	
-	focus = {
-		id = YUG_approach_germany
-		icon = GFX_focus_chi_mission_to_germany
-		prerequisite = { focus = YUG_consolidate_our_rule }
-		#mutually_exclusive = { focus = YUG_serbo_romanian_friendship }
-		x = 2
-		y = 1
-		relative_position_id = YUG_consolidate_our_rule
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-			GER = {
-				NOT = { has_war_with = ROOT }
-				has_government = fascism
-				has_capitulated = no
-			}
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = GER
-					has_war_with = ROOT
-				}
-			}
-			has_completed_focus = YUG_invite_ljotic_into_government
-		}
-
-		bypass = {
-			
-		}
-
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
-
-		completion_reward = {
-			GER = {
-				add_opinion_modifier = { 
-					target = ROOT
-					modifier = large_increase
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = YUG_join_axis_ljotic
-		text = YUG_join_axis
-		icon = GFX_goal_support_fascism
-		prerequisite = { focus = YUG_approach_germany }
-		x = 0
-		y = 1
-		relative_position_id = YUG_approach_germany
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-			is_subject = no
-			is_in_faction = no
-			OR = {
-				GER = {
-					NOT = { has_war_with = ROOT }
-					has_government = fascism
-					has_capitulated = no
-					is_faction_leader = yes
-				}
-				any_other_country = {
-					is_major = yes
-					has_government = fascism
-					is_faction_leader = yes
-				}
-			}
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = GER
-					has_war_with = YUG
-				}
-			}
-		}
-
-		bypass = {
-			is_in_faction_with = GER
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = {
-					GER = {
-						exists = yes
-						has_capitulated = no
-						has_government = fascism
-						is_faction_leader = yes
-					}
-				}
-				GER = { country_event = generic.2 }
-			}
-			else = {
-				get_best_alliance_match_fascism_effect = yes
-				var:best_leader = {
-					country_event = generic.2
-				}
-			}
 		}
 	}
 	
@@ -1286,17 +1349,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			#has_civil_war = no
-			NOT = {
-				OR = {
-					has_idea = YUG_ethnic_nationalism_1
-					has_idea = YUG_ethnic_nationalism_2
-					has_idea = YUG_ethnic_nationalism_3
-				}
-			}
-			NOT = {
-				has_idea = YUG_croatian_question
-			}
+			has_war = no
 		}
 
 		bypass = {
@@ -1486,6 +1539,418 @@ focus_tree = {
 		}
 	}
 	
+	###############
+	### Fascism ###
+	###############
+	
+	focus = {
+		id = YUG_invite_ljotic_into_government
+		icon = GFX_goal_YUG_ljotic
+		prerequisite = { focus = YUG_stojadinovic_assassinated }
+		mutually_exclusive = { focus = YUG_unban_communism focus = YUG_cave_to_zivkovic }
+		x = 0
+		y = 1
+		relative_position_id = YUG_stojadinovic_assassinated
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = ser_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_SER_temper
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			custom_effect_tooltip = YUG_value_25
+			
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = YUG_dimitrije_ljotic
+			add_ideas = YUG_dimitrije_ljotic
+			add_stability = -0.05
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			custom_effect_tooltip = YUG_weak_grip_warning
+			show_ideas_tooltip = YUG_weak_grip
+		}
+	}
+	
+	focus = {
+		id = YUG_support_the_middle_class
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = YUG_invite_ljotic_into_government }
+		x = -1
+		y = 1
+		relative_position_id = YUG_invite_ljotic_into_government
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { controls_state = PREV }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 108 }
+				limit = {
+					ROOT = { controls_state = PREV }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_appeal_to_the_public
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = YUG_invite_ljotic_into_government }
+		x = 1
+		y = 1
+		relative_position_id = YUG_invite_ljotic_into_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+	}
+	
+	focus = {
+		id = YUG_corporatism
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = YUG_support_the_middle_class }
+		prerequisite = { focus = YUG_appeal_to_the_public }
+		prerequisite = { focus = YUG_strengthen_our_grip }
+		x = 0
+		y = 2
+		relative_position_id = YUG_invite_ljotic_into_government
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUG_corporatism_idea
+		}
+	}
+	
+	focus = {
+		id = YUG_traditional_values_ljotic
+		text = YUG_traditional_values
+		icon = GFX_goal_YUG_orthodox_church_support
+		prerequisite = { focus = YUG_corporatism }
+		prerequisite = { focus = YUG_handle_the_regent }
+		x = 1
+		y = 2
+		relative_position_id = YUG_corporatism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			add_to_variable = { var = slv_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_SLV_temper
+			subtract_from_variable = { var = ser_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_SER_temper
+			custom_effect_tooltip = YUG_value_25
+			
+			add_ideas = YUG_idea_orthodox_church_support
+		}
+	}
+	
+	focus = {
+		id = YUG_serbo_romanian_friendship
+		icon = GFX_goal_YUG_befriend_romania
+		prerequisite = { focus = YUG_consolidate_our_rule }
+		#mutually_exclusive = { focus = YUG_approach_germany }
+		x = -2
+		y = 1
+		relative_position_id = YUG_consolidate_our_rule
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			ROM = {
+				has_capitulated = no
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = ROM
+					has_war_with = ROOT
+				}
+			}
+			has_completed_focus = YUG_cave_to_zivkovic
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			ROM = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_reform_the_balkan_pact
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = YUG_serbo_romanian_friendship }
+		x = 0
+		y = 1
+		relative_position_id = YUG_serbo_romanian_friendship
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "Balkan Entente"
+			ROM = {
+				country_event = generic.5
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_approach_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = YUG_consolidate_our_rule }
+		#mutually_exclusive = { focus = YUG_serbo_romanian_friendship }
+		x = 2
+		y = 1
+		relative_position_id = YUG_consolidate_our_rule
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			GER = {
+				NOT = { has_war_with = ROOT }
+				has_government = fascism
+				has_capitulated = no
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = ROOT
+				}
+			}
+			has_completed_focus = YUG_invite_ljotic_into_government
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = YUG_army_threat_warning
+			GER = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_join_axis_ljotic
+		text = YUG_join_axis
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = YUG_approach_germany }
+		x = 0
+		y = 1
+		relative_position_id = YUG_approach_germany
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			OR = {
+				GER = {
+					NOT = { has_war_with = ROOT }
+					has_government = fascism
+					has_capitulated = no
+					is_faction_leader = yes
+				}
+				any_other_country = {
+					is_major = yes
+					has_government = fascism
+					is_faction_leader = yes
+				}
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = YUG
+				}
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = GER
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						is_faction_leader = yes
+					}
+				}
+				GER = { country_event = generic.2 }
+			}
+			else = {
+				get_best_alliance_match_fascism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
+		}
+	}
+	
+	#################
+	### Communism ###
+	#################
+	
 	focus = {
 		id = YUG_unban_communism
 		icon = GFX_goal_generic_war_with_comintern
@@ -1526,7 +1991,7 @@ focus_tree = {
 	#########################
 	
 	focus = {
-		id = YUG_modernization_plan
+		id = YUG_industrialization_program
 		icon = GFX_goal_generic_construction
 		x = 40
 		y = 0
@@ -1565,13 +2030,13 @@ focus_tree = {
 	focus = {
 		id = YUG_northern_focus
 		icon = GFX_goal_YUG_northern_focus
-		prerequisite = { focus = YUG_modernization_plan }
+		prerequisite = { focus = YUG_industrialization_program }
 		mutually_exclusive = { }
-		x = -7
+		x = -5
 		y = 1
-		relative_position_id = YUG_modernization_plan
+		relative_position_id = YUG_industrialization_program
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 40
@@ -1612,6 +2077,8 @@ focus_tree = {
 			
 			subtract_from_variable = { var = bos_temper value = 10 }
 			custom_effect_tooltip = YUG_decrease_BOS_temper
+			
+			custom_effect_tooltip = YUG_value_10
 			
 			if = {
 				limit = {
@@ -1679,7 +2146,7 @@ focus_tree = {
 		id = YUG_develop_slovenia
 		icon = GFX_goal_YUG_slovene_industry
 		prerequisite = { focus = YUG_northern_focus }
-		mutually_exclusive = { focus = YUG_industrialize_croatia }
+		#mutually_exclusive = { focus = YUG_develop_croatia }
 		x = -1
 		y = 1
 		relative_position_id = YUG_northern_focus
@@ -1760,46 +2227,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_expand_the_university_of_ljubljana
-		icon = GFX_focus_research
-		prerequisite = { focus = YUG_develop_slovenia }
-		x = -1
-		y = 1
-		relative_position_id = YUG_develop_slovenia
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-			OR = {
-				controls_state = 102
-				any_country = {
-					is_subject_of = ROOT
-					controls_state = 102
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-	
-	focus = {
 		id = YUG_improve_light_industry
 		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = YUG_develop_slovenia }
+		mutually_exclusive = { focus = YUG_dalmatian_shipping }
 		x = 0
 		y = 2
 		relative_position_id = YUG_develop_slovenia
@@ -1863,10 +2294,48 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_industrialize_croatia
+		id = YUG_expand_the_university_of_ljubljana
+		icon = GFX_focus_research
+		prerequisite = { focus = YUG_improve_light_industry focus = YUG_dalmatian_shipping }
+		mutually_exclusive = { focus = YUG_expand_the_university_of_zagreb }
+		x = 0
+		y = 1
+		relative_position_id = YUG_improve_light_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			OR = {
+				controls_state = 102
+				any_country = {
+					is_subject_of = ROOT
+					controls_state = 102
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = YUG_develop_croatia
 		icon = GFX_goal_YUG_croatian_industry
 		prerequisite = { focus = YUG_northern_focus }
-		mutually_exclusive = { focus = YUG_develop_slovenia }
+		#mutually_exclusive = { focus = YUG_develop_slovenia }
 		x = 1
 		y = 1
 		relative_position_id = YUG_northern_focus
@@ -1980,11 +2449,11 @@ focus_tree = {
 	focus = {
 		id = YUG_dalmatian_shipping
 		icon = GFX_goal_YUG_damatian_shipping
-		prerequisite = { focus = YUG_industrialize_croatia }
-		mutually_exclusive = {  }
-		x = 1
-		y = 1
-		relative_position_id = YUG_industrialize_croatia
+		prerequisite = { focus = YUG_develop_croatia }
+		mutually_exclusive = { focus = YUG_improve_light_industry }
+		x = 0
+		y = 2
+		relative_position_id = YUG_develop_croatia
 
 		cost = 10
 
@@ -2066,10 +2535,11 @@ focus_tree = {
 	focus = {
 		id = YUG_expand_the_university_of_zagreb
 		icon = GFX_goal_YUG_croatian_science
-		prerequisite = { focus = YUG_industrialize_croatia }
-		x = 3
+		prerequisite = { focus = YUG_improve_light_industry focus = YUG_dalmatian_shipping }
+		mutually_exclusive = { focus = YUG_expand_the_university_of_ljubljana }
+		x = 0
 		y = 1
-		relative_position_id = YUG_industrialize_croatia
+		relative_position_id = YUG_dalmatian_shipping
 
 		cost = 10
 
@@ -2103,7 +2573,7 @@ focus_tree = {
 	focus = {
 		id = YUG_modernize_bosnia
 		icon = GFX_goal_YUG_bosnian_industry
-		prerequisite = { focus = YUG_develop_slovenia focus = YUG_industrialize_croatia }
+		prerequisite = { focus = YUG_develop_slovenia focus = YUG_develop_croatia }
 		x = 0
 		y = 2
 		relative_position_id = YUG_northern_focus
@@ -2187,7 +2657,7 @@ focus_tree = {
 		id = YUG_exploit_bosnian_mines
 		icon = GFX_focus_generic_aluminum
 		prerequisite = { focus = YUG_modernize_bosnia focus = YUG_rare_minerals_exploitation }
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = YUG_modernize_bosnia
 
@@ -2270,10 +2740,10 @@ focus_tree = {
 	focus = {
 		id = YUG_expand_the_mining_industry
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = YUG_modernization_plan }
+		prerequisite = { focus = YUG_industrialization_program }
 		x = 0
 		y = 2
-		relative_position_id = YUG_modernization_plan
+		relative_position_id = YUG_industrialization_program
 
 		cost = 5
 
@@ -2309,7 +2779,7 @@ focus_tree = {
 		id = YUG_rare_minerals_exploitation
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = YUG_expand_the_mining_industry }
-		prerequisite = { focus = YUG_industrialize_croatia }
+		prerequisite = { focus = YUG_develop_croatia }
 		x = -1
 		y = 1
 		relative_position_id = YUG_expand_the_mining_industry
@@ -2713,15 +3183,87 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = YUG_local_self_management
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = YUG_six_year_plan }
+		mutually_exclusive = { focus = YUG_central_management }
+		x = -3
+		y = 1
+		relative_position_id = YUG_six_year_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_local_self_management
+		}
+	}
+	
+	focus = {
+		id = YUG_central_management
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = YUG_six_year_plan }
+		mutually_exclusive = { focus = YUG_local_self_management }
+		x = 3
+		y = 1
+		relative_position_id = YUG_six_year_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_central_management
+		}
+	}
+	
+	focus = {
 		id = YUG_southern_focus
 		icon = GFX_goal_YUG_southern_focus
-		prerequisite = { focus = YUG_modernization_plan }
+		prerequisite = { focus = YUG_industrialization_program }
 		mutually_exclusive = { }
 		x = 5
 		y = 1
-		relative_position_id = YUG_modernization_plan
+		relative_position_id = YUG_industrialization_program
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 40
@@ -2766,6 +3308,8 @@ focus_tree = {
 			
 			subtract_from_variable = { var = mnt_temper value = 10 }
 			custom_effect_tooltip = YUG_decrease_MNT_temper
+			
+			custom_effect_tooltip = YUG_value_10
 			
 			if = {
 				limit = {
@@ -3639,7 +4183,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_mass_motorization
+		id = YUG_army_motorization
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = YUG_initiate_a_tank_programm }
 		x = -2
@@ -3665,8 +4209,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = YUG_mass_motorization_idea
-			custom_effect_tooltip = YUG_mass_motorization_tooltip
+			add_ideas = YUG_army_motorization_idea
+			custom_effect_tooltip = YUG_army_motorization_tooltip
 			hidden_effect = {
                 division_template = {
 	                name = "Motorna Divizija"
@@ -3707,10 +4251,10 @@ focus_tree = {
 	focus = {
 		id = YUG_motorized_logistics
 		icon = GFX_goal_generic_production2
-		prerequisite = { focus = YUG_mass_motorization }
+		prerequisite = { focus = YUG_army_motorization }
 		x = -2
 		y = 1
-		relative_position_id = YUG_mass_motorization
+		relative_position_id = YUG_army_motorization
 
 		cost = 10
 
@@ -3744,10 +4288,10 @@ focus_tree = {
 	focus = {
 		id = YUG_armored_cavalry
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = YUG_mass_motorization }
+		prerequisite = { focus = YUG_army_motorization }
 		x = 0
 		y = 1
-		relative_position_id = YUG_mass_motorization
+		relative_position_id = YUG_army_motorization
 
 		cost = 10
 
@@ -3847,7 +4391,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_form_a_proper_tank_battalion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -3882,7 +4426,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_learn_from_foreign_designs
+		id = YUG_learn_from_foreign_designs_tanks
+		text = YUG_learn_from_foreign_designs
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = YUG_import_tanks }
 		prerequisite = { focus = YUG_form_a_proper_tank_battalion }
@@ -3921,11 +4466,11 @@ focus_tree = {
 	focus = {
 		id = YUG_mobile_bastions
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = YUG_learn_from_foreign_designs }
+		prerequisite = { focus = YUG_learn_from_foreign_designs_tanks }
 		mutually_exclusive = { focus = YUG_tank_destroyer_focus }
 		x = 0
 		y = 1
-		relative_position_id = YUG_learn_from_foreign_designs
+		relative_position_id = YUG_learn_from_foreign_designs_tanks
 
 		cost = 10
 
@@ -3958,11 +4503,11 @@ focus_tree = {
 	focus = {
 		id = YUG_tank_destroyer_focus
 		icon = GFX_focus_generic_army_tanks2
-		prerequisite = { focus = YUG_learn_from_foreign_designs }
+		prerequisite = { focus = YUG_learn_from_foreign_designs_tanks }
 		mutually_exclusive = { focus = YUG_mobile_bastions }
 		x = 2
 		y = 1
-		relative_position_id = YUG_learn_from_foreign_designs
+		relative_position_id = YUG_learn_from_foreign_designs_tanks
 
 		cost = 10
 
@@ -4131,43 +4676,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_bicycle_battalions
-		icon = GFX_goal_generic_military_sphere
+		id = YUG_motorize_the_cavalry
+		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = YUG_update_our_arsenal }
 		x = -1
 		y = 1
 		relative_position_id = YUG_update_our_arsenal
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			set_technology = { bicycle_infantry = 1 }
-		}
-	}
-	
-	focus = {
-		id = YUG_motorize_the_cavalry
-		icon = GFX_goal_generic_cavalry
-		prerequisite = { focus = YUG_bicycle_battalions }
-		x = 0
-		y = 1
-		relative_position_id =  YUG_bicycle_battalions
 
 		cost = 10
 
@@ -4197,43 +4711,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_local_militias
-		icon = GFX_goal_generic_allies_build_infantry
+		id = YUG_mountain_brigades
+		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = YUG_update_our_arsenal }
 		x = 1
 		y = 1
 		relative_position_id = YUG_update_our_arsenal
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = YUG_local_militias_idea
-		}
-	}
-	
-	focus = {
-		id = YUG_mountain_brigades
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = YUG_local_militias }
-		x = 0
-		y = 1
-		relative_position_id = YUG_local_militias
 
 		cost = 5
 
@@ -4266,7 +4749,8 @@ focus_tree = {
 	focus = {
 		id = YUG_belgrade_artiljerijska_skola
 		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = YUG_motorize_the_cavalry focus = YUG_mountain_brigades }
+		prerequisite = { focus = YUG_motorize_the_cavalry }
+		prerequisite = { focus = YUG_mountain_brigades }
 		x = -1
 		y = 1
 		relative_position_id = YUG_mountain_brigades
@@ -4461,7 +4945,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_defense_of_the_homeland
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -4539,7 +5023,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_expand_rifle_factories
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -4705,6 +5189,348 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = YUG_recognize_army_problems
+		icon = GFX_goal_YUG_army_problems
+		prerequisite = { focus = YUG_army_reorganization }
+		x = 13
+		y = 1
+		relative_position_id = YUG_army_reorganization
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = YUG_retain_serbian_favouritism
+		icon = GFX_goal_YUG_serbian_favouritism_army
+		prerequisite = { focus = YUG_recognize_army_problems }
+		mutually_exclusive = { focus = YUG_non_discriminating_officer_promotions }
+		x = -1
+		y = 1
+		relative_position_id = YUG_recognize_army_problems
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_serbian_general_staff_1
+				add_idea = YUG_serbian_general_staff_2
+			}
+			
+			subtract_from_variable = { var = ser_temper value = 25	}
+			custom_effect_tooltip = YUG_decrease_SER_temper
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			add_to_variable = { var = slv_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_SLV_temper
+			add_to_variable = { var = bos_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_BOS_temper
+			add_to_variable = { var = mac_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_MAC_temper
+			custom_effect_tooltip = YUG_value_25
+		}
+	}
+	
+	focus = {
+		id = YUG_non_discriminating_officer_promotions
+		icon = GFX_goal_YUG_non_discriminating_officer_promotions
+		prerequisite = { focus = YUG_recognize_army_problems }
+		mutually_exclusive = { focus = YUG_retain_serbian_favouritism }
+		x = 1
+		y = 1
+		relative_position_id = YUG_recognize_army_problems
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_serbian_general_staff_1
+				add_idea = YUG_yugoslav_general_staff
+			}
+			
+			add_to_variable = { var = ser_temper value = 25	}
+			custom_effect_tooltip = YUG_increase_SER_temper
+			subtract_from_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_CRO_temper
+			subtract_from_variable = { var = slv_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_SLV_temper
+			subtract_from_variable = { var = bos_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_BOS_temper
+			subtract_from_variable = { var = mac_temper value = 25 }
+			custom_effect_tooltip = YUG_decrease_MAC_temper
+			custom_effect_tooltip = YUG_value_25
+		}
+	}
+	
+	focus = {
+		id = YUG_keep_the_anti_german_stance
+		icon = GFX_goal_YUG_anti_german
+		prerequisite = { focus = YUG_retain_serbian_favouritism focus = YUG_non_discriminating_officer_promotions }
+		mutually_exclusive = { focus = YUG_seek_out_the_anti_german_personnel }
+		x = 0
+		y = 1
+		relative_position_id = YUG_retain_serbian_favouritism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = YUG_seek_out_the_anti_german_personnel
+		icon = GFX_goal_YUG_investigate_the_army
+		prerequisite = { focus = YUG_retain_serbian_favouritism focus = YUG_non_discriminating_officer_promotions }
+		mutually_exclusive = { focus = YUG_keep_the_anti_german_stance }
+		x = 0
+		y = 1
+		relative_position_id = YUG_non_discriminating_officer_promotions
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = anti_german_military
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = anti_german_military
+			add_to_variable = { var = ser_temper value = 20	}
+			custom_effect_tooltip = YUG_increase_SER_temper
+			custom_effect_tooltip = YUG_value_20
+			custom_effect_tooltip = YUG_army_no_longer_a_threat
+		}
+	}
+	
+	focus = {
+		id = YUG_force_conscription
+		icon = GFX_goal_YUG_force_conscription
+		prerequisite = { focus = YUG_retain_serbian_favouritism }
+		prerequisite = { focus = YUG_keep_the_anti_german_stance focus = YUG_seek_out_the_anti_german_personnel }
+		mutually_exclusive = { focus = YUG_local_militias }
+		x = -1
+		y = 2
+		relative_position_id = YUG_retain_serbian_favouritism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_variable = { var = cro_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_CRO_temper
+			add_to_variable = { var = slv_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_SLV_temper
+			add_to_variable = { var = bos_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_BOS_temper
+			add_to_variable = { var = mac_temper value = 25 }
+			custom_effect_tooltip = YUG_increase_MAC_temper
+			custom_effect_tooltip = YUG_value_25
+			
+			add_ideas = YUG_forced_conscription
+			
+			102 = {
+				add_state_modifier = {
+					modifier = {
+						local_manpower = 0.1
+					}
+				}
+			}
+			103 = {
+				add_state_modifier = {
+					modifier = {
+						local_manpower = 0.3
+					}
+				}
+			}
+			109 = {
+				add_state_modifier = {
+					modifier = {
+						local_manpower = 0.3
+					}
+				}
+			}
+			104 = {
+				add_state_modifier = {
+					modifier = {
+						local_manpower = 0.15
+					}
+				}
+			}
+			106 = {
+				add_state_modifier = {
+					modifier = {
+						local_manpower = 0.2
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = YUG_local_militias
+		icon = GFX_goal_YUG_local_militas
+		prerequisite = { focus = YUG_non_discriminating_officer_promotions }
+		prerequisite = { focus = YUG_keep_the_anti_german_stance focus = YUG_seek_out_the_anti_german_personnel }
+		mutually_exclusive { focus = YUG_force_conscription }
+		x = 1
+		y = 2
+		relative_position_id = YUG_non_discriminating_officer_promotions
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = YUG_local_militias_idea
+		}
+	}
+	
+	focus = {
+		id = YUG_stable_army
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = YUG_force_conscription focus = YUG_local_militias }
+		x = 0
+		y = 4
+		relative_position_id = YUG_recognize_army_problems
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+	
 	############################
 	######## AIR FORCE #########
 	############################
@@ -4712,10 +5538,10 @@ focus_tree = {
 	focus = {
 		id = YUG_modernize_the_air_force
 		icon = GFX_goal_generic_build_airforce
-		x = 79
+		x = 84
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -5052,7 +5878,7 @@ focus_tree = {
 	focus = {
 		id = YUG_the_ik_3
 		icon = GFX_goal_generic_air_fighter2
-		prerequisite = { focus = YUG_belgrade_air_academy focus = YUG_further_aircraft_importation }
+		prerequisite = { focus = YUG_belgrade_air_academy focus = YUG_learn_from_foreign_designs_planes }
 		x = 0
 		y = 4
 		relative_position_id = YUG_modernize_the_air_force
@@ -5513,7 +6339,7 @@ focus_tree = {
 	
 	focus = {
 		id = YUG_italian_purchase
-		icon = GFX_goal_YUG_cooperation_with_italy
+		icon = GFX_goal_YUG_befriend_italy
 		prerequisite = { focus = YUG_foreign_aircraft_industry }
 		x = 1
 		y = 1
@@ -5688,9 +6514,42 @@ focus_tree = {
 		}
 	}
 	
+	#focus = {
+	#	id = YUG_further_aircraft_importation
+	#	icon = GFX_goal_generic_scientific_exchange
+	#	prerequisite = { focus = YUG_french_purchase focus = YUG_british_purchase focus = YUG_italian_purchase focus = YUG_german_purchase }
+	#	x = 0
+	#	y = 2
+	#	relative_position_id = YUG_foreign_aircraft_industry
+	#
+	#	cost = 5
+	#
+	#	ai_will_do = {
+	#		factor = 40
+	#	}
+	#
+	#	available = {
+	#		
+	#	}
+	#
+	#	bypass = {
+	#		
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#	
+	#	completion_reward = {
+	#		unlock_decision_category_tooltip = YUG_aircraft_importation_category
+	#		add_political_power = 150
+	#	}
+	#}
+	
 	focus = {
-		id = YUG_further_aircraft_importation
-		icon = GFX_goal_generic_scientific_exchange
+		id = YUG_learn_from_foreign_designs_planes
+		text = YUG_learn_from_foreign_designs
+		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = YUG_french_purchase focus = YUG_british_purchase focus = YUG_italian_purchase focus = YUG_german_purchase }
 		x = 0
 		y = 2
@@ -5703,11 +6562,11 @@ focus_tree = {
 		}
 
 		available = {
-			
+
 		}
 
 		bypass = {
-			
+
 		}
 
 		cancel_if_invalid = yes
@@ -5715,8 +6574,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			unlock_decision_category_tooltip = YUG_aircraft_importation_category
-			add_political_power = 150
+			add_tech_bonus = {
+				name = YUG_contest_the_adriatic
+				bonus = 1
+				uses = 2
+				category = air_equipment
+			}
 		}
 	}
 	
@@ -5727,10 +6590,10 @@ focus_tree = {
 	focus = {
 		id = YUG_modernize_the_navy
 		icon = GFX_goal_generic_occupy_states_coastal
-		x = 96
+		x = 101
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -5784,7 +6647,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_modernize_the_navy
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -6368,7 +7231,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = YUG_develop_battleships
+				name = YUG_naval_aviation
 				bonus = 1.0
 				uses = 2
 				category = naval_air
@@ -6686,7 +7549,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_modernize_the_navy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40

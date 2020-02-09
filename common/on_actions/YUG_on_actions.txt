@@ -53,6 +53,11 @@ on_actions = {
 				}
 			}
 		}
+		effect = {
+			#YUG = {
+			#	
+			#}
+		}
 	}
 	
 	on_government_change = {
@@ -78,12 +83,12 @@ on_actions = {
 					FROM = {
 						tag = CRO
 					}
-					has_global_flag = croatian_revolt
+					has_global_flag = yug_croatian_revolt
 					NOT = {
-						has_global_flag = croatian_revolt_over
+						has_global_flag = yug_croatian_revolt_over
 					}
 				}
-				set_global_flag = croatian_revolt_over
+				set_global_flag = yug_croatian_revolt_over
 			}
 		}
 	}

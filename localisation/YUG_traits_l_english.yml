@@ -8,8 +8,9 @@
  YUG_titoism:0 "Titoism"
  YUG_deliverer_of_the_kings_last_words:0 "Deliverer of the King's Last Words"
  YUG_face_of_the_january_sixth_dictatorship:0 "Face of the January 6th Dictatorship"
+ YUG_accused_of_homosexuality:0 "Accused of Homosexuality"
  YUG_opposition_suppressor:0 "Opposition Suppressor"
- YUG_resistance_fighter:0 "Resistance Fighter"
+ YUG_resistance_organizer:0 "Resistance Organizer"
  
  ### Advisior Traits
  YUG_famous_poet:0 "Famous Poet"
@@ -17,7 +18,7 @@
  YUG_aircraft_designer:0 "Aircraft Designer"
  
  ### Companies
- YUG_state_railways:0 "State Railways"
+ YUG_state_railways_trait:0 "State Railways"
  YUG_mining_company:0 "Mining Company"
  
  ### General Traits
