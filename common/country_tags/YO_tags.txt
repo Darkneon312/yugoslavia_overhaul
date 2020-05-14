@@ -1,1 +1,0 @@
-YGO = "countries/YO_Otheryug.txt"

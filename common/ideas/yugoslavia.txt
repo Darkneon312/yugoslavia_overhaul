@@ -217,7 +217,7 @@ ideas = {
 			}
 		}
 		
-		YUG_croatian_question = {
+		YUG_idea_croatian_opposition = { #renamed to "The Croatian Question", PDX code used for compatibilty
 		
 			picture = chi_incompetent_officers
 			
@@ -551,7 +551,7 @@ ideas = {
 			}
 		}
 		
-		YUG_privatization_idea = {
+		YUG_strategic_nationalizations_idea = {
 		
 			picture = generic_local_self_management
 			
@@ -566,6 +566,30 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		YUG_foreign_capital_zvikovic = {
+			
+			name = YUG_idea_foreign_capital
+			
+			picture = generic_foreign_capital
+			
+			allowed = {
+				original_tag = YUG
+			}
+
+			allowed_civil_war = {
+				#always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.05
 				production_speed_buildings_factor = 0.05
@@ -587,6 +611,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_gain = 0.5
+				land_reinforce_rate = 0.1
+				army_morale_factor = 0.1
 				justify_war_goal_time = -0.25
 				conscription = 0.01
 				mobilization_speed = 0.1
@@ -627,9 +654,28 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
+				has_government = fascism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		YUG_the_italian_model_idea = {
+		
+			picture = generic_fascism_drift_2
+			
+			allowed = {
+				original_tag = YUG
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
 			}
 
 			removal_cost = -1
@@ -1531,24 +1577,24 @@ ideas = {
 			}
 		}
 		
-		YUG_idea_croatian_opposition = {
-			
-			picture = FRA_scw_intervention_republicans_focus
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				stability_factor = -0.3
-			}
-		}
+		#YUG_idea_croatian_opposition = {
+		#	
+		#	picture = FRA_scw_intervention_republicans_focus
+		#
+		#	allowed = {
+		#		always = no
+		#	}
+		#
+		#	allowed_civil_war = {
+		#
+		#	}
+		#
+		#	removal_cost = -1
+		#	
+		#	modifier = {
+		#		stability_factor = -0.3
+		#	}
+		#}
 
 		#YUG_idea_macedonian_opposition = {
 		#	

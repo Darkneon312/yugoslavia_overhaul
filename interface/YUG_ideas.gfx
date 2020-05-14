@@ -6,13 +6,13 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_croatian_question"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_croatian_question.dds"
+		name = "GFX_idea_YUG_idea_croatian_opposition"
+		texturefile = "gfx/interface/ideas/YUG/idea_YUG_idea_croatian_opposition.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_idea_YUG_vmro"
-		texturefile = "gfx/interface/ideas/YUG/idea_YUG_vmro.dds"
+		name = "GFX_idea_YUG_idea_macedonian_opposition"
+		texturefile = "gfx/interface/ideas/YUG/YUG_idea_macedonian_opposition.dds"
 	}
 	
 	spriteType = {

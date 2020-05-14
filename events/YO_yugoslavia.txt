@@ -3,6 +3,7 @@
 ##############################
 
 add_namespace = YO_yugoslavia
+add_namespace = YO_yugoslavia_collapse
 
 # Attempted Assassination on Milan Stojadinovic
 country_event = {
@@ -468,7 +469,7 @@ country_event = {
 	
 	trigger = {
 		tag = YUG
-		#has_idea = YUG_croatian_question
+		#has_idea = YUG_idea_croatian_opposition
 		YUG = {
 			check_variable = { var = YUG.cro_temper value = 200 compare = greater_than_or_equals }
 		}
@@ -505,9 +506,9 @@ country_event = {
 		
 		if = {
 			limit = {
-				has_idea = YUG_croatian_question
+				has_idea = YUG_idea_croatian_opposition
 			}
-			remove_ideas = YUG_croatian_question
+			remove_ideas = YUG_idea_croatian_opposition
 		}
 		if = {
 			limit = {
@@ -590,9 +591,9 @@ country_event = {
 		
 		if = {
 			limit = {
-				has_idea = YUG_croatian_question
+				has_idea = YUG_idea_croatian_opposition
 			}
-			remove_ideas = YUG_croatian_question
+			remove_ideas = YUG_idea_croatian_opposition
 		}
 		if = {
 			limit = {
@@ -1059,5 +1060,33 @@ country_event = {
 		}
 		
 		set_country_flag = yug_concordat_end
+	}
+}
+
+#
+country_event = {
+	id = YO_yugoslavia.1
+	title = YO_yugoslavia.1.t
+	desc = YO_yugoslavia.1.d
+	picture = GFX_report_event_yug_regency
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = YO_yugoslavia.2.a
+		ai_chance = {
+			factor = 40
+		}
+		
+	}
+	
+	option = {
+		name = YO_yugoslavia.2.b
+		ai_chance = {
+			factor = 40
+		}
+		
 	}
 }

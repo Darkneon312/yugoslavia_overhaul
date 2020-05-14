@@ -93,22 +93,6 @@ on_actions = {
 		}
 	}
 	
-	on_capitulation = {
-		effect = {
-			if = {
-				limit = {
-					tag = YGO
-				}
-			}
-			every_state = {
-				limit = {
-					is_core_of = YGO
-				}
-				remove_core_of = YGO
-			}
-		}	
-	}
-	
 	#ROOT is subject FROM is previous overlord
 	on_release_as_free = {
 		effect = {
