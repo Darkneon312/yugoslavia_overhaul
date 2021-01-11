@@ -508,18 +508,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 120
-			
-			subtract_from_variable = { var = ser_temper value = 25	}
-			custom_effect_tooltip = YUG_decrease_SER_temper
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			add_to_variable = { var = slv_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_SLV_temper
-			add_to_variable = { var = bos_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_BOS_temper
-			add_to_variable = { var = mac_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_MAC_temper
-			custom_effect_tooltip = YUG_value_25
 		}
 	}
 	
@@ -672,17 +660,7 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = ser_temper value = 25	}
-			custom_effect_tooltip = YUG_increase_SER_temper
-			subtract_from_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_CRO_temper
-			subtract_from_variable = { var = slv_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_SLV_temper
-			subtract_from_variable = { var = bos_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_BOS_temper
-			subtract_from_variable = { var = mac_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_MAC_temper
-			custom_effect_tooltip = YUG_value_25
+			
 		}
 	}
 	
@@ -759,15 +737,6 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = ser_temper value = 25 }
-			add_to_variable = { var = cro_temper value = 25 }
-			add_to_variable = { var = slv_temper value = 25 }
-			add_to_variable = { var = bos_temper value = 25 }
-			add_to_variable = { var = mnt_temper value = 25 }
-			add_to_variable = { var = mac_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_all_temper
-			custom_effect_tooltip = YUG_value_25
-			
 			add_stability = 0.1
 			add_war_support = 0.1
 			add_political_power = 50
@@ -802,14 +771,6 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			#add_to_variable = { var = ser_temper value = 25 }
-			#add_to_variable = { var = cro_temper value = 25 }
-			#add_to_variable = { var = slv_temper value = 25 }
-			#add_to_variable = { var = bos_temper value = 25 }
-			#add_to_variable = { var = mnt_temper value = 25 }
-			#add_to_variable = { var = mac_temper value = 25 }
-			#custom_effect_tooltip = YUG_increase_all_temper
-			
 			add_war_support = 0.1
 			add_ideas = YUG_yugoslav_militarism_idea
 		}
@@ -843,9 +804,6 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			custom_effect_tooltip = YUG_value_25
 			set_party_name = {
 				ideology = neutrality
 				name = YUG_JNS_neutrality_party
@@ -947,6 +905,40 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = YUG_militaristic_reforms
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = YUG_strategic_nationalizations }
+		x = -1
+		y = 1
+		relative_position_id = YUG_strategic_nationalizations
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		#cancel_if_invalid = no
+		#continue_if_invalid = no
+		#available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_empowered_army
+				add_idea = YUG_militaristic_reforms_idea
+			}
+		}
+	}
+	
+	focus = {
 		id = YUG_attract_foreign_capital_zivkovic
 		text = YUG_attract_foreign_capital
 		icon = GFX_goal_generic_trade
@@ -982,11 +974,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_militaristic_reforms
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = YUG_strategic_nationalizations }
-		x = -1
-		y = 1
+		id = YUG_yugoslav_state_guard
+		icon = GFX_goal_YUG_yugoslav_state_guard
+		prerequisite = { focus = YUG_militaristic_reforms focus = YUG_attract_foreign_capital_zivkovic }
+		x = 0
+		y = 2
 		relative_position_id = YUG_strategic_nationalizations
 
 		cost = 5
@@ -996,7 +988,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+		
 		}
 
 		bypass = {
@@ -1008,10 +1000,7 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = YUG_empowered_army
-				add_idea = YUG_militaristic_reforms_idea
-			}
+			add_ideas = YUG_yugoslav_state_guard_idea
 		}
 	}
 	
@@ -1138,10 +1127,6 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			custom_effect_tooltip = YUG_value_25
-			
 			remove_ideas = YUG_yugoslav_regency
 			add_ideas = YUG_peter_II
 		}
@@ -1151,7 +1136,7 @@ focus_tree = {
 		id = YUG_crush_the_separatists
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus = YUG_handle_the_regent }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = YUG_handle_the_regent
 
@@ -1178,17 +1163,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = slv_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_SLV_temper
-			add_to_variable = { var = bos_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_BOS_temper
-			add_to_variable = { var = mac_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_MAC_temper
-			custom_effect_tooltip = YUG_value_25
-			add_to_variable = { var = cro_temper value = 50 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			custom_effect_tooltip = YUG_value_50
-			
 			remove_ideas = YUG_idea_croatian_opposition
 			remove_ideas = YUG_idea_macedonian_opposition
 			remove_ideas = YUG_idea_slovene_nationalism
@@ -1196,42 +1170,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = YUG_yugoslav_state_guard
-		icon = GFX_goal_YUG_yugoslav_state_guard
-		prerequisite = { focus = YUG_handle_the_regent }
-		x = 1
-		y = 1
-		relative_position_id = YUG_handle_the_regent
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-		
-		}
-
-		bypass = {
-			
-		}
-
-		#cancel_if_invalid = no
-		#continue_if_invalid = no
-		#available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = YUG_yugoslav_state_guard_idea
-		}
-	}
-	
-	focus = {
 		id = YUG_consolidate_our_rule
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = YUG_crush_the_separatists }
-		prerequisite = { focus = YUG_yugoslav_state_guard }
-		x = 1
+		prerequisite = { focus = YUG_yugoslav_state_guard focus = YUG_the_italian_model }
+		x = 0
 		y = 1
 		relative_position_id = YUG_crush_the_separatists
 
@@ -1497,12 +1440,6 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = ser_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_SER_temper
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			custom_effect_tooltip = YUG_value_25
-			
 			#custom_effect_tooltip = available_political_advisor
 			#show_ideas_tooltip = YUG_dimitrije_ljotic
 			add_ideas = YUG_dimitrije_ljotic
@@ -1698,14 +1635,6 @@ focus_tree = {
 		#available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			add_to_variable = { var = slv_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_SLV_temper
-			subtract_from_variable = { var = ser_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_SER_temper
-			custom_effect_tooltip = YUG_value_25
-			
 			add_ideas = YUG_idea_orthodox_church_support
 		}
 	}
@@ -1713,7 +1642,6 @@ focus_tree = {
 	focus = {
 		id = YUG_the_italian_model
 		icon = GFX_focus_generic_italy_first
-		prerequisite = { focus = YUG_handle_the_regent }
 		prerequisite = { focus = YUG_economic_self_sufficiency focus = YUG_traditional_values_ljotic }
 		x = 0
 		y = 2
@@ -1726,7 +1654,9 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {
+				has_idea = YUG_yugoslav_regency
+			}
 		}
 
 		bypass = {
@@ -2067,17 +1997,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			subtract_from_variable = { var = cro_temper value = 10 }
-			custom_effect_tooltip = YUG_decrease_CRO_temper
-			
-			subtract_from_variable = { var = slv_temper value = 10 }
-			custom_effect_tooltip = YUG_decrease_SLV_temper
-			
-			subtract_from_variable = { var = bos_temper value = 10 }
-			custom_effect_tooltip = YUG_decrease_BOS_temper
-			
-			custom_effect_tooltip = YUG_value_10
-			
 			if = {
 				limit = {
 					OR = {
@@ -3298,17 +3217,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			subtract_from_variable = { var = ser_temper value = 10 }
-			custom_effect_tooltip = YUG_decrease_SER_temper
-			
-			subtract_from_variable = { var = mac_temper value = 10 }
-			custom_effect_tooltip = YUG_decrease_MAC_temper
-			
-			subtract_from_variable = { var = mnt_temper value = 10 }
-			custom_effect_tooltip = YUG_decrease_MNT_temper
-			
-			custom_effect_tooltip = YUG_value_10
-			
 			if = {
 				limit = {
 					OR = {
@@ -5251,18 +5159,6 @@ focus_tree = {
 				remove_idea = YUG_serbian_general_staff_1
 				add_idea = YUG_serbian_general_staff_2
 			}
-			
-			subtract_from_variable = { var = ser_temper value = 25	}
-			custom_effect_tooltip = YUG_decrease_SER_temper
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			add_to_variable = { var = slv_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_SLV_temper
-			add_to_variable = { var = bos_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_BOS_temper
-			add_to_variable = { var = mac_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_MAC_temper
-			custom_effect_tooltip = YUG_value_25
 		}
 	}
 	
@@ -5298,18 +5194,6 @@ focus_tree = {
 				remove_idea = YUG_serbian_general_staff_1
 				add_idea = YUG_yugoslav_general_staff
 			}
-			
-			add_to_variable = { var = ser_temper value = 25	}
-			custom_effect_tooltip = YUG_increase_SER_temper
-			subtract_from_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_CRO_temper
-			subtract_from_variable = { var = slv_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_SLV_temper
-			subtract_from_variable = { var = bos_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_BOS_temper
-			subtract_from_variable = { var = mac_temper value = 25 }
-			custom_effect_tooltip = YUG_decrease_MAC_temper
-			custom_effect_tooltip = YUG_value_25
 		}
 	}
 	
@@ -5377,10 +5261,6 @@ focus_tree = {
 
 		completion_reward = {
 			remove_ideas = anti_german_military
-			add_to_variable = { var = ser_temper value = 20	}
-			custom_effect_tooltip = YUG_increase_SER_temper
-			custom_effect_tooltip = YUG_value_20
-			custom_effect_tooltip = YUG_army_no_longer_a_threat
 		}
 	}
 	
@@ -5413,16 +5293,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_to_variable = { var = cro_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_CRO_temper
-			add_to_variable = { var = slv_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_SLV_temper
-			add_to_variable = { var = bos_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_BOS_temper
-			add_to_variable = { var = mac_temper value = 25 }
-			custom_effect_tooltip = YUG_increase_MAC_temper
-			custom_effect_tooltip = YUG_value_25
-			
 			add_ideas = YUG_forced_conscription
 			
 			102 = {

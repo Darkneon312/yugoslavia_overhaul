@@ -469,9 +469,16 @@ country_event = {
 	
 	trigger = {
 		tag = YUG
-		#has_idea = YUG_idea_croatian_opposition
-		YUG = {
-			check_variable = { var = YUG.cro_temper value = 200 compare = greater_than_or_equals }
+		has_idea = YUG_idea_croatian_opposition
+		has_war = yes
+		OR = {
+			AND = {
+				CRO = {
+					exists = yes
+					is_subject_of = YUG
+				}
+			}
+			109 = { is_owned_and_controlled_by = YUG }
 		}
 	}
 	

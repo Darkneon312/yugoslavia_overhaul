@@ -6,4 +6,4 @@ tags={
 	"Map"
 }
 name="Yugoslavia Overhaul Mod"
-supported_version="1.9.2"
+supported_version="1.9.3"

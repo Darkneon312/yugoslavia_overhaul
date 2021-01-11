@@ -11,6 +11,47 @@ if = {
 	}
 }
 
+remove_state_core = 102
+remove_state_core = 103
+remove_state_core = 104
+remove_state_core = 106
+remove_state_core = 109
+
+102 = { #slovenia
+	start_resistance = yes
+	set_compliance = 80
+	set_resistance = 15
+	set_garrison_strength = 1.0
+}
+
+103 = { #croatia - dalmatia
+	start_resistance = yes
+	set_compliance = 40
+	set_resistance = 25
+	set_garrison_strength = 1.0
+}
+
+109 = { #croatia - slavonia
+	start_resistance = yes
+	set_compliance = 40
+	set_resistance = 25
+	set_garrison_strength = 1.0
+}
+
+104 = { #bosnia
+	start_resistance = yes
+	set_compliance = 75
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+
+106 = { #macedonia
+	start_resistance = yes
+	set_compliance = 60
+	set_resistance = 20
+	set_garrison_strength = 1.0
+}
+
 add_equipment_to_stockpile = {
 	type = fighter_equipment_0
 	amount = 600
@@ -28,10 +69,6 @@ add_equipment_to_stockpile = {
 	amount = 6
 	producer = GER
 }
-
-activate_decision = YUG_slovene_opposition_1
-activate_decision = YUG_macedonian_opposition
-activate_decision = YUG_bosnian_opposition
 
 if = {
 	limit = {
@@ -63,57 +100,6 @@ add_ideas = {
 
 add_ideas = {
 	YUG_petar_zivkovic_army
-}
-
-set_variable = { var = ser_temper value = -100 }
-set_variable = { var = cro_temper value = 100 }
-set_variable = { var = slv_temper value = 50 }
-
-set_variable = { var = bos_temper value = 25 }
-set_variable = { var = mnt_temper value = -75 }
-set_variable = { var = mac_temper value = 75 }
-
-set_variable = { var = ita_temper value = 25 }
-set_variable = { var = hun_temper value = 25 }
-set_variable = { var = bul_temper value = 25 }
-set_variable = { var = alb_temper value = 25 }
-
-YUG = {
-	102 = {
-		add_state_modifier = {
-			modifier = {
-				local_manpower = -0.1
-			}
-		}
-	}
-	103 = {
-		add_state_modifier = {
-			modifier = {
-				local_manpower = -0.3
-			}
-		}
-	}
-	109 = {
-		add_state_modifier = {
-			modifier = {
-				local_manpower = -0.3
-			}
-		}
-	}
-	104 = {
-		add_state_modifier = {
-			modifier = {
-				local_manpower = -0.15
-			}
-		}
-	}
-	106 = {
-		add_state_modifier = {
-			modifier = {
-				local_manpower = -0.2
-			}
-		}
-	}
 }
 
 set_technology = {
@@ -292,7 +278,8 @@ set_party_name = {
 	long_name = YUG_ZBR_fascism_party_long
 }
 
-set_stability = 0.5
+set_stability = 0.4
+set_war_support = 0.3
 
 create_country_leader = {
 	name = "Pavle Karađorđević"
